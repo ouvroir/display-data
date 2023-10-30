@@ -1,0 +1,33 @@
+# toutes les relations topologiques
+
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX display: <https://ouvroir.umontreal.ca/onto/display#>
+
+SELECT ?subject_exhibit ?se_label ?topological_relation ?oe_label ?object_exhibit
+WHERE {
+
+  # superclasse des relations topologiques
+  # permettant de récupérer tous les types de relations topologiques
+  BIND(display:hasTopologicalRelationWith AS ?htrw)
+
+  ?subject_exhibit ?htrw ?object_exhibit ;
+     ?topological_relation ?object_exhibit .
+
+  OPTIONAL {
+    ?subject_exhibit rdfs:label ?se_label .
+  }
+
+  OPTIONAL {
+    ?object_exhibit rdfs:label ?oe_label .
+  }
+
+  # les déclarations de superclasses sont matérialisées par le moteur d'inférence
+  # on filtre pour conserver les plus spécifiques seulement
+  FILTER(?topological_relation != ?htrw)
+  FILTER(?topological_relation != display:proximalRelation)
+  FILTER(?topological_relation != display:spatialRelation)
+
+} ORDER BY ?subject_exhibit

@@ -1,0 +1,21 @@
+# requête utilitaire
+
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX display: <https://ouvroir.umontreal.ca/onto/display#>
+PREFIX exhib: <https://ouvroir.umontreal.ca/data/exhib#>
+
+SELECT DISTINCT ?subject ?label
+WHERE {
+
+  { ?subject a display:Exhibit }
+  UNION
+  { ?subject a display:ExhibitionSpace }
+
+  FILTER NOT EXISTS{ ?subject rdfs:label ?label }
+
+}
+ORDER BY ?subject

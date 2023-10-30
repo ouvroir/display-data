@@ -1,0 +1,255 @@
+@prefix bot: <https://w3id.org/bot#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix display: <https://ouvroir.umontreal.ca/onto/display#> .
+@prefix exhib: <https://ouvroir.umontreal.ca/data/exhib#> .
+
+# Feux pâles selon Display
+
+####################################################
+# Préambule
+####################################################
+
+exhib:space0000 rdfs:label "Préambule"@fr ;
+  bot:adjacentZone exhib:space0001 ; # Symmetric
+  display:hasExhibit exhib:exhibit0001 , # inféré?
+    exhib:exhibit0002 ,
+    exhib:exhibit0003 ,
+    exhib:exhibit0004 ;
+  bot:adjacentElement exhib:element0004 ,
+    exhib:element0005 ,
+    exhib:element0006 ,
+    exhib:element0007 .
+
+exhib:exhibit0001 a display:Exhibit ;
+  rdfs:label "Ready-made R : code barre exposé dans le préambule"@fr ;
+  display:faces exhib:element0005 .
+
+exhib:exhibit0002 a display:Exhibit ;
+  rdfs:label "Titre de l'exposition : Feux pâles"@fr ;
+  rdf:value "Feux pâles" ;
+  display:isAbove exhib:exhibit0001 .
+
+exhib:exhibit0003 a display:Exhibit ;
+  rdfs:label "Crédits"@fr ;
+  rdf:value "Exposition réalisée avec le concours de l’agence les readymade appartiennent à tout le monde ®" ;
+  display:isBelow exhib:exhibit0001 .
+
+exhib:exhibit0004 a display:Exhibit ;
+  rdfs:label "Sommaire de l’exposition"@fr ;
+  display:spatialFuzzyness 2 . # représenter les niveaux de certitude
+
+exhib:element0004 a display:DisplayWall ;
+  rdfs:label "Cimaise du code-barre"@fr ;
+  rdfs:comment "Cloison (cimaise) qui sert de support à exhib:exhibit0001. Identifié comme mur A dans le rapport"@fr .
+
+exhib:element0005 a display:DisplayWall ;
+  rdfs:label "cimaise du préambule"@fr .
+
+exhib:element0006 a display:DisplayWall ;
+  rdfs:label "cimaise faisant face au mur de la porte d'entrée"@fr .
+
+exhib:element0007 a display:Wall ;
+  rdfs:label "mur de la porte d'entrée"@fr ;
+  display:faces exhib:element0006 ;
+  bot:hasSubElement exhib:element0008 .
+
+exhib:element0008 a display:Door ;
+  rdfs:label "Porte d'entrée"@fr .
+
+exhib:interface0007 a display:HangingInterface ;
+  rdfs:label "Interface d'accrochage exhibit001-element004"@fr ;
+  bot:interfaceOf exhib:element0004 ,
+    exhib:exhibit0001 .
+
+exhib:interface0000 a display:PathwayInterface ;
+  bot:interfaceOf exhib:space0000 , exhib:space0002 . # Si un espace est contenu dans un espace, on accède à l'espace contenu au plus bas niveau, pour accéder aux PathwayInterface.
+
+exhib:interface0001 a display:PathwayInterface ;
+  bot:interfaceOf exhib:space0000 , exhib:space0004 .
+
+####################################################
+# Salle 1
+####################################################
+
+exhib:space0001 a display:ExhibitionSpace ;
+  rdfs:label "salle 1 : Inventaire du mémorable"@fr ;
+  bot:adjacentZone exhib:space0005 ; # Symmetric
+  display:hasExhibitionSpace exhib:space0002 , # transitive par bot:containsZone
+    exhib:space0003 ,
+    exhib:space0004 .
+
+# Spaces contained in exhib:space0001
+# peut être inféré si on déclare par ex. display:hasExhibitionSpace
+exhib:space0002 bot:adjacentElement exhib:element0010 ;
+  rdfs:label "haut de la salle 1"@fr .
+
+exhib:space0003 a display:ExhibitionSpace ;
+  rdfs:label "esapce Remps"@fr ;
+  bot:adjacentElement exhib:element0009 ,
+    exhib:element0010 ,
+    exhib:element0011 ,
+    exhib:element0012 ;
+  display:hasExhibit exhib:exhibit0005 ,
+    exhib:exhibit0006 ,
+    exhib:exhibit0007 ,
+    exhib:exhibit0008 ,
+    exhib:exhibit0009 ,
+    exhib:exhibit0010 ,
+    exhib:exhibit0011 ,
+    exhib:exhibit0012 .
+
+exhib:exhibit0005 a display:Exhibit ;
+  rdfs:label "Remps" , "Scarabattolo"@it , "Trompe l'oeil"@fr ;
+  display:faces exhib:element0013 .
+
+exhib:element0013 a display:Showcase ;
+  rdfs:label "vitrine (laquelle?)"@fr .
+
+exhib:element0015 a display:Showcase ;
+  rdfs:label "vitrine (laquelle?)"@fr .
+
+exhib:element0014 a display:Base ;
+  rdfs:label "Socle de Platon"@fr .
+
+exhib:exhibit0006 a display:Exhibit ;
+  rdfs:label "Buste de Platon"@fr ;
+  display:liesOn exhib:element0014 ;
+  display:inFrontOf exhib:element0010 ;
+  display:isLeftOf exhib:element0015 .
+
+exhib:exhibit0007 a display:Exhibit ;
+  rdfs:label "Buste de Simonide"@fr ;
+  display:between exhib:element0015 , exhib:element0013 . # between
+
+exhib:exhibit0008 a display:Exhibit ;
+  rdfs:label "Buste d'Aristote"@fr ;
+  display:between exhib:element0016 , exhib:element0013 . # between
+
+exhib:exhibit0009 a display:Exhibit ;
+  rdfs:label "Buste de Quintilien"@fr ;
+  display:faces exhib:exhibit0006 ;
+  display:isRightOf exhib:element0016 .
+
+exhib:element0016 a display:Showcase ;
+  rdfs:label "vitrine (laquelle?)"@fr ;
+  display:faces exhib:element0015 ;
+  display:isLeftOf exhib:exhibit0009 .
+
+exhib:space0004 a display:ExhibitionSpace ;
+  rdfs:label "bas de la salle 1"@fr ;
+  display:adjacentElement exhib:element0012 .
+
+exhib:element0009 a display:DisplayWall ;
+  rdfs:label "cimaise Remps"@fr .
+
+exhib:element0010 a display:DisplayWall ;
+  rdfs:label "cimaise de la salle 1"@fr .
+
+exhib:element0011 a display:DisplayWall ;
+  rdfs:label "cimaise de la salle 1"@fr .
+
+exhib:element0012 a display:DisplayWall ;
+  rdfs:label "cimaise de la salle 1"@fr .
+
+exhib:interface0002 a display:PathwayInterface ;
+  bot:interfaceOf exhib:space0002 , exhib:space0003 .
+  # pathwayInterfaceOf, avec domaine et portée pour inférence
+
+exhib:interface0003 a display:PathwayInterface ;
+  bot:interfaceOf exhib:space0002 , exhib:space0005 .
+
+exhib:interface0004 a display:PathwayInterface ;
+  bot:interfaceOf exhib:space0003 , exhib:space0004 .
+
+exhib:interface0005 a display:PathwayInterface ;
+  bot:interfaceOf exhib:space0004 , exhib:space0005 .
+
+exhib:interface0006 a display:HangingInterface ;
+  bot:interfaceOf exhib:element0009 , exhib:exhibit0005 .
+
+####################################################
+# Salle 2
+####################################################
+
+exhib:space0005 a display:ExhibitionSpace ;
+  rdfs:label "salle 2 : Le cabinets d’amateurs"@fr .
+
+####################################################
+# Salle 3
+####################################################
+
+exhib:space0006 a display:ExhibitionSpace ;
+  rdfs:label "salle 3 : L’art d’accommoder les restes"@fr ;
+  display:hasExhibitionSpace exhib:space0007 ,
+    exhib:space0008 ,
+    exhib:space0009 .
+
+exhib:space0007 rdfs:label "haut de la salle 3"@fr .
+exhib:space0008 rdfs:label "esapce Spoerri"@fr .
+exhib:space0009 rdfs:label "bas de la salle 3"@fr .
+
+####################################################
+# salles
+####################################################
+
+exhib:space0010 a display:ExhibitionSpace ;
+  rdfs:label "salle 4 :"@fr .
+
+exhib:space0011 a display:ExhibitionSpace ;
+  rdfs:label "salle 5 :"@fr .
+
+exhib:space0012 a display:ExhibitionSpace ;
+  rdfs:label "salle 6 :"@fr .
+
+exhib:space0013 rdfs:label "haut de la salle 6"@fr .
+
+exhib:space0016 rdfs:label "salle 7"@fr .
+
+exhib:space0017 a display:ExhibitionSpace ;
+  rdfs:label "salle 8 :"@fr .
+
+exhib:space0018 rdfs:label "haut de la salle 8"@fr .
+
+exhib:space0019 a display:ExhibitionSpace ;
+  rdfs:label "esapce Vezano"@fr .
+
+exhib:space0020 rdfs:label "bas de la salle 8"@fr .
+
+exhib:space0021 a display:ExhibitionSpace ;
+  rdfs:label "salle 9 :"@fr .
+
+exhib:space0022 a display:ExhibitionSpace ;
+  rdfs:label "salle 10 :"@fr .
+
+exhib:space0023 a display:ExhibitionSpace ;
+  rdfs:label "salle 11 :"@fr .
+
+exhib:space0024 rdfs:label "haut de la salle 11"@fr .
+
+####################################################
+# Espaces déservants
+####################################################
+
+exhib:space0999 a display:ExhibitionSpace ;
+  rdfs:label "Espace desservant Francken"@fr ;
+  bot:intersectsZone exhib:space0002 , # Symmetric. # Si un espace est contenu dans un espace, on intersectionne dans l'espace contenu au plus bas niveau (plus précis que l'intersection de haut niveau, avec lequelle on ne saurait pas dans quel espace de plus bas niveau on passe).
+    exhib:space0005 ,
+    exhib:space0007 ,
+    exhib:space0010 ,
+    exhib:space0011 ,
+    exhib:space0013 ,
+    exhib:space0016 ,
+    exhib:space0018 ,
+    exhib:space0021 ,
+    exhib:space0022 ,
+    exhib:space0024 .
+
+exhib:space0998 a display:ExhibitionSpace ;
+  rdfs:label "Espace desservant Thomas-Pannini"@fr ;
+  bot:intersectsZone exhib:space0004 ;
+  bot:intersectsZone exhib:space0005 ;
+  bot:intersectsZone exhib:space0009 .
+
+exhib:space0997 a display:ExhibitionSpace ;
+  rdfs:label "Espace desservant Broodthaers"@fr .
