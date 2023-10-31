@@ -25,6 +25,18 @@ Dans ce contexte, `rdfs:label` est utilisé fournir des éléments d'information
 
 Copier-coller le contenu du fichier dans ce formulaire : [http://ttl.summerofcode.be](http://ttl.summerofcode.be)
 
+Ou :
+
+```bash
+$ npm install -g turtle-validator
+```
+
+puis
+
+```bash
+$ ttl <path-to-file ...>
+```
+
 *Informations*
 
 - https://github.com/IDLabResearch/TurtleValidator
