@@ -13,6 +13,8 @@ Cette section détaille les conventions d'encodage suggérées dans le contexte 
 Peu d'information sur les expôts est actuellement disponible dans ce jeu de données : la description de l'exposition est circonscrite par les relations topologique.
 Dans ce contexte, `rdfs:label` est utilisé fournir des éléments d'information permettant de répérer une ressource sur le plan. Il s'agit de créer un lien informel entre les ressources (au sens de RDF) et les informations documentaires utilisées.
 
+Référence : [Label Everything](https://patterns.dataincubator.org/book/label-everything.html)
+
 ## Identifier les ressources selon la convention proposée
 
 - `exhib:space[0-9]{4}`
@@ -37,6 +39,6 @@ puis
 $ ttl <path-to-file ...>
 ```
 
-*Informations*
+Informations :
 
 - https://github.com/IDLabResearch/TurtleValidator
