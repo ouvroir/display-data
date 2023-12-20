@@ -229,11 +229,35 @@ exhib:space0008 rdfs:label "esapce Spoerri"@fr .
 exhib:space0009 rdfs:label "bas de la salle 3"@fr .
 
 ####################################################
-# salles
+# Salle 4
 ####################################################
 
 exhib:space0010 a display:ExhibitionSpace ;
-  rdfs:label "salle 4 :"@fr .
+  rdfs:label "salle 4 :"@fr ,
+  display:hasExhibit exhib:exhibit0026 ,
+    exhib:exhibit0027 ,
+    exhib:exhibit0028 ,
+    exhib:exhibit0029 ,
+    exhib:exhibit0030 .
+
+exhib:exhibit0026 rdfs:label "Klein" .
+exhib:exhibit0027 rdfs:label "Wilson" .
+exhib:exhibit0028 rdfs:label "Dibbets" .
+exhib:exhibit0029 rdfs:label "Long" .
+exhib:exhibit0030 rdfs:label "Smithson" .
+
+exhib:element0025 a display:Showcase ;
+  rdfs:label "vitrine archive"@fr ;
+  display:inFrontOf exhib:element0026 ,
+  display:contains exhib:exhibit0026 ,
+    exhib:exhibit0027 ,
+    exhib:exhibit0028 ,
+    exhib:exhibit0029 ,
+    exhib:exhibit0030 .
+
+exhib:element0026 a display:DisplayWall ;
+  rdfs:label "cimaise de la salle 4"@fr .
+  
 
 exhib:space0011 a display:ExhibitionSpace ;
   rdfs:label "salle 5 :"@fr .
