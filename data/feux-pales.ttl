@@ -173,7 +173,46 @@ exhib:interface0006 a display:HangingInterface ;
 ####################################################
 
 exhib:space0005 a display:ExhibitionSpace ;
-  rdfs:label "salle 2 : Le cabinets d’amateurs"@fr .
+  rdfs:label "salle 2 : Le cabinets d’amateurs"@fr ,
+  display:hasExhibit exhib:exhibit0021 ,
+    exhib:exhibit0022 ,
+    exhib:exhibit0023 ,
+    exhib:exhibit0024 ,
+    exhib:exhibit0025 .
+
+exhib:exhibit0021 rdfs:label "Janssens 1" ,
+  display:inFrontOf exhib:exhibit0002.
+exhib:exhibit0022 rdfs:label "Janssens 2" .
+exhib:exhibit0023 rdfs:label "Francken" ,
+  display:inFrontOf exhib:exhibit0024 ,
+    exhib:exhibit0025 .
+exhib:exhibit0024 rdfs:label "Pannini" .
+exhib:exhibit0025 rdfs:label "Thomas" .
+
+exhib:interface0011 a display:PathwayInterface .
+
+exhib:element0021 a display:DisplayWall ;
+  rdfs:label "cimaise de la salle 2 haut"@fr .
+
+exhib:element0022 a display:DisplayWall ;
+  rdfs:label "cimaise de la salle 2 gauche"@fr .
+
+exhib:element0023 a display:DisplayWall ;
+  rdfs:label "cimaise de la salle 2 bas"@fr .
+
+exhib:element0024 a display:DisplayWall ;
+  rdfs:label "cimaise de la salle 2 droite"@fr .
+  
+exhib:interface0012 a display:HangingInterface ;
+  rdfs:label "Interface d'accrochage exhibit0023-element0021"@fr ;
+  bot:interfaceOf exhib:element0021 ,
+    exhib:exhibit0023.
+
+exhib:interface0013 a display:HangingInterface ;
+  rdfs:label "Interface d'accrochage exhibit0021-element0022"@fr ;
+  bot:interfaceOf exhib:element0022 ,
+    exhib:exhibit0021.
+
 
 ####################################################
 # Salle 3
