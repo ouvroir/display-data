@@ -258,9 +258,30 @@ exhib:element0025 a display:Showcase ;
 exhib:element0026 a display:DisplayWall ;
   rdfs:label "cimaise de la salle 4"@fr .
   
+####################################################
+# Salle 5
+####################################################
 
 exhib:space0011 a display:ExhibitionSpace ;
-  rdfs:label "salle 5 :"@fr .
+  rdfs:label "salle 5 :"@fr ,
+  display:hasExhibit exhib:exhibit0031 ,
+    exhib:exhibit0032 ,
+    exhib:exhibit0033 ,
+    exhib:exhibit0034 ,
+    exhib:exhibit0035 .
+
+exhib:exhibit0026 rdfs:label "McCollum" ,
+  display:inFrontOf exhib:exhibit0027.
+exhib:exhibit0027 rdfs:label "Richter 1" .
+exhib:exhibit0028 rdfs:label "Richter 2" .
+exhib:exhibit0029 rdfs:label "Clairet" .
+exhib:exhibit0030 rdfs:label "Charlton" .    
+
+#todo: DisplayWall et Interfaces 
+
+####################################################
+# salles
+####################################################
 
 exhib:space0012 a display:ExhibitionSpace ;
   rdfs:label "salle 6 :"@fr .
