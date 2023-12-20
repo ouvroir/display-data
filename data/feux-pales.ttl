@@ -225,8 +225,60 @@ exhib:space0006 a display:ExhibitionSpace ;
     exhib:space0009 .
 
 exhib:space0007 rdfs:label "haut de la salle 3"@fr .
-exhib:space0008 rdfs:label "esapce Spoerri"@fr .
-exhib:space0009 rdfs:label "bas de la salle 3"@fr .
+
+exhib:space0008 rdfs:label "espace Spoerri"@fr ;
+  display:hasInterface exhib:interface0009 ,
+    exhib:interface0010 .
+
+exhib:space0009 rdfs:label "bas de la salle 3"@fr ;
+  display:hasInterface exhib:interface0011 .
+
+exhib:interface0011 a rdfs:label "Interface de circulation pour space0009 et space0005"@fr ;
+  bot:interfaceOf exhib:space0005 .
+
+exhib:interface0014 a display:PathwayInterface ;
+  rdfs:label "Interface de circulation pour space0007 et space0010"@fr .
+
+exhib:interface0009 a display:PathwayInterface ;
+  bot:interfaceOf exhib:space0007 .
+exhib:interface0010 a display:PathwayInterface .
+  bot:interfaceOf exhib:space0009 .
+
+exhib:space0008 display:hasExhibit exhib:exhibit0013 ,
+  exhib:exhibit0013 ,
+  exhib:exhibit0014 ,
+  exhib:exhibit0015 ,
+  exhib:exhibit0016 ,
+  exhib:exhibit0017 .
+
+exhib:element0017 a display:DisplayWall .
+  display:hasInterface exhib:interface0008 .
+exhib:element0018 a display:DisplayWall .
+exhib:element0019 a display:DisplayWall .
+
+# connecter un élément avec un expôt
+# en utilisant une interface devrait nous permettre
+# d'inférérer le type d'interface.
+
+exhib:exhibit0013 rdfs:label "Spoerri" ;
+  display:hasInterface exhib:interface0008 ;
+  display:isRightOf exhib:exhibit0014 ;
+  display:faces exhib:exhibit0015 .
+exhib:exhibit0014 rdfs:label "Roth" .
+
+# Duchamp
+# Ne peut pas relever du point de vue (personne qui regarde)
+exhib:exhibit0015 rdfs:label "Duchamp" .
+
+# Manzoni
+exhib:exhibit0016 rdfs:label "Manzoni" ;
+  display:inFrontOf exhib:element0019 .
+
+# Beuys
+exhib:exhibit0017 rdfs:label "Beuys" ;
+  display:isContainedIn exhib:element0020 .
+exhib:element0020 a display:Showcase ;
+  display:inFrontOf exhib:element0018 .
 
 ####################################################
 # Salle 4
