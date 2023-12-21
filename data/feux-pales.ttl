@@ -173,17 +173,17 @@ exhib:interface0006 a display:HangingInterface ;
 ####################################################
 
 exhib:space0005 a display:ExhibitionSpace ;
-  rdfs:label "salle 2 : Le cabinets d’amateurs"@fr ,
+  rdfs:label "salle 2 : Le cabinets d’amateurs"@fr ;
   display:hasExhibit exhib:exhibit0021 ,
     exhib:exhibit0022 ,
     exhib:exhibit0023 ,
     exhib:exhibit0024 ,
     exhib:exhibit0025 .
 
-exhib:exhibit0021 rdfs:label "Janssens 1" ,
+exhib:exhibit0021 rdfs:label "Janssens 1" ;
   display:inFrontOf exhib:exhibit0002.
 exhib:exhibit0022 rdfs:label "Janssens 2" .
-exhib:exhibit0023 rdfs:label "Francken" ,
+exhib:exhibit0023 rdfs:label "Francken" ;
   display:inFrontOf exhib:exhibit0024 ,
     exhib:exhibit0025 .
 exhib:exhibit0024 rdfs:label "Pannini" .
@@ -233,7 +233,7 @@ exhib:space0008 rdfs:label "espace Spoerri"@fr ;
 exhib:space0009 rdfs:label "bas de la salle 3"@fr ;
   display:hasInterface exhib:interface0011 .
 
-exhib:interface0011 a rdfs:label "Interface de circulation pour space0009 et space0005"@fr ;
+exhib:interface0011 rdfs:label "Interface de circulation pour space0009 et space0005"@fr ;
   bot:interfaceOf exhib:space0005 .
 
 exhib:interface0014 a display:PathwayInterface ;
@@ -241,7 +241,7 @@ exhib:interface0014 a display:PathwayInterface ;
 
 exhib:interface0009 a display:PathwayInterface ;
   bot:interfaceOf exhib:space0007 .
-exhib:interface0010 a display:PathwayInterface .
+exhib:interface0010 a display:PathwayInterface ;
   bot:interfaceOf exhib:space0009 .
 
 exhib:space0008 display:hasExhibit exhib:exhibit0013 ,
@@ -251,7 +251,7 @@ exhib:space0008 display:hasExhibit exhib:exhibit0013 ,
   exhib:exhibit0016 ,
   exhib:exhibit0017 .
 
-exhib:element0017 a display:DisplayWall .
+exhib:element0017 a display:DisplayWall ;
   display:hasInterface exhib:interface0008 .
 exhib:element0018 a display:DisplayWall .
 exhib:element0019 a display:DisplayWall .
@@ -285,7 +285,7 @@ exhib:element0020 a display:Showcase ;
 ####################################################
 
 exhib:space0010 a display:ExhibitionSpace ;
-  rdfs:label "salle 4 :"@fr ,
+  rdfs:label "salle 4 :"@fr ;
   display:hasExhibit exhib:exhibit0026 ,
     exhib:exhibit0027 ,
     exhib:exhibit0028 ,
@@ -300,7 +300,7 @@ exhib:exhibit0030 rdfs:label "Smithson" .
 
 exhib:element0025 a display:Showcase ;
   rdfs:label "vitrine archive"@fr ;
-  display:inFrontOf exhib:element0026 ,
+  display:inFrontOf exhib:element0026 ;
   display:contains exhib:exhibit0026 ,
     exhib:exhibit0027 ,
     exhib:exhibit0028 ,
@@ -315,14 +315,14 @@ exhib:element0026 a display:DisplayWall ;
 ####################################################
 
 exhib:space0011 a display:ExhibitionSpace ;
-  rdfs:label "salle 5 :"@fr ,
+  rdfs:label "salle 5 :"@fr ;
   display:hasExhibit exhib:exhibit0031 ,
     exhib:exhibit0032 ,
     exhib:exhibit0033 ,
     exhib:exhibit0034 ,
     exhib:exhibit0035 .
 
-exhib:exhibit0026 rdfs:label "McCollum" ,
+exhib:exhibit0026 rdfs:label "McCollum" ;
   display:inFrontOf exhib:exhibit0027.
 exhib:exhibit0027 rdfs:label "Richter 1" .
 exhib:exhibit0028 rdfs:label "Richter 2" .
