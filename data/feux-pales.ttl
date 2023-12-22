@@ -316,6 +316,7 @@ exhib:element0026 a display:DisplayWall ;
 
 exhib:space0011 a display:ExhibitionSpace ;
   rdfs:label "salle 5 :"@fr ;
+  bot:interfaceOf exhib:space0010;
   display:hasExhibit exhib:exhibit0031 ,
     exhib:exhibit0032 ,
     exhib:exhibit0033 ,
@@ -323,13 +324,24 @@ exhib:space0011 a display:ExhibitionSpace ;
     exhib:exhibit0035 .
 
 exhib:exhibit0026 rdfs:label "McCollum" ;
-  display:inFrontOf exhib:exhibit0027.
+  display:inFrontOf exhib:exhibit0027 .
 exhib:exhibit0027 rdfs:label "Richter 1" .
-exhib:exhibit0028 rdfs:label "Richter 2" .
-exhib:exhibit0029 rdfs:label "Clairet" .
-exhib:exhibit0030 rdfs:label "Charlton" .    
+exhib:exhibit0028 rdfs:label "Richter 2" ;
+  display:hasInterface exhib:element0031 .
+exhib:exhibit0029 rdfs:label "Clairet" ;
+  display:isRightOf exhib:exhibit0027 ;
+  display:hasInterface exhib:element0032 .
+exhib:exhibit0030 rdfs:label "Charlton" ;  
+  display:hasInterface exhib:element0033 .
 
-#todo: DisplayWall et Interfaces 
+exhib:element0030 a display:DisplayWall ;
+  display:hasInterface exhib:exhibit0026 .
+exhib:element0031 a display:DisplayWall .
+exhib:element0032 a display:DisplayWall .
+exhib:element0033 a display:DisplayWall .
+
+
+#vérifier les interfaces. Faut-il déclarer que exhibit0027 est sur un mur ou il est suffisant qu'il soit face à exhibit0026?
 
 ####################################################
 # salles
