@@ -316,7 +316,7 @@ exhib:element0025 a display:Showcase ;
 
 exhib:element0026 a display:DisplayWall ;
   rdfs:label "cimaise de la salle 4"@fr .
-  
+
 ####################################################
 # Salle 5
 ####################################################
@@ -351,13 +351,32 @@ exhib:element0033 a display:DisplayWall .
 #vérifier les interfaces. Faut-il déclarer que exhibit0027 est sur un mur ou il est suffisant qu'il soit face à exhibit0026?
 
 ####################################################
-# salles
+# Salle 6
 ####################################################
 
 exhib:space0012 a display:ExhibitionSpace ;
-  rdfs:label "salle 6 :"@fr .
+  rdfs:label "salle 6 :"@fr ;
+  bot:interfaceOf exhib:space0011, exhib:space0016.
 
 exhib:space0013 rdfs:label "haut de la salle 6"@fr .
+exhib:space0014 rdfs:label "milieu de la salle 6"@fr .
+exhib:space0025 rdfs:label "bas de la salle 6"@fr .
+
+
+exhib:interface0015 a display:PathwayInterface ;
+  rdfs:label "Interface de circulation pour space0013 et space0014"@fr ;
+  bot:interfaceOf exhib:space0013 ,
+    exhib:space0014. 
+exhib:interface0016 a display:PathwayInterface ;
+  rdfs:label "Interface de circulation pour space0025 et space0014"@fr ;
+  bot:interfaceOf exhib:space0014 ,
+    exhib:space0025.
+
+#vérifier les interfaces
+
+####################################################
+# Salles
+####################################################
 
 exhib:space0016 rdfs:label "salle 7"@fr .
 
@@ -367,7 +386,7 @@ exhib:space0017 a display:ExhibitionSpace ;
 exhib:space0018 rdfs:label "haut de la salle 8"@fr .
 
 exhib:space0019 a display:ExhibitionSpace ;
-  rdfs:label "esapce Vezano"@fr .
+  rdfs:label "espace Vezano"@fr .
 
 exhib:space0020 rdfs:label "bas de la salle 8"@fr .
 
