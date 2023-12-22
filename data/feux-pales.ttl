@@ -264,15 +264,22 @@ exhib:exhibit0013 rdfs:label "Spoerri" ;
   display:hasInterface exhib:interface0008 ;
   display:isRightOf exhib:exhibit0014 ;
   display:faces exhib:exhibit0015 .
-exhib:exhibit0014 rdfs:label "Roth" .
+exhib:exhibit0014 rdfs:label "Roth" ;
+  display:on exhib:element0028.
+exhib:element0028 a display:base.
 
 # Duchamp
 # Ne peut pas relever du point de vue (personne qui regarde)
-exhib:exhibit0015 rdfs:label "Duchamp" .
+exhib:exhibit0015 rdfs:label "Duchamp" ;
+  display:on exhib:element0029.
+exhib:element0029 a display:base.
 
 # Manzoni
 exhib:exhibit0016 rdfs:label "Manzoni" ;
-  display:inFrontOf exhib:element0019 .
+  display:inFrontOf exhib:element0019 ;
+  display:on exhib:element0027.
+exhib:element0027 a display:base.
+# comment dire que l'oeuvre est sur un socle? display:on ou onto? exhib:element that is a display:base ? #
 
 # Beuys
 exhib:exhibit0017 rdfs:label "Beuys" ;
