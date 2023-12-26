@@ -502,11 +502,48 @@ exhib:space0022 a display:ExhibitionSpace ;
 
 #Pathway
 
+####################################################
+# Salle 11
+####################################################
 
 exhib:space0023 a display:ExhibitionSpace ;
   rdfs:label "salle 11 :"@fr .
 
-exhib:space0024 rdfs:label "haut de la salle 11"@fr .
+exhib:space0024 rdfs:label "haut de la salle 11"@fr ;
+  display:hasExhibit exhib:exhibit0052,
+  exhib:exhibit0053 ,
+  exhib:exhibit0054 ,
+  exhib:exhibit0055 ,
+  exhib:exhibit0056 ,
+  exhib:exhibit0057 .
+
+exhib:exhibit0052 rdfs:label "Blondeau" ;
+  display:isRightOf exhib:Morris ;
+  display:faces exhib:exhibit0055 .
+exhib:exhibit0053 rdfs:label "Morris" ;
+   display:hasInterface exhib:element0050 .
+exhib:exhibit0054 rdfs:label "Ready-made" 
+    display:faces exhib:exhibit0055 ;
+    display:faces exhib:exhibit0057 ;
+    display:hasInterface exhib:element0051 .
+exhib:exhibit0055 rdfs:label "Ready-made 2" 
+  #au milieu de la piece au sol. Faces Salomon?
+exhib:exhibit0056 rdfs:label "Salomon" ;
+  display:faces exhib:exhibit0055 ;
+  display:faces exhib:exhibit0052 ;
+  display:hasInterface exhib:element0052 .
+exhib:exhibit0057 rdfs:label "Löcher" ;
+  display:hasInterface exhib:element0050 ;
+  display:faces exhib:exhibit0055 . 
+
+exhib:element0050 a display:DisplayWall .
+exhib:element0051 a display:DisplayWall .
+exhib:element0052 a display:DisplayWall .
+exhib:element0053 a display:DisplayWall .
+
+exhib:space0026 rdfs:label "bas de la salle 11"@fr .
+
+#j'ai laissé les isleft/rightOf en fonction du regardeur parce que nous avons commencé comme ça, malgré la problématique que cela pose.
 
 ####################################################
 # Espaces déservants
