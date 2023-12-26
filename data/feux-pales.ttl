@@ -428,6 +428,8 @@ exhib:interface0020 a display:PathwayInterface ;
 
 
 ####################################################
+# Salle 8
+####################################################
 
 exhib:space0017 a display:ExhibitionSpace ;
   rdfs:label "salle 8 :"@fr .
@@ -435,9 +437,31 @@ exhib:space0017 a display:ExhibitionSpace ;
 exhib:space0018 rdfs:label "haut de la salle 8"@fr .
 
 exhib:space0019 a display:ExhibitionSpace ;
-  rdfs:label "espace Vezano"@fr .
+  rdfs:label "milieu de salle 8"@f ;
+  display:hasExhibit exhib:exhibit0043 ,
+  exhib:exhibit0044 ,
+  exhib:exhibit0045 ,
+  exhib:exhibit0046 .
+  
+exhib:exhibit0043 rdfs:label "Duchamp 1";
+  display:isLeftOf exhib:exhibit0044;
+  display:faces exhib:exhibit0046;
+  display:hasInterface exhib:element0043.
+exhib:exhibit0044 rdfs:label "Duchamp 2".
+exhib:exhibit0045 rdfs:label "Venazzo";
+  display:hasInterface exhib:element0044.
+exhib:exhibit0046 rdfs:label "Broodthaers".
 
 exhib:space0020 rdfs:label "bas de la salle 8"@fr .
+
+exhib:element0043 a display:DisplayWall .
+exhib:element0044 a display:DisplayWall .
+exhib:element0045 a display:DisplayWall ;
+  display:hasInterface exhib:exhibit0046.
+
+
+#Pathway
+
 
 exhib:space0021 a display:ExhibitionSpace ;
   rdfs:label "salle 9 :"@fr .
