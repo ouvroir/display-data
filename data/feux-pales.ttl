@@ -399,10 +399,35 @@ exhib:interface0016 a display:PathwayInterface ;
 #vérifier les interfaces
 
 ####################################################
-# Salles
+# Salle 7
 ####################################################
 
-exhib:space0016 rdfs:label "salle 7"@fr .
+exhib:space0016 rdfs:label "salle 7"@fr;
+  display:hasExhibit exhib:exhibit0042. 
+
+exhib:exhibit0042 rdfs:label "Souvenir écran".
+#au mileu de la salle au sol. 
+
+exhib:interface0017 a display:PathwayInterface ;
+  rdfs:label "Interface de circulation pour space0016 et space0013"@fr ;
+  bot:interfaceOf exhib:space0016 ,
+    exhib:space0013. 
+exhib:interface0018 a display:PathwayInterface ;
+  rdfs:label "Interface de circulation pour space0016 et space0025"@fr ;
+  bot:interfaceOf exhib:space0016 ,
+    exhib:space0025.
+exhib:interface0019 a display:PathwayInterface ;
+  rdfs:label "Interface de circulation pour space0016 et space0018"@fr ;
+  bot:interfaceOf exhib:space0016 ,
+    exhib:space0018. 
+exhib:interface0020 a display:PathwayInterface ;
+  rdfs:label "Interface de circulation pour space0016 et space0020"@fr ;
+  bot:interfaceOf exhib:space0016 ,
+    exhib:space0020.
+
+
+
+####################################################
 
 exhib:space0017 a display:ExhibitionSpace ;
   rdfs:label "salle 8 :"@fr .
