@@ -492,9 +492,16 @@ exhib:element0049 a display:Showcase ;
     
 #Pathway
 
+####################################################
+# Salle 10
+####################################################
 
 exhib:space0022 a display:ExhibitionSpace ;
-  rdfs:label "salle 10 :"@fr .
+  rdfs:label "salle 10 :"@fr ;
+  display:hasExhibit exhib:exhibit0051.
+
+#Pathway
+
 
 exhib:space0023 a display:ExhibitionSpace ;
   rdfs:label "salle 11 :"@fr .
