@@ -348,7 +348,8 @@ exhib:element0032 a display:DisplayWall .
 exhib:element0033 a display:DisplayWall .
 
 
-#vérifier les interfaces. Faut-il déclarer que exhibit0027 est sur un mur ou il est suffisant qu'il soit face à exhibit0026?
+#vérifier les interfaces. Ne serait-il pas plus clair de mettre les Interfaces PathWay au meme endroit en dehors des salles? 
+#Faut-il déclarer que exhibit0027 est sur un mur ou il est suffisant qu'il soit face à exhibit0026?
 
 ####################################################
 # Salle 6
@@ -359,9 +360,32 @@ exhib:space0012 a display:ExhibitionSpace ;
   bot:interfaceOf exhib:space0011, exhib:space0016.
 
 exhib:space0013 rdfs:label "haut de la salle 6"@fr .
-exhib:space0014 rdfs:label "milieu de la salle 6"@fr .
+exhib:space0014 rdfs:label "milieu de la salle 6"@fr ;
+  display:hasExhibit exhib:exhibit0036,
+  exhib:exhibit0037,
+  exhib:exhibit0038,
+  exhib:exhibit0039,
+  exhib:exhibit0040.
 exhib:space0025 rdfs:label "bas de la salle 6"@fr .
 
+exhib:exhibit0036 rdfs:label "Dimitrijevic";
+  display:hasInterface exhib:element0040. 
+exhib:exhibit0037 rdfs:label "Prina";
+  display:isLeftOf exhib:exhibit0041;
+  display:hasInterface exhib:element0041.
+exhib:exhibit0041 rdfs:label "Prina 2".
+exhib:exhibit0038 rdfs:label "Lévine 1".
+exhib:exhibit0039 rdfs:label "Lévine 2";
+  display:isRightOf exhib:exhibit0038;
+  display:isLeftOf exhib:exhibit0040;
+  #IsBetween?
+  display:faces exhib:exhibit0036;
+  display:hasInterface exhib:element0042.
+exhib:exhibit0040 rdfs:label "Linke".
+
+exhib:element0040 a display:DisplayWall .
+exhib:element0041 a display:DisplayWall .
+exhib:element0042 a display:DisplayWall .
 
 exhib:interface0015 a display:PathwayInterface ;
   rdfs:label "Interface de circulation pour space0013 et space0014"@fr ;
