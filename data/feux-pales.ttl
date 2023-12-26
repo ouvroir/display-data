@@ -462,9 +462,36 @@ exhib:element0045 a display:DisplayWall ;
 
 #Pathway
 
+####################################################
+# Salle 9
+####################################################
 
 exhib:space0021 a display:ExhibitionSpace ;
-  rdfs:label "salle 9 :"@fr .
+  rdfs:label "salle 9 :"@fr ;
+  display:hasExhibit exhib:exhibit0047,
+  exhib:exhibit0048 ,
+  exhib:exhibit0049 ,
+  exhib:exhibit0050 ,
+  exhib:exhibit0051 .
+
+exhib:exhibit0047 rdfs:label "Haacke" .
+exhib:exhibit0048 rdfs:label "Manzoni 1" .
+exhib:exhibit0049 rdfs:label "Duchamp 3" .
+exhib:exhibit0050 rdfs:label "Broodthaers" .
+exhib:exhibit0051 rdfs:label "Parcelle
+à céder" .
+
+exhib:element0046 a display:DisplayWall .
+exhib:element0047 a display:DisplayWall .
+exhib:element0048 a display:DisplayWall .
+exhib:element0049 a display:Showcase ;
+  rdfs:label "vitrine oeuvres"@fr ;
+  display:inFrontOf exhib:element0047 ;
+  display:contains exhib:exhibit0048 ,
+    exhib:exhibit0049.
+    
+#Pathway
+
 
 exhib:space0022 a display:ExhibitionSpace ;
   rdfs:label "salle 10 :"@fr .
