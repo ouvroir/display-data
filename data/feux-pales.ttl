@@ -489,8 +489,7 @@ exhib:exhibit0047 rdfs:label "Haacke" .
 exhib:exhibit0048 rdfs:label "Manzoni 1" .
 exhib:exhibit0049 rdfs:label "Duchamp 3" .
 exhib:exhibit0050 rdfs:label "Broodthaers" .
-exhib:exhibit0051 rdfs:label "Parcelle
-à céder" .
+exhib:exhibit0051 rdfs:label "Parcelle à céder" .
 
 exhib:element0046 a display:DisplayWall .
 exhib:element0047 a display:DisplayWall .
@@ -533,11 +532,11 @@ exhib:exhibit0052 rdfs:label "Blondeau" ;
   display:faces exhib:exhibit0055 .
 exhib:exhibit0053 rdfs:label "Morris" ;
    display:hasInterface exhib:element0050 .
-exhib:exhibit0054 rdfs:label "Ready-made" 
+exhib:exhibit0054 rdfs:label "Ready-made" ;
     display:faces exhib:exhibit0055 ;
     display:faces exhib:exhibit0057 ;
     display:hasInterface exhib:element0051 .
-exhib:exhibit0055 rdfs:label "Ready-made 2" 
+exhib:exhibit0055 rdfs:label "Ready-made 2" .
   #au milieu de la piece au sol. Faces Salomon?
 exhib:exhibit0056 rdfs:label "Salomon" ;
   display:faces exhib:exhibit0055 ;
