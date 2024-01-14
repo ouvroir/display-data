@@ -292,7 +292,7 @@ exhib:element0020 a display:Showcase ;
 ####################################################
 
 exhib:space0010 a display:ExhibitionSpace ;
-  rdfs:label "salle 4 :"@fr ;
+  rdfs:label "salle 4 : Le musée sans objet"@fr ;
   display:hasExhibit exhib:exhibit0026 ,
     exhib:exhibit0027 ,
     exhib:exhibit0028 ,
@@ -325,7 +325,7 @@ exhib:interface0021 a display:PathwayInterface ;
 ####################################################
 
 exhib:space0011 a display:ExhibitionSpace ;
-  rdfs:label "salle 5 :"@fr ;
+  rdfs:label "salle 5 : Passif de la modernité"@fr ;
   bot:interfaceOf exhib:space0010 ;
   display:hasExhibit exhib:exhibit0031 ,
     exhib:exhibit0032 ,
@@ -374,7 +374,7 @@ exhib:interface0024 a display:PathwayInterface ;
 ####################################################
 
 exhib:space0012 a display:ExhibitionSpace ;
-  rdfs:label "salle 6 :"@fr ;
+  rdfs:label "salle 6 : La chair est triste, hélas ! Et j’ai lu tous les livres...."@fr ;
   bot:interfaceOf exhib:space0011 , exhib:space0016 .
 
 exhib:space0013 rdfs:label "haut de la salle 6"@fr .
@@ -428,7 +428,7 @@ exhib:interface0016 a display:PathwayInterface ;
 # Salle 7
 ####################################################
 
-exhib:space0016 rdfs:label "salle 7"@fr ;
+exhib:space0016 rdfs:label "salle 7 : Respect de l’étiquette, intérêt du cartel"@fr ;
   display:hasExhibit exhib:exhibit0042 . 
 
 exhib:exhibit0042 rdfs:label "Souvenir écran" .
@@ -459,7 +459,7 @@ exhib:interface0020 a display:PathwayInterface ;
 ####################################################
 
 exhib:space0017 a display:ExhibitionSpace ;
-  rdfs:label "salle 8 :"@fr .
+  rdfs:label "salle 8 : Le musée réfléchi"@fr .
 
 exhib:space0018 rdfs:label "haut de la salle 8"@fr .
 
@@ -497,7 +497,7 @@ exhib:element0045 a display:DisplayWall ;
 ####################################################
 
 exhib:space0021 a display:ExhibitionSpace ;
-  rdfs:label "salle 9 :"@fr ;
+  rdfs:label "salle 9 : Mesure pour mesure"@fr ;
   display:hasExhibit exhib:exhibit0047 ,
   exhib:exhibit0048 ,
   exhib:exhibit0049 ,
@@ -527,8 +527,7 @@ exhib:element0049 a display:Showcase ;
 ####################################################
 
 exhib:space0022 a display:ExhibitionSpace ;
-  rdfs:label "salle 10 :"@fr ;
-  display:hasExhibit exhib:exhibit0051 .
+  rdfs:label "salle 10 : De la propriété littéraire et artistique"@fr ;
 
 #Pathway
 
@@ -537,7 +536,7 @@ exhib:space0022 a display:ExhibitionSpace ;
 ####################################################
 
 exhib:space0023 a display:ExhibitionSpace ;
-  rdfs:label "salle 11 :"@fr .
+  rdfs:label "salle 11 : L’index"@fr .
 
 exhib:space0024 rdfs:label "haut de la salle 11"@fr ;
   display:hasExhibit exhib:exhibit0052 ,
