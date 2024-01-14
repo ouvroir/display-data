@@ -334,8 +334,8 @@ exhib:space0011 a display:ExhibitionSpace ;
     exhib:exhibit0034 ,
     exhib:exhibit0035 .
 
-exhib:exhibit0026 rdfs:label "McCollum" ;
-  display:inFrontOf exhib:exhibit0027 .
+exhib:exhibit0031 rdfs:label "McCollum" ;
+  display:inFrontOf exhib:exhibit0027 . # corr. : ?
 
 exhib:exhibit0032 rdfs:label "Richter 1" .
 
@@ -343,8 +343,8 @@ exhib:exhibit0033 rdfs:label "Richter 2" .
 #  display:hasInterface exhib:element0031 .
 # [X] corr. objet doit être une interface
 
-exhib:exhibit0029 rdfs:label "Clairet" ;
-  display:isRightOf exhib:exhibit0027 ;
+exhib:exhibit0034 rdfs:label "Clairet" ;
+  display:isRightOf exhib:exhibit0027 . # corr. : ?
 #  display:hasInterface exhib:element0032 .
 # [X] corr. objet doit être une interface
 
