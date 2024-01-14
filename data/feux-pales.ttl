@@ -326,7 +326,8 @@ exhib:interface0021 a display:PathwayInterface ;
 
 exhib:space0011 a display:ExhibitionSpace ;
   rdfs:label "salle 5 : Passif de la modernité"@fr ;
-  bot:interfaceOf exhib:space0010 ;
+#  bot:interfaceOf exhib:space0010 ;
+#  [X] corr. sujet doit être une interface
   display:hasExhibit exhib:exhibit0031 ,
     exhib:exhibit0032 ,
     exhib:exhibit0033 ,
@@ -336,20 +337,24 @@ exhib:space0011 a display:ExhibitionSpace ;
 exhib:exhibit0026 rdfs:label "McCollum" ;
   display:inFrontOf exhib:exhibit0027 .
 
-exhib:exhibit0027 rdfs:label "Richter 1" .
+exhib:exhibit0032 rdfs:label "Richter 1" .
 
-exhib:exhibit0028 rdfs:label "Richter 2" ;
-  display:hasInterface exhib:element0031 .
+exhib:exhibit0033 rdfs:label "Richter 2" .
+#  display:hasInterface exhib:element0031 .
+# [X] corr. objet doit être une interface
 
 exhib:exhibit0029 rdfs:label "Clairet" ;
   display:isRightOf exhib:exhibit0027 ;
-  display:hasInterface exhib:element0032 .
+#  display:hasInterface exhib:element0032 .
+# [X] corr. objet doit être une interface
 
-exhib:exhibit0030 rdfs:label "Charlton" ;  
-  display:hasInterface exhib:element0033 .
+exhib:exhibit0035 rdfs:label "Charlton" .
+#  display:hasInterface exhib:element0033 .
+# [X] corr. objet doit être une interface
 
-exhib:element0030 a display:DisplayWall ;
-  display:hasInterface exhib:exhibit0026 .
+exhib:element0030 a display:DisplayWall .
+#  display:hasInterface exhib:exhibit0026 .
+# [X] corr. objet doit être une interface
 
 exhib:element0031 a display:DisplayWall .
 
@@ -374,8 +379,9 @@ exhib:interface0024 a display:PathwayInterface ;
 ####################################################
 
 exhib:space0012 a display:ExhibitionSpace ;
-  rdfs:label "salle 6 : La chair est triste, hélas ! Et j’ai lu tous les livres...."@fr ;
-  bot:interfaceOf exhib:space0011 , exhib:space0016 .
+  rdfs:label "salle 6 : La chair est triste, hélas ! Et j’ai lu tous les livres...."@fr .
+#  bot:interfaceOf exhib:space0011 , exhib:space0016 . 
+#  [X] corr. sujet doit être une interface
 
 exhib:space0013 rdfs:label "haut de la salle 6"@fr .
 
@@ -388,12 +394,14 @@ exhib:space0014 rdfs:label "milieu de la salle 6"@fr ;
 
 exhib:space0015 rdfs:label "bas de la salle 6"@fr .
 
-exhib:exhibit0036 rdfs:label "Dimitrijevic";
-  display:hasInterface exhib:element0040 . 
+exhib:exhibit0036 rdfs:label "Dimitrijevic" .
+#  display:hasInterface exhib:element0040 .
+# [X] corr. objet doit être une interface
 
 exhib:exhibit0037 rdfs:label "Prina";
-  display:isLeftOf exhib:exhibit0041 ;
-  display:hasInterface exhib:element0041 .
+  display:isLeftOf exhib:exhibit0041 .
+#  display:hasInterface exhib:element0041 .
+# [X] corr. objet doit être une interface
 
 exhib:exhibit0041 rdfs:label "Prina 2" .
 
@@ -403,8 +411,9 @@ exhib:exhibit0039 rdfs:label "Lévine 2";
   display:isRightOf exhib:exhibit0038 ;
   display:isLeftOf exhib:exhibit0040 ;
   #IsBetween?
-  display:faces exhib:exhibit0036 ;
-  display:hasInterface exhib:element0042 .
+  display:faces exhib:exhibit0036 .
+#  display:hasInterface exhib:element0042 .
+# [X] corr. objet doit être une interface
 
 exhib:exhibit0040 rdfs:label "Linke" .
 
@@ -472,13 +481,15 @@ exhib:space0019 a display:ExhibitionSpace ;
   
 exhib:exhibit0043 rdfs:label "Duchamp 1";
   display:isLeftOf exhib:exhibit0044 ;
-  display:faces exhib:exhibit0046 ;
-  display:hasInterface exhib:element0043 .
+  display:faces exhib:exhibit0046 .
+#  display:hasInterface exhib:element0043 .
+# [X] corr. objet doit être une interface
 
 exhib:exhibit0044 rdfs:label "Duchamp 2" .
 
-exhib:exhibit0045 rdfs:label "Venazzo";
-  display:hasInterface exhib:element0044 .
+exhib:exhibit0045 rdfs:label "Venazzo" .
+#  display:hasInterface exhib:element0044 .
+# [X] corr. objet doit être une interface
 
 exhib:exhibit0046 rdfs:label "Broodthaers" .
 
@@ -486,9 +497,9 @@ exhib:space0020 rdfs:label "bas de la salle 8"@fr .
 
 exhib:element0043 a display:DisplayWall .
 exhib:element0044 a display:DisplayWall .
-exhib:element0045 a display:DisplayWall ;
-  display:hasInterface exhib:exhibit0046 .
-
+exhib:element0045 a display:DisplayWall .
+#  display:hasInterface exhib:exhibit0046 .
+# [X] corr. objet doit être une interface
 
 #Pathway
 
@@ -550,24 +561,28 @@ exhib:exhibit0052 rdfs:label "Blondeau" ;
   display:isRightOf exhib:Morris ;
   display:faces exhib:exhibit0055 .
 
-exhib:exhibit0053 rdfs:label "Morris" ;
-   display:hasInterface exhib:element0050 .
+exhib:exhibit0053 rdfs:label "Morris" .
+#   display:hasInterface exhib:element0050 . 
+# [X] corr. objet doit être une interface
 
 exhib:exhibit0054 rdfs:label "Ready-made" ;
     display:faces exhib:exhibit0055 ;
-    display:faces exhib:exhibit0057 ;
-    display:hasInterface exhib:element0051 .
+    display:faces exhib:exhibit0057 .
+#    display:hasInterface exhib:element0051 .
+# [X] corr. objet doit être une interface
 
 exhib:exhibit0055 rdfs:label "Ready-made 2" .
   #au milieu de la piece au sol. Faces Salomon?
 
 exhib:exhibit0056 rdfs:label "Salomon" ;
   display:faces exhib:exhibit0055 ;
-  display:faces exhib:exhibit0052 ;
-  display:hasInterface exhib:element0052 .
+  display:faces exhib:exhibit0052 .
+#  display:hasInterface exhib:element0052 .
+# corr. objet doit être une interface
 
 exhib:exhibit0057 rdfs:label "Löcher" ;
-  display:hasInterface exhib:element0050 ;
+#  display:hasInterface exhib:element0050 ;
+# [X] corr. objet doit être une interface
   display:faces exhib:exhibit0055 . 
 
 exhib:element0050 a display:DisplayWall .
