@@ -256,9 +256,7 @@ exhib:element0017 a display:DisplayWall ;
 exhib:element0018 a display:DisplayWall .
 exhib:element0019 a display:DisplayWall .
 
-# connecter un élément avec un expôt
-# en utilisant une interface devrait nous permettre
-# d'inférérer le type d'interface.
+# connecter un élément avec un expôt en utilisant une interface devrait nous permettre d'inférérer le type d'interface.
 
 exhib:exhibit0013 rdfs:label "Spoerri" ;
   display:hasInterface exhib:interface0008 ;
@@ -636,12 +634,7 @@ exhib:space0016 bot:adjacentZone exhib:space0012 ,
   exhib:space0017 .
 exhib:space0021 bot:adjacentZone exhib:space0017 ,
   exhib:space0022 .
-exhib:space0022 bot:adjacentZone exhib:space0021 ,
-  exhib:space0023 .
-
-# salle 3
-
-exhib:space0007 display:hasInterface exhib:interface0021 .
+exhib:space0022 bot:adjacentZone exhib:space0023 .
 
 # salle 8
 
