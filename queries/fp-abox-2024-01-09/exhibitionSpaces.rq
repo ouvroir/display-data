@@ -1,0 +1,37 @@
+# tag fp-abox-2024-01-09
+
+# tous les espaces expographiques déclarés
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX display: <https://ouvroir.umontreal.ca/onto/display#>
+
+SELECT * WHERE {
+  ?es a display:ExhibitionSpace ;
+  	rdfs:label ?esl .
+}
+ORDER BY ?es # n = 17
+
+# tous les espaces expographiques déclarés ou inférés via SPARQL
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX display: <https://ouvroir.umontreal.ca/onto/display#>
+
+CONSTRUCT {
+  ?exhibitionSpace rdfs:label ?esl .
+}
+WHERE {
+  {
+    ?exhibitionSpace display:hasExhibit ?exhibit ;
+	  rdfs:label ?esl .
+  }
+  UNION
+  { ?exhibitionSpace a display:ExhibitionSpace ;
+	  rdfs:label ?esl .
+  }
+  UNION
+  { ?space display:hasExhibitionSpace ?exhibitionSpace .
+    ?exhibitionSpace rdfs:label ?esl .
+  }
+} # n = 28
+
+# Using ORDER BY on a solution sequence for a CONSTRUCT or DESCRIBE query has no direct effect because only SELECT returns a sequence of results Using ORDER BY on a solution sequence for a CONSTRUCT or DESCRIBE query has no direct effect because only SELECT returns a sequence of results https://www.w3.org/TR/sparql11-query/

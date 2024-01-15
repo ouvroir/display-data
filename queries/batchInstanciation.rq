@@ -6,7 +6,7 @@ PREFIX display: <https://ouvroir.umontreal.ca/onto/display#>
 PREFIX crm: <http://www.cidoc-crm.org/cidoc-crm/>
 PREFIX ex: <http://example.org/>
 
-CONSTRUCT {
+CONSTRUCT { # utiliser insert pour modifier le store
 
   ?exhibit a crm:E22_Human-Made_Object ;
     crm:P2_has_type ex:some_term_in_vocabulary_call_it_AAT . # exemple
