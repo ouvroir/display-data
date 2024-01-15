@@ -507,16 +507,16 @@ exhib:element0045 a display:DisplayWall .
 exhib:space0021 a display:ExhibitionSpace ;
   rdfs:label "salle 9 : Mesure pour mesure"@fr ;
   display:hasExhibit exhib:exhibit0047 ,
-  exhib:exhibit0048 ,
-  exhib:exhibit0049 ,
-  exhib:exhibit0050 ,
-  exhib:exhibit0051 .
+    exhib:exhibit0048 ,
+    exhib:exhibit0049 ,
+    exhib:exhibit0050 ;
+  display:intersectingExhibit exhib:exhibit0051 .
 
 exhib:exhibit0047 rdfs:label "Haacke" .
 exhib:exhibit0048 rdfs:label "Manzoni 1" .
 exhib:exhibit0049 rdfs:label "Duchamp 3" .
 exhib:exhibit0050 rdfs:label "Broodthaers" .
-exhib:exhibit0051 rdfs:label "Parcelle à céder" .
+exhib:exhibit0051 rdfs:label "Parcelle à céder"@fr .
 
 exhib:element0046 a display:DisplayWall .
 exhib:element0047 a display:DisplayWall .
@@ -536,6 +536,7 @@ exhib:element0049 a display:Showcase ;
 
 exhib:space0022 a display:ExhibitionSpace ;
   rdfs:label "salle 10 : De la propriété littéraire et artistique"@fr ;
+  display:intersectingExhibit exhib:exhibit0051 .
 
 #Pathway
 
