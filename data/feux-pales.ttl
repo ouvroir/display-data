@@ -340,6 +340,13 @@ exhib:exhibit0032 rdfs:label "Richter 1" .
 exhib:exhibit0033 rdfs:label "Richter 2" .
 #  display:hasInterface exhib:element0031 .
 # [X] corr. objet doit être une interface
+# par exemple : 
+exhib:interface0033 a display:HangingInterface ;
+  rdfs:label "Interface d'accrochage de Richter"@fr ;
+  rdfs:comment "L'utilisation des interfaces permet de complexifier les relations, c'est-à-dire d'aller au-delà de la relation binaire du triplet RDF. Ainsi, nous pouvons impliquer plus de deux entités dans la relation si nécessaire."@fr ,
+    "Par ailleurs, exhib:element0031 sera reclassé, par inférence, comme un display:Support puisqu'il est impliqué dans une relation d'interface."@fr ;
+  bot:interfaceOf exhib:exhibit0033 ,
+    exhib:element0031 .
 
 exhib:exhibit0034 rdfs:label "Clairet" ;
   display:isRightOf exhib:exhibit0027 . # corr. : ?
@@ -660,9 +667,16 @@ exhib:interface0026 a display:PathwayInterface ;
 #salle 10
 
 exhib:interface0027 a display:PathwayInterface ;
+  rdfs:label "Interface de circulation côté Haake"@fr ;
   bot:interfaceOf exhib:space0021 ,
     exhib:space0022 .
 # pas la subtilité du pilier au milieu.
+# il faudrait créer deux interfaces de circulation dans ce cas :
+exhib:interface0032 a display:PathwayInterface ;
+  rdfs:label "Interface de circulation côté Broodthaers"@fr ;
+  bot:interfaceOf exhib:space0021 ,
+    exhib:space0022 .
+
 
 # salle 11
 
