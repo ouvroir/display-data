@@ -36,8 +36,7 @@ exhib:exhibit0003 a display:Exhibit ;
   display:isBelow exhib:exhibit0001 .
 
 exhib:exhibit0004 a display:Exhibit ;
-  rdfs:label "Sommaire de l’exposition"@fr ;
-  display:spatialFuzzyness 2 . # représenter les niveaux de certitude
+  rdfs:label "Sommaire de l’exposition"@fr .
 
 exhib:element0004 a display:DisplayWall ;
   rdfs:label "Cimaise du code-barre"@fr ;
@@ -154,7 +153,8 @@ exhib:element0012 a display:DisplayWall ;
 
 exhib:interface0002 a display:PathwayInterface ;
   bot:interfaceOf exhib:space0002 , exhib:space0003 .
-  # pathwayInterfaceOf, avec domaine et portée pour inférence
+  # pathwayInterfaceOf, avec domaine et portée pour inférence # mod.
+  # voir branche pathways pour premier essais
 
 exhib:interface0003 a display:PathwayInterface ;
   bot:interfaceOf exhib:space0002 , exhib:space0005 .
@@ -378,6 +378,8 @@ exhib:interface0024 a display:PathwayInterface ;
 
 #vérifier les interfaces. Ne serait-il pas plus clair de mettre les Interfaces PathWay au meme endroit en dehors des salles? 
 #Faut-il déclarer que exhibit0027 est sur un mur ou il est suffisant qu'il soit face à exhibit0026?
+# solution proposée serait hasHangingInterface avec domain exhibit
+# similaire à pathwayInterfaceOf plus haut
 
 ####################################################
 # Salle 6
@@ -564,7 +566,7 @@ exhib:space0025 rdfs:label "milieu 11"@fr ;
     exhib:exhibit0057 .
 
 exhib:exhibit0052 rdfs:label "Blondeau" ;
-  display:isRightOf exhib:Morris ;
+  display:isRightOf exhib:exhibit0053 ;
   display:faces exhib:exhibit0055 .
 
 exhib:exhibit0053 rdfs:label "Morris" .
@@ -634,9 +636,9 @@ exhib:space0997 a display:ExhibitionSpace ;
 ####################################################
 
 # adjacences
+# bot:adjacentZone is Symmetric
 
 exhib:space0001  bot:adjacentZone exhib:space0005 .
-
 exhib:space0006  bot:adjacentZone exhib:exhibit0005 ,
   exhib:space0010 .
 exhib:space0011 bot:adjacentZone exhib:space0010 ,
