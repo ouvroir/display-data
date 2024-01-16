@@ -226,7 +226,7 @@ exhib:space0006 a display:ExhibitionSpace ;
 
 exhib:space0007 rdfs:label "haut de la salle 3"@fr .
 
-exhib:space0008 rdfs:label "espace Spoerri"@fr ;
+exhib:space0008 rdfs:label "milieu de la salle 3 (espace Spoerri)"@fr ;
   display:hasInterface exhib:interface0009 ,
     exhib:interface0010 .
 
@@ -268,9 +268,10 @@ exhib:element0028 a display:Base .
 
 # Duchamp
 # Ne peut pas relever du point de vue (personne qui regarde)
-exhib:exhibit0015 rdfs:label "Duchamp" ;
+exhib:exhibit0015 rdfs:label "Fontaine (Duchamp)" ;
   display:on exhib:element0029 .
-exhib:element0029 a display:Base .
+exhib:element0029 a display:Base ;
+  rdfs:label "socle sur lequel est posé Fontaine (Duchamp), dans la salle 3"
 
 # Manzoni
 exhib:exhibit0016 rdfs:label "Manzoni" ;
@@ -547,13 +548,13 @@ exhib:space0022 a display:ExhibitionSpace ;
 exhib:space0023 a display:ExhibitionSpace ;
   rdfs:label "salle 11 : L’index"@fr .
 
-exhib:space0024 rdfs:label "haut de la salle 11"@fr ;
+exhib:space0025 rdfs:label "milieu 11"@fr ;
   display:hasExhibit exhib:exhibit0052 ,
-  exhib:exhibit0053 ,
-  exhib:exhibit0054 ,
-  exhib:exhibit0055 ,
-  exhib:exhibit0056 ,
-  exhib:exhibit0057 .
+    exhib:exhibit0053 ,
+    exhib:exhibit0054 ,
+    exhib:exhibit0055 ,
+    exhib:exhibit0056 ,
+    exhib:exhibit0057 .
 
 exhib:exhibit0052 rdfs:label "Blondeau" ;
   display:isRightOf exhib:Morris ;
@@ -588,7 +589,7 @@ exhib:element0051 a display:DisplayWall .
 exhib:element0052 a display:DisplayWall .
 exhib:element0053 a display:DisplayWall .
 
-exhib:space0025 rdfs:label "milieu de la salle 11"@fr .
+exhib:space0024 rdfs:label "haut de la salle 11"@fr .
 exhib:space0026 rdfs:label "bas de la salle 11"@fr .
 
 #j'ai laissé les isleft/rightOf en fonction du regardeur parce que nous avons commencé comme ça, malgré la problématique que cela pose.
@@ -618,11 +619,13 @@ exhib:space0998 a display:ExhibitionSpace ;
   bot:intersectsZone exhib:space0009 .
 
 exhib:space0997 a display:ExhibitionSpace ;
-  rdfs:label "Espace desservant Broodthaers"@fr .
+  rdfs:label "Espace desservant Broodthaers"@fr ;
+  rdfs:comment "Description inachevée; il n'est pas clair que la notion d'espace deservant nous sera utile."@fr .
 
 ####################################################
 # Vérifications Espaces
 ####################################################
+
 # adjacences
 
 exhib:space0001  bot:adjacentZone exhib:space0005 .
@@ -643,7 +646,8 @@ exhib:space0017 display:hasExhibitionSpace exhib:space0018 ,
   exhib:space0019 ,
   exhib:space0020 .
 
-exhib:space0020 a display:ExhibitionSpace . # si omis, sera inféré
+# si omis, sera inféré
+exhib:space0020 a display:ExhibitionSpace .
 
 exhib:interface0025 a display:PathwayInterface ;
   bot:interfaceOf exhib:space0018 ,
