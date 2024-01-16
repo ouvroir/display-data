@@ -137,7 +137,7 @@ exhib:element0016 a display:Showcase ;
 
 exhib:space0004 a display:ExhibitionSpace ;
   rdfs:label "bas de la salle 1"@fr ;
-  display:adjacentElement exhib:element0012 .
+  bot:adjacentElement exhib:element0012 .
 
 exhib:element0009 a display:DisplayWall ;
   rdfs:label "cimaise Remps"@fr .
@@ -638,8 +638,7 @@ exhib:space0997 a display:ExhibitionSpace ;
 # adjacences
 # bot:adjacentZone is Symmetric
 
-exhib:space0001  bot:adjacentZone exhib:space0005 .
-exhib:space0006  bot:adjacentZone exhib:exhibit0005 ,
+exhib:space0006  bot:adjacentZone exhib:space0005 ,
   exhib:space0010 .
 exhib:space0011 bot:adjacentZone exhib:space0010 ,
   exhib:space0012 .
