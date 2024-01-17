@@ -271,7 +271,7 @@ exhib:element0028 a display:Base .
 exhib:exhibit0015 rdfs:label "Fontaine (Duchamp)" ;
   display:on exhib:element0029 .
 exhib:element0029 a display:Base ;
-  rdfs:label "socle sur lequel est posé Fontaine (Duchamp), dans la salle 3"
+  rdfs:label "socle sur lequel est posé Fontaine (Duchamp), dans la salle 3" .
 
 # Manzoni
 exhib:exhibit0016 rdfs:label "Manzoni" ;
