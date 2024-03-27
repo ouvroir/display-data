@@ -89,7 +89,9 @@ exhib:space0003 a display:ExhibitionSpace ;
     exhib:element0010 ,
     exhib:element0011 ,
     exhib:element0012 ;
-  display:hasExhibit exhib:exhibit0005 ,
+  display:hasExhibit exhib:display001.
+
+Exhib:display001 display:includes  exhib:exhibit0005 ,
     exhib:exhibit0006 ,
     exhib:exhibit0007 ,
     exhib:exhibit0008 ,
@@ -107,6 +109,15 @@ exhib:element0013 a display:Showcase ;
 
 exhib:element0015 a display:Showcase ;
   rdfs:label "vitrine (laquelle?)"@fr .
+  
+  # je veux dire que dans le showcase il y a un display :
+exhib:element0015 display:contains exhib:display002 . 
+exhib:display001 display:includes exhib:exhibit0058 ,
+exhib:exhibit0059 , 
+exhib:exhibit0060 , 
+exhib:exhibit0061 , 
+exhib:exhibit0062 .
+
 
 exhib:element0014 a display:Base ;
   rdfs:label "Socle de Platon"@fr .
