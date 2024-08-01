@@ -12,7 +12,7 @@
 
 exhib:space0000 rdfs:label "Préambule"@fr ;
   bot:adjacentZone exhib:space0001 ; # Symmetric
-  display:hasExhibit exhib:exhibit0001 , # inféré?
+  display:containsExhibit exhib:exhibit0001 , # inféré?
     exhib:exhibit0002 ,
     exhib:exhibit0003 ,
     exhib:exhibit0004 ;
@@ -89,9 +89,10 @@ exhib:space0003 a display:ExhibitionSpace ;
     exhib:element0010 ,
     exhib:element0011 ,
     exhib:element0012 ;
-  display:hasExhibit exhib:display001.
+  display:containsExhibit exhib:display001 .
 
-Exhib:display001 display:includes  exhib:exhibit0005 ,
+# display001 est un display
+exhib:display001 display:includes exhib:exhibit0005 ,
     exhib:exhibit0006 ,
     exhib:exhibit0007 ,
     exhib:exhibit0008 ,
@@ -109,15 +110,14 @@ exhib:element0013 a display:Showcase ;
 
 exhib:element0015 a display:Showcase ;
   rdfs:label "vitrine (laquelle?)"@fr .
-  
-  # je veux dire que dans le showcase il y a un display :
-exhib:element0015 display:contains exhib:display002 . 
-exhib:display001 display:includes exhib:exhibit0058 ,
-exhib:exhibit0059 , 
-exhib:exhibit0060 , 
-exhib:exhibit0061 , 
-exhib:exhibit0062 .
 
+# je veux dire que dans le showcase il y a un display :
+exhib:element0015 display:contains exhib:display002 .
+exhib:display001 display:includes exhib:exhibit0058 ,
+  exhib:exhibit0059 ,
+  exhib:exhibit0060 ,
+  exhib:exhibit0061 ,
+  exhib:exhibit0062 .
 
 exhib:element0014 a display:Base ;
   rdfs:label "Socle de Platon"@fr .
@@ -185,7 +185,7 @@ exhib:interface0006 a display:HangingInterface ;
 
 exhib:space0005 a display:ExhibitionSpace ;
   rdfs:label "salle 2 : Le cabinets d’amateurs"@fr ;
-  display:hasExhibit exhib:exhibit0021 ,
+  display:containsExhibit exhib:exhibit0021 ,
     exhib:exhibit0022 ,
     exhib:exhibit0023 ,
     exhib:exhibit0024 ,
@@ -255,7 +255,7 @@ exhib:interface0009 a display:PathwayInterface ;
 exhib:interface0010 a display:PathwayInterface ;
   bot:interfaceOf exhib:space0009 .
 
-exhib:space0008 display:hasExhibit exhib:exhibit0013 ,
+exhib:space0008 display:containsExhibit exhib:exhibit0013 ,
   exhib:exhibit0013 ,
   exhib:exhibit0014 ,
   exhib:exhibit0015 ,
@@ -302,7 +302,7 @@ exhib:element0020 a display:Showcase ;
 
 exhib:space0010 a display:ExhibitionSpace ;
   rdfs:label "salle 4 : Le musée sans objet"@fr ;
-  display:hasExhibit exhib:exhibit0026 ,
+  display:containsExhibit exhib:exhibit0026 ,
     exhib:exhibit0027 ,
     exhib:exhibit0028 ,
     exhib:exhibit0029 ,
@@ -337,7 +337,7 @@ exhib:space0011 a display:ExhibitionSpace ;
   rdfs:label "salle 5 : Passif de la modernité"@fr ;
 #  bot:interfaceOf exhib:space0010 ;
 #  [X] corr. sujet doit être une interface
-  display:hasExhibit exhib:exhibit0031 ,
+  display:containsExhibit exhib:exhibit0031 ,
     exhib:exhibit0032 ,
     exhib:exhibit0033 ,
     exhib:exhibit0034 ,
@@ -404,7 +404,7 @@ exhib:space0012 a display:ExhibitionSpace ;
 exhib:space0013 rdfs:label "haut de la salle 6"@fr .
 
 exhib:space0014 rdfs:label "milieu de la salle 6"@fr ;
-  display:hasExhibit exhib:exhibit0036 ,
+  display:containsExhibit exhib:exhibit0036 ,
   exhib:exhibit0037 ,
   exhib:exhibit0038 ,
   exhib:exhibit0039 ,
@@ -456,7 +456,7 @@ exhib:interface0016 a display:PathwayInterface ;
 ####################################################
 
 exhib:space0016 rdfs:label "salle 7 : Respect de l’étiquette, intérêt du cartel"@fr ;
-  display:hasExhibit exhib:exhibit0042 . 
+  display:containsExhibit exhib:exhibit0042 . 
 
 exhib:exhibit0042 rdfs:label "Souvenir écran" .
 #au mileu de la salle au sol. 
@@ -501,7 +501,7 @@ exhib:element0054 display:faces exhib:element0055 .
 
 exhib:space0019 a display:ExhibitionSpace ;
   rdfs:label "milieu de salle 8"@f ;
-  display:hasExhibit exhib:exhibit0043 ,
+  display:containsExhibit exhib:exhibit0043 ,
   exhib:exhibit0044 ,
   exhib:exhibit0045 ,
   exhib:exhibit0046 .
@@ -534,7 +534,7 @@ exhib:element0045 a display:DisplayWall .
 
 exhib:space0021 a display:ExhibitionSpace ;
   rdfs:label "salle 9 : Mesure pour mesure"@fr ;
-  display:hasExhibit exhib:exhibit0047 ,
+  display:containsExhibit exhib:exhibit0047 ,
     exhib:exhibit0048 ,
     exhib:exhibit0049 ,
     exhib:exhibit0050 ;
@@ -576,7 +576,7 @@ exhib:space0023 a display:ExhibitionSpace ;
   rdfs:label "salle 11 : L’index"@fr .
 
 exhib:space0025 rdfs:label "milieu 11"@fr ;
-  display:hasExhibit exhib:exhibit0052 ,
+  display:containsExhibit exhib:exhibit0052 ,
     exhib:exhibit0053 ,
     exhib:exhibit0054 ,
     exhib:exhibit0055 ,
