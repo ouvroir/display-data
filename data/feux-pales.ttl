@@ -2,7 +2,7 @@
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix display: <https://ouvroir.umontreal.ca/onto/display#> .
-@prefix exhib: <https://ouvroir.umontreal.ca/data/exhib#> .
+@prefix exhib: <https://ouvroir.umontreal.ca/data/exhib/> .
 
 # Feux pâles selon Display
 
@@ -106,18 +106,19 @@ exhib:exhibit0005 a display:Exhibit ;
   display:faces exhib:element0013 .
 
 exhib:element0013 a display:Showcase ;
-  rdfs:label "vitrine (laquelle?)"@fr .
+  rdfs:label "vitrine vis-à-vis Remps"@fr .
 
 exhib:element0015 a display:Showcase ;
   rdfs:label "vitrine (laquelle?)"@fr .
 
 # je veux dire que dans le showcase il y a un display :
 exhib:element0015 display:contains exhib:display002 .
-exhib:display001 display:includes exhib:exhibit0058 ,
-  exhib:exhibit0059 ,
-  exhib:exhibit0060 ,
-  exhib:exhibit0061 ,
-  exhib:exhibit0062 .
+exhib:display002 a display:Display ;
+  display:includes exhib:exhibit0058 ,
+    exhib:exhibit0059 ,
+    exhib:exhibit0060 ,
+    exhib:exhibit0061 ,
+    exhib:exhibit0062 .
 
 exhib:element0014 a display:Base ;
   rdfs:label "Socle de Platon"@fr .
@@ -142,7 +143,7 @@ exhib:exhibit0009 a display:Exhibit ;
   display:isRightOf exhib:element0016 .
 
 exhib:element0016 a display:Showcase ;
-  rdfs:label "vitrine (laquelle?)"@fr ;
+  rdfs:label "vitrine (vers le bas du plan)"@fr ;
   display:faces exhib:element0015 ;
   display:isLeftOf exhib:exhibit0009 .
 
@@ -192,7 +193,7 @@ exhib:space0005 a display:ExhibitionSpace ;
     exhib:exhibit0025 .
 
 exhib:exhibit0021 rdfs:label "Janssens 1" ;
-  display:inFrontOf exhib:exhibit0002 .
+  display:inFrontOf exhib:element0024 .
 exhib:exhibit0022 rdfs:label "Janssens 2" .
 exhib:exhibit0023 rdfs:label "Francken" ;
   display:inFrontOf exhib:exhibit0024 ,
@@ -543,7 +544,7 @@ exhib:space0021 a display:ExhibitionSpace ;
 exhib:exhibit0047 rdfs:label "Haacke" .
 exhib:exhibit0048 rdfs:label "Manzoni 1" .
 exhib:exhibit0049 rdfs:label "Duchamp 3" .
-exhib:exhibit0050 rdfs:label "Broodthaers, salle 9" .
+exhib:exhibit0050 rdfs:label "Broodthaers (salle 9)"@fr .
 exhib:exhibit0051 rdfs:label "Parcelle à céder"@fr .
 
 exhib:element0046 a display:DisplayWall .
