@@ -1,9 +1,12 @@
-@prefix bot: <https://w3id.org/bot#> .
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix display: <https://ouvroir.umontreal.ca/onto/display#> .
-@prefix exhib: <https://ouvroir.umontreal.ca/data/exhib/> .
+PREFIX bot: <https://w3id.org/bot#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX display: <https://w3id.org/display#>
+PREFIX exhib: <https://ouvroir.umontreal.ca/data/>
+PREFIX la: <https://linked.art/ns/terms/>
+PREFIX crm: <http://www.cidoc-crm.org/cidoc-crm/>
 
+####################################################
 # Feux pâles selon Display
 
 ####################################################
