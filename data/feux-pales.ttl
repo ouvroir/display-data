@@ -6,12 +6,14 @@ PREFIX exhib: <https://ouvroir.umontreal.ca/data/>
 PREFIX la: <https://linked.art/ns/terms/>
 PREFIX crm: <http://www.cidoc-crm.org/cidoc-crm/>
 
-####################################################
-# Feux pâles selon Display
+#########################################################
+# Feux pâles selon Display                              #
+# Encodage réalisé par David Valentine et Zoë Renaudie  #
+#########################################################
 
-####################################################
+########################################################
 # Préambule
-####################################################
+########################################################
 
 exhib:space0000 rdfs:label "Préambule"@fr ;
   bot:adjacentZone exhib:space0001 ; # Symmetric
@@ -41,14 +43,14 @@ exhib:exhibit0003 a display:Exhibit ;
 exhib:exhibit0004 a display:Exhibit ;
   rdfs:label "Sommaire de l’exposition"@fr .
 
-exhib:element0004 a display:DisplayWall ;
+exhib:element0004 a display:Element ;
   rdfs:label "Cimaise du code-barre"@fr ;
   rdfs:comment "Cloison (cimaise) qui sert de support à exhib:exhibit0001. Identifié comme mur A dans le rapport"@fr .
 
-exhib:element0005 a display:DisplayWall ;
+exhib:element0005 a display:Element ;
   rdfs:label "cimaise du préambule"@fr .
 
-exhib:element0006 a display:DisplayWall ;
+exhib:element0006 a display:Element ;
   rdfs:label "cimaise faisant face au mur de la porte d'entrée"@fr .
 
 exhib:element0007 a display:Wall ;
@@ -70,9 +72,9 @@ exhib:interface0000 a display:PathwayInterface ;
 exhib:interface0001 a display:PathwayInterface ;
   bot:interfaceOf exhib:space0000 , exhib:space0004 .
 
-####################################################
+########################################################
 # Salle 1
-####################################################
+########################################################
 
 exhib:space0001 a display:ExhibitionSpace ;
   rdfs:label "salle 1 : Inventaire du mémorable"@fr ;
@@ -183,9 +185,9 @@ exhib:interface0005 a display:PathwayInterface ;
 exhib:interface0006 a display:HangingInterface ;
   bot:interfaceOf exhib:element0009 , exhib:exhibit0005 .
 
-####################################################
+########################################################
 # Salle 2
-####################################################
+########################################################
 
 exhib:space0005 a display:ExhibitionSpace ;
   rdfs:label "salle 2 : Le cabinets d’amateurs"@fr ;
@@ -229,9 +231,9 @@ exhib:interface0013 a display:HangingInterface ;
     exhib:exhibit0021 .
 
 
-####################################################
+########################################################
 # Salle 3
-####################################################
+########################################################
 
 exhib:space0006 a display:ExhibitionSpace ;
   rdfs:label "salle 3 : L’art d’accommoder les restes"@fr ;
@@ -300,9 +302,9 @@ exhib:exhibit0017 rdfs:label "Beuys" ;
 exhib:element0020 a display:Showcase ;
   display:inFrontOf exhib:element0018 .
 
-####################################################
+########################################################
 # Salle 4
-####################################################
+########################################################
 
 exhib:space0010 a display:ExhibitionSpace ;
   rdfs:label "salle 4 : Le musée sans objet"@fr ;
@@ -333,9 +335,9 @@ exhib:element0026 a display:DisplayWall ;
 exhib:interface0021 a display:PathwayInterface ;
   bot:interfaceOf exhib:space0007 , exhib:space0010 .
 
-####################################################
+########################################################
 # Salle 5
-####################################################
+########################################################
 
 exhib:space0011 a display:ExhibitionSpace ;
   rdfs:label "salle 5 : Passif de la modernité"@fr ;
@@ -396,9 +398,9 @@ exhib:interface0024 a display:PathwayInterface ;
 # solution proposée serait hasHangingInterface avec domain exhibit
 # similaire à pathwayInterfaceOf plus haut
 
-####################################################
+########################################################
 # Salle 6
-####################################################
+########################################################
 
 exhib:space0012 a display:ExhibitionSpace ;
   rdfs:label "salle 6 : La chair est triste, hélas ! Et j’ai lu tous les livres...."@fr .
@@ -455,9 +457,9 @@ exhib:interface0016 a display:PathwayInterface ;
 
 #vérifier les interfaces
 
-####################################################
+########################################################
 # Salle 7
-####################################################
+########################################################
 
 exhib:space0016 rdfs:label "salle 7 : Respect de l’étiquette, intérêt du cartel"@fr ;
   display:containsExhibit exhib:exhibit0042 . 
@@ -485,9 +487,9 @@ exhib:interface0020 a display:PathwayInterface ;
   bot:interfaceOf exhib:space0016 ,
     exhib:space0020 .
 
-####################################################
+########################################################
 # Salle 8
-####################################################
+########################################################
 
 exhib:space0017 a display:ExhibitionSpace ;
   rdfs:label "salle 8 : Le musée réfléchi"@fr .
@@ -532,9 +534,9 @@ exhib:element0045 a display:DisplayWall .
 
 #Pathway
 
-####################################################
+########################################################
 # Salle 9
-####################################################
+########################################################
 
 exhib:space0021 a display:ExhibitionSpace ;
   rdfs:label "salle 9 : Mesure pour mesure"@fr ;
@@ -562,9 +564,9 @@ exhib:element0049 a display:Showcase ;
     
 #Pathway
 
-####################################################
+########################################################
 # Salle 10
-####################################################
+########################################################
 
 exhib:space0022 a display:ExhibitionSpace ;
   rdfs:label "salle 10 : De la propriété littéraire et artistique"@fr ;
@@ -572,9 +574,9 @@ exhib:space0022 a display:ExhibitionSpace ;
 
 #Pathway
 
-####################################################
+########################################################
 # Salle 11
-####################################################
+########################################################
 
 exhib:space0023 a display:ExhibitionSpace ;
   rdfs:label "salle 11 : L’index"@fr .
@@ -625,9 +627,9 @@ exhib:space0026 rdfs:label "bas de la salle 11"@fr .
 
 #j'ai laissé les isleft/rightOf en fonction du regardeur parce que nous avons commencé comme ça, malgré la problématique que cela pose.
 
-####################################################
+########################################################
 # Espaces déservants
-####################################################
+########################################################
 
 exhib:space0999 a display:ExhibitionSpace ;
   rdfs:label "Espace desservant Francken"@fr ;
@@ -653,9 +655,9 @@ exhib:space0997 a display:ExhibitionSpace ;
   rdfs:label "Espace desservant Broodthaers"@fr ;
   rdfs:comment "Description inachevée; il n'est pas clair que la notion d'espace deservant nous sera utile."@fr .
 
-####################################################
+########################################################
 # Vérifications Espaces
-####################################################
+########################################################
 
 # adjacences
 # bot:adjacentZone is Symmetric
