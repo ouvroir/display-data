@@ -30,6 +30,10 @@ Peu d’information sur les expôts est actuellement disponible dans ce jeu de d
 
 Référence : [Label Everything](https://patterns.dataincubator.org/book/label-everything.html)
 
+Remarque : l’utilisation de deux propriétés `rdfs:label` ou plus pour une même entité, par exemple avec différentes étiquettes linguistiques, rend les données non conformes au modèle de Linked Art.
+
+Référence : [core-properties](https://linked.art/model/base/#core-properties)
+
 ## Identifier les ressources selon la convention proposée
 
 - `exhib:space[0-9]{4}`
