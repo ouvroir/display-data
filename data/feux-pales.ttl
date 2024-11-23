@@ -725,6 +725,28 @@ exhib:interface0030 a display:PathwayInterface ;
 exhib:interface0031 a display:PathwayInterface ;
   bot:interfaceOf exhib:space0026 ,
     exhib:space0025 .
+
+
+########################################################
+# L'ensemble des expôts
+# décrit selon voir https://linked.art/model/collection/
+########################################################
+
+exhib:set0000 a la:Set ;
+  rdfs:label "Expôts de Feux pâles (1990)" ;
+  crm:P2_has_type aat:300378926 ;
+  crm:P1_is_identified_by [ a crm:E33_E41_Linguistic_Appellation ;
+    crm:P190_has_symbolic_content "Expôts de Feux pâles (1990)" ;
+    crm:P2_has_type aat:300404670 ] ;
+  crm:P67i_is_referred_to_by [ a crm:E33_Linguistic_Object ;
+    crm:P190_has_symbolic_content "L'ensemble des expôts de l'exposition Feux pâles, CAPC Bordeaux, 1990" ;
+    crm:P2_has_type aat:300435416 ] ;
+  crm:P94i_was_created_by [ a crm:E65_Creation ;
+#    crm:P4_has_time-span [ a crm:E52_Time-Span ;
+#    crm:P82a_begin_of_the_begin "2019-05-01T00:00:00Z" ;
+#    crm:P82b_end_of_the_end "2019-05-01T23:59:59Z" ]
+  ] .
+
 ########################################################
 # display:Element as seen by CIDOC
 ########################################################
@@ -1005,3 +1027,67 @@ exhib:exhibit0002 a crm:E22_Human-Made_Object ;
 
 exhib:exhibit0030 a crm:E22_Human-Made_Object ;
   crm:P2_has_type aat:300133025 .
+
+########################################################
+# Put exhibits in the Feux pâles set
+# FP set brings together exhibits as proposed by PT 
+########################################################
+
+exhib:exhibit0037 la:member_of exhib:set0000 .
+exhib:exhibit0024 la:member_of exhib:set0000 .
+exhib:exhibit0052 la:member_of exhib:set0000 .
+exhib:exhibit0011 la:member_of exhib:set0000 .
+exhib:exhibit0058 la:member_of exhib:set0000 .
+exhib:exhibit0017 la:member_of exhib:set0000 .
+exhib:exhibit0045 la:member_of exhib:set0000 .
+exhib:exhibit0004 la:member_of exhib:set0000 .
+exhib:exhibit0032 la:member_of exhib:set0000 .
+exhib:exhibit0060 la:member_of exhib:set0000 .
+exhib:exhibit0038 la:member_of exhib:set0000 .
+exhib:exhibit0025 la:member_of exhib:set0000 .
+exhib:exhibit0053 la:member_of exhib:set0000 .
+exhib:exhibit0012 la:member_of exhib:set0000 .
+exhib:exhibit0040 la:member_of exhib:set0000 .
+exhib:exhibit0059 la:member_of exhib:set0000 .
+exhib:exhibit0046 la:member_of exhib:set0000 .
+exhib:exhibit0005 la:member_of exhib:set0000 .
+exhib:exhibit0033 la:member_of exhib:set0000 .
+exhib:exhibit0061 la:member_of exhib:set0000 .
+exhib:exhibit0039 la:member_of exhib:set0000 .
+exhib:exhibit0026 la:member_of exhib:set0000 .
+exhib:exhibit0054 la:member_of exhib:set0000 .
+exhib:exhibit0013 la:member_of exhib:set0000 .
+exhib:exhibit0047 la:member_of exhib:set0000 .
+exhib:exhibit0006 la:member_of exhib:set0000 .
+exhib:exhibit0034 la:member_of exhib:set0000 .
+exhib:exhibit0062 la:member_of exhib:set0000 .
+exhib:exhibit0021 la:member_of exhib:set0000 .
+exhib:exhibit0027 la:member_of exhib:set0000 .
+exhib:exhibit0055 la:member_of exhib:set0000 .
+exhib:exhibit0014 la:member_of exhib:set0000 .
+exhib:exhibit0042 la:member_of exhib:set0000 .
+exhib:exhibit0001 la:member_of exhib:set0000 .
+exhib:exhibit0048 la:member_of exhib:set0000 .
+exhib:exhibit0007 la:member_of exhib:set0000 .
+exhib:exhibit0035 la:member_of exhib:set0000 .
+exhib:exhibit0022 la:member_of exhib:set0000 .
+exhib:exhibit0050 la:member_of exhib:set0000 .
+exhib:exhibit0028 la:member_of exhib:set0000 .
+exhib:exhibit0056 la:member_of exhib:set0000 .
+exhib:exhibit0015 la:member_of exhib:set0000 .
+exhib:exhibit0043 la:member_of exhib:set0000 .
+exhib:exhibit0002 la:member_of exhib:set0000 .
+exhib:exhibit0030 la:member_of exhib:set0000 .
+exhib:exhibit0049 la:member_of exhib:set0000 .
+exhib:exhibit0008 la:member_of exhib:set0000 .
+exhib:exhibit0036 la:member_of exhib:set0000 .
+exhib:exhibit0023 la:member_of exhib:set0000 .
+exhib:exhibit0051 la:member_of exhib:set0000 .
+exhib:exhibit0010 la:member_of exhib:set0000 .
+exhib:exhibit0029 la:member_of exhib:set0000 .
+exhib:exhibit0057 la:member_of exhib:set0000 .
+exhib:exhibit0016 la:member_of exhib:set0000 .
+exhib:exhibit0044 la:member_of exhib:set0000 .
+exhib:exhibit0003 la:member_of exhib:set0000 .
+exhib:exhibit0031 la:member_of exhib:set0000 .
+exhib:exhibit0009 la:member_of exhib:set0000 .
