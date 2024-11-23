@@ -5,6 +5,7 @@ PREFIX display: <https://w3id.org/display#>
 PREFIX exhib: <https://ouvroir.umontreal.ca/data/>
 PREFIX la: <https://linked.art/ns/terms/>
 PREFIX crm: <http://www.cidoc-crm.org/cidoc-crm/>
+PREFIX aat: <http://vocab.getty.edu/aat/>
 
 #########################################################
 # Feux pâles selon Display                              #
@@ -156,16 +157,16 @@ exhib:space0004 a display:ExhibitionSpace ;
   rdfs:label "bas de la salle 1"@fr ;
   bot:adjacentElement exhib:element0012 .
 
-exhib:element0009 a display:DisplayWall ;
+exhib:element0009 a display:Element ;
   rdfs:label "cimaise Remps"@fr .
 
-exhib:element0010 a display:DisplayWall ;
+exhib:element0010 a display:Element ;
   rdfs:label "cimaise de la salle 1"@fr .
 
-exhib:element0011 a display:DisplayWall ;
+exhib:element0011 a display:Element ;
   rdfs:label "cimaise de la salle 1"@fr .
 
-exhib:element0012 a display:DisplayWall ;
+exhib:element0012 a display:Element ;
   rdfs:label "cimaise de la salle 1"@fr .
 
 exhib:interface0002 a display:PathwayInterface ;
@@ -208,16 +209,16 @@ exhib:exhibit0025 rdfs:label "Thomas" .
 
 exhib:interface0011 a display:PathwayInterface .
 
-exhib:element0021 a display:DisplayWall ;
+exhib:element0021 a display:Element ;
   rdfs:label "cimaise de la salle 2 haut"@fr .
 
-exhib:element0022 a display:DisplayWall ;
+exhib:element0022 a display:Element ;
   rdfs:label "cimaise de la salle 2 gauche"@fr .
 
-exhib:element0023 a display:DisplayWall ;
+exhib:element0023 a display:Element ;
   rdfs:label "cimaise de la salle 2 bas"@fr .
 
-exhib:element0024 a display:DisplayWall ;
+exhib:element0024 a display:Element ;
   rdfs:label "cimaise de la salle 2 droite"@fr .
   
 exhib:interface0012 a display:HangingInterface ;
@@ -268,10 +269,10 @@ exhib:space0008 display:containsExhibit exhib:exhibit0013 ,
   exhib:exhibit0016 ,
   exhib:exhibit0017 .
 
-exhib:element0017 a display:DisplayWall ;
+exhib:element0017 a display:Element ;
   display:hasInterface exhib:interface0008 .
-exhib:element0018 a display:DisplayWall .
-exhib:element0019 a display:DisplayWall .
+exhib:element0018 a display:Element .
+exhib:element0019 a display:Element .
 
 # connecter un élément avec un expôt en utilisant une interface devrait nous permettre d'inférérer le type d'interface.
 
@@ -329,7 +330,7 @@ exhib:element0025 a display:Showcase ;
     exhib:exhibit0029 ,
     exhib:exhibit0030 .
 
-exhib:element0026 a display:DisplayWall ;
+exhib:element0026 a display:Element ;
   rdfs:label "cimaise de la salle 4"@fr .
 
 exhib:interface0021 a display:PathwayInterface ;
@@ -374,15 +375,15 @@ exhib:exhibit0035 rdfs:label "Charlton" .
 #  display:hasInterface exhib:element0033 .
 # [X] corr. objet doit être une interface
 
-exhib:element0030 a display:DisplayWall .
+exhib:element0030 a display:Element .
 #  display:hasInterface exhib:exhibit0026 .
 # [X] corr. objet doit être une interface
 
-exhib:element0031 a display:DisplayWall .
+exhib:element0031 a display:Element .
 
-exhib:element0032 a display:DisplayWall .
+exhib:element0032 a display:Element .
 
-exhib:element0033 a display:DisplayWall .
+exhib:element0033 a display:Element .
 
 exhib:interface0022 a display:PathwayInterface ;
   bot:interfaceOf exhib:space0011 , exhib:space0010 .
@@ -441,9 +442,9 @@ exhib:exhibit0039 rdfs:label "Lévine 2";
 
 exhib:exhibit0040 rdfs:label "Linke" .
 
-exhib:element0040 a display:DisplayWall .
-exhib:element0041 a display:DisplayWall .
-exhib:element0042 a display:DisplayWall .
+exhib:element0040 a display:Element .
+exhib:element0041 a display:Element .
+exhib:element0042 a display:Element .
 
 exhib:interface0015 a display:PathwayInterface ;
   rdfs:label "Interface de circulation pour space0013 et space0014"@fr ;
@@ -526,9 +527,9 @@ exhib:exhibit0045 rdfs:label "Venazzo" .
 
 exhib:space0020 rdfs:label "bas de la salle 8"@fr .
 
-exhib:element0043 a display:DisplayWall .
-exhib:element0044 a display:DisplayWall .
-exhib:element0045 a display:DisplayWall .
+exhib:element0043 a display:Element .
+exhib:element0044 a display:Element .
+exhib:element0045 a display:Element .
 #  display:hasInterface exhib:exhibit0046 .
 # [X] corr. objet doit être une interface
 
@@ -552,9 +553,9 @@ exhib:exhibit0049 rdfs:label "Duchamp 3" .
 exhib:exhibit0050 rdfs:label "Broodthaers (salle 9)"@fr .
 exhib:exhibit0051 rdfs:label "Parcelle à céder"@fr .
 
-exhib:element0046 a display:DisplayWall .
-exhib:element0047 a display:DisplayWall .
-exhib:element0048 a display:DisplayWall .
+exhib:element0046 a display:Element .
+exhib:element0047 a display:Element .
+exhib:element0048 a display:Element .
 
 exhib:element0049 a display:Showcase ;
   rdfs:label "vitrine oeuvres"@fr ;
@@ -617,10 +618,10 @@ exhib:exhibit0057 rdfs:label "Löcher" ;
 # [X] corr. objet doit être une interface
   display:faces exhib:exhibit0055 . 
 
-exhib:element0050 a display:DisplayWall .
-exhib:element0051 a display:DisplayWall .
-exhib:element0052 a display:DisplayWall .
-exhib:element0053 a display:DisplayWall .
+exhib:element0050 a display:Element .
+exhib:element0051 a display:Element .
+exhib:element0052 a display:Element .
+exhib:element0053 a display:Element .
 
 exhib:space0024 rdfs:label "haut de la salle 11"@fr .
 exhib:space0026 rdfs:label "bas de la salle 11"@fr .
@@ -724,3 +725,283 @@ exhib:interface0030 a display:PathwayInterface ;
 exhib:interface0031 a display:PathwayInterface ;
   bot:interfaceOf exhib:space0026 ,
     exhib:space0025 .
+########################################################
+# display:Element as seen by CIDOC
+########################################################
+
+exhib:element0004 a crm:E22_Human-Made_Object ;
+  crm:P2_has_type aat:300375221 .
+
+exhib:element0005 a crm:E22_Human-Made_Object ;
+  crm:P2_has_type aat:300375221 .
+
+exhib:element0006 a crm:E22_Human-Made_Object ;
+  crm:P2_has_type aat:300375221 .
+
+exhib:element0023 a crm:E22_Human-Made_Object ;
+  crm:P2_has_type aat:300375221 .
+
+exhib:element0048 a crm:E22_Human-Made_Object ;
+  crm:P2_has_type aat:300375221 .
+
+exhib:element0042 a crm:E22_Human-Made_Object ;
+  crm:P2_has_type aat:300375221 .
+
+exhib:element0033 a crm:E22_Human-Made_Object ;
+  crm:P2_has_type aat:300375221 .
+
+exhib:element0052 a crm:E22_Human-Made_Object ;
+  crm:P2_has_type aat:300375221 .
+
+exhib:element0024 a crm:E22_Human-Made_Object ;
+  crm:P2_has_type aat:300375221 .
+
+exhib:element0043 a crm:E22_Human-Made_Object ;
+  crm:P2_has_type aat:300375221 .
+
+exhib:element0053 a crm:E22_Human-Made_Object ;
+  crm:P2_has_type aat:300375221 .
+
+exhib:element0044 a crm:E22_Human-Made_Object ;
+  crm:P2_has_type aat:300375221 .
+
+exhib:element0010 a crm:E22_Human-Made_Object ;
+  crm:P2_has_type aat:300375221 .
+
+exhib:element0026 a crm:E22_Human-Made_Object ;
+  crm:P2_has_type aat:300375221 .
+
+exhib:element0045 a crm:E22_Human-Made_Object ;
+  crm:P2_has_type aat:300375221 .
+
+exhib:element0017 a crm:E22_Human-Made_Object ;
+  crm:P2_has_type aat:300375221 .
+
+exhib:element0011 a crm:E22_Human-Made_Object ;
+  crm:P2_has_type aat:300375221 .
+
+exhib:element0030 a crm:E22_Human-Made_Object ;
+  crm:P2_has_type aat:300375221 .
+
+exhib:element0021 a crm:E22_Human-Made_Object ;
+  crm:P2_has_type aat:300375221 .
+
+exhib:element0046 a crm:E22_Human-Made_Object ;
+  crm:P2_has_type aat:300375221 .
+
+exhib:element0040 a crm:E22_Human-Made_Object ;
+  crm:P2_has_type aat:300375221 .
+
+exhib:element0018 a crm:E22_Human-Made_Object ;
+  crm:P2_has_type aat:300375221 .
+
+exhib:element0012 a crm:E22_Human-Made_Object ;
+  crm:P2_has_type aat:300375221 .
+
+exhib:element0031 a crm:E22_Human-Made_Object ;
+  crm:P2_has_type aat:300375221 .
+
+exhib:element0009 a crm:E22_Human-Made_Object ;
+  crm:P2_has_type aat:300375221 .
+
+exhib:element0050 a crm:E22_Human-Made_Object ;
+  crm:P2_has_type aat:300375221 .
+
+exhib:element0022 a crm:E22_Human-Made_Object ;
+  crm:P2_has_type aat:300375221 .
+
+exhib:element0047 a crm:E22_Human-Made_Object ;
+  crm:P2_has_type aat:300375221 .
+
+exhib:element0041 a crm:E22_Human-Made_Object ;
+  crm:P2_has_type aat:300375221 .
+
+exhib:element0019 a crm:E22_Human-Made_Object ;
+  crm:P2_has_type aat:300375221 .
+
+exhib:element0032 a crm:E22_Human-Made_Object ;
+  crm:P2_has_type aat:300375221 .
+
+exhib:element0051 a crm:E22_Human-Made_Object ;
+  crm:P2_has_type aat:300375221 .
+
+########################################################
+# display:Exhibit as seen by CIDOC
+########################################################
+
+exhib:exhibit0049 a crm:E22_Human-Made_Object ;
+  crm:P2_has_type aat:300133025 .
+
+exhib:exhibit0008 a crm:E22_Human-Made_Object ;
+  crm:P2_has_type aat:300133025 .
+
+exhib:exhibit0036 a crm:E22_Human-Made_Object ;
+  crm:P2_has_type aat:300133025 .
+
+exhib:exhibit0023 a crm:E22_Human-Made_Object ;
+  crm:P2_has_type aat:300133025 .
+
+exhib:exhibit0051 a crm:E22_Human-Made_Object ;
+  crm:P2_has_type aat:300133025 .
+
+exhib:exhibit0010 a crm:E22_Human-Made_Object ;
+  crm:P2_has_type aat:300133025 .
+
+exhib:exhibit0029 a crm:E22_Human-Made_Object ;
+  crm:P2_has_type aat:300133025 .
+
+exhib:exhibit0057 a crm:E22_Human-Made_Object ;
+  crm:P2_has_type aat:300133025 .
+
+exhib:exhibit0016 a crm:E22_Human-Made_Object ;
+  crm:P2_has_type aat:300133025 .
+
+exhib:exhibit0044 a crm:E22_Human-Made_Object ;
+  crm:P2_has_type aat:300133025 .
+
+exhib:exhibit0003 a crm:E22_Human-Made_Object ;
+  crm:P2_has_type aat:300133025 .
+
+exhib:exhibit0031 a crm:E22_Human-Made_Object ;
+  crm:P2_has_type aat:300133025 .
+
+exhib:exhibit0009 a crm:E22_Human-Made_Object ;
+  crm:P2_has_type aat:300133025 .
+
+exhib:exhibit0037 a crm:E22_Human-Made_Object ;
+  crm:P2_has_type aat:300133025 .
+
+exhib:exhibit0024 a crm:E22_Human-Made_Object ;
+  crm:P2_has_type aat:300133025 .
+
+exhib:exhibit0052 a crm:E22_Human-Made_Object ;
+  crm:P2_has_type aat:300133025 .
+
+exhib:exhibit0011 a crm:E22_Human-Made_Object ;
+  crm:P2_has_type aat:300133025 .
+
+exhib:exhibit0058 a crm:E22_Human-Made_Object ;
+  crm:P2_has_type aat:300133025 .
+
+exhib:exhibit0017 a crm:E22_Human-Made_Object ;
+  crm:P2_has_type aat:300133025 .
+
+exhib:exhibit0045 a crm:E22_Human-Made_Object ;
+  crm:P2_has_type aat:300133025 .
+
+exhib:exhibit0004 a crm:E22_Human-Made_Object ;
+  crm:P2_has_type aat:300133025 .
+
+exhib:exhibit0032 a crm:E22_Human-Made_Object ;
+  crm:P2_has_type aat:300133025 .
+
+exhib:exhibit0060 a crm:E22_Human-Made_Object ;
+  crm:P2_has_type aat:300133025 .
+
+exhib:space0021  rdf:type  crm:E22_Human-Made_Object;
+  crm:P2_has_type aat:300133025 .
+
+exhib:exhibit0038 a crm:E22_Human-Made_Object ;
+  crm:P2_has_type aat:300133025 .
+
+exhib:exhibit0025 a crm:E22_Human-Made_Object ;
+  crm:P2_has_type aat:300133025 .
+
+exhib:exhibit0053 a crm:E22_Human-Made_Object ;
+  crm:P2_has_type aat:300133025 .
+
+exhib:exhibit0012 a crm:E22_Human-Made_Object ;
+  crm:P2_has_type aat:300133025 .
+
+exhib:exhibit0040 a crm:E22_Human-Made_Object ;
+  crm:P2_has_type aat:300133025 .
+
+exhib:exhibit0059 a crm:E22_Human-Made_Object ;
+  crm:P2_has_type aat:300133025 .
+
+exhib:exhibit0046 a crm:E22_Human-Made_Object ;
+  crm:P2_has_type aat:300133025 .
+
+exhib:exhibit0005 a crm:E22_Human-Made_Object ;
+  crm:P2_has_type aat:300133025 .
+
+exhib:exhibit0033 a crm:E22_Human-Made_Object ;
+  crm:P2_has_type aat:300133025 .
+
+exhib:exhibit0061 a crm:E22_Human-Made_Object ;
+  crm:P2_has_type aat:300133025 .
+
+exhib:exhibit0039 a crm:E22_Human-Made_Object ;
+  crm:P2_has_type aat:300133025 .
+
+exhib:exhibit0026 a crm:E22_Human-Made_Object ;
+  crm:P2_has_type aat:300133025 .
+
+exhib:exhibit0054 a crm:E22_Human-Made_Object ;
+  crm:P2_has_type aat:300133025 .
+
+exhib:exhibit0013 a crm:E22_Human-Made_Object ;
+  crm:P2_has_type aat:300133025 .
+
+exhib:exhibit0041 a crm:E22_Human-Made_Object ;
+  crm:P2_has_type aat:300133025 .
+
+exhib:exhibit0047 a crm:E22_Human-Made_Object ;
+  crm:P2_has_type aat:300133025 .
+
+exhib:exhibit0006 a crm:E22_Human-Made_Object ;
+  crm:P2_has_type aat:300133025 .
+
+exhib:exhibit0034 a crm:E22_Human-Made_Object ;
+  crm:P2_has_type aat:300133025 .
+
+exhib:exhibit0062 a crm:E22_Human-Made_Object ;
+  crm:P2_has_type aat:300133025 .
+
+exhib:exhibit0021 a crm:E22_Human-Made_Object ;
+  crm:P2_has_type aat:300133025 .
+
+exhib:exhibit0027 a crm:E22_Human-Made_Object ;
+  crm:P2_has_type aat:300133025 .
+
+exhib:exhibit0055 a crm:E22_Human-Made_Object ;
+  crm:P2_has_type aat:300133025 .
+
+exhib:exhibit0014 a crm:E22_Human-Made_Object ;
+  crm:P2_has_type aat:300133025 .
+
+exhib:exhibit0042 a crm:E22_Human-Made_Object ;
+  crm:P2_has_type aat:300133025 .
+
+exhib:exhibit0001 a crm:E22_Human-Made_Object ;
+  crm:P2_has_type aat:300133025 .
+
+exhib:exhibit0048 a crm:E22_Human-Made_Object ;
+  crm:P2_has_type aat:300133025 .
+
+exhib:exhibit0007 a crm:E22_Human-Made_Object ;
+  crm:P2_has_type aat:300133025 .
+
+exhib:exhibit0035 a crm:E22_Human-Made_Object ;
+  crm:P2_has_type aat:300133025 .
+
+exhib:exhibit0022 a crm:E22_Human-Made_Object ;
+  crm:P2_has_type aat:300133025 .
+
+exhib:exhibit0050 a crm:E22_Human-Made_Object ;
+  crm:P2_has_type aat:300133025 .
+
+exhib:exhibit0028 a crm:E22_Human-Made_Object ;
+  crm:P2_has_type aat:300133025 .
+
+exhib:exhibit0056 a crm:E22_Human-Made_Object ;
+  crm:P2_has_type aat:300133025 .
+
+exhib:exhibit0043 a crm:E22_Human-Made_Object ;
+  crm:P2_has_type aat:300133025 .
+
+exhib:exhibit0002 a crm:E22_Human-Made_Object ;
+  crm:P2_has_type aat:300133025 .
+
+exhib:exhibit0030 a crm:E22_Human-Made_Object ;
+  crm:P2_has_type aat:300133025 .
