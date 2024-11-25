@@ -1,0 +1,19 @@
+PREFIX dis: <http://stanbol.apache.org/ontology/disambiguation/disambiguation#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX display: <https://ouvroir.umontreal.ca/onto/display#>
+PREFIX exhib: <https://ouvroir.umontreal.ca/data/exhib#>
+PREFIX bot: <https://w3id.org/bot#>
+
+INSERT DATA {
+  # données incohérentes
+  exhib:space0022 display:hasExhibit exhib:space0021 .
+}
+
+# Réponse : Update succeeded
+
+# Donc données incohérentes
+DESCRIBE exhib:space0022 # hasExhibit space21
+DESCRIBE exhib:space0021 # a Exhibit
+
+# Voir SHACL
