@@ -1,0 +1,38 @@
+# construction de la description rectifiée des interfaces
+# input : données obsolètes
+# output : données mises à jour avec display/0.1.0-alpha
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX display: <https://w3id.org/display#>
+PREFIX bot: <https://w3id.org/bot#>
+
+CONSTRUCT {
+  # hangingInterface
+  ?hinterface a ?hi ;
+    rdfs:label ?label ;
+    display:interfaceOfExhibit ?exhibit ;
+    display:interfaceProvidedBy ?element .
+  # pathwatInterface
+  ?pinterface a ?pi ;
+    rdfs:label ?label ;
+    bot:interfaceOfSpace ?space .
+}
+
+WHERE {
+  BIND(display:HangingInterface AS ?hi)
+  BIND(display:PathwayInterface AS ?pi)
+  {
+    ?hinterface a ?hi ;
+      bot:interfaceOf ?exhibit ;
+      bot:interfaceOf ?element .
+    ?exhibit a display:Exhibit .
+    ?element a display:Element .
+    MINUS {?exhibit a display:Element}
+    OPTIONAL {?hinterface rdfs:label ?label}
+  }
+  UNION # pour gérer le label
+  {
+    ?pinterface a ?pi ;
+      bot:interfaceOf ?space .
+    OPTIONAL {?pinterface rdfs:label ?label}
+  }
+}

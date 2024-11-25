@@ -316,19 +316,13 @@ exhib:element0032 a display:Element .
 
 exhib:element0033 a display:Element .
 
-exhib:interface0022 a display:PathwayInterface ;
-  bot:interfaceOf exhib:space0011 , exhib:space0010 .
-
-exhib:interface0023 a display:PathwayInterface ;
-  bot:interfaceOf exhib:space0011 , exhib:space0013 .
-
-exhib:interface0024 a display:PathwayInterface ;
-  bot:interfaceOf exhib:space0011 , exhib:space0015 .
-
-#vérifier les interfaces. Ne serait-il pas plus clair de mettre les Interfaces PathWay au meme endroit en dehors des salles? 
+#vérifier les interfaces. Ne serait-il pas plus clair de mettre les Interfaces PathWay au meme endroit en dehors des salles?
+  # C'est fait partiellement, en même temps que la rectification en lot des interfaces pour v0.1.0-alpha. Pour des raisons techniques, toutes les interfaces sont maintenant regroupées. Voir /queries/0.1.0-alpha/construct-interfaces.rq
 #Faut-il déclarer que exhibit0027 est sur un mur ou il est suffisant qu'il soit face à exhibit0026?
+  # L'un n'empêche pas l'autre. Ça dépendra du contexte de la description.
 # solution proposée serait hasHangingInterface avec domain exhibit
 # similaire à pathwayInterfaceOf plus haut
+  # Voir v0.1.0-alpha de l'ontologie
 
 ########################################################
 # Salle 6
@@ -706,6 +700,38 @@ exhib:interface0027 a display:PathwayInterface;
 exhib:interface0021 a display:PathwayInterface;
         bot:interfaceOfSpace exhib:space0007 , exhib:space0010 .
 
+#########################################################
+# Feux pâles selon CIDOC                                #
+# Suivant les patrons de Linked Art                     #
+#########################################################
+
+########################################################
+# Exhibition activity
+########################################################
+
+exhib:activity0000 a crm:E7_Activity ;
+  rdfs:label "Feux pâles (capcMusée d’art contemporain, Bordeaux, 1990)"@fr ;
+  crm:P14_carried_out_by <http://vocab.getty.edu/ulan/500305133> ;
+  crm:P15_was_influenced_by <https://linked.art/example/concept/exhidea> ;
+  crm:P16_used_specific_object exhib:set0000 ;
+  crm:P1_is_identified_by [ a crm:E33_E41_Linguistic_Appellation ;
+    crm:P190_has_symbolic_content "Feux pâles" ;
+    crm:P2_has_type aat:300404670 ] ;
+  crm:P2_has_type aat:300054766 ;
+  crm:P4_has_time-span [ a crm:E52_Time-Span ;
+            crm:P82a_begin_of_the_begin "1990-12-07" ;
+            crm:P82b_end_of_the_end "1991-03-03" ] ;
+  crm:P67i_is_referred_to_by [ a crm:E33_Linguistic_Object ;
+            crm:P190_has_symbolic_content "" ;
+            crm:P2_has_type aat:300435416 ] ;
+  crm:P7_took_place_at <http://vocab.getty.edu/tgn/7008161> .
+
+########################################################
+# Exhibition concept
+########################################################
+
+<https://linked.art/example/concept/exhidea> a crm:E89_Propositional_Object ;
+    rdfs:label "Idea for Manet and Modern Beauty" .
 
 ########################################################
 # L'ensemble des expôts
@@ -726,6 +752,16 @@ exhib:set0000 a la:Set ;
 #    crm:P82a_begin_of_the_begin "2019-05-01T00:00:00Z" ;
 #    crm:P82b_end_of_the_end "2019-05-01T23:59:59Z" ]
   ] .
+
+## information entites  ##
+
+<http://vocab.getty.edu/tgn/7008161> a crm:E53_Place ;
+  rdfs:label "Bordeaux" ;
+  crm:P2_has_type aat:300008389 .
+
+<http://vocab.getty.edu/ulan/500305133> a crm:E74_Group ;
+  rdfs:label "CAPC Bordeaux" ;
+  crm:P2_has_type aat:300312281 .
 
 ########################################################
 # display:Element as seen by CIDOC
@@ -898,9 +934,6 @@ exhib:exhibit0032 a crm:E22_Human-Made_Object ;
   crm:P2_has_type aat:300133025 .
 
 exhib:exhibit0060 a crm:E22_Human-Made_Object ;
-  crm:P2_has_type aat:300133025 .
-
-exhib:space0021  rdf:type  crm:E22_Human-Made_Object;
   crm:P2_has_type aat:300133025 .
 
 exhib:exhibit0038 a crm:E22_Human-Made_Object ;
