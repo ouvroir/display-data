@@ -64,17 +64,6 @@ exhib:element0008 a display:Element ;
   rdfs:label "Porte d'entrée"@fr ;
   rdfs:comment "n'est pas typé actuellement (2024-11-22)" .
 
-exhib:interface0007 a display:HangingInterface ;
-  rdfs:label "Interface d'accrochage exhibit001-element004"@fr ;
-  bot:interfaceOf exhib:element0004 ,
-    exhib:exhibit0001 .
-
-exhib:interface0000 a display:PathwayInterface ;
-  bot:interfaceOf exhib:space0000 , exhib:space0002 . # Si un espace est contenu dans un espace, on accède à l'espace contenu au plus bas niveau, pour accéder aux PathwayInterface.
-
-exhib:interface0001 a display:PathwayInterface ;
-  bot:interfaceOf exhib:space0000 , exhib:space0004 .
-
 ########################################################
 # Salle 1
 ########################################################
@@ -174,23 +163,6 @@ exhib:element0011 a display:Element ;
 exhib:element0012 a display:Element ;
   rdfs:label "cimaise de la salle 1"@fr .
 
-exhib:interface0002 a display:PathwayInterface ;
-  bot:interfaceOf exhib:space0002 , exhib:space0003 .
-  # pathwayInterfaceOf, avec domaine et portée pour inférence # mod.
-  # voir branche pathways pour premier essais
-
-exhib:interface0003 a display:PathwayInterface ;
-  bot:interfaceOf exhib:space0002 , exhib:space0005 .
-
-exhib:interface0004 a display:PathwayInterface ;
-  bot:interfaceOf exhib:space0003 , exhib:space0004 .
-
-exhib:interface0005 a display:PathwayInterface ;
-  bot:interfaceOf exhib:space0004 , exhib:space0005 .
-
-exhib:interface0006 a display:HangingInterface ;
-  bot:interfaceOf exhib:element0009 , exhib:exhibit0005 .
-
 ########################################################
 # Salle 2
 ########################################################
@@ -212,8 +184,6 @@ exhib:exhibit0023 rdfs:label "Francken" ;
 exhib:exhibit0024 rdfs:label "Pannini" .
 exhib:exhibit0025 rdfs:label "Thomas" .
 
-exhib:interface0011 a display:PathwayInterface .
-
 exhib:element0021 a display:Element ;
   rdfs:label "cimaise de la salle 2 haut"@fr .
 
@@ -225,17 +195,6 @@ exhib:element0023 a display:Element ;
 
 exhib:element0024 a display:Element ;
   rdfs:label "cimaise de la salle 2 droite"@fr .
-  
-exhib:interface0012 a display:HangingInterface ;
-  rdfs:label "Interface d'accrochage exhibit0023-element0021"@fr ;
-  bot:interfaceOf exhib:element0021 ,
-    exhib:exhibit0023 .
-
-exhib:interface0013 a display:HangingInterface ;
-  rdfs:label "Interface d'accrochage exhibit0021-element0022"@fr ;
-  bot:interfaceOf exhib:element0022 ,
-    exhib:exhibit0021 .
-
 
 ########################################################
 # Salle 3
@@ -248,24 +207,8 @@ exhib:space0006 a display:ExhibitionSpace ;
     exhib:space0009 .
 
 exhib:space0007 rdfs:label "haut de la salle 3"@fr .
-
-exhib:space0008 rdfs:label "milieu de la salle 3 (espace Spoerri)"@fr ;
-  display:hasInterface exhib:interface0009 ,
-    exhib:interface0010 .
-
-exhib:space0009 rdfs:label "bas de la salle 3"@fr ;
-  display:hasInterface exhib:interface0011 .
-
-exhib:interface0011 rdfs:label "Interface de circulation pour space0009 et space0005"@fr ;
-  bot:interfaceOf exhib:space0005 .
-
-exhib:interface0014 a display:PathwayInterface ;
-  rdfs:label "Interface de circulation pour space0007 et space0010"@fr .
-
-exhib:interface0009 a display:PathwayInterface ;
-  bot:interfaceOf exhib:space0007 .
-exhib:interface0010 a display:PathwayInterface ;
-  bot:interfaceOf exhib:space0009 .
+exhib:space0008 rdfs:label "milieu de la salle 3 (espace Spoerri)"@fr .
+exhib:space0009 rdfs:label "bas de la salle 3"@fr .
 
 exhib:space0008 display:containsExhibit exhib:exhibit0013 ,
   exhib:exhibit0013 ,
@@ -274,15 +217,10 @@ exhib:space0008 display:containsExhibit exhib:exhibit0013 ,
   exhib:exhibit0016 ,
   exhib:exhibit0017 .
 
-exhib:element0017 a display:Element ;
-  display:hasInterface exhib:interface0008 .
 exhib:element0018 a display:Element .
 exhib:element0019 a display:Element .
 
-# connecter un élément avec un expôt en utilisant une interface devrait nous permettre d'inférérer le type d'interface.
-
 exhib:exhibit0013 rdfs:label "Spoerri" ;
-  display:hasInterface exhib:interface0008 ;
   display:rightOf exhib:exhibit0014 ;
   display:faces exhib:exhibit0015 .
 exhib:exhibit0014 rdfs:label "Roth" ;
@@ -345,17 +283,12 @@ exhib:element0025 a display:Element ;
 exhib:element0026 a display:Element ;
   rdfs:label "cimaise de la salle 4"@fr .
 
-exhib:interface0021 a display:PathwayInterface ;
-  bot:interfaceOf exhib:space0007 , exhib:space0010 .
-
 ########################################################
 # Salle 5
 ########################################################
 
 exhib:space0011 a display:ExhibitionSpace ;
   rdfs:label "salle 5 : Passif de la modernité"@fr ;
-#  bot:interfaceOf exhib:space0010 ;
-#  [X] corr. sujet doit être une interface
   display:containsExhibit exhib:exhibit0031 ,
     exhib:exhibit0032 ,
     exhib:exhibit0033 ,
@@ -368,28 +301,14 @@ exhib:exhibit0031 rdfs:label "McCollum" ;
 exhib:exhibit0032 rdfs:label "Richter 1" .
 
 exhib:exhibit0033 rdfs:label "Richter 2" .
-#  display:hasInterface exhib:element0031 .
-# [X] corr. objet doit être une interface
-# par exemple : 
-exhib:interface0033 a display:HangingInterface ;
-  rdfs:label "Interface d'accrochage de Richter"@fr ;
-  rdfs:comment "L'utilisation des interfaces permet de complexifier les relations, c'est-à-dire d'aller au-delà de la relation binaire du triplet RDF. Ainsi, nous pouvons impliquer plus de deux entités dans la relation si nécessaire."@fr ,
-    "Par ailleurs, exhib:element0031 sera reclassé, par inférence, comme un display:Support puisqu'il est impliqué dans une relation d'interface."@fr ;
-  bot:interfaceOf exhib:exhibit0033 ,
-    exhib:element0031 .
+exhib:interface0033 rdfs:comment "L'utilisation des interfaces permet de complexifier les relations, c'est-à-dire d'aller au-delà de la relation binaire du triplet RDF. Ainsi, nous pouvons impliquer plus de deux entités dans la relation si nécessaire."@fr .
 
 exhib:exhibit0034 rdfs:label "Clairet" ;
-  display:rightOf exhib:exhibit0027 . # corr. : ?
-#  display:hasInterface exhib:element0032 .
-# [X] corr. objet doit être une interface
+  display:rightOf exhib:exhibit0027 .
 
 exhib:exhibit0035 rdfs:label "Charlton" .
-#  display:hasInterface exhib:element0033 .
-# [X] corr. objet doit être une interface
 
 exhib:element0030 a display:Element .
-#  display:hasInterface exhib:exhibit0026 .
-# [X] corr. objet doit être une interface
 
 exhib:element0031 a display:Element .
 
@@ -417,8 +336,6 @@ exhib:interface0024 a display:PathwayInterface ;
 
 exhib:space0012 a display:ExhibitionSpace ;
   rdfs:label "salle 6 : La chair est triste, hélas ! Et j’ai lu tous les livres...."@fr .
-#  bot:interfaceOf exhib:space0011 , exhib:space0016 . 
-#  [X] corr. sujet doit être une interface
 
 exhib:space0013 rdfs:label "haut de la salle 6"@fr .
 
@@ -432,13 +349,9 @@ exhib:space0014 rdfs:label "milieu de la salle 6"@fr ;
 exhib:space0015 rdfs:label "bas de la salle 6"@fr .
 
 exhib:exhibit0036 rdfs:label "Dimitrijevic" .
-#  display:hasInterface exhib:element0040 .
-# [X] corr. objet doit être une interface
 
 exhib:exhibit0037 rdfs:label "Prina";
   display:leftOf exhib:exhibit0041 .
-#  display:hasInterface exhib:element0041 .
-# [X] corr. objet doit être une interface
 
 exhib:exhibit0041 rdfs:label "Prina 2" .
 
@@ -449,26 +362,12 @@ exhib:exhibit0039 rdfs:label "Lévine 2";
   display:leftOf exhib:exhibit0040 ;
   #IsBetween?
   display:faces exhib:exhibit0036 .
-#  display:hasInterface exhib:element0042 .
-# [X] corr. objet doit être une interface
 
 exhib:exhibit0040 rdfs:label "Linke" .
 
 exhib:element0040 a display:Element .
 exhib:element0041 a display:Element .
 exhib:element0042 a display:Element .
-
-exhib:interface0015 a display:PathwayInterface ;
-  rdfs:label "Interface de circulation pour space0013 et space0014"@fr ;
-  bot:interfaceOf exhib:space0013 ,
-    exhib:space0014 . 
-
-exhib:interface0016 a display:PathwayInterface ;
-  rdfs:label "Interface de circulation pour space0015 et space0014"@fr ;
-  bot:interfaceOf exhib:space0014 ,
-    exhib:space0015 .
-
-#vérifier les interfaces
 
 ########################################################
 # Salle 7
@@ -479,26 +378,6 @@ exhib:space0016 rdfs:label "salle 7 : Respect de l’étiquette, intérêt du c
 
 exhib:exhibit0042 rdfs:label "Souvenir écran" .
 #au mileu de la salle au sol. 
-
-exhib:interface0017 a display:PathwayInterface ;
-  rdfs:label "Interface de circulation pour space0016 et space0013"@fr ;
-  bot:interfaceOf exhib:space0016 ,
-    exhib:space0013 . 
-
-exhib:interface0018 a display:PathwayInterface ;
-  rdfs:label "Interface de circulation pour space0016 et space0015"@fr ;
-  bot:interfaceOf exhib:space0016 ,
-    exhib:space0015 .
-
-exhib:interface0019 a display:PathwayInterface ;
-  rdfs:label "Interface de circulation pour space0016 et space0018"@fr ;
-  bot:interfaceOf exhib:space0016 ,
-    exhib:space0018 . 
-
-exhib:interface0020 a display:PathwayInterface ;
-  rdfs:label "Interface de circulation pour space0016 et space0020"@fr ;
-  bot:interfaceOf exhib:space0016 ,
-    exhib:space0020 .
 
 ########################################################
 # Salle 8
@@ -533,22 +412,16 @@ exhib:space0019 a display:ExhibitionSpace ;
 exhib:exhibit0043 rdfs:label "Duchamp 1";
   display:leftOf exhib:exhibit0044 ;
   display:faces exhib:exhibit0046 .
-#  display:hasInterface exhib:element0043 .
-# [X] corr. objet doit être une interface
 
 exhib:exhibit0044 rdfs:label "Duchamp 2" .
 
 exhib:exhibit0045 rdfs:label "Venazzo" .
-#  display:hasInterface exhib:element0044 .
-# [X] corr. objet doit être une interface
 
 exhib:space0020 rdfs:label "bas de la salle 8"@fr .
 
 exhib:element0043 a display:Element .
 exhib:element0044 a display:Element .
 exhib:element0045 a display:Element .
-#  display:hasInterface exhib:exhibit0046 .
-# [X] corr. objet doit être une interface
 
 #Pathway
 
@@ -613,14 +486,10 @@ exhib:exhibit0052 rdfs:label "Blondeau" ;
   display:faces exhib:exhibit0055 .
 
 exhib:exhibit0053 rdfs:label "Morris" .
-#   display:hasInterface exhib:element0050 . 
-# [X] corr. objet doit être une interface
 
 exhib:exhibit0054 rdfs:label "Ready-made" ;
     display:faces exhib:exhibit0055 ;
     display:faces exhib:exhibit0057 .
-#    display:hasInterface exhib:element0051 .
-# [X] corr. objet doit être une interface
 
 exhib:exhibit0055 rdfs:label "Ready-made 2" .
   #au milieu de la piece au sol. Faces Salomon?
@@ -628,12 +497,8 @@ exhib:exhibit0055 rdfs:label "Ready-made 2" .
 exhib:exhibit0056 rdfs:label "Salomon" ;
   display:faces exhib:exhibit0055 ;
   display:faces exhib:exhibit0052 .
-#  display:hasInterface exhib:element0052 .
-# corr. objet doit être une interface
 
 exhib:exhibit0057 rdfs:label "Löcher" ;
-#  display:hasInterface exhib:element0050 ;
-# [X] corr. objet doit être une interface
   display:faces exhib:exhibit0055 . 
 
 exhib:element0050 a display:Element .
@@ -700,27 +565,19 @@ exhib:space0017 display:hasExhibitionSpace exhib:space0018 ,
 # si omis, sera inféré
 exhib:space0020 a display:ExhibitionSpace .
 
-exhib:interface0025 a display:PathwayInterface ;
-  bot:interfaceOf exhib:space0018 ,
-    exhib:space0021 .
-    
-exhib:interface0026 a display:PathwayInterface ;
-  bot:interfaceOf exhib:space0020 ,
-    exhib:space0021 .
-
 #salle 10
 
-exhib:interface0027 a display:PathwayInterface ;
-  rdfs:label "Interface de circulation côté Haake"@fr ;
-  bot:interfaceOf exhib:space0021 ,
-    exhib:space0022 .
+# à vérifier
+#exhib:interface0027 a display:PathwayInterface ;
+#  rdfs:label "Interface de circulation côté Haake"@fr ;
+#  bot:interfaceOf exhib:space0021 ,
+#    exhib:space0022 .
 # pas la subtilité du pilier au milieu.
 # il faudrait créer deux interfaces de circulation dans ce cas :
-exhib:interface0032 a display:PathwayInterface ;
-  rdfs:label "Interface de circulation côté Broodthaers"@fr ;
-  bot:interfaceOf exhib:space0021 ,
-    exhib:space0022 .
-
+#exhib:interface0032 a display:PathwayInterface ;
+#  rdfs:label "Interface de circulation côté Broodthaers"@fr ;
+#  bot:interfaceOf exhib:space0021 ,
+#    exhib:space0022 .
 
 # salle 11
 
@@ -728,21 +585,126 @@ exhib:space0023 display:hasExhibitionSpace exhib:space0024 ,
   exhib:space0025 ,
   exhib:space0026 .
 
-exhib:interface0028 a display:PathwayInterface ;
-  bot:interfaceOf exhib:space0022 ,
-    exhib:space0024 .
+#########################################################
+# Interfaces selon Display                              #
+#########################################################
 
-exhib:interface0029 a display:PathwayInterface ;
-  bot:interfaceOf exhib:space0022 ,
-    exhib:space0026 .
+exhib:interface0018 a display:PathwayInterface;
+        rdfs:label "Interface de circulation pour space0016 et space0015"@fr;
+        bot:interfaceOfSpace exhib:space0015 , exhib:space0016 .
 
-exhib:interface0030 a display:PathwayInterface ;
-  bot:interfaceOf exhib:space0025 ,
-    exhib:space0024 .
+exhib:interface0012 a display:HangingInterface;
+  rdfs:label "Interface d'accrochage exhibit0023-element0021"@fr;
+  display:interfaceOfExhibit exhib:exhibit0023;
+  display:interfaceProvidedBy exhib:element0021 .
 
-exhib:interface0031 a display:PathwayInterface ;
-  bot:interfaceOf exhib:space0026 ,
-    exhib:space0025 .
+exhib:interface0031 a display:PathwayInterface;
+  bot:interfaceOfSpace exhib:space0026 , exhib:space0025 .
+
+exhib:interface0008 display:interfaceProvidedBy exhib:element0017 ;
+  display:interfaceOfExhibit exhib:exhibit0013 .
+
+exhib:interface0009 a display:PathwayInterface;
+  bot:interfaceOfSpace exhib:space0007 , exhib:space0008 .
+
+exhib:interface0003 a display:PathwayInterface;
+        bot:interfaceOfSpace exhib:space0005 , exhib:space0002 .
+
+exhib:interface0028 a display:PathwayInterface;
+        bot:interfaceOfSpace exhib:space0022 , exhib:space0024 .
+
+exhib:interface0022 a display:PathwayInterface;
+        bot:interfaceOfSpace exhib:space0010 , exhib:space0011 .
+
+exhib:interface0019 a display:PathwayInterface;
+        rdfs:label "Interface de circulation pour space0016 et space0018"@fr;
+        bot:interfaceOfSpace exhib:space0018 , exhib:space0016 .
+
+exhib:interface0013 a display:HangingInterface;
+        rdfs:label "Interface d'accrochage exhibit0021-element0022"@fr;
+        display:interfaceOfExhibit exhib:exhibit0021;
+        display:interfaceProvidedBy exhib:element0022 .
+
+exhib:interface0032 a display:PathwayInterface;
+        rdfs:label "Interface de circulation côté Broodthaers"@fr;
+        bot:interfaceOfSpace exhib:space0021 , exhib:space0022 .
+
+exhib:interface0004 a display:PathwayInterface;
+        bot:interfaceOfSpace exhib:space0004 , exhib:space0003 .
+
+exhib:interface0029 a display:PathwayInterface;
+        bot:interfaceOfSpace exhib:space0026 , exhib:space0022 .
+
+exhib:interface0023 a display:PathwayInterface;
+        bot:interfaceOfSpace exhib:space0011 , exhib:space0013 .
+
+exhib:interface0033 a display:HangingInterface;
+        rdfs:label "Interface d'accrochage de Richter"@fr;
+        display:interfaceOfExhibit exhib:exhibit0033;
+        display:interfaceProvidedBy exhib:element0031 .
+
+exhib:interface0005 a display:PathwayInterface;
+        bot:interfaceOfSpace exhib:space0004 , exhib:space0005 .
+
+exhib:interface0024 a display:PathwayInterface;
+        bot:interfaceOfSpace exhib:space0015 , exhib:space0011 .
+
+exhib:interface0015 a display:PathwayInterface;
+        rdfs:label "Interface de circulation pour space0013 et space0014"@fr;
+        bot:interfaceOfSpace exhib:space0013 , exhib:space0014 .
+
+exhib:interface0006 a display:HangingInterface;
+        display:interfaceOfExhibit exhib:exhibit0005;
+        display:interfaceProvidedBy exhib:element0009 .
+
+exhib:interface0000 a display:PathwayInterface;
+        bot:interfaceOfSpace exhib:space0000 , exhib:space0002 .
+
+exhib:interface0025 a display:PathwayInterface;
+        bot:interfaceOfSpace exhib:space0018 , exhib:space0021 .
+
+exhib:interface0016 a display:PathwayInterface;
+        rdfs:label "Interface de circulation pour space0015 et space0014"@fr;
+        bot:interfaceOfSpace exhib:space0015 , exhib:space0014 .
+
+exhib:interface0010 a display:PathwayInterface;
+        bot:interfaceOfSpace exhib:space0009 , exhib:space0008.
+
+exhib:interface0007 a display:HangingInterface;
+        rdfs:label "Interface d'accrochage exhibit001-element004"@fr;
+        display:interfaceOfExhibit exhib:exhibit0001;
+        display:interfaceProvidedBy exhib:element0004 .
+
+exhib:interface0001 a display:PathwayInterface;
+        bot:interfaceOfSpace exhib:space0000 , exhib:space0004 .
+
+exhib:interface0026 a display:PathwayInterface;
+        bot:interfaceOfSpace exhib:space0021 , exhib:space0020 .
+
+exhib:interface0020 a display:PathwayInterface;
+        rdfs:label "Interface de circulation pour space0016 et space0020"@fr;
+        bot:interfaceOfSpace exhib:space0016 , exhib:space0020 .
+
+exhib:interface0017 a display:PathwayInterface;
+        rdfs:label "Interface de circulation pour space0016 et space0013"@fr;
+        bot:interfaceOfSpace exhib:space0016 , exhib:space0013 .
+
+exhib:interface0011 a display:PathwayInterface;
+        rdfs:label "Interface de circulation pour space0009 et space0005"@fr;
+        bot:interfaceOfSpace exhib:space0005 , exhib:space0009 .
+
+exhib:interface0030 a display:PathwayInterface;
+        bot:interfaceOfSpace exhib:space0025 , exhib:space0024 .
+
+exhib:interface0002 a display:PathwayInterface;
+        bot:interfaceOfSpace exhib:space0002 , exhib:space0003 .
+
+exhib:interface0027 a display:PathwayInterface;
+        rdfs:label "Interface de circulation côté Haake"@fr;
+        bot:interfaceOfSpace exhib:space0021 , exhib:space0022 .
+
+exhib:interface0021 a display:PathwayInterface;
+        bot:interfaceOfSpace exhib:space0007 , exhib:space0010 .
 
 
 ########################################################
