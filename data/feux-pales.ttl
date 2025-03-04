@@ -32,7 +32,7 @@ exhib:exhibit0001 a display:Exhibit ;
   display:faces exhib:element0005 .
 
 exhib:exhibit0002 a display:Exhibit ;
-  rdfs:label "Titre de l'exposition : Feux pâles"@fr ;
+  rdfs:label "Titre de l’exposition : Feux pâles"@fr ;
   rdf:value "Feux pâles" ;
   display:above exhib:exhibit0001 .
 
@@ -52,17 +52,17 @@ exhib:element0005 a display:Element ;
   rdfs:label "cimaise du préambule"@fr .
 
 exhib:element0006 a display:Element ;
-  rdfs:label "cimaise faisant face au mur de la porte d'entrée"@fr .
+  rdfs:label "cimaise faisant face au mur de la porte d’entrée"@fr .
 
 exhib:element0007 a display:Element ;
-  rdfs:label "mur de la porte d'entrée"@fr ;
-  rdfs:comment "n'est pas typé actuellement (2024-11-22)" ;
+  rdfs:label "mur de la porte d’entrée"@fr ;
+  rdfs:comment "n’est pas typé actuellement (2024-11-22)" ;
   display:faces exhib:element0006 ;
   bot:hasSubElement exhib:element0008 .
 
 exhib:element0008 a display:Element ;
-  rdfs:label "Porte d'entrée"@fr ;
-  rdfs:comment "n'est pas typé actuellement (2024-11-22)" .
+  rdfs:label "Porte d’entrée"@fr ;
+  rdfs:comment "n’est pas typé actuellement (2024-11-22)" .
 
 ########################################################
 # Salle 1
@@ -99,15 +99,15 @@ exhib:display001 display:includes exhib:exhibit0005 ,
     exhib:exhibit0012 .
 
 exhib:exhibit0005 a display:Exhibit ;
-  rdfs:label "Remps" , "Scarabattolo"@it , "Trompe l'oeil"@fr ;
+  rdfs:label "Remps" , "Scarabattolo"@it , "Trompe l’œil"@fr ;
   display:faces exhib:element0013 .
 
 exhib:element0013 a display:Element ;
-  rdfs:comment "n'est pas typé actuellement (2024-11-22)" ;
+  rdfs:comment "n’est pas typé actuellement (2024-11-22)" ;
   rdfs:label "vitrine vis-à-vis Remps"@fr .
 
 exhib:element0015 a display:Element ;
-  rdfs:comment "n'est pas typé actuellement (2024-11-22)" ;
+  rdfs:comment "n’est pas typé actuellement (2024-11-22)" ;
   rdfs:label "vitrine (laquelle?)"@fr .
 
 # je veux dire que dans le showcase il y a un display :
@@ -120,7 +120,7 @@ exhib:display002 a display:Display ;
     exhib:exhibit0062 .
 
 exhib:element0014 a display:Element ;
-  rdfs:comment "n'est pas typé actuellement (2024-11-22)" ; rdfs:label "Socle de Platon"@fr .
+  rdfs:comment "n’est pas typé actuellement (2024-11-22)" ; rdfs:label "Socle de Platon"@fr .
 
 exhib:exhibit0006 a display:Exhibit ;
   rdfs:label "Buste de Platon"@fr ;
@@ -133,7 +133,7 @@ exhib:exhibit0007 a display:Exhibit ;
   display:between exhib:element0015 , exhib:element0013 . # between
 
 exhib:exhibit0008 a display:Exhibit ;
-  rdfs:label "Buste d'Aristote"@fr ;
+  rdfs:label "Buste d’Aristote"@fr ;
   display:between exhib:element0016 , exhib:element0013 . # between
 
 exhib:exhibit0009 a display:Exhibit ;
@@ -142,7 +142,7 @@ exhib:exhibit0009 a display:Exhibit ;
   display:rightOf exhib:element0016 .
 
 exhib:element0016 a display:Element ;
-  rdfs:comment "n'est pas typé actuellement (2024-11-22)" ;
+  rdfs:comment "n’est pas typé actuellement (2024-11-22)" ;
   rdfs:label "vitrine (vers le bas du plan)"@fr ;
   display:faces exhib:element0015 ;
   display:leftOf exhib:exhibit0009 .
@@ -227,14 +227,14 @@ exhib:exhibit0014 rdfs:label "Roth" ;
   display:liesOn exhib:element0028 .
 exhib:element0028 a display:Element ;
   rdfs:label "socle" ;
-  rdfs:comment "n'est pas typé actuellement (2024-11-22)" .
+  rdfs:comment "n’est pas typé actuellement (2024-11-22)" .
 
 # Duchamp
 # Ne peut pas relever du point de vue (personne qui regarde)
 exhib:exhibit0015 rdfs:label "Fontaine (Duchamp)" ;
   display:liesOn exhib:element0029 .
 exhib:element0029 a display:Element ;
-  rdfs:comment "n'est pas typé actuellement (2024-11-22)" ;
+  rdfs:comment "n’est pas typé actuellement (2024-11-22)" ;
   rdfs:label "socle sur lequel est posé Fontaine (Duchamp), dans la salle 3" .
 
 # Manzoni
@@ -243,13 +243,13 @@ exhib:exhibit0016 rdfs:label "Manzoni" ;
   display:liesOn exhib:element0027 .
 exhib:element0027 a display:Element ;
   rdfs:label "socle" ;
-  rdfs:comment "n'est pas typé actuellement (2024-11-22)" .
+  rdfs:comment "n’est pas typé actuellement (2024-11-22)" .
 
 # Beuys
 exhib:exhibit0017 rdfs:label "Beuys" ;
   display:containedIn exhib:element0020 .
 exhib:element0020 a display:Element ;
-  rdfs:comment "n'est pas typé actuellement (2024-11-22)" ;
+  rdfs:comment "n’est pas typé actuellement (2024-11-22)" ;
   display:inFrontOf exhib:element0018 .
 
 ########################################################
@@ -271,7 +271,7 @@ exhib:exhibit0029 rdfs:label "Long" .
 exhib:exhibit0030 rdfs:label "Smithson" .
 
 exhib:element0025 a display:Element ;
-  rdfs:comment "n'est pas typé actuellement (2024-11-22)" ;
+  rdfs:comment "n’est pas typé actuellement (2024-11-22)" ;
   rdfs:label "vitrine archive"@fr ;
   display:inFrontOf exhib:element0026 ;
   display:contains exhib:exhibit0026 ,
@@ -301,7 +301,7 @@ exhib:exhibit0031 rdfs:label "McCollum" ;
 exhib:exhibit0032 rdfs:label "Richter 1" .
 
 exhib:exhibit0033 rdfs:label "Richter 2" .
-exhib:interface0033 rdfs:comment "L'utilisation des interfaces permet de complexifier les relations, c'est-à-dire d'aller au-delà de la relation binaire du triplet RDF. Ainsi, nous pouvons impliquer plus de deux entités dans la relation si nécessaire."@fr .
+exhib:interface0033 rdfs:comment "L’utilisation des interfaces permet de complexifier les relations, c’est-à-dire d’aller au-delà de la relation binaire du triplet RDF. Ainsi, nous pouvons impliquer plus de deux entités dans la relation si nécessaire."@fr .
 
 exhib:exhibit0034 rdfs:label "Clairet" ;
   display:rightOf exhib:exhibit0027 .
@@ -317,12 +317,12 @@ exhib:element0032 a display:Element .
 exhib:element0033 a display:Element .
 
 #vérifier les interfaces. Ne serait-il pas plus clair de mettre les Interfaces PathWay au meme endroit en dehors des salles?
-  # C'est fait partiellement, en même temps que la rectification en lot des interfaces pour v0.1.0-alpha. Pour des raisons techniques, toutes les interfaces sont maintenant regroupées. Voir /queries/0.1.0-alpha/construct-interfaces.rq
-#Faut-il déclarer que exhibit0027 est sur un mur ou il est suffisant qu'il soit face à exhibit0026?
-  # L'un n'empêche pas l'autre. Ça dépendra du contexte de la description.
+  # C’est fait partiellement, en même temps que la rectification en lot des interfaces pour v0.1.0-alpha. Pour des raisons techniques, toutes les interfaces sont maintenant regroupées. Voir /queries/0.1.0-alpha/construct-interfaces.rq
+#Faut-il déclarer que exhibit0027 est sur un mur ou il est suffisant qu’il soit face à exhibit0026?
+  # L’un n’empêche pas l’autre. Ça dépendra du contexte de la description.
 # solution proposée serait hasHangingInterface avec domain exhibit
 # similaire à pathwayInterfaceOf plus haut
-  # Voir v0.1.0-alpha de l'ontologie
+  # Voir v0.1.0-alpha de l’ontologie
 
 ########################################################
 # Salle 6
@@ -387,14 +387,14 @@ exhib:element0054 a display:Element ;
   display:isBehind exhib:exhibit0043 ;
   display:faces exhib:element0055 ;
   rdfs:label "cimaise du haut, salle 8"@fr ;
-  rdfs:comment "n'est pas typé actuellement (2024-11-22)" .
+  rdfs:comment "n’est pas typé actuellement (2024-11-22)" .
 
 exhib:exhibit0046 display:inFrontOf exhib:element0055 ;
   rdfs:label "Broodthaers, salle 8" .
 
 exhib:element0055 a display:Element ;
   rdfs:label "cimaise Broodthaers, salle 8"@fr ;
-  rdfs:comment "n'est pas typé actuellement (2024-11-22)" .
+  rdfs:comment "n’est pas typé actuellement (2024-11-22)" .
 
 exhib:space0019 a display:ExhibitionSpace ;
   rdfs:label "milieu de salle 8"@f ;
@@ -442,7 +442,7 @@ exhib:element0047 a display:Element .
 exhib:element0048 a display:Element .
 
 exhib:element0049 a display:Element ;
-  rdfs:comment "n'est pas typé actuellement (2024-11-22)" ;
+  rdfs:comment "n’est pas typé actuellement (2024-11-22)" ;
   rdfs:label "vitrine œuvres"@fr ;
   display:inFrontOf exhib:element0047 ;
   display:contains exhib:exhibit0048 ,
@@ -503,7 +503,7 @@ exhib:element0053 a display:Element .
 exhib:space0024 rdfs:label "haut de la salle 11"@fr .
 exhib:space0026 rdfs:label "bas de la salle 11"@fr .
 
-#j'ai laissé les isleft/rightOf en fonction du regardeur parce que nous avons commencé comme ça, malgré la problématique que cela pose.
+#j’ai laissé les isleft/rightOf en fonction du regardeur parce que nous avons commencé comme ça, malgré la problématique que cela pose.
 
 ########################################################
 # Espaces déservants
@@ -511,7 +511,7 @@ exhib:space0026 rdfs:label "bas de la salle 11"@fr .
 
 exhib:space0999 a display:ExhibitionSpace ;
   rdfs:label "Espace desservant Francken"@fr ;
-  bot:intersectsZone exhib:space0002 , # Symmetric. # Si un espace est contenu dans un espace, on intersectionne dans l'espace contenu au plus bas niveau (plus précis que l'intersection de haut niveau, avec lequelle on ne saurait pas dans quel espace de plus bas niveau on passe).
+  bot:intersectsZone exhib:space0002 , # Symmetric. # Si un espace est contenu dans un espace, on intersectionne dans l’espace contenu au plus bas niveau (plus précis que l’intersection de haut niveau, avec lequelle on ne saurait pas dans quel espace de plus bas niveau on passe).
     exhib:space0005 ,
     exhib:space0007 ,
     exhib:space0010 ,
@@ -531,7 +531,7 @@ exhib:space0998 a display:ExhibitionSpace ;
 
 exhib:space0997 a display:ExhibitionSpace ;
   rdfs:label "Espace desservant Broodthaers"@fr ;
-  rdfs:comment "Description inachevée; il n'est pas clair que la notion d'espace deservant nous sera utile."@fr .
+  rdfs:comment "Description inachevée; il n’est pas clair que la notion d’espace deservant nous sera utile."@fr .
 
 ########################################################
 # Vérifications Espaces
@@ -588,7 +588,7 @@ exhib:interface0018 a display:PathwayInterface;
         bot:interfaceOfSpace exhib:space0015 , exhib:space0016 .
 
 exhib:interface0012 a display:HangingInterface;
-  rdfs:label "Interface d'accrochage exhibit0023-element0021"@fr;
+  rdfs:label "Interface d’accrochage exhibit0023-element0021"@fr;
   display:interfaceOfExhibit exhib:exhibit0023;
   display:interfaceProvidedBy exhib:element0021 .
 
@@ -615,7 +615,7 @@ exhib:interface0019 a display:PathwayInterface;
         bot:interfaceOfSpace exhib:space0018 , exhib:space0016 .
 
 exhib:interface0013 a display:HangingInterface;
-        rdfs:label "Interface d'accrochage exhibit0021-element0022"@fr;
+        rdfs:label "Interface d’accrochage exhibit0021-element0022"@fr;
         display:interfaceOfExhibit exhib:exhibit0021;
         display:interfaceProvidedBy exhib:element0022 .
 
@@ -633,7 +633,7 @@ exhib:interface0023 a display:PathwayInterface;
         bot:interfaceOfSpace exhib:space0011 , exhib:space0013 .
 
 exhib:interface0033 a display:HangingInterface;
-        rdfs:label "Interface d'accrochage de Richter"@fr;
+        rdfs:label "Interface d’accrochage de Richter"@fr;
         display:interfaceOfExhibit exhib:exhibit0033;
         display:interfaceProvidedBy exhib:element0031 .
 
@@ -665,7 +665,7 @@ exhib:interface0010 a display:PathwayInterface;
         bot:interfaceOfSpace exhib:space0009 , exhib:space0008.
 
 exhib:interface0007 a display:HangingInterface;
-        rdfs:label "Interface d'accrochage exhibit001-element004"@fr;
+        rdfs:label "Interface d’accrochage exhibit001-element004"@fr;
         display:interfaceOfExhibit exhib:exhibit0001;
         display:interfaceProvidedBy exhib:element0004 .
 
@@ -734,7 +734,7 @@ exhib:activity0000 a crm:E7_Activity ;
     rdfs:label "Idea for Manet and Modern Beauty" .
 
 ########################################################
-# L'ensemble des expôts
+# L’ensemble des expôts
 # décrit selon voir https://linked.art/model/collection/
 ########################################################
 
@@ -745,7 +745,7 @@ exhib:set0000 a la:Set ;
     crm:P190_has_symbolic_content "Expôts de Feux pâles (1990)" ;
     crm:P2_has_type aat:300404670 ] ;
   crm:P67i_is_referred_to_by [ a crm:E33_Linguistic_Object ;
-    crm:P190_has_symbolic_content "L'ensemble des expôts de l'exposition Feux pâles, CAPC Bordeaux, 1990" ;
+    crm:P190_has_symbolic_content "L’ensemble des expôts de l’exposition Feux pâles, CAPC Bordeaux, 1990" ;
     crm:P2_has_type aat:300435416 ] ;
   crm:P94i_was_created_by [ a crm:E65_Creation ;
 #    crm:P4_has_time-span [ a crm:E52_Time-Span ;
