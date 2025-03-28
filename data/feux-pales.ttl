@@ -6,6 +6,7 @@ PREFIX exhib: <https://ouvroir.umontreal.ca/data/>
 PREFIX la: <https://linked.art/ns/terms/>
 PREFIX crm: <http://www.cidoc-crm.org/cidoc-crm/>
 PREFIX aat: <http://vocab.getty.edu/aat/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 #########################################################
 # Feux pâles selon Display                              #
@@ -22,13 +23,12 @@ exhib:space0000 rdfs:label "Préambule"@fr ;
     exhib:exhibit0002 ,
     exhib:exhibit0003 ,
     exhib:exhibit0004 ;
-  bot:adjacentElement exhib:element0004 ,
+  display:adjacentExhibit exhib:element0004 ,
     exhib:element0005 ,
     exhib:element0006 ,
     exhib:element0007 .
 
 exhib:exhibit0001 a display:Exhibit ;
-  rdfs:label "Ready-made R : code barre exposé dans le préambule"@fr ;
   display:faces exhib:element0005 .
 
 exhib:exhibit0002 a display:Exhibit ;
@@ -77,18 +77,19 @@ exhib:space0001 a display:ExhibitionSpace ;
 
 # Spaces contained in exhib:space0001
 # peut être inféré si on déclare par ex. display:hasExhibitionSpace
-exhib:space0002 bot:adjacentElement exhib:element0010 ;
+exhib:space0002 display:adjacentExhibit exhib:element0010 ;
   rdfs:label "haut de la salle 1"@fr .
 
 exhib:space0003 a display:ExhibitionSpace ;
   rdfs:label "espace Remps"@fr ;
-  bot:adjacentElement exhib:element0009 ,
+  display:adjacentExhibit exhib:element0009 ,
     exhib:element0010 ,
     exhib:element0011 ,
     exhib:element0012 ;
-  display:containsExhibit exhib:display001 .
+  display:containsExhibit exhib:display001 . # attention : n’est pas member_of set
 
 # display001 est un display
+# attention n’est pas member_of set 
 exhib:display001 display:includes exhib:exhibit0005 ,
     exhib:exhibit0006 ,
     exhib:exhibit0007 ,
@@ -149,7 +150,7 @@ exhib:element0016 a display:Element ;
 
 exhib:space0004 a display:ExhibitionSpace ;
   rdfs:label "bas de la salle 1"@fr ;
-  bot:adjacentElement exhib:element0012 .
+  display:adjacentExhibit exhib:element0012 .
 
 exhib:element0009 a display:Element ;
   rdfs:label "cimaise Remps"@fr .
@@ -231,11 +232,11 @@ exhib:element0028 a display:Element ;
 
 # Duchamp
 # Ne peut pas relever du point de vue (personne qui regarde)
-exhib:exhibit0015 rdfs:label "Fontaine (Duchamp)" ;
-  display:liesOn exhib:element0029 .
+exhib:exhibit0015 display:liesOn exhib:element0029 .
 exhib:element0029 a display:Element ;
-  rdfs:comment "n’est pas typé actuellement (2024-11-22)" ;
-  rdfs:label "socle sur lequel est posé Fontaine (Duchamp), dans la salle 3" .
+  rdfs:comment "n’est pas typé actuellement (2024-11-22)"@fr ,
+    "socle sur lequel est posé Fontaine (Duchamp), dans la salle 3"@fr ;
+  rdfs:label "socle de fontaine"@fr .
 
 # Manzoni
 exhib:exhibit0016 rdfs:label "Manzoni" ;
@@ -381,7 +382,7 @@ exhib:space0017 a display:ExhibitionSpace ;
   rdfs:label "salle 8 : Le musée réfléchi"@fr .
 
 exhib:space0018 rdfs:label "haut de la salle 8"@fr ;
-  bot:adjacentElement exhib:element0054 .
+  display:adjacentExhibit exhib:element0054 .
 
 exhib:element0054 a display:Element ;
   display:isBehind exhib:exhibit0043 ;
@@ -741,12 +742,16 @@ exhib:activity0000 a crm:E7_Activity ;
 exhib:set0000 a la:Set ;
   rdfs:label "Expôts de Feux pâles (1990)" ;
   crm:P2_has_type aat:300378926 ;
-  crm:P1_is_identified_by [ a crm:E33_E41_Linguistic_Appellation ;
+  crm:P1_is_identified_by [
+    a crm:E33_E41_Linguistic_Appellation ;
     crm:P190_has_symbolic_content "Expôts de Feux pâles (1990)" ;
-    crm:P2_has_type aat:300404670 ] ;
-  crm:P67i_is_referred_to_by [ a crm:E33_Linguistic_Object ;
+    crm:P2_has_type aat:300404670
+  ] ;
+  crm:P67i_is_referred_to_by [
+    a crm:E33_Linguistic_Object ;
     crm:P190_has_symbolic_content "L’ensemble des expôts de l’exposition Feux pâles, CAPC Bordeaux, 1990" ;
-    crm:P2_has_type aat:300435416 ] ;
+    crm:P2_has_type aat:300435416
+  ] ;
   crm:P94i_was_created_by [ a crm:E65_Creation ;
 #    crm:P4_has_time-span [ a crm:E52_Time-Span ;
 #    crm:P82a_begin_of_the_begin "2019-05-01T00:00:00Z" ;
@@ -1032,35 +1037,76 @@ exhib:exhibit0028 a crm:E22_Human-Made_Object ;
 exhib:exhibit0056 a crm:E22_Human-Made_Object ;
   crm:P2_has_type aat:300133025 .
 
-exhib:exhibit0015 a crm:E22_Human-Made_Object ;
-  la:equivalent <http://www.wikidata.org/entity/Q1206847> ;
-  crm:P2_has_type aat:300133025 ;
+exhib:exhibit0001 a display:Exhibit ;
+  rdfs:label "Ready-made R : code barre exposé dans le préambule"@fr ;
+  crm:P2_has_type aat:300133025 , aat:300033618 ;
   crm:P1_is_identified_by [
     a crm:E33_E41_Linguistic_Appellation ;
-    crm:P190_has_symbolic_content "Fontaine" ;
+    crm:P190_has_symbolic_content "®" ;
     crm:P2_has_type aat:300404670 ;
-    crm:P172_has_language aat:300388306
-  ] , [
-    a crm:E33_E41_Linguistic_Appellation ;
-    crm:P190_has_symbolic_content "Fountain" ;
-    crm:P2_has_type aat:300404670 ;
-    crm:P172_has_language aat:300388277
+    crm:P72_has_language aat:300388306
   ] ;
   crm:P67i_is_referred_to_by [
     a crm:E33_Linguistic_Object ;
-    crm:P190_has_symbolic_content "(from Wikidata) readymade sculpture attributed to Marcel Duchamp consisting of a porcelain urinal signed “R. KELLY » z’l" ;
-    crm:P2_has_type aat:300435416 ;
-    crm:P172_has_language aat:300388277
+    crm:P190_has_symbolic_content "acrylique sur toile"@fr ;
+    crm:P2_has_type aat:300435429 ;
+    crm:P72_has_language aat:300388306
   ] ;
   crm:P108i_was_produced_by [
     a crm:E12_Production ;
+    crm:P14_carried_out_by <http://dbpedia.org/resource/CAPC_musée_d'art_contemporain_de_Bordeaux> ;
+    crm:P4_has_time-span [
+      a crm:E52_Time-Span ;
+      rdfs:label "1990" ;
+      rdf:value "1990"^^xsd:gYear ;
+      crm:P82a_begin_of_the_begin "1990-01-01T00:00:00Z"^^xsd:dateTime ;
+      crm:P82b_end_of_the_end "1990-12-31T23:59:59Z"^^xsd:dateTime
+    ]
+  ] ;
+  crm:P43_has_dimension [
+    a crm:E54_Dimension ;
+    crm:P2_has_type aat:300055644 ;
+    crm:P90_has_value 97 ;
+    crm:P91_has_unit aat:300379098
+  ] , [
+    a crm:E54_Dimension ;
+    crm:P2_has_type aat:300055647 ;
+    crm:P90_has_value 130 ;
+    crm:P91_has_unit aat:300379098
+  ] .
+
+exhib:exhibit0015 a crm:E22_Human-Made_Object ;
+  rdfs:label "Fontaine (Duchamp)"@fr ;
+# @todo supprimer des données
+# la:equivalent <http://www.wikidata.org/entity/Q1206847> ;
+  crm:P2_has_type aat:300133025 , aat:300047090 ;
+  crm:P1_is_identified_by [
+    a crm:E33_E41_Linguistic_Appellation ;
+    crm:P190_has_symbolic_content "Fontaine"@fr ;
+    crm:P2_has_type aat:300404670 ;
+    crm:P72_has_language aat:300388306
+  ] , [
+    a crm:E33_E41_Linguistic_Appellation ;
+    crm:P190_has_symbolic_content "Fountain"@en ;
+    crm:P2_has_type aat:300404670 ;
+    crm:P72_has_language aat:300388277
+  ] ;
+  crm:P67i_is_referred_to_by [
+    a crm:E33_Linguistic_Object ;
+    crm:P190_has_symbolic_content "readymade sculpture attributed to Marcel Duchamp consisting of a porcelain urinal signed “R. KELLY”"@en ;
+    crm:P2_has_type aat:300435416 ;
+    crm:P72_has_language aat:300388277
+  ] ;
+  crm:P108i_was_produced_by [
+    a crm:E12_Production ;
+    crm:P14_carried_out_by <http://dbpedia.org/resource/Marcel_Duchamp> ;
     crm:P4_has_time-span [
       a crm:E52_Time-Span ;
       rdfs:label "1937" ;
-      crm:P82a_begin_of_the_begin "1917-01-01T00:00:00Z" ;
-      crm:P82b_end_of_the_end "1917-12-31T23:59:59Z"
-      ] ;
-    crm:P14_carried_out_by <http://www.wikidata.org/entity/Q5912>
+      rdf:value "1937"^^xsd:gYear ;
+      crm:P82a_begin_of_the_begin "1917-01-01T00:00:00Z"^^xsd:dateTime ;
+      crm:P82b_end_of_the_end "1917-12-31T23:59:59Z"^^xsd:dateTime
+    ]
   ] .
 
 exhib:exhibit0043 a crm:E22_Human-Made_Object ;
