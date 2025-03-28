@@ -1,0 +1,97 @@
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX crm: <http://www.cidoc-crm.org/cidoc-crm/>
+PREFIX aat: <http://vocab.getty.edu/aat/>
+
+aat:300054766 a crm:E55_Type , skos:Concept ;
+  rdfs:label "Exhibition"@en .
+
+aat:300133025 a crm:E55_Type , skos:Concept ;
+  rdfs:label "Artwork"@en .
+
+######################################
+# Types of work
+######################################
+
+aat:300435443 a crm:E55_Type , skos:Concept ;
+  rdfs:label "Type of Work"@en .
+
+aat:300033618 a crm:E55_Type , skos:Concept ;
+  rdfs:label "Painting"@en ;
+  crm:P2_has_type aat:300435443 .
+
+aat:300047090 a crm:E55_Type , skos:Concept ;
+  rdfs:label "Sculpture"@en ;
+  crm:P2_has_type aat:300435443 .
+
+aat:300375221 a crm:E55_Type , skos:Concept ;
+  rdfs:label "Modular Walls"@en .
+
+######################################
+# Dimensions
+######################################
+
+aat:300055647 a crm:E55_Type , skos:Concept ;
+  rdfs:label "Width"@en .
+
+aat:300055644 a crm:E55_Type , skos:Concept ;
+  rdfs:label "Height"@en .
+
+aat:300379098 a crm:E58_Measurement_Unit , skos:Concept ;
+  rdfs:label "Centimeters"@en ;
+  skos:notation "cm" .
+
+######################################
+# Linguistic Objets
+######################################
+
+aat:300404670 a crm:E55_Type , skos:Concept ;
+  rdfs:label "Primary Name"@en .
+
+aat:300418049 a crm:E55_Type , skos:Concept ;
+  rdfs:label "Brief Text"@en .
+
+aat:300435416 a crm:E55_Type , skos:Concept ;
+  rdfs:label "Description"@en ;
+  crm:P2_has_type aat:300418049 .
+
+aat:300435429 a crm:E55_Type , skos:Concept ;
+  rdfs:label "Material Statement"@en ;
+  crm:P2_has_type aat:300418049 .
+
+aat:300378926 a crm:E55_Type , skos:Concept ;
+  rdfs:label "Topical Collection"@en .
+
+aat:300312281 a crm:E55_Type , skos:Concept ;
+  rdfs:label "Museum"@en .
+
+######################################
+# Groups
+######################################
+
+<http://vocab.getty.edu/ulan/500305133> a crm:E74_Group ;
+  rdfs:label "CAPC Bordeaux" ;
+  crm:P2_has_type aat:300312281 .
+
+######################################
+# Languages
+######################################
+
+aat:300388277 a crm:E56_Language , skos:Concept ;
+  rdfs:label "English"@en ;
+  skos:notation "en" .
+
+aat:300388306 a crm:E56_Language , skos:Concept ;
+  rdfs:label "French"@en ;
+  skos:notation "fr" .
+
+#######################################
+# Places
+#######################################
+
+aat:300008389 a crm:E55_Type , skos:Concept ;
+  rdfs:label "City"@en .
+
+<http://vocab.getty.edu/tgn/7008161> a crm:E53_Place ;
+  rdfs:label "Bordeaux" ;
+  crm:P2_has_type aat:300008389 .
