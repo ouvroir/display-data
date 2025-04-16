@@ -716,15 +716,17 @@ exhib:activity0000 a crm:E7_Activity ;
   crm:P15_was_influenced_by <https://linked.art/example/concept/exhidea> ;
   crm:P16_used_specific_object exhib:set0000 ;
   crm:P1_is_identified_by [ a crm:E33_E41_Linguistic_Appellation ;
-    crm:P190_has_symbolic_content "Feux pâles" ;
-    crm:P2_has_type aat:300404670 ] ;
+    crm:P190_has_symbolic_content "Feux pâles"@fr ;
+    crm:P2_has_type aat:300404670 ;
+    crm:P72_has_language aat:300388306 ] ;
   crm:P2_has_type aat:300054766 ;
   crm:P4_has_time-span [ a crm:E52_Time-Span ;
-            crm:P82a_begin_of_the_begin "1990-12-07" ;
-            crm:P82b_end_of_the_end "1991-03-03" ] ;
+    crm:P82a_begin_of_the_begin "1990-12-07" ;
+    crm:P82b_end_of_the_end "1991-03-03" ] ;
   crm:P67i_is_referred_to_by [ a crm:E33_Linguistic_Object ;
-            crm:P190_has_symbolic_content "" ;
-            crm:P2_has_type aat:300435416 ] ;
+    crm:P190_has_symbolic_content "Feux-Pâles est une exposition commandée/signée par le capcMusée d’art contemporain de Bordeaux, et les ready-made appartiennent à tout le monde®, agence dont le directeur est l’artiste fictionnaliste Philippe Thomas. L’exposition présente en 11 chapitres une proposition sur la socialite du système de l’art. Plongeant le public dans des jeux de fiction et de références, il raconte sa perception de l’histoire de l’art et du musée." ;
+    crm:P2_has_type aat:300435416 ;
+    rdfs:comment "description à sourcer"@fr ] ;
   crm:P7_took_place_at <http://vocab.getty.edu/tgn/7008161> .
 
 ########################################################
