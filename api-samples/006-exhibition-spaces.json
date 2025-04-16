@@ -1,0 +1,24 @@
+{
+  "iri": "https://ouvroir.umontreal.ca/data/activity0000",
+  "type": "http://www.cidoc-crm.org/cidoc-crm/E7_Activity",
+  "_label": {
+    "fr": "Feux pâles (capcMusée d’art contemporain, Bordeaux, 1990)"
+  },
+  "spaces": [
+    "https://ouvroir.umontreal.ca/data/space0000",
+    "https://ouvroir.umontreal.ca/data/space0002",
+    "https://ouvroir.umontreal.ca/data/space0003",
+    "https://ouvroir.umontreal.ca/data/space0004",
+    "https://ouvroir.umontreal.ca/data/space0018",
+    "https://ouvroir.umontreal.ca/data/space0005",
+    "https://ouvroir.umontreal.ca/data/space0008",
+    "https://ouvroir.umontreal.ca/data/space0010",
+    "https://ouvroir.umontreal.ca/data/space0011",
+    "https://ouvroir.umontreal.ca/data/space0014",
+    "https://ouvroir.umontreal.ca/data/space0016",
+    "https://ouvroir.umontreal.ca/data/space0019",
+    "https://ouvroir.umontreal.ca/data/space0021",
+    "https://ouvroir.umontreal.ca/data/space0022",
+    "https://ouvroir.umontreal.ca/data/space0025"
+  ]
+}

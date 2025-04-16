@@ -1,0 +1,24 @@
+{
+  "head": {
+    "vars": [
+      "exhibition",
+      "label"
+    ]
+  },
+  "results": {
+    "bindings": [
+      {
+        "exhibition": {
+          "type": "uri",
+          "value": "https://ouvroir.umontreal.ca/data/activity0000"
+        },
+        "label": {
+          "type": "literal",
+          "xml:lang": "fr",
+          "value": "Feux pâles (capcMusée d’art contemporain, Bordeaux, 1990)"
+        }
+      }
+    ]
+  },
+  "query": "PREFIX n0: <http://www.cidoc-crm.org/cidoc-crm/>\nPREFIX n1: <http://vocab.getty.edu/aat/>\nPREFIX n2: <http://www.w3.org/2000/01/rdf-schema#>\nSELECT DISTINCT ?exhibition ?label WHERE {?exhibition a n0:E7_Activity;n0:P2_has_type n1:300054766;n2:label ?label}"
+}

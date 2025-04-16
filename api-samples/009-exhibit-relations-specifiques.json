@@ -1,0 +1,70 @@
+{
+  "head": {
+    "vars": [
+      "exhibit",
+      "relation",
+      "object"
+    ]
+  },
+  "results": {
+    "bindings": [
+      {
+        "exhibit": {
+          "type": "uri",
+          "value": "https://ouvroir.umontreal.ca/data/exhibit0006"
+        },
+        "relation": {
+          "type": "uri",
+          "value": "https://w3id.org/display#liesOn"
+        },
+        "object": {
+          "type": "uri",
+          "value": "https://ouvroir.umontreal.ca/data/element0014"
+        }
+      },
+      {
+        "exhibit": {
+          "type": "uri",
+          "value": "https://ouvroir.umontreal.ca/data/exhibit0006"
+        },
+        "relation": {
+          "type": "uri",
+          "value": "https://w3id.org/display#inFrontOf"
+        },
+        "object": {
+          "type": "uri",
+          "value": "https://ouvroir.umontreal.ca/data/element0010"
+        }
+      },
+      {
+        "exhibit": {
+          "type": "uri",
+          "value": "https://ouvroir.umontreal.ca/data/exhibit0006"
+        },
+        "relation": {
+          "type": "uri",
+          "value": "https://w3id.org/display#leftOf"
+        },
+        "object": {
+          "type": "uri",
+          "value": "https://ouvroir.umontreal.ca/data/element0015"
+        }
+      },
+      {
+        "exhibit": {
+          "type": "uri",
+          "value": "https://ouvroir.umontreal.ca/data/exhibit0006"
+        },
+        "relation": {
+          "type": "uri",
+          "value": "https://w3id.org/display#faces"
+        },
+        "object": {
+          "type": "uri",
+          "value": "https://ouvroir.umontreal.ca/data/exhibit0009"
+        }
+      }
+    ]
+  },
+  "query": "PREFIX n0: <https://ouvroir.umontreal.ca/data/>\nPREFIX n1: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX n2: <https://w3id.org/display#>\nSELECT ?exhibit ?relation ?object WHERE {BIND(n0:exhibit0006 AS ?exhibit) ?exhibit ?relation ?object. ?relation n1:subPropertyOf+ n2:hasTopologicalRelationWith. FILTER (?relation != n2:hasTopologicalRelationWith) FILTER (?relation != n2:spatialRelationship) FILTER (?relation != n2:proximalRelationship)}"
+}
