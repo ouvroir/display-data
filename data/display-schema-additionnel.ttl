@@ -16,31 +16,17 @@ la:has_member owl:inverseOf la:member_of .
 crm:P16_used_specific_object owl:inverseOf crm:P16i_was_used_for .
 
 # bot
-# localement actuellement
 bot:adjacentZone a owl:ObjectProperty , owl:SymmetricProperty ;
   rdfs:domain bot:Zone ;
   rdfs:range bot:Zone ;
-  owl:propertyDisjointWith bot:intersectsZone ;
-  rdfs:isDefinedBy bot: .
+  owl:propertyDisjointWith bot:intersectsZone .
 
 bot:intersectsZone a owl:ObjectProperty , owl:SymmetricProperty ;
   rdfs:domain bot:Zone ;
   rdfs:range bot:Zone ;
-  owl:propertyDisjointWith bot:adjacentZone ;
-  rdfs:isDefinedBy bot: .
+  owl:propertyDisjointWith bot:adjacentZone .
 
+# @todo ajouter les sous-propriétés
 bot:containsZone a owl:ObjectProperty , owl:TransitiveProperty ;
   rdfs:domain bot:Zone ;
-  rdfs:range bot:Zone ;
-  rdfs:isDefinedBy bot: .
-
-################################
-# element dans le set (via SPARQL)
-
-# PREFIX la: <https://linked.art/ns/terms/>
-# PREFIX display: <https://w3id.org/display#>
-# INSERT {
-#   <https://ouvroir.umontreal.ca/data/set0000> la:has_member ?element
-# } WHERE {
-#   ?element a display:Element;
-# }
+  rdfs:range bot:Zone .

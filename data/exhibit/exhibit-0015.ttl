@@ -1,0 +1,48 @@
+PREFIX bot: <https://w3id.org/bot#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX display: <https://w3id.org/display#>
+PREFIX exhib: <https://ouvroir.umontreal.ca/data/>
+PREFIX la: <https://linked.art/ns/terms/>
+PREFIX crm: <http://www.cidoc-crm.org/cidoc-crm/>
+PREFIX aat: <http://vocab.getty.edu/aat/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+exhib:exhibit0015 a crm:E22_Human-Made_Object ;
+    rdfs:label                  "Fontaine (Duchamp)"@fr ;
+    crm:P2_has_type             aat:300133025 ,
+                                aat:300047090 ;
+    crm:P1_is_identified_by     <urn:uuid:e00fa329-dcdd-460d-aa70-cdb20f080f34> ,
+                                <urn:uuid:1c05c198-c80e-4daa-8b6b-e3a44b873d0f> ;
+    crm:P67i_is_referred_to_by  <urn:uuid:508e8e8a-a743-4dd3-b250-fac2acec0c35> ;
+    crm:P108i_was_produced_by   <urn:uuid:ac9fa743-4e60-4875-a2b4-08cdd0aa9c5d> .
+
+<urn:uuid:e00fa329-dcdd-460d-aa70-cdb20f080f34>
+    rdf:type                      crm:E33_E41_Linguistic_Appellation ;
+    crm:P190_has_symbolic_content "Fontaine"@fr ;
+    crm:P2_has_type               aat:300404670 ;
+    crm:P72_has_language          aat:300388306 .
+
+<urn:uuid:1c05c198-c80e-4daa-8b6b-e3a44b873d0f>
+    rdf:type                      crm:E33_E41_Linguistic_Appellation ;
+    crm:P190_has_symbolic_content "Fountain"@en ;
+    crm:P2_has_type               aat:300404670 ;
+    crm:P72_has_language          aat:300388277 .
+
+<urn:uuid:508e8e8a-a743-4dd3-b250-fac2acec0c35>
+    rdf:type                      crm:E33_Linguistic_Object ;
+    crm:P190_has_symbolic_content "readymade sculpture attributed to Marcel Duchamp consisting of a porcelain urinal signed “R. KELLY”"@en ;
+    crm:P2_has_type               aat:300435416 ;
+    crm:P72_has_language          aat:300388277 .
+
+<urn:uuid:ac9fa743-4e60-4875-a2b4-08cdd0aa9c5d>
+    rdf:type               crm:E12_Production ;
+    crm:P14_carried_out_by <http://dbpedia.org/resource/Marcel_Duchamp> ;
+    crm:P4_has_time-span   <urn:uuid:e0a024b3-bc5f-4345-9906-be5a14b10695> .
+
+<urn:uuid:e0a024b3-bc5f-4345-9906-be5a14b10695>
+    rdf:type                    crm:E52_Time-Span ;
+    rdfs:label                  "1937" ;
+    rdf:value                   "1937"^^xsd:gYear ;
+    crm:P82a_begin_of_the_begin "1917-01-01T00:00:00Z"^^xsd:dateTime ;
+    crm:P82b_end_of_the_end     "1917-12-31T23:59:59Z"^^xsd:dateTime .

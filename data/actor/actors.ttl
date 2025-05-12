@@ -1,0 +1,26 @@
+PREFIX bot: <https://w3id.org/bot#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX display: <https://w3id.org/display#>
+PREFIX exhib: <https://ouvroir.umontreal.ca/data/>
+PREFIX la: <https://linked.art/ns/terms/>
+PREFIX crm: <http://www.cidoc-crm.org/cidoc-crm/>
+PREFIX aat: <http://vocab.getty.edu/aat/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<http://vocab.getty.edu/ulan/500305133>
+    rdf:type        crm:E74_Group ;
+    crm:P2_has_type aat:300312281 ;
+    rdfs:label      "CAPC Musée d’art contemporain de Bordeaux"@fr .
+
+<http://vocab.getty.edu/ulan/500096019>
+    rdf:type    crm:E21_Person ;
+    rdfs:label  "Philippe Thomas"@fr .
+
+<http://dbpedia.org/resource/Marcel_Duchamp>
+    rdf:type    crm:E21_Person ;
+    rdfs:label  "Marcel Duchamp"@fr .
+
+<http://vocab.getty.edu/ulan/500185192>
+    rdf:type    crm:E21_Person ;
+    rdfs:label  "Andrea Dominico Remps"@it .
