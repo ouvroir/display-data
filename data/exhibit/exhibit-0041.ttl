@@ -1,0 +1,59 @@
+PREFIX bot: <https://w3id.org/bot#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX display: <https://w3id.org/display#>
+PREFIX exhib: <https://ouvroir.umontreal.ca/data/>
+PREFIX la: <https://linked.art/ns/terms/>
+PREFIX crm: <http://www.cidoc-crm.org/cidoc-crm/>
+PREFIX aat: <http://vocab.getty.edu/aat/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+exhib:exhibit0041
+    rdf:type                    crm:E22_Human-Made_Object ;
+    rdfs:label                  "Prina 2"@fr ;
+    rdfs:comment                "Oeuvre composée de deux items exhibit0037 et exhibit0041. Préciser Collection Robert Calle" ;
+    crm:P2_has_type             aat:300133025 ,
+                                aat:300264849 ;
+    crm:P1_is_identified_by     <urn:uuid:4b4e42f6-56ad-4dd9-8d88-63945751ad70> ;
+    crm:P67i_is_referred_to_by  <urn:uuid:5061c008-1170-4b4e-9c46-fe35d0c3cd6c> ;
+    crm:P108i_was_produced_by   <urn:uuid:0e978aaa-205b-4279-847e-bf4554072118> ;    
+    crm:P43_has_dimension       <urn:uuid:a0a7e822-1126-4d56-a608-15c8f15293c0> ,
+                                <urn:uuid:640b3459-c4a0-41a9-8c62-3762da611e1a> .
+
+<urn:uuid:4b4e42f6-56ad-4dd9-8d88-63945751ad70>
+    rdf:type                        crm:E33_E41_Linguistic_Appellation ;
+    crm:P190_has_symbolic_content   "Exquisite Corpse : the complete paintings of Manet n° 35/556, La musique aux Tuileries 1860 - Ny Carlsberg Glyptoteket, Copenhagen" ;
+    crm:P2_has_type                 aat:300404670 ;
+    crm:P72_has_language            aat:300387822 .
+	
+<urn:uuid:5061c008-1170-4b4e-9c46-fe35d0c3cd6c>
+    rdf:type                        crm:E33_Linguistic_Object ;
+    crm:P190_has_symbolic_content   "encre sur papier"@fr ;
+    crm:P2_has_type                 aat:300435429 ;
+    crm:P72_has_language            aat:300388306 .
+
+<urn:uuid:0e978aaa-205b-4279-847e-bf4554072118>
+    rdf:type                crm:E12_Production ;
+    crm:P14_carried_out_by  https://vocab.getty.edu/ulan/500073908 ;
+    crm:P4_has_time-span    <urn:uuid:09e51926-b547-43b3-b4d7-6e97416bc945> .
+	
+<urn:uuid:09e51926-b547-43b3-b4d7-6e97416bc945>
+    rdf:type                    crm:E52_Time-Span ;
+    rdfs:label                  "1988" ;
+    rdf:value                   "1988"^^xsd:gYear ;
+    crm:P82a_begin_of_the_begin "1988-01-01T00:00:00Z"^^xsd:dateTime ;
+    crm:P82b_end_of_the_end     "1988-12-31T23:59:59Z"^^xsd:dateTime .
+
+	
+<urn:uuid:a0a7e822-1126-4d56-a608-15c8f15293c0>
+    rdf:type          crm:E54_Dimension ;
+    crm:P2_has_type   aat:300055644 ;
+    crm:P90_has_value 76 ;
+    crm:P91_has_unit  aat:300379098 .
+
+	
+<urn:uuid:640b3459-c4a0-41a9-8c62-3762da611e1a>
+    rdf:type          crm:E54_Dimension ;
+    crm:P2_has_type   aat:300056240 ;
+    crm:P90_has_value 118 ;
+    crm:P91_has_unit  aat:300379226 .

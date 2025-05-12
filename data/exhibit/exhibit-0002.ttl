@@ -1,0 +1,30 @@
+PREFIX bot: <https://w3id.org/bot#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX display: <https://w3id.org/display#>
+PREFIX exhib: <https://ouvroir.umontreal.ca/data/>
+PREFIX la: <https://linked.art/ns/terms/>
+PREFIX crm: <http://www.cidoc-crm.org/cidoc-crm/>
+PREFIX aat: <http://vocab.getty.edu/aat/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+exhib:exhibit0002
+    rdf:type                    crm:E22_Human-Made_Object ;
+    rdfs:label                  "Titre de l'exposition"@fr ;
+    rdfs:comment                "Trouver un moyen de transcrire le contenu" ;
+    crm:P2_has_type             aat:300220751 ;
+    crm:P67i_is_referred_to_by  <urn:uuid:c93e6840-ae2e-4e20-b181-ff0c7993d89c> ;
+    crm:P67i_is_referred_to_by  <urn:uuid:9e16b078-f3d8-40bf-80e3-44dc0ed16c99> ;
+    crm:P108i_was_produced_by   <urn:uuid:ea055aed-a5c0-435d-a7d2-3e9631434f53> .
+
+<urn:uuid:c93e6840-ae2e-4e20-b181-ff0c7993d89c>
+    rdf:type                      crm:E33_Linguistic_Object ;
+    crm:P190_has_symbolic_content "lettraset"@fr ;
+    crm:P2_has_type               aat:300435429 ;
+    crm:P72_has_language          aat:300388306 .
+
+<urn:uuid:9e16b078-f3d8-40bf-80e3-44dc0ed16c99>
+    rdf:type                      crm:E33_Linguistic_Object ;
+    crm:P190_has_symbolic_content "titre de l'exposition"@fr ;
+    crm:P2_has_type               aat:300435416 ;
+    crm:P72_has_language          aat:300388306 .

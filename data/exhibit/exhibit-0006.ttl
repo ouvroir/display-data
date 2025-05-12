@@ -1,0 +1,55 @@
+PREFIX bot: <https://w3id.org/bot#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX display: <https://w3id.org/display#>
+PREFIX exhib: <https://ouvroir.umontreal.ca/data/>
+PREFIX la: <https://linked.art/ns/terms/>
+PREFIX crm: <http://www.cidoc-crm.org/cidoc-crm/>
+PREFIX aat: <http://vocab.getty.edu/aat/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+exhib:exhibit0006
+    rdf:type                    crm:E22_Human-Made_Object ;
+    rdfs:label                  "Buste de Platon"@fr ;
+    rdfs:comment                "Ce buste est une copie d'un buste original, je ne sais pas comment l'intituler : vérifier ressource métier. Il faut aussi préciser qu'il est dans la Collection des moulages, Institut d’Archéologie classique de Strasbourg" ;
+    crm:P2_has_type             aat:300133025 ,
+                                aat:300047090 ;
+    crm:P1_is_identified_by     <urn:uuid:6b51598b-245d-4152-ae4d-6a55a5a81d4d> ;
+    crm:P67i_is_referred_to_by  <urn:uuid:d7562213-1326-4676-b8bc-77d4b47a434b> ;
+    crm:P108i_was_produced_by   <urn:uuid:438d9576-f8c7-4f49-8fcd-90c2a6c069f3> ;
+    crm:P43_has_dimension       <urn:uuid:6c9aa5ce-5757-4206-8162-8b4925de8875> ,
+                                <urn:uuid:349cf563-3a62-467b-bf22-d6bbc74316eb> , 
+                                <urn:uuid:02b953a4-6f35-4119-99dc-c3a4c8510cbd> .
+    
+<urn:uuid:6b51598b-245d-4152-ae4d-6a55a5a81d4d>
+    rdf:type                        crm:E33_E41_Linguistic_Appellation ;
+    crm:P190_has_symbolic_content   "Platon (Original : Musée de Berlin, IV avant J.C.) " ;
+    crm:P2_has_type                 aat:300404670 ;
+    crm:P72_has_language            aat:300388306 .
+
+<urn:uuid:d7562213-1326-4676-b8bc-77d4b47a434b>
+    rdf:type                        crm:E33_Linguistic_Object ;
+    crm:P190_has_symbolic_content   "moulage plâtre"@fr ;
+    crm:P2_has_type                 aat:300435429 ;
+    crm:P72_has_language            aat:300388306 .
+
+<urn:uuid:438d9576-f8c7-4f49-8fcd-90c2a6c069f3>
+    rdf:type                crm:E12_Production .
+
+<urn:uuid:6c9aa5ce-5757-4206-8162-8b4925de8875>
+    rdf:type          crm:E54_Dimension ;
+    crm:P2_has_type   aat:300055644 ;
+    crm:P90_has_value 51 ;
+    crm:P91_has_unit  aat:300379098 .
+
+<urn:uuid:349cf563-3a62-467b-bf22-d6bbc74316eb>
+    rdf:type          crm:E54_Dimension ;
+    crm:P2_has_type   aat:300055647 ;
+    crm:P90_has_value 24 ;
+    crm:P91_has_unit  aat:300379098 .
+
+<urn:uuid:02b953a4-6f35-4119-99dc-c3a4c8510cbd>
+    rdf:type          crm:E54_Dimension ;
+    crm:P2_has_type   aat:300056240 ;
+    crm:P90_has_value 8 ;
+    crm:P91_has_unit  aat:300379226 .
