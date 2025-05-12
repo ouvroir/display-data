@@ -1,0 +1,8 @@
+# compter les instances de exhibit qui
+# ne sont pas des element ni des display
+PREFIX display: <https://w3id.org/display#>
+SELECT (COUNT (?e) AS ?n) WHERE {
+  ?e a display:Exhibit
+  MINUS {?e a display:Element}
+  MINUS {?e a display:Display}
+}

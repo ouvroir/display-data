@@ -4,3 +4,6 @@ datasets-config/
 .DS_Store
 notes/
 data/add-data.ttl
+queries/api/
+queries/test-insertInconsistencies.rq
+queries/utilitaire-exhibitMetadata.rq

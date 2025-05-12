@@ -1,0 +1,2 @@
+# générer un uuid sous forme d’URN
+SELECT(UUID()AS?uuid){}

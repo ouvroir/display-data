@@ -1,0 +1,43 @@
+# inférer les exhibits contenus par un espace contenant des espaces
+# autrement dit, exhibits indirectement contenu
+
+PREFIX dbp: <http://dbpedia.org/property/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX la: <https://linked.art/ns/terms/>
+PREFIX crm: <http://www.cidoc-crm.org/cidoc-crm/>
+PREFIX aat: <http://vocab.getty.edu/aat/>
+PREFIX exhib: <https://ouvroir.umontreal.ca/data/>
+PREFIX display: <https://w3id.org/display#>
+
+SELECT DISTINCT
+?outer_space
+?outer_space_label
+?space_to_space_relation
+?inner_space
+?inner_space_label
+?exhibit
+?exhibit_label
+WHERE
+{
+
+  { # bindings
+    # exemple avec space0006
+    BIND(exhib:space0006 AS ?outer_space)
+    BIND(display:ExhibitionSpace AS ?type)
+    BIND("display:hasExhibitionSpace" AS ?space_to_space_relation)
+  }
+
+  ?outer_space a ?type ;
+  	rdfs:label ?outer_space_label ;
+    display:hasExhibitionSpace ?inner_space .
+
+  OPTIONAL {
+    ?inner_space rdfs:label ?inner_space_label .
+  }
+  
+  OPTIONAL {
+    ?inner_space display:hasExhibit ?exhibit .
+    ?exhibit rdfs:label ?exhibit_label .
+  }
+} ORDER BY ?id

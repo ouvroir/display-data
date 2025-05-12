@@ -1,0 +1,14 @@
+# équivalent de DESCRIBE IRI
+# débarassé des propriétés inutiles ajoutées par les inférences
+PREFIX bot: <https://w3id.org/bot#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+SELECT * WHERE {
+  BIND(<https://ouvroir.umontreal.ca/data/element0004> AS ?s)
+  ?s ?p ?o .
+  FILTER(?p != owl:differentFrom)
+  FILTER(?o != rdfs:Resource)
+  FILTER(?o != owl:Thing)
+  FILTER(?o != bot:Element)
+  FILTER(?s != ?o)
+}  ORDER BY ?p

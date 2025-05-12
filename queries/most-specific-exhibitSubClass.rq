@@ -1,0 +1,31 @@
+PREFIX bot: <https://w3id.org/bot#>
+PREFIX n0: <https://ntnlv.ca/ns/utils#>
+PREFIX n1: <https://w3id.org/display#>
+PREFIX n2: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX n3: <https://ouvroir.umontreal.ca/data/>
+
+SELECT DISTINCT ?iri ?type ?mapping  
+WHERE {
+  ?iri a ?type .
+  OPTIONAL {
+    # pour afficher la chaîne mise en correspondance avec la classe
+    # dans le fichier de contexte (@context)
+    ?type n0:jsonldmapping ?mapping 
+  }
+  FILTER (?type IN ( n1:Exhibit, n1:Element, n1:Display ))
+
+  FILTER NOT EXISTS {
+    # On conserve la solution si ?type n’a pas de sous-classe (donc la plus spécifique)
+    ?subtype ^a  ?iri ;
+      n2:subClassOf ?type .
+    
+    # il faut ignorer certaines sous-classes inférées
+    FILTER (?subtype != ?type) # every class is an rdfs:subClassOf itself (inference)
+    FILTER (?subtype != bot:Element) # display et bot element equivalent class donc sous-classes mutuelles
+  }
+
+  # on applique la requête sur une ressource en particulier
+  # ici à titre d’exemple
+  # fonction BIND() aussi possible
+  FILTER (?iri IN ( n3:element0007))
+}

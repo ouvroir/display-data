@@ -9,7 +9,7 @@ PREFIX display: <https://ouvroir.umontreal.ca/onto/display#>
 SELECT ?subject_exhibit ?se_label ?topological_relation ?oe_label ?object_exhibit
 WHERE {
 
-  # superclasse des relations topologiques
+  # superpropriété des relations topologiques
   # permettant de récupérer tous les types de relations topologiques
   BIND(display:hasTopologicalRelationWith AS ?htrw)
 
@@ -24,7 +24,7 @@ WHERE {
     ?object_exhibit rdfs:label ?oe_label .
   }
 
-  # les déclarations de superclasses sont matérialisées par le moteur d'inférence
+  # les déclarations de superclasses sont matérialisées par le moteur d’inférence
   # on filtre pour conserver les plus spécifiques seulement
   FILTER(?topological_relation != ?htrw)
   FILTER(?topological_relation != display:proximalRelation)
