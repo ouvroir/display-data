@@ -1,0 +1,23 @@
+{
+  "iri": "https://ouvroir.umontreal.ca/data/activity0000",
+  "type": "http://www.cidoc-crm.org/cidoc-crm/E7_Activity",
+  "_label": {
+    "fr": "Feux pâles (capcMusée d’art contemporain, Bordeaux, 1990)"
+  },
+  "identified_by": {
+    "fr": "Feux pâles"
+  },
+  "classified_as": "http://vocab.getty.edu/aat/300054766",
+  "used_specific_object": {
+    "iri": "https://ouvroir.umontreal.ca/data/set0000",
+    "type": "https://linked.art/ns/terms/Set",
+    "_label": {
+      "fr": "Expôts de Feux pâles (1990)"
+    },
+    "referred_to_by": [
+      {
+        "fr": "L’ensemble des expôts de l’exposition Feux pâles, CAPC Bordeaux, 1990"
+      }
+    ]
+  }
+}

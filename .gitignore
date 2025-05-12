@@ -3,4 +3,4 @@ tbox-abox/
 datasets-config/
 .DS_Store
 notes/
-data/linked-art.json.jsonld
+data/add-data.ttl

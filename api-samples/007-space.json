@@ -1,0 +1,20 @@
+{
+  "iri": "https://ouvroir.umontreal.ca/data/space0001",
+  "type": [
+    "https://w3id.org/display#ExhibitionSpace",
+    "https://w3id.org/bot#Zone",
+    "https://w3id.org/bot#Space"
+  ],
+  "_label": {
+    "fr": "salle 1 : Inventaire du mémorable"
+  },
+  "adjacent_zone": [
+    "https://ouvroir.umontreal.ca/data/space0005",
+    "https://ouvroir.umontreal.ca/data/space0000"
+  ],
+  "has_exhibition_space": [
+    "https://ouvroir.umontreal.ca/data/space0002",
+    "https://ouvroir.umontreal.ca/data/space0003",
+    "https://ouvroir.umontreal.ca/data/space0004"
+  ]
+}

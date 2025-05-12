@@ -1,0 +1,48 @@
+PREFIX rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs:    <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX skos:    <http://www.w3.org/2004/02/skos/core#>
+PREFIX crm:     <http://www.cidoc-crm.org/cidoc-crm/>
+PREFIX aat:     <http://vocab.getty.edu/aat/>
+PREFIX la:      <https://linked.art/ns/terms/>
+PREFIX display: <https://w3id.org/display#>
+PREFIX bot:     <https://w3id.org/bot#>
+PREFIX exhib:   <https://ouvroir.umontreal.ca/data/>
+PREFIX xsd:     <http://www.w3.org/2001/XMLSchema#>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX user:    <urn:display:user:> # display project data
+PREFIX utils:   <https://ntnlv.ca/ns/utils#>
+
+<urn:uuid:1b215ba8-9e9b-4d4b-af9a-3245bc48940b>
+    rdf:type            utils:Project ;
+    rdfs:label          "Exemple de projet : hypothèse A"@fr ;
+    rdfs:comment        """
+Dans l’hypothèse de projet A, chaque version du projet est stockée dans un graphe nommé.
+Le graphe et toutes les déclarations de nature topologique qui y appartiennent représentent une interprétation de l’exposition à laquelle plusieurs utilisateurs peuvent contribuer.
+Dans cette hypothèse, les déclarations sont sourcées par les versions de projet. 
+Les versions sont liées au projet par dcterms:hasVersion, mais dcterms:hasPart pourrait faire l’affaire; sémantique à discuter."""@fr ;
+    dcterms:title       "Exemple de projet : hypothèse A"@fr ;
+    dcterms:description "Ce projet réalisé à l’Ouvroir porte sur Feux pâles par Philippe Thomas (1990)."@fr ;
+    dcterms:subject     exhib:activity0000 ;
+    dcterms:creator     user:David ;
+    dcterms:contributor user:Zoë ,
+                        user:Emmanuel ;
+    dcterms:created     "2025-05-07T16:32:48.456-04:00"^^xsd:dateTime ;
+    dcterms:modified    "2025-05-07T20:04:18.015-04:00"^^xsd:dateTime ;
+    dcterms:hasVersion  <urn:uuid:8d330a9f-e3e2-4dba-ab62-d2f3e098fb33> ,
+                        <urn:uuid:a9da2047-48fb-411c-bf4d-86b9d0cc28f9> .
+
+<urn:uuid:b5aa1c27-c15c-484e-a6c8-aa831683e55c>
+    rdf:type            <foo> ;
+    rdfs:label          "hypothèse A, version 1"@fr ;
+    dcterms:isVersionOf <urn:uuid:1b215ba8-9e9b-4d4b-af9a-3245bc48940b> ;
+    dcterms:identifier  1 ; # numéro de version
+    dcterms:created     "2025-05-07T21:33:54.085-04:00"^^xsd:dateTime ;
+    dcterms:modified    "2025-05-07T21:34:08.066-04:00"^^xsd:dateTime ;
+    .
+
+GRAPH <urn:uuid:8d330a9f-e3e2-4dba-ab62-d2f3e098fb33> {
+
+  exhib:exhibit0005 display:faces exhib:element0013 .
+  # etc.
+
+}

@@ -1,0 +1,147 @@
+PREFIX bot: <https://w3id.org/bot#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX display: <https://w3id.org/display#>
+PREFIX exhib: <https://ouvroir.umontreal.ca/data/>
+PREFIX la: <https://linked.art/ns/terms/>
+PREFIX crm: <http://www.cidoc-crm.org/cidoc-crm/>
+PREFIX aat: <http://vocab.getty.edu/aat/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+########################################################
+# L’ensemble des expôts
+# voir https://linked.art/model/collection/
+########################################################
+
+exhib:set0000 a la:Set ;
+    rdfs:label                  "Feux pâles (1990) : ensemble des exhibits" ;
+    crm:P2_has_type             aat:300378926 ;
+    crm:P1_is_identified_by     <urn:uuid:d01ffd54-e462-456e-9f28-1862f3c3b903> ;
+    crm:P67i_is_referred_to_by  <urn:uuid:a30266eb-a8ae-4361-b716-25cdb747c6f2> ;
+#  crm:P94i_was_created_by [ a crm:E65_Creation ;
+#    crm:P4_has_time-span [ a crm:E52_Time-Span ;
+#    crm:P82a_begin_of_the_begin "2019-05-01T00:00:00Z" ;
+#    crm:P82b_end_of_the_end "2019-05-01T23:59:59Z" ]
+#  ]
+  .
+
+<urn:uuid:d01ffd54-e462-456e-9f28-1862f3c3b903>
+    rdf:type                      crm:E33_E41_Linguistic_Appellation ;
+    crm:P190_has_symbolic_content "Feux pâles, 1990 (exhibits)" ;
+    crm:P2_has_type               aat:300404670 ;
+    crm:P72_has_language          aat:300388306 .
+
+<urn:uuid:a30266eb-a8ae-4361-b716-25cdb747c6f2>
+    rdf:type crm:E33_Linguistic_Object ;
+    crm:P190_has_symbolic_content "L’ensemble des expôts de l’exposition Feux pâles, CAPC Bordeaux, 1990 (incluant les instances de la sous-classe display:Element)." ;
+    crm:P2_has_type aat:300435416 .
+
+########################################################
+# Put exhibits in the Feux pâles set
+# FP set brings together exhibits as proposed by PT 
+########################################################
+
+exhib:exhibit0037 la:member_of exhib:set0000 .
+exhib:exhibit0024 la:member_of exhib:set0000 .
+exhib:exhibit0052 la:member_of exhib:set0000 .
+exhib:exhibit0011 la:member_of exhib:set0000 .
+exhib:exhibit0058 la:member_of exhib:set0000 .
+exhib:exhibit0017 la:member_of exhib:set0000 .
+exhib:exhibit0045 la:member_of exhib:set0000 .
+exhib:exhibit0004 la:member_of exhib:set0000 .
+exhib:exhibit0032 la:member_of exhib:set0000 .
+exhib:exhibit0060 la:member_of exhib:set0000 .
+exhib:exhibit0038 la:member_of exhib:set0000 .
+exhib:exhibit0025 la:member_of exhib:set0000 .
+exhib:exhibit0053 la:member_of exhib:set0000 .
+exhib:exhibit0012 la:member_of exhib:set0000 .
+exhib:exhibit0040 la:member_of exhib:set0000 .
+exhib:exhibit0059 la:member_of exhib:set0000 .
+exhib:exhibit0046 la:member_of exhib:set0000 .
+exhib:exhibit0005 la:member_of exhib:set0000 .
+exhib:exhibit0033 la:member_of exhib:set0000 .
+exhib:exhibit0061 la:member_of exhib:set0000 .
+exhib:exhibit0039 la:member_of exhib:set0000 .
+exhib:exhibit0026 la:member_of exhib:set0000 .
+exhib:exhibit0054 la:member_of exhib:set0000 .
+exhib:exhibit0013 la:member_of exhib:set0000 .
+exhib:exhibit0047 la:member_of exhib:set0000 .
+exhib:exhibit0006 la:member_of exhib:set0000 .
+exhib:exhibit0034 la:member_of exhib:set0000 .
+exhib:exhibit0062 la:member_of exhib:set0000 .
+exhib:exhibit0021 la:member_of exhib:set0000 .
+exhib:exhibit0027 la:member_of exhib:set0000 .
+exhib:exhibit0055 la:member_of exhib:set0000 .
+exhib:exhibit0014 la:member_of exhib:set0000 .
+exhib:exhibit0042 la:member_of exhib:set0000 .
+exhib:exhibit0001 la:member_of exhib:set0000 .
+exhib:exhibit0048 la:member_of exhib:set0000 .
+exhib:exhibit0007 la:member_of exhib:set0000 .
+exhib:exhibit0035 la:member_of exhib:set0000 .
+exhib:exhibit0022 la:member_of exhib:set0000 .
+exhib:exhibit0050 la:member_of exhib:set0000 .
+exhib:exhibit0028 la:member_of exhib:set0000 .
+exhib:exhibit0056 la:member_of exhib:set0000 .
+exhib:exhibit0015 la:member_of exhib:set0000 .
+exhib:exhibit0043 la:member_of exhib:set0000 .
+exhib:exhibit0002 la:member_of exhib:set0000 .
+exhib:exhibit0030 la:member_of exhib:set0000 .
+exhib:exhibit0049 la:member_of exhib:set0000 .
+exhib:exhibit0008 la:member_of exhib:set0000 .
+exhib:exhibit0036 la:member_of exhib:set0000 .
+exhib:exhibit0023 la:member_of exhib:set0000 .
+exhib:exhibit0051 la:member_of exhib:set0000 .
+exhib:exhibit0010 la:member_of exhib:set0000 .
+exhib:exhibit0029 la:member_of exhib:set0000 .
+exhib:exhibit0057 la:member_of exhib:set0000 .
+exhib:exhibit0016 la:member_of exhib:set0000 .
+exhib:exhibit0044 la:member_of exhib:set0000 .
+exhib:exhibit0003 la:member_of exhib:set0000 .
+exhib:exhibit0031 la:member_of exhib:set0000 .
+exhib:exhibit0009 la:member_of exhib:set0000 .
+<https://ouvroir.umontreal.ca/data/element0026> <https://linked.art/ns/terms/member_of> <https://ouvroir.umontreal.ca/data/set0000> .
+<https://ouvroir.umontreal.ca/data/element0054> <https://linked.art/ns/terms/member_of> <https://ouvroir.umontreal.ca/data/set0000> .
+<https://ouvroir.umontreal.ca/data/element0013> <https://linked.art/ns/terms/member_of> <https://ouvroir.umontreal.ca/data/set0000> .
+<https://ouvroir.umontreal.ca/data/element0041> <https://linked.art/ns/terms/member_of> <https://ouvroir.umontreal.ca/data/set0000> .
+<https://ouvroir.umontreal.ca/data/element0019> <https://linked.art/ns/terms/member_of> <https://ouvroir.umontreal.ca/data/set0000> .
+<https://ouvroir.umontreal.ca/data/element0047> <https://linked.art/ns/terms/member_of> <https://ouvroir.umontreal.ca/data/set0000> .
+<https://ouvroir.umontreal.ca/data/element0006> <https://linked.art/ns/terms/member_of> <https://ouvroir.umontreal.ca/data/set0000> .
+<https://ouvroir.umontreal.ca/data/element0021> <https://linked.art/ns/terms/member_of> <https://ouvroir.umontreal.ca/data/set0000> .
+<https://ouvroir.umontreal.ca/data/element0027> <https://linked.art/ns/terms/member_of> <https://ouvroir.umontreal.ca/data/set0000> .
+<https://ouvroir.umontreal.ca/data/element0055> <https://linked.art/ns/terms/member_of> <https://ouvroir.umontreal.ca/data/set0000> .
+<https://ouvroir.umontreal.ca/data/element0014> <https://linked.art/ns/terms/member_of> <https://ouvroir.umontreal.ca/data/set0000> .
+<https://ouvroir.umontreal.ca/data/element0042> <https://linked.art/ns/terms/member_of> <https://ouvroir.umontreal.ca/data/set0000> .
+<https://ouvroir.umontreal.ca/data/element0048> <https://linked.art/ns/terms/member_of> <https://ouvroir.umontreal.ca/data/set0000> .
+<https://ouvroir.umontreal.ca/data/element0007> <https://linked.art/ns/terms/member_of> <https://ouvroir.umontreal.ca/data/set0000> .
+<https://ouvroir.umontreal.ca/data/element0022> <https://linked.art/ns/terms/member_of> <https://ouvroir.umontreal.ca/data/set0000> .
+<https://ouvroir.umontreal.ca/data/element0050> <https://linked.art/ns/terms/member_of> <https://ouvroir.umontreal.ca/data/set0000> .
+<https://ouvroir.umontreal.ca/data/element0028> <https://linked.art/ns/terms/member_of> <https://ouvroir.umontreal.ca/data/set0000> .
+<https://ouvroir.umontreal.ca/data/element0015> <https://linked.art/ns/terms/member_of> <https://ouvroir.umontreal.ca/data/set0000> .
+<https://ouvroir.umontreal.ca/data/element0043> <https://linked.art/ns/terms/member_of> <https://ouvroir.umontreal.ca/data/set0000> .
+<https://ouvroir.umontreal.ca/data/element0030> <https://linked.art/ns/terms/member_of> <https://ouvroir.umontreal.ca/data/set0000> .
+<https://ouvroir.umontreal.ca/data/element0049> <https://linked.art/ns/terms/member_of> <https://ouvroir.umontreal.ca/data/set0000> .
+<https://ouvroir.umontreal.ca/data/element0008> <https://linked.art/ns/terms/member_of> <https://ouvroir.umontreal.ca/data/set0000> .
+<https://ouvroir.umontreal.ca/data/element0023> <https://linked.art/ns/terms/member_of> <https://ouvroir.umontreal.ca/data/set0000> .
+<https://ouvroir.umontreal.ca/data/element0051> <https://linked.art/ns/terms/member_of> <https://ouvroir.umontreal.ca/data/set0000> .
+<https://ouvroir.umontreal.ca/data/element0010> <https://linked.art/ns/terms/member_of> <https://ouvroir.umontreal.ca/data/set0000> .
+<https://ouvroir.umontreal.ca/data/element0029> <https://linked.art/ns/terms/member_of> <https://ouvroir.umontreal.ca/data/set0000> .
+<https://ouvroir.umontreal.ca/data/element0016> <https://linked.art/ns/terms/member_of> <https://ouvroir.umontreal.ca/data/set0000> .
+<https://ouvroir.umontreal.ca/data/element0044> <https://linked.art/ns/terms/member_of> <https://ouvroir.umontreal.ca/data/set0000> .
+<https://ouvroir.umontreal.ca/data/element0031> <https://linked.art/ns/terms/member_of> <https://ouvroir.umontreal.ca/data/set0000> .
+<https://ouvroir.umontreal.ca/data/element0009> <https://linked.art/ns/terms/member_of> <https://ouvroir.umontreal.ca/data/set0000> .
+<https://ouvroir.umontreal.ca/data/element0024> <https://linked.art/ns/terms/member_of> <https://ouvroir.umontreal.ca/data/set0000> .
+<https://ouvroir.umontreal.ca/data/element0052> <https://linked.art/ns/terms/member_of> <https://ouvroir.umontreal.ca/data/set0000> .
+<https://ouvroir.umontreal.ca/data/element0011> <https://linked.art/ns/terms/member_of> <https://ouvroir.umontreal.ca/data/set0000> .
+<https://ouvroir.umontreal.ca/data/element0017> <https://linked.art/ns/terms/member_of> <https://ouvroir.umontreal.ca/data/set0000> .
+<https://ouvroir.umontreal.ca/data/element0045> <https://linked.art/ns/terms/member_of> <https://ouvroir.umontreal.ca/data/set0000> .
+<https://ouvroir.umontreal.ca/data/element0004> <https://linked.art/ns/terms/member_of> <https://ouvroir.umontreal.ca/data/set0000> .
+<https://ouvroir.umontreal.ca/data/element0032> <https://linked.art/ns/terms/member_of> <https://ouvroir.umontreal.ca/data/set0000> .
+<https://ouvroir.umontreal.ca/data/element0025> <https://linked.art/ns/terms/member_of> <https://ouvroir.umontreal.ca/data/set0000> .
+<https://ouvroir.umontreal.ca/data/element0053> <https://linked.art/ns/terms/member_of> <https://ouvroir.umontreal.ca/data/set0000> .
+<https://ouvroir.umontreal.ca/data/element0012> <https://linked.art/ns/terms/member_of> <https://ouvroir.umontreal.ca/data/set0000> .
+<https://ouvroir.umontreal.ca/data/element0040> <https://linked.art/ns/terms/member_of> <https://ouvroir.umontreal.ca/data/set0000> .
+<https://ouvroir.umontreal.ca/data/element0018> <https://linked.art/ns/terms/member_of> <https://ouvroir.umontreal.ca/data/set0000> .
+<https://ouvroir.umontreal.ca/data/element0046> <https://linked.art/ns/terms/member_of> <https://ouvroir.umontreal.ca/data/set0000> .
+<https://ouvroir.umontreal.ca/data/element0005> <https://linked.art/ns/terms/member_of> <https://ouvroir.umontreal.ca/data/set0000> .
+<https://ouvroir.umontreal.ca/data/element0033> <https://linked.art/ns/terms/member_of> <https://ouvroir.umontreal.ca/data/set0000> .
+<https://ouvroir.umontreal.ca/data/element0020> <https://linked.art/ns/terms/member_of> <https://ouvroir.umontreal.ca/data/set0000> .

@@ -1,0 +1,63 @@
+PREFIX bot: <https://w3id.org/bot#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX display: <https://w3id.org/display#>
+PREFIX exhib: <https://ouvroir.umontreal.ca/data/>
+PREFIX la: <https://linked.art/ns/terms/>
+PREFIX crm: <http://www.cidoc-crm.org/cidoc-crm/>
+PREFIX aat: <http://vocab.getty.edu/aat/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+exhib:exhibit0005
+    rdf:type                    crm:E22_Human-Made_Object ;
+    rdfs:label                  "Scarabattolo (Remps)"@it ;
+    crm:P2_has_type             aat:300133025 ,
+                                aat:300033618 ;
+    crm:P1_is_identified_by     <urn:uuid:70d68ead-aaee-4df1-9f4c-b6e0e8032a34> ,
+                                <urn:uuid:02e1a2a8-7b06-40c3-b9f4-0eea25edfe62> ;
+    crm:P67i_is_referred_to_by  <urn:uuid:c739aa2e-ae33-4e9e-9aba-87bc9d0f9f08> ;
+    crm:P108i_was_produced_by   <urn:uuid:0da4bdaa-364b-4989-9d68-e7d37cfbc2a7> ;
+    crm:P43_has_dimension       <urn:uuid:01e810ea-b0bb-4221-a1b5-549ce229f5b5> ,
+                                <urn:uuid:81c9aadd-79f8-44c4-b87c-a348dfeb51f9> .
+
+<urn:uuid:70d68ead-aaee-4df1-9f4c-b6e0e8032a34>
+    rdf:type                        crm:E33_E41_Linguistic_Appellation ;
+    crm:P190_has_symbolic_content   "Scarabattolo" ;
+    crm:P2_has_type                 aat:300404670 ;
+    crm:P72_has_language            <http://vocab.getty.edu/aat/300388474> .
+
+<urn:uuid:02e1a2a8-7b06-40c3-b9f4-0eea25edfe62>
+    rdf:type                        crm:E33_E41_Linguistic_Appellation ;
+    crm:P190_has_symbolic_content   "Cabinet de curiosités" ;
+    crm:P2_has_type                 aat:300404670 ;
+    crm:P72_has_language            aat:300388306 .
+
+<urn:uuid:c739aa2e-ae33-4e9e-9aba-87bc9d0f9f08>
+    rdf:type                        crm:E33_Linguistic_Object ;
+    crm:P190_has_symbolic_content   "huile sur toile"@fr ;
+    crm:P2_has_type                 aat:300435429 ;
+    crm:P72_has_language            aat:300388306 .
+
+<urn:uuid:0da4bdaa-364b-4989-9d68-e7d37cfbc2a7>
+    rdf:type                crm:E12_Production ;
+    crm:P14_carried_out_by  <http://vocab.getty.edu/ulan/500185192> ;
+    crm:P4_has_time-span    <urn:uuid:658acfb4-7471-4720-95f7-258b0bc4ea71> .
+
+<urn:uuid:658acfb4-7471-4720-95f7-258b0bc4ea71>
+    rdf:type                    crm:E52_Time-Span ;
+    rdfs:label                  "1690" ;
+    rdf:value                   "1690"^^xsd:gYear ;
+    crm:P82a_begin_of_the_begin "1690-01-01T00:00:00Z"^^xsd:dateTime ;
+    crm:P82b_end_of_the_end     "1690-12-31T23:59:59Z"^^xsd:dateTime .
+
+<urn:uuid:01e810ea-b0bb-4221-a1b5-549ce229f5b5>
+    rdf:type          crm:E54_Dimension ;
+    crm:P2_has_type   aat:300055644 ;
+    crm:P90_has_value 98.5 ;
+    crm:P91_has_unit  aat:300379098 .
+
+<urn:uuid:81c9aadd-79f8-44c4-b87c-a348dfeb51f9>
+    rdf:type          crm:E54_Dimension ;
+    crm:P2_has_type   aat:300055647 ;
+    crm:P90_has_value 135 ;
+    crm:P91_has_unit  aat:300379098 .

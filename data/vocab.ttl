@@ -1,20 +1,26 @@
-PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
-PREFIX crm: <http://www.cidoc-crm.org/cidoc-crm/>
-PREFIX aat: <http://vocab.getty.edu/aat/>
+PREFIX rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs:    <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX skos:    <http://www.w3.org/2004/02/skos/core#>
+PREFIX crm:     <http://www.cidoc-crm.org/cidoc-crm/>
+PREFIX aat:     <http://vocab.getty.edu/aat/>
+PREFIX la:      <https://linked.art/ns/terms/>
+PREFIX utils:   <https://ntnlv.ca/ns/utils#>
+PREFIX display: <https://w3id.org/display#>
 
-aat:300054766 a crm:E55_Type , skos:Concept ;
-  rdfs:label "Exhibition"@en .
+aat:300054766
+    rdf:type  crm:E55_Type ,
+              skos:Concept ;
+  rdfs:label  "Exhibition"@en .
 
 aat:300133025 a crm:E55_Type , skos:Concept ;
   rdfs:label "Artwork"@en .
 
 ######################################
-# Types of work
+# Types of Object/Work
 ######################################
 
 aat:300435443 a crm:E55_Type , skos:Concept ;
-  rdfs:label "Type of Work"@en .
+  rdfs:label "Type of Object/Work"@en .
 
 aat:300033618 a crm:E55_Type , skos:Concept ;
   rdfs:label "Painting"@en ;
@@ -25,7 +31,8 @@ aat:300047090 a crm:E55_Type , skos:Concept ;
   crm:P2_has_type aat:300435443 .
 
 aat:300375221 a crm:E55_Type , skos:Concept ;
-  rdfs:label "Modular Walls"@en .
+  rdfs:label "Modular Walls"@en , "Cimaise"@fr ;
+  crm:P2_has_type aat:300435443 .
 
 ######################################
 # Dimensions
@@ -38,15 +45,19 @@ aat:300055644 a crm:E55_Type , skos:Concept ;
   rdfs:label "Height"@en .
 
 aat:300379098 a crm:E58_Measurement_Unit , skos:Concept ;
-  rdfs:label "Centimeters"@en ;
+  rdfs:label "centimeters"@en ;
   skos:notation "cm" .
 
 ######################################
 # Linguistic Objets
 ######################################
 
+aat:300435445 a crm:E55_Type , skos:Concept ;
+  rdfs:label "Titles/Names"@en .
+
 aat:300404670 a crm:E55_Type , skos:Concept ;
-  rdfs:label "Primary Name"@en .
+  rdfs:label "Primary Name"@en ;
+  rdfs:comment "“preferred terms” according to the AAT"@en .
 
 aat:300418049 a crm:E55_Type , skos:Concept ;
   rdfs:label "Brief Text"@en .
@@ -69,21 +80,29 @@ aat:300312281 a crm:E55_Type , skos:Concept ;
 # Groups
 ######################################
 
-<http://vocab.getty.edu/ulan/500305133> a crm:E74_Group ;
-  rdfs:label "CAPC Bordeaux" ;
-  crm:P2_has_type aat:300312281 .
+
 
 ######################################
 # Languages
 ######################################
 
+aat:300435433 a crm:E55_Type , skos:Concept ;
+  rdfs:label "Language"@en .
+
 aat:300388277 a crm:E56_Language , skos:Concept ;
   rdfs:label "English"@en ;
-  skos:notation "en" .
+  skos:notation "en" ;
+  crm:P2_has_type aat:300435433 .
 
 aat:300388306 a crm:E56_Language , skos:Concept ;
   rdfs:label "French"@en ;
-  skos:notation "fr" .
+  skos:notation "fr" ;
+  crm:P2_has_type aat:300435433 .
+
+aat:300388474 a crm:E56_Language , skos:Concept ;
+  rdfs:label "Italian"@en ;
+  skos:notation "it" ;
+  crm:P2_has_type aat:300435433 .
 
 #######################################
 # Places
@@ -92,6 +111,32 @@ aat:300388306 a crm:E56_Language , skos:Concept ;
 aat:300008389 a crm:E55_Type , skos:Concept ;
   rdfs:label "City"@en .
 
-<http://vocab.getty.edu/tgn/7008161> a crm:E53_Place ;
+<http://vocab.getty.edu/tgn/7008161> a crm:E53_Place, skos:Concept ;
   rdfs:label "Bordeaux" ;
   crm:P2_has_type aat:300008389 .
+
+#######################################
+# JSON-LD mapping
+# Utilisées par l’API
+#######################################
+
+# Linked Art
+crm:E7_Activity                     utils:jsonldmapping "Activity" .
+crm:E12_Production                  utils:jsonldmapping "Prodcution" .
+crm:E21_Person                      utils:jsonldmapping "Person" .
+crm:E33_Linguistic_Object           utils:jsonldmapping "LinguisticObject" .
+crm:E33_E41_Linguistic_Appellation  utils:jsonldmapping "Name" .
+crm:E52_Time-Span                   utils:jsonldmapping "TimeSpan" .
+crm:E53_Place                       utils:jsonldmapping "Place" .
+crm:E54_Dimension                   utils:jsonldmapping "Dimension" .
+crm:E55_Type                        utils:jsonldmapping "Type" .
+crm:E56_Language                    utils:jsonldmapping "Language" .
+crm:E58_Measurement_Unit            utils:jsonldmapping "MeasurementUnit" .
+crm:E74_Group                       utils:jsonldmapping "Group" .
+la:Set                              utils:jsonldmapping "Set" .
+
+# Display
+display:Display                     utils:jsonldmapping "Display" .
+display:Element                     utils:jsonldmapping "Element" .
+display:Exhibit                     utils:jsonldmapping "Exhibit" .
+display:ExhibitionSpace             utils:jsonldmapping "ExhibitionSpace" .

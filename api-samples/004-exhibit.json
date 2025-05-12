@@ -1,0 +1,23 @@
+{
+  "iri": "https://ouvroir.umontreal.ca/data/exhibit0015",
+  "type": [
+    "http://www.cidoc-crm.org/cidoc-crm/E22_Human-Made_Object",
+    "https://w3id.org/display#Exhibit"
+  ],
+  "_label": {
+    "fr": "Fontaine (Duchamp)"
+  },
+  "identified_by": [
+    {
+      "fr": "Fontaine"
+    },
+    {
+      "en": "Fountain"
+    }
+  ],
+  "creator": "http://www.wikidata.org/entity/Q5912",
+  "has_topological_relation_with": [
+    "https://ouvroir.umontreal.ca/data/element0029",
+    "https://ouvroir.umontreal.ca/data/exhibit0013"
+  ]
+}

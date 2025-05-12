@@ -1,0 +1,22 @@
+{
+  "iri": "https://ouvroir.umontreal.ca/data/space0000",
+  "type": [
+    "https://w3id.org/bot#Zone",
+    "https://w3id.org/display#ExhibitionSpace",
+    "https://w3id.org/bot#Space"
+  ],
+  "_label": {
+    "fr": "Préambule"
+  },
+  "has_exhibit": [
+    "https://ouvroir.umontreal.ca/data/element0004",
+    "https://ouvroir.umontreal.ca/data/element0005",
+    "https://ouvroir.umontreal.ca/data/element0006",
+    "https://ouvroir.umontreal.ca/data/element0007",
+    "https://ouvroir.umontreal.ca/data/exhibit0001",
+    "https://ouvroir.umontreal.ca/data/exhibit0002",
+    "https://ouvroir.umontreal.ca/data/exhibit0003",
+    "https://ouvroir.umontreal.ca/data/exhibit0004"
+  ],
+  "adjacent_zone": "https://ouvroir.umontreal.ca/data/space0001"
+}

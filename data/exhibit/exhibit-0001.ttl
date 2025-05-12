@@ -1,0 +1,56 @@
+PREFIX bot: <https://w3id.org/bot#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX display: <https://w3id.org/display#>
+PREFIX exhib: <https://ouvroir.umontreal.ca/data/>
+PREFIX la: <https://linked.art/ns/terms/>
+PREFIX crm: <http://www.cidoc-crm.org/cidoc-crm/>
+PREFIX aat: <http://vocab.getty.edu/aat/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+exhib:exhibit0001
+    rdf:type                    crm:E22_Human-Made_Object ;
+    rdfs:label                  "Ready-made R : code-barres exposé dans le préambule"@fr ;
+    crm:P2_has_type             aat:300133025 ,
+                                aat:300033618 ;
+    crm:P1_is_identified_by     <urn:uuid:ff6833d0-ce10-4162-869f-a30ad10cb661> ;
+    crm:P67i_is_referred_to_by  <urn:uuid:cf6976af-df66-4e7a-b506-dd75f061a69b> ;
+    crm:P108i_was_produced_by   <urn:uuid:ea055aed-a5c0-435d-a7d2-3e9631434f53> ;
+    crm:P43_has_dimension       <urn:uuid:f97441b9-1325-4dbe-8828-b3b3ec537090> ,
+                                <urn:uuid:2b42ec96-e1e7-400e-93c3-f65dfe8ee313> .
+
+<urn:uuid:ff6833d0-ce10-4162-869f-a30ad10cb661>
+    rdf:type                        crm:E33_E41_Linguistic_Appellation ;
+    crm:P190_has_symbolic_content   "®" ;
+    crm:P2_has_type                 aat:300404670 ;
+    crm:P72_has_language            aat:300388306 .
+
+<urn:uuid:cf6976af-df66-4e7a-b506-dd75f061a69b>
+    rdf:type                      crm:E33_Linguistic_Object ;
+    crm:P190_has_symbolic_content "acrylique sur toile"@fr ;
+    crm:P2_has_type               aat:300435429 ;
+    crm:P72_has_language          aat:300388306 .
+
+<urn:uuid:ea055aed-a5c0-435d-a7d2-3e9631434f53>
+    rdf:type                crm:E12_Production ;
+    crm:P14_carried_out_by  <http://vocab.getty.edu/ulan/500305133> ;
+    crm:P4_has_time-span    <urn:uuid:3ee918dc-bfbc-45f9-afc1-9e3569efc7ec> .
+
+<urn:uuid:3ee918dc-bfbc-45f9-afc1-9e3569efc7ec>
+    rdf:type                    crm:E52_Time-Span ;
+    rdfs:label                  "1990" ;
+    rdf:value                   "1990"^^xsd:gYear ;
+    crm:P82a_begin_of_the_begin "1990-01-01T00:00:00Z"^^xsd:dateTime ;
+    crm:P82b_end_of_the_end     "1990-12-31T23:59:59Z"^^xsd:dateTime .
+
+<urn:uuid:f97441b9-1325-4dbe-8828-b3b3ec537090>
+    rdf:type          crm:E54_Dimension ;
+    crm:P2_has_type   aat:300055644 ;
+    crm:P90_has_value 97 ;
+    crm:P91_has_unit  aat:300379098 .
+
+<urn:uuid:2b42ec96-e1e7-400e-93c3-f65dfe8ee313>
+    rdf:type          crm:E54_Dimension ;
+    crm:P2_has_type   aat:300055647 ;
+    crm:P90_has_value 130 ;
+    crm:P91_has_unit  aat:300379098 .
