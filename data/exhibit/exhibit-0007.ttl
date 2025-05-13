@@ -8,48 +8,49 @@ PREFIX crm: <http://www.cidoc-crm.org/cidoc-crm/>
 PREFIX aat: <http://vocab.getty.edu/aat/>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-exhib:exhibit0006
+exhib:exhibit0007
     rdf:type                    crm:E22_Human-Made_Object ;
-    rdfs:label                  "Buste de Platon"@fr ;
-    rdfs:comment                "Ce buste est une copie d'un buste original, je ne sais pas comment l'intituler : vérifier ressource métier. Il faut aussi préciser qu'il est dans la Collection des moulages, Institut d’Archéologie classique de Strasbourg" ;
+    rdfs:label                  "Buste de Simonide"@fr ;
+    rdfs:comment                "Ce buste est une copie d'un buste original, je ne sais pas comment l'intituler : vérifier ressource métier. Dans l'exposition semble être nommé Simonide mais semblerait d'après d'autre sources que ce soit Eschyle. Collection des moulages, Institut d’Archéologie classique de Strasbourg" ;
     crm:P2_has_type             aat:300133025 ,
                                 aat:300047090 ;
-    crm:P1_is_identified_by     <urn:uuid:6b51598b-245d-4152-ae4d-6a55a5a81d4d> ;
-    crm:P67i_is_referred_to_by  <urn:uuid:d7562213-1326-4676-b8bc-77d4b47a434b> ;
-    crm:P108i_was_produced_by   <urn:uuid:438d9576-f8c7-4f49-8fcd-90c2a6c069f3> ;
-    crm:P43_has_dimension       <urn:uuid:6c9aa5ce-5757-4206-8162-8b4925de8875> ,
-                                <urn:uuid:349cf563-3a62-467b-bf22-d6bbc74316eb> , 
-                                <urn:uuid:02b953a4-6f35-4119-99dc-c3a4c8510cbd> .
+    crm:P1_is_identified_by     <urn:uuid:37a9f599-0d38-40f6-a0eb-bf5d0e9bca77> ;
+    crm:P67i_is_referred_to_by  <urn:uuid:f346e756-8c1b-41ea-b4b1-dcea1f6cba52> ;
+    crm:P108i_was_produced_by   <urn:uuid:0567b106-5543-47b2-9e75-85626e4b964f> ;
+    crm:P43_has_dimension       <urn:uuid:f4c0918e-ef03-494c-9e73-1570e7de3104> ,
+                                <urn:uuid:899d6c59-9266-44f8-9555-8826c04c499b> , 
+                                <urn:uuid:aa310932-3109-48ea-825a-2c24122ddcbd> .
     
-<urn:uuid:6b51598b-245d-4152-ae4d-6a55a5a81d4d>
+	
+<urn:uuid:37a9f599-0d38-40f6-a0eb-bf5d0e9bca77>
     rdf:type                        crm:E33_E41_Linguistic_Appellation ;
-    crm:P190_has_symbolic_content   "Platon (Original : Musée de Berlin, IV avant J.C.)" ;
+    crm:P190_has_symbolic_content   "" ;
     crm:P2_has_type                 aat:300404670 ;
     crm:P72_has_language            aat:300388306 .
-
-<urn:uuid:d7562213-1326-4676-b8bc-77d4b47a434b>
+	
+<urn:uuid:f346e756-8c1b-41ea-b4b1-dcea1f6cba52>
     rdf:type                        crm:E33_Linguistic_Object ;
     crm:P190_has_symbolic_content   "moulage plâtre"@fr ;
     crm:P2_has_type                 aat:300435429 ;
     crm:P72_has_language            aat:300388306 .
 
-<urn:uuid:438d9576-f8c7-4f49-8fcd-90c2a6c069f3>
+<urn:uuid:0567b106-5543-47b2-9e75-85626e4b964f>
     rdf:type                crm:E12_Production .
 
-<urn:uuid:6c9aa5ce-5757-4206-8162-8b4925de8875>
+<urn:uuid:f4c0918e-ef03-494c-9e73-1570e7de3104>
     rdf:type          crm:E54_Dimension ;
     crm:P2_has_type   aat:300055644 ;
-    crm:P90_has_value 51 ;
+    crm:P90_has_value 70 ;
     crm:P91_has_unit  aat:300379098 .
 
-<urn:uuid:349cf563-3a62-467b-bf22-d6bbc74316eb>
+<urn:uuid:899d6c59-9266-44f8-9555-8826c04c499b>
     rdf:type          crm:E54_Dimension ;
     crm:P2_has_type   aat:300055647 ;
-    crm:P90_has_value 24 ;
+    crm:P90_has_value 40 ;
     crm:P91_has_unit  aat:300379098 .
 
-<urn:uuid:02b953a4-6f35-4119-99dc-c3a4c8510cbd>
+<urn:uuid:aa310932-3109-48ea-825a-2c24122ddcbd>
     rdf:type          crm:E54_Dimension ;
     crm:P2_has_type   aat:300056240 ;
-    crm:P90_has_value 8 ;
+    crm:P90_has_value 13 ;
     crm:P91_has_unit  aat:300379226 .

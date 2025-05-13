@@ -1,0 +1,63 @@
+PREFIX bot: <https://w3id.org/bot#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX display: <https://w3id.org/display#>
+PREFIX exhib: <https://ouvroir.umontreal.ca/data/>
+PREFIX la: <https://linked.art/ns/terms/>
+PREFIX crm: <http://www.cidoc-crm.org/cidoc-crm/>
+PREFIX aat: <http://vocab.getty.edu/aat/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+exhib:exhibit0051
+    rdf:type                    crm:E22_Human-Made_Object ;
+    rdfs:label                  "Parcelle à céder"@fr ;
+    rdfs:comment                "Changement du titre pendant l'exposition de parcelle à céder à propriété privée. Va poser probleme certainement car je n'ai pas d'url pour l'artiste. Comment faire quand l'artiste n'a pas d'url N.A JEDERMANN? Affilié à la Collection capcMusée d’art contemporain, Bordeaux, autres infos : N° Inv. : 1991 – 22, Plan d’installation dans archives d’exposition du capc, Fiche de l'oeuvre :https://www.navigart.fr/capc/artwork/jedermann-n-a-philippe-thomas-propriete-privee-40000000000461" ;
+    crm:P2_has_type             aat:300133025 ,
+                                aat:300047896 ;
+    crm:P1_is_identified_by     <urn:uuid:b666a816-87c3-46b0-9000-8029182f7408> ;
+    crm:P67i_is_referred_to_by  <urn:uuid:f45b34c3-6ee2-4745-aee8-3f2421e897e7> ;
+    crm:P108i_was_produced_by   <urn:uuid:94fb4436-9086-44c7-bd12-eb700e1a1b5f> ;    
+    crm:P43_has_dimension       <urn:uuid:9ac668a3-6c09-4567-811a-eafdc107ecde> ,
+                                <urn:uuid:838df36a-3053-4e07-86a5-3a51f16fee2e> .
+                                
+
+<urn:uuid:b666a816-87c3-46b0-9000-8029182f7408>
+rdf:type                        crm:E33_E41_Linguistic_Appellation ;
+crm:P190_has_symbolic_content   "Propriété privée*" ;
+crm:P2_has_type                 aat:300404670 ;
+crm:P72_has_language            aat:300387822 .
+
+<urn:uuid:f45b34c3-6ee2-4745-aee8-3f2421e897e7>
+    rdf:type                        crm:E33_Linguistic_Object ;
+    crm:P190_has_symbolic_content   "parquet flottant et tableau à lettres sur trépied"@fr ;
+    crm:P2_has_type                 aat:300435429 ;
+    crm:P72_has_language            aat:300388306 .
+
+<urn:uuid:94fb4436-9086-44c7-bd12-eb700e1a1b5f>
+    rdf:type                crm:E12_Production ;
+    crm:P14_carried_out_by  "N.A JEDERMANN" ;
+    crm:P4_has_time-span    <urn:uuid:1d819587-c13d-410f-8a63-c99ec836cf7a> .
+
+	
+<urn:uuid:1d819587-c13d-410f-8a63-c99ec836cf7a>
+    rdf:type                    crm:E52_Time-Span ;
+    rdfs:label                  "1990" ;
+    rdf:value                   "1990"^^xsd:gYear ;
+    crm:P82a_begin_of_the_begin "1990-01-01T00:00:00Z"^^xsd:dateTime ;
+    crm:P82b_end_of_the_end     "1990-12-31T23:59:59Z"^^xsd:dateTime .
+
+	
+<urn:uuid:b2d5777d-95e4-45aa-a3e0-60bace4e624e>
+    rdf:type          crm:E54_Dimension ;
+    crm:P2_has_type   aat:300055644 ;
+    crm:P90_has_value 134 ;
+    crm:P91_has_unit  aat:300379098 .
+
+<urn:uuid:838df36a-3053-4e07-86a5-3a51f16fee2e>
+    rdf:type          crm:E54_Dimension ;
+    crm:P2_has_type   aat:300055644 ;
+    crm:P90_has_value 30,525 ;
+    crm:P91_has_unit  aat:300404436  .
+
+
+

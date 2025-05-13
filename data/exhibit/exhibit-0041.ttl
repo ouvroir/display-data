@@ -13,7 +13,7 @@ exhib:exhibit0041
     rdfs:label                  "Prina 2"@fr ;
     rdfs:comment                "Oeuvre composée de deux items exhibit0037 et exhibit0041. Préciser Collection Robert Calle" ;
     crm:P2_has_type             aat:300133025 ,
-                                aat:300264849 ;
+                                aat:300189621 ;
     crm:P1_is_identified_by     <urn:uuid:4b4e42f6-56ad-4dd9-8d88-63945751ad70> ;
     crm:P67i_is_referred_to_by  <urn:uuid:5061c008-1170-4b4e-9c46-fe35d0c3cd6c> ;
     crm:P108i_was_produced_by   <urn:uuid:0e978aaa-205b-4279-847e-bf4554072118> ;    

@@ -1,0 +1,57 @@
+PREFIX bot: <https://w3id.org/bot#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX display: <https://w3id.org/display#>
+PREFIX exhib: <https://ouvroir.umontreal.ca/data/>
+PREFIX la: <https://linked.art/ns/terms/>
+PREFIX crm: <http://www.cidoc-crm.org/cidoc-crm/>
+PREFIX aat: <http://vocab.getty.edu/aat/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+exhib:exhibit0056
+    rdf:type                    crm:E22_Human-Made_Object ;
+    rdfs:label                  "Salomon"@fr ;
+    rdfs:comment                "Collection Galerie Claire Burrus" ;
+    crm:P2_has_type             aat:300133025 ,
+                                aat:300047896 ;
+    crm:P1_is_identified_by     <urn:uuid:793bb46f-920e-4572-92d4-a5ce4ee7b971> ;
+    crm:P67i_is_referred_to_by  <urn:uuid:d362fcbb-7199-4c4d-9851-5b6632eae371> ;
+    crm:P108i_was_produced_by   <urn:uuid:c70ab43a-8d4b-445e-8a47-e04fc17d80b8> ;    
+    crm:P43_has_dimension       <urn:uuid:a605cc95-d265-4d18-a196-cea7fa1b4c45> ,
+    	                        <urn:uuid:64b8070f-a3ca-45bc-978a-428926ab6906> .
+
+<urn:uuid:793bb46f-920e-4572-92d4-a5ce4ee7b971>
+    rdf:type                        crm:E33_E41_Linguistic_Appellation ;
+    crm:P190_has_symbolic_content   "Étude de cartel n°6" ;
+    crm:P2_has_type                 aat:300404670 ;
+    crm:P72_has_language            aat:300387822 .
+
+<urn:uuid:d362fcbb-7199-4c4d-9851-5b6632eae371>
+    rdf:type                        crm:E33_Linguistic_Object ;
+    crm:P190_has_symbolic_content   "table lumineuse"@fr ;
+    crm:P2_has_type                 aat:300435429 ;
+    crm:P72_has_language            aat:300388306 .
+
+<urn:uuid:c70ab43a-8d4b-445e-8a47-e04fc17d80b8>
+    rdf:type                crm:E12_Production ;
+    crm:P14_carried_out_by  https://vocab.getty.edu/ulan/500045082 ;
+    crm:P4_has_time-span    <urn:uuid:6891f77e-5eed-4483-b791-a6e022f62bb2>.
+
+<urn:uuid:6891f77e-5eed-4483-b791-a6e022f62bb2>
+    rdf:type                    crm:E52_Time-Span ;
+    rdfs:label                  "1990" ;
+    rdf:value                   "1990"^^xsd:gYear ;
+    crm:P82a_begin_of_the_begin "1990-01-01T00:00:00Z"^^xsd:dateTime ;
+    crm:P82b_end_of_the_end     "1990-12-31T23:59:59Z"^^xsd:dateTime .
+
+<urn:uuid:a605cc95-d265-4d18-a196-cea7fa1b4c45>
+    rdf:type          crm:E54_Dimension ;
+    crm:P2_has_type   aat:300072633 ;
+    crm:P90_has_value 60 ;
+    crm:P91_has_unit  aat:300379098 .
+
+<urn:uuid:64b8070f-a3ca-45bc-978a-428926ab6906>
+    rdf:type          crm:E54_Dimension ;
+    crm:P2_has_type   aat:300055645 ;
+    crm:P90_has_value 127 ;
+    crm:P91_has_unit  aat:300379098 .

@@ -443,7 +443,7 @@ exhib:element0049 a display:Element ;
   rdfs:label "vitrine œuvres"@fr ;
   display:inFrontOf exhib:element0047 ;
   display:contains exhib:exhibit0048 ,
-    exhib:exhibit0049 .
+    exhib:exhibit0049 , exhibit0065.
     
 #Pathway
 
@@ -971,3 +971,4 @@ exhib:exhibit0002 a crm:E22_Human-Made_Object ;
 
 exhib:exhibit0030 a crm:E22_Human-Made_Object ;
   crm:P2_has_type aat:300133025 .
+
