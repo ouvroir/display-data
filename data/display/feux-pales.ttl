@@ -32,7 +32,6 @@ exhib:exhibit0001 a display:Exhibit ;
   display:faces exhib:element0005 .
 
 exhib:exhibit0002 a display:Exhibit ;
-  rdfs:label "Titre de l’exposition : Feux pâles"@fr ;
   rdf:value "Feux pâles" ;
   display:above exhib:exhibit0001 .
 
@@ -105,9 +104,7 @@ exhib:element0013 a display:Element ;
   rdfs:comment "n’est pas typé actuellement (2024-11-22)" ;
   rdfs:label "vitrine vis-à-vis Remps"@fr .
 
-exhib:element0015 a display:Element ;
-  rdfs:comment "n’est pas typé actuellement (2024-11-22)" ;
-  rdfs:label "vitrine (laquelle?)"@fr .
+exhib:element0015 a display:Element .
 
 # je veux dire que dans le showcase il y a un display :
 exhib:element0015 display:contains exhib:display002 .

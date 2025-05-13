@@ -1,0 +1,23 @@
+PREFIX bot: <https://w3id.org/bot#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX display: <https://w3id.org/display#>
+PREFIX exhib: <https://ouvroir.umontreal.ca/data/>
+PREFIX la: <https://linked.art/ns/terms/>
+PREFIX crm: <http://www.cidoc-crm.org/cidoc-crm/>
+PREFIX aat: <http://vocab.getty.edu/aat/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+exhib:element0015 a crm:E22_Human-Made_Object ;
+    rdfs:label                  "Vitrine entre Platon et Simonide"@fr ;
+    rdfs:comment                "Dans la salle 1, Inventaire du mémorable, display:leftOf exhib:element0013 (buste de Platon); ou entre le buste de Platon et le buste de Simonide"@fr ;
+    crm:P2_has_type             aat:300144148 ;
+    crm:P67i_is_referred_to_by  <urn:uuid:5e170f74-f90f-4f10-8033-c2d5a22135b7> ;
+    .
+
+<urn:uuid:5e170f74-f90f-4f10-8033-c2d5a22135b7>
+    rdf:type                      crm:E33_Linguistic_Object ;
+    crm:P190_has_symbolic_content "Vitrine située entre le buste de Platon et le buste de Simonide, dans l’Inventaire du mémorable, salle 1, indirectement."@fr ;
+    crm:P2_has_type               aat:300435451 ;
+    crm:P72_has_language          aat:aat:300388306 ;
+    .

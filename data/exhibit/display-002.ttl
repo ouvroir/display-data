@@ -1,0 +1,16 @@
+PREFIX bot: <https://w3id.org/bot#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX display: <https://w3id.org/display#>
+PREFIX exhib: <https://ouvroir.umontreal.ca/data/>
+PREFIX la: <https://linked.art/ns/terms/>
+PREFIX crm: <http://www.cidoc-crm.org/cidoc-crm/>
+PREFIX aat: <http://vocab.getty.edu/aat/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+exhib:display002
+    rdf:type                    display:Display ;
+    rdfs:label                  "Display contenu par exhib:element0015 (vitrine entre Platon et Simonide)"@fr ;
+#    crm:P2_has_type             aat:300424684 ;
+    rdfs:comment                "Typage à revoir, car aat:300424684 est un type de document dans la hiérarchie de l’AAT (ce qui est incompatible avec display:Display)."@fr ;
+    .
