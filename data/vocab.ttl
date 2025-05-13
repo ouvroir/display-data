@@ -30,9 +30,39 @@ aat:300047090 a crm:E55_Type , skos:Concept ;
   rdfs:label "Sculpture"@en ;
   crm:P2_has_type aat:300435443 .
 
-aat:300375221 a crm:E55_Type , skos:Concept ;
-  rdfs:label "Modular Walls"@en , "Cimaise"@fr ;
-  crm:P2_has_type aat:300435443 .
+aat:300375221
+    rdf:type          crm:E55_Type ,
+                      skos:Concept ;
+    rdfs:label        "Modular Wall"@en ;
+    skos:scopeNote    "Dans le contexte du projet Display, utilisé pour désigner les cimaises ou toute autre forme de cloison mobile ou temporaire. Voir aussi \"Picture rails\"."@fr ;
+    crm:P2_has_type aat:300435443 ;
+    .
+
+
+aat:300211861
+    rdf:type        crm:E55_Type ,
+                    skos:Concept ;
+    rdfs:label      "Identification sign"@en ;
+    skos:note       "Nous avions initialement proposé aat:300235510 \"visual resources\", mais aat:300211861 est plus près de l’expression souhaitée. Il s’agit d’une signalétique, par exemple un panneau ou une impression sur un mur, support d’un élément d’identification de l’entité où l’on se trouve (d’où l’idée de \"signs that confirm destinations\", dans l’AAT)."@fr ;
+    crm:P2_has_type aat:300435443 ;
+    .
+
+
+aat:300037680
+    rdf:type        crm:E55_Type ,
+                    skos:Concept ;
+    rdfs:label      "Furniture"@en ;
+    skos:note       ""@fr ;
+    crm:P2_has_type aat:300435443 ;
+    .
+
+
+aat:300144148
+    rdf:type        crm:E55_Type ,
+                    skos:Concept ;
+    rdfs:label      "Showcase"@en ;
+    crm:P2_has_type aat:300435443 ;
+    .
 
 ######################################
 # Dimensions
@@ -49,11 +79,18 @@ aat:300379098 a crm:E58_Measurement_Unit , skos:Concept ;
   skos:notation "cm" .
 
 ######################################
-# Linguistic Objets
+# Types of Identifier
 ######################################
 
-aat:300435445 a crm:E55_Type , skos:Concept ;
-  rdfs:label "Titles/Names"@en .
+aat:300312355 a crm:E55_Type , skos:Concept ;
+  rdfs:label "Accession number"@en ;
+  skos:note "An accession number for the object; skos:exactMatch Wikidata Q1417099, according to the AAT; Wikidata description: object identifiers used in galleries, libraries, archives, and museums"@en ;
+  skos:exactMatch	<http://www.wikidata.org/entity/Q1417099> ;
+  .
+
+######################################
+# Type of linguistic objets
+######################################
 
 aat:300404670 a crm:E55_Type , skos:Concept ;
   rdfs:label "Primary Name"@en ;
@@ -66,21 +103,29 @@ aat:300435416 a crm:E55_Type , skos:Concept ;
   rdfs:label "Description"@en ;
   crm:P2_has_type aat:300418049 .
 
+
 aat:300435429 a crm:E55_Type , skos:Concept ;
   rdfs:label "Material Statement"@en ;
+  skos:scopeNote "A description or list of the materials the object is made of (source: Linked Art)"@en ;
   crm:P2_has_type aat:300418049 .
 
-aat:300378926 a crm:E55_Type , skos:Concept ;
-  rdfs:label "Topical Collection"@en .
+
+aat:300435436 a crm:E55_Type , skos:Concept ;
+  rdfs:label "Production Statement"@en ;
+  skos:scopeNote "A description of the production or creation of the object (source: Linked Art)"@en ;
+  crm:P2_has_type aat:300418049 .
+
+
+aat:300435451 a crm:E55_Type , skos:Concept ;
+  rdfs:label "Spatial Statement"@en ;
+  crm:P2_has_type aat:300418049 .
+
+######################################
+# Types of group
+######################################
 
 aat:300312281 a crm:E55_Type , skos:Concept ;
   rdfs:label "Museum"@en .
-
-######################################
-# Groups
-######################################
-
-
 
 ######################################
 # Languages
@@ -116,6 +161,13 @@ aat:300008389 a crm:E55_Type , skos:Concept ;
   crm:P2_has_type aat:300008389 .
 
 #######################################
+# À classer
+#######################################
+
+aat:300378926 a crm:E55_Type , skos:Concept ;
+  rdfs:label "Topical Collection"@en .
+
+#######################################
 # JSON-LD mapping
 # Utilisées par l’API
 #######################################
@@ -126,6 +178,7 @@ crm:E12_Production                  utils:jsonldmapping "Prodcution" .
 crm:E21_Person                      utils:jsonldmapping "Person" .
 crm:E33_Linguistic_Object           utils:jsonldmapping "LinguisticObject" .
 crm:E33_E41_Linguistic_Appellation  utils:jsonldmapping "Name" .
+crm:E42_Identifier                  utils:jsonldmapping "Identifier" .
 crm:E52_Time-Span                   utils:jsonldmapping "TimeSpan" .
 crm:E53_Place                       utils:jsonldmapping "Place" .
 crm:E54_Dimension                   utils:jsonldmapping "Dimension" .
