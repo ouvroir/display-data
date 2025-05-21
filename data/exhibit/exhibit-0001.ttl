@@ -11,7 +11,8 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 exhib:exhibit0001
     rdf:type                    crm:E22_Human-Made_Object ;
     rdfs:label                  "Ready-made R : code-barres exposé dans le préambule"@fr ;
-    rdfs:comment                "il faudrait pouvoir préciser si les dimensions sont encadrés ou non, par défault on considère que c'est le cas. Cette oeuvre a deux éléments : l'oeuvre et son cartel" ;
+    rdfs:comment                "il faudrait pouvoir préciser si les dimensions sont encadrés ou non, par défault on considère que c'est le cas (ZR)."@fr ,
+                                "Cette oeuvre a deux éléments : l'oeuvre et son cartel"@fr ;
     crm:P2_has_type             aat:300133025 ,
                                 aat:300033618 ;
     crm:P1_is_identified_by     <urn:uuid:ff6833d0-ce10-4162-869f-a30ad10cb661> ;

@@ -11,7 +11,8 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 exhib:exhibit0041
     rdf:type                    crm:E22_Human-Made_Object ;
     rdfs:label                  "Prina 2"@fr ;
-    rdfs:comment                "Oeuvre composée de deux items exhibit0037 et exhibit0041. Préciser Collection Robert Calle" ;
+    rdfs:comment                "Oeuvre composée de deux items exhibit0037 et exhibit0041. (ZR)"@fr ,
+                                "Préciser Collection Robert Calle (ZR)"@fr ;
     crm:P2_has_type             aat:300133025 ,
                                 aat:300189621 ;
     crm:P1_is_identified_by     <urn:uuid:4b4e42f6-56ad-4dd9-8d88-63945751ad70> ;

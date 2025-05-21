@@ -11,7 +11,8 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 exhib:exhibit0007
     rdf:type                    crm:E22_Human-Made_Object ;
     rdfs:label                  "Buste de Simonide"@fr ;
-    rdfs:comment                "Ce buste est une copie d'un buste original, je ne sais pas comment l'intituler : vérifier ressource métier. Dans l'exposition semble être nommé Simonide mais semblerait d'après d'autre sources que ce soit Eschyle. Collection des moulages, Institut d’Archéologie classique de Strasbourg" ;
+    rdfs:comment                "Ce buste est une copie d'un buste original, je ne sais pas comment l'intituler : vérifier ressource métier. Dans l'exposition semble être nommé Simonide mais semblerait d'après d'autre sources que ce soit Eschyle (ZR)."@fr ,
+                                "Collection des moulages, Institut d’Archéologie classique de Strasbourg (ZR)"@fr ;
     crm:P2_has_type             aat:300133025 ,
                                 aat:300047090 ;
     crm:P1_is_identified_by     <urn:uuid:37a9f599-0d38-40f6-a0eb-bf5d0e9bca77> ;

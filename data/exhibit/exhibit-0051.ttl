@@ -56,7 +56,7 @@ crm:P72_has_language            aat:300387822 .
 <urn:uuid:838df36a-3053-4e07-86a5-3a51f16fee2e>
     rdf:type          crm:E54_Dimension ;
     crm:P2_has_type   aat:300055644 ;
-    crm:P90_has_value 30,525 ;
+    crm:P90_has_value 30.525 ;
     crm:P91_has_unit  aat:300404436  .
 
 
