@@ -108,6 +108,7 @@ aat:300404670 a crm:E55_Type , skos:Concept ;
 aat:300418049 a crm:E55_Type , skos:Concept ;
   rdfs:label "Brief Text"@en .
 
+
 aat:300435416 a crm:E55_Type , skos:Concept ;
   rdfs:label "Description"@en ;
   crm:P2_has_type aat:300418049 .
@@ -124,6 +125,12 @@ aat:300435436 a crm:E55_Type , skos:Concept ;
   skos:scopeNote "A description of the production or creation of the object (source: Linked Art)"@en ;
   crm:P2_has_type aat:300418049 .
 
+
+aat:300026687 a crm:E55_Type , skos:Concept ;
+  rdfs:label "Credit Line"@en ;
+  skos:scopeNote "A short statement of who should be acknowledged for the object (source: Linked Art)"@en ;
+  crm:P2_has_type aat:300418049 ;
+  .
 
 aat:300435451 a crm:E55_Type , skos:Concept ;
   rdfs:label "Spatial Statement"@en ;
