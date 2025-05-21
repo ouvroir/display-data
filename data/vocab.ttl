@@ -43,7 +43,16 @@ aat:300211861
     rdf:type        crm:E55_Type ,
                     skos:Concept ;
     rdfs:label      "Identification sign"@en ;
-    skos:note       "Nous avions initialement proposé aat:300235510 \"visual resources\", mais aat:300211861 est plus près de l’expression souhaitée. Il s’agit d’une signalétique, par exemple un panneau ou une impression sur un mur, support d’un élément d’identification de l’entité où l’on se trouve (d’où l’idée de \"signs that confirm destinations\", dans l’AAT)."@fr ;
+    skos:note       "Nous avions initialement proposé aat:300220751 \"Information forms (objects)\", mais aat:300211861 est plus près de l’expression souhaitée. Il s’agit d’une signalétique, par exemple un panneau ou une impression sur un mur, support d’un élément d’identification de l’entité où l’on se trouve (d’où l’idée de \"signs that confirm destinations\", dans l’AAT)."@fr ;
+    crm:P2_has_type aat:300435443 ;
+    .
+
+
+aat:300213259
+    rdf:type        crm:E55_Type ,
+                    skos:Concept ;
+    rdfs:label      "Information sign"@en ;
+    skos:note       "Nous avions initialement proposé aat:300235510 \"visual resources\", mais aat:300211861 est plus près de l’expression souhaitée. Il s’agit d’une signalétique, par exemple un panneau ou une impression sur un mur, support d’un élément d’information général (\"Use to distinguish those signs that convey general information from those that are 'direction signs,' 'identification signs,' or 'regulatory signs.'\", dans l’AAT)."@fr ;
     crm:P2_has_type aat:300435443 ;
     .
 

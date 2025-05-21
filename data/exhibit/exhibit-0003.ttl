@@ -12,8 +12,8 @@ exhib:exhibit0003
     rdf:type                    crm:E22_Human-Made_Object ;
     rdfs:label                  "Crédits"@fr ;
     rdfs:comment                "Trouver un moyen de transcrire le contenu Exposition réalisée avec le concours de l’agence les readymade appartiennent à tout le monde ® (ZR)"@fr ,
-    "Pour P2_has_type, utiliser aat:300211861; voir skos:note de aat:300211861 dans ../vocab.ttl"@fr;
-    crm:P2_has_type             aat:300211861 ;
+                                "Pour P2_has_type, utiliser aat:300213259 (Information sign); voir skos:note de aat:300213259 dans ../vocab.ttl"@fr;
+    crm:P2_has_type             aat:300213259 ;
     crm:P67i_is_referred_to_by  <urn:uuid:d5f56c31-f4ce-45d5-a3fd-e4f09aeea615> ,
                                 <urn:uuid:49bc2b2c-aebc-4a65-933d-3b6ef6c0286c> ;
     crm:P108i_was_produced_by   <urn:uuid:ea055aed-a5c0-435d-a7d2-3e9631434f53> .

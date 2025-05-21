@@ -12,7 +12,8 @@ exhib:exhibit0002
     rdf:type                    crm:E22_Human-Made_Object ;
     rdfs:label                  "Titre de l’exposition"@fr ;
     rdfs:comment                "Trouver un moyen de transcrire le contenu textuel de l’exhibit (ZR)"@fr ;
-    crm:P2_has_type             aat:300220751 ;
+                                "Pour P2_has_type, utiliser aat:300211861 (Identification sign); voir skos:note de aat:300211861 dans ../vocab.ttl"@fr;
+    crm:P2_has_type             aat:300211861 ;
     crm:P67i_is_referred_to_by  <urn:uuid:c93e6840-ae2e-4e20-b181-ff0c7993d89c> ;
     crm:P67i_is_referred_to_by  <urn:uuid:9e16b078-f3d8-40bf-80e3-44dc0ed16c99> ;
     crm:P108i_was_produced_by   <urn:uuid:ea055aed-a5c0-435d-a7d2-3e9631434f53> .
