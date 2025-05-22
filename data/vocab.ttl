@@ -8,27 +8,39 @@ PREFIX utils:   <https://ntnlv.ca/ns/utils#>
 PREFIX display: <https://w3id.org/display#>
 
 aat:300054766
-    rdf:type  crm:E55_Type ,
-              skos:Concept ;
-  rdfs:label  "Exhibition"@en .
+    rdf:type        crm:E55_Type ,
+                    skos:Concept ;
+    rdfs:label      "Exhibition"@en ;
+    skos:prefLabel  "Exhibition"@en ;
+    .
 
-aat:300133025 a crm:E55_Type , skos:Concept ;
-  rdfs:label "Artwork"@en .
+
+aat:300133025
+    rdf:type    crm:E55_Type ,
+                skos:Concept ;
+    rdfs:label  "Artwork"@en ;
+    .
+
 
 ######################################
 # Types of Object/Work
 ######################################
 
-aat:300435443 a crm:E55_Type , skos:Concept ;
-  rdfs:label "Type of Object/Work"@en .
+aat:300435443
+    rdf:type crm:E55_Type , skos:Concept ;
+    rdfs:label "Type of Object/Work"@en .
 
-aat:300033618 a crm:E55_Type , skos:Concept ;
-  rdfs:label "Painting"@en ;
-  crm:P2_has_type aat:300435443 .
+aat:300033618
+    rdf:type        crm:E55_Type ,
+                    skos:Concept ;
+    rdfs:label      "Painting"@en ;
+    crm:P2_has_type aat:300435443 ;
+    .
 
-aat:300047090 a crm:E55_Type , skos:Concept ;
-  rdfs:label "Sculpture"@en ;
-  crm:P2_has_type aat:300435443 .
+aat:300047090
+    rdf:type crm:E55_Type , skos:Concept ;
+    rdfs:label "Sculpture"@en ;
+    crm:P2_has_type aat:300435443 .
 
 aat:300375221
     rdf:type          crm:E55_Type ,
@@ -77,111 +89,148 @@ aat:300144148
 # Dimensions
 ######################################
 
-aat:300055647 a crm:E55_Type , skos:Concept ;
-  rdfs:label "Width"@en .
+aat:300055647
+    rdf:type crm:E55_Type , skos:Concept ;
+    rdfs:label "Width"@en ;
+    .
 
-aat:300055644 a crm:E55_Type , skos:Concept ;
-  rdfs:label "Height"@en .
+aat:300055644
+    rdf:type crm:E55_Type , skos:Concept ;
+    rdfs:label "Height"@en .
 
-aat:300379098 a crm:E58_Measurement_Unit , skos:Concept ;
-  rdfs:label "centimeters"@en ;
-  skos:notation "cm" .
+aat:300379098
+    rdf:type crm:E58_Measurement_Unit , skos:Concept ;
+    rdfs:label "centimeters"@en ;
+    skos:notation "cm" ;
+    .
 
 ######################################
 # Types of Identifier
 ######################################
 
-aat:300312355 a crm:E55_Type , skos:Concept ;
-  rdfs:label "Accession number"@en ;
-  skos:note "An accession number for the object; skos:exactMatch Wikidata Q1417099, according to the AAT; Wikidata description: object identifiers used in galleries, libraries, archives, and museums"@en ;
-  skos:exactMatch	<http://www.wikidata.org/entity/Q1417099> ;
-  .
+aat:300312355
+    rdf:type crm:E55_Type , skos:Concept ;
+    rdfs:label "Accession number"@en ;
+    skos:note "An accession number for the object; skos:exactMatch Wikidata Q1417099, according to the AAT; Wikidata description: object identifiers used in galleries, libraries, archives, and museums"@en ;
+    skos:exactMatch <http://www.wikidata.org/entity/Q1417099> ;
+    .
 
 ######################################
 # Type of linguistic objets
 ######################################
 
-aat:300404670 a crm:E55_Type , skos:Concept ;
-  rdfs:label "Primary Name"@en ;
-  rdfs:comment "“preferred terms” according to the AAT"@en .
+aat:300404670
+    rdf:type crm:E55_Type , skos:Concept ;
+    rdfs:label "Primary Name"@en ;
+    rdfs:comment "“preferred terms” according to the AAT"@en ;
+    .
 
-aat:300418049 a crm:E55_Type , skos:Concept ;
-  rdfs:label "Brief Text"@en .
-
-
-aat:300435416 a crm:E55_Type , skos:Concept ;
-  rdfs:label "Description"@en ;
-  crm:P2_has_type aat:300418049 .
-
-
-aat:300435429 a crm:E55_Type , skos:Concept ;
-  rdfs:label "Material Statement"@en ;
-  skos:scopeNote "A description or list of the materials the object is made of (source: Linked Art)"@en ;
-  crm:P2_has_type aat:300418049 .
+aat:300418049
+    rdf:type crm:E55_Type , skos:Concept ;
+    rdfs:label "Brief Text"@en ;
+    .
 
 
-aat:300435436 a crm:E55_Type , skos:Concept ;
-  rdfs:label "Production Statement"@en ;
-  skos:scopeNote "A description of the production or creation of the object (source: Linked Art)"@en ;
-  crm:P2_has_type aat:300418049 .
+aat:300435416
+    rdf:type crm:E55_Type , skos:Concept ;
+    rdfs:label "Description"@en ;
+    crm:P2_has_type aat:300418049 ;
+    .
 
 
-aat:300026687 a crm:E55_Type , skos:Concept ;
-  rdfs:label "Credit Line"@en ;
-  skos:scopeNote "A short statement of who should be acknowledged for the object (source: Linked Art)"@en ;
-  crm:P2_has_type aat:300418049 ;
-  .
+aat:300435429
+    rdf:type crm:E55_Type , skos:Concept ;
+    rdfs:label "Material Statement"@en ;
+    skos:scopeNote "A description or list of the materials the object is made of (source: Linked Art)"@en ;
+    crm:P2_has_type aat:300418049 ;
+    .
 
-aat:300435451 a crm:E55_Type , skos:Concept ;
-  rdfs:label "Spatial Statement"@en ;
-  crm:P2_has_type aat:300418049 .
+
+aat:300435436
+    rdf:type crm:E55_Type , skos:Concept ;
+    rdfs:label "Production Statement"@en ;
+    skos:scopeNote "A description of the production or creation of the object (source: Linked Art)"@en ;
+    crm:P2_has_type aat:300418049 ;
+    .
+
+
+aat:300026687
+    rdf:type crm:E55_Type , skos:Concept ;
+    rdfs:label "Credit Line"@en ;
+    skos:scopeNote "A short statement of who should be acknowledged for the object (source: Linked Art)"@en ;
+    crm:P2_has_type aat:300418049 ;
+    .
+
+aat:300435451
+    rdf:type crm:E55_Type , skos:Concept ;
+    rdfs:label "Spatial Statement"@en ;
+    crm:P2_has_type aat:300418049 ;
+    .
 
 ######################################
 # Types of group
 ######################################
 
-aat:300312281 a crm:E55_Type , skos:Concept ;
-  rdfs:label "Museum"@en .
+aat:300312281
+    rdf:type crm:E55_Type , skos:Concept ;
+    rdfs:label "Museum"@en .
 
 ######################################
 # Languages
 ######################################
 
-aat:300435433 a crm:E55_Type , skos:Concept ;
-  rdfs:label "Language"@en .
+aat:300435433
+    rdf:type crm:E55_Type , skos:Concept ;
+    rdfs:label "Language"@en ;
+    .
 
-aat:300388277 a crm:E56_Language , skos:Concept ;
-  rdfs:label "English"@en ;
-  skos:notation "en" ;
-  crm:P2_has_type aat:300435433 .
+aat:300388277
+    rdf:type crm:E56_Language , skos:Concept ;
+    rdfs:label "English"@en ;
+    skos:notation "en" ;
+    crm:P2_has_type aat:300435433 ;
+    .
 
-aat:300388306 a crm:E56_Language , skos:Concept ;
-  rdfs:label "French"@en ;
-  skos:notation "fr" ;
-  crm:P2_has_type aat:300435433 .
+aat:300388306
+    rdf:type crm:E56_Language , skos:Concept ;
+    rdfs:label "French"@en ;
+    skos:notation "fr" ;
+    crm:P2_has_type aat:300435433 ;
+    .
 
-aat:300388474 a crm:E56_Language , skos:Concept ;
-  rdfs:label "Italian"@en ;
-  skos:notation "it" ;
-  crm:P2_has_type aat:300435433 .
+aat:300388474
+    rdf:type crm:E56_Language , skos:Concept ;
+    rdfs:label "Italian"@en ;
+    skos:notation "it" ;
+    crm:P2_has_type aat:300435433 ;
+    .
 
 #######################################
 # Places
 #######################################
 
-aat:300008389 a crm:E55_Type , skos:Concept ;
-  rdfs:label "City"@en .
+aat:300008389
+    rdf:type crm:E55_Type , skos:Concept ;
+    rdfs:label "City"@en ;
+    .
 
-<http://vocab.getty.edu/tgn/7008161> a crm:E53_Place, skos:Concept ;
-  rdfs:label "Bordeaux" ;
-  crm:P2_has_type aat:300008389 .
+<http://vocab.getty.edu/tgn/7008161>
+    rdf:type        crm:E53_Place ,
+                    skos:Concept ;
+    rdfs:label      "Bordeaux"@fr ;
+    crm:P2_has_type aat:300008389 ;
+    .
 
 #######################################
 # À classer
 #######################################
 
-aat:300378926 a crm:E55_Type , skos:Concept ;
-  rdfs:label "Topical Collection"@en .
+
+aat:300378926
+    rdf:type crm:E55_Type , skos:Concept ;
+    rdfs:label "Topical Collection"@en ;
+    .
+
 
 #######################################
 # JSON-LD mapping
