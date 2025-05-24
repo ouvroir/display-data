@@ -23,7 +23,7 @@ exhib:exhibit0003
     
 <urn:uuid:d5f56c31-f4ce-45d5-a3fd-e4f09aeea615>
     rdf:type                      crm:E33_Linguistic_Object ;
-    crm:P190_has_symbolic_content "lettraset"@fr ;
+    crm:P190_has_symbolic_content "Caractères transfert"@fr ;
     crm:P2_has_type               aat:300435429 ;
     crm:P72_has_language          aat:300388306 .
 
