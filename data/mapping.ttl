@@ -1,0 +1,26 @@
+#######################################
+# JSON-LD mapping
+# Utilisées par l’API
+#######################################
+
+# Linked Art
+crm:E7_Activity                     utils:jsonldmapping "Activity" .
+crm:E12_Production                  utils:jsonldmapping "Prodcution" .
+crm:E21_Person                      utils:jsonldmapping "Person" .
+crm:E33_Linguistic_Object           utils:jsonldmapping "LinguisticObject" .
+crm:E33_E41_Linguistic_Appellation  utils:jsonldmapping "Name" .
+crm:E42_Identifier                  utils:jsonldmapping "Identifier" .
+crm:E52_Time-Span                   utils:jsonldmapping "TimeSpan" .
+crm:E53_Place                       utils:jsonldmapping "Place" .
+crm:E54_Dimension                   utils:jsonldmapping "Dimension" .
+crm:E55_Type                        utils:jsonldmapping "Type" .
+crm:E56_Language                    utils:jsonldmapping "Language" .
+crm:E58_Measurement_Unit            utils:jsonldmapping "MeasurementUnit" .
+crm:E74_Group                       utils:jsonldmapping "Group" .
+la:Set                              utils:jsonldmapping "Set" .
+
+# Display
+display:Display                     utils:jsonldmapping "Display" .
+display:Element                     utils:jsonldmapping "Element" .
+display:Exhibit                     utils:jsonldmapping "Exhibit" .
+display:ExhibitionSpace             utils:jsonldmapping "ExhibitionSpace" .

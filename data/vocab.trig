@@ -1,0 +1,765 @@
+PREFIX rdf:       <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs:      <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd:       <http://www.w3.org/2001/XMLSchema#>
+PREFIX dc:        <http://purl.org/dc/terms/>
+PREFIX skos:      <http://www.w3.org/2004/02/skos/core#>
+PREFIX skosxl:    <http://www.w3.org/2008/05/skos-xl#>
+PREFIX crm:       <http://www.cidoc-crm.org/cidoc-crm/>
+PREFIX aat:       <http://vocab.getty.edu/aat/>
+PREFIX la:        <https://linked.art/ns/terms/>
+PREFIX utils:     <https://ntnlv.ca/ns/utils#>
+PREFIX display:   <https://w3id.org/display#>
+PREFIX dist:       <https://w3id.org/display/vocab/>
+PREFIX distgr:       <https://w3id.org/display/vocab/group/>
+PREFIX distalt:   <https://w3id.org/display/vocab/altLabel/>
+PREFIX distpref:  <https://w3id.org/display/vocab/prefLabel/>
+
+<urn:ouvroir:vocab> { # graphe
+
+
+<https://w3id.org/display/vocab>
+    rdf:type            skos:ConceptScheme ;
+    rdfs:label          "DIST - Display Thesaurus"@en ,
+                        "DIST - Display : Thésaurus"@fr ;
+    dc:subject          aat:300054766 ,
+                        aat:300133025 ,
+                        <http://www.wikidata.org/entity/Q621550> ;
+    dc:publisher        <https://ouvroir.umontreal.ca> ;
+    dc:modified         "2025-05-26"^^xsd:date ;
+    skos:hasTopConcept  dist:types ,
+                        aat:300435433 ,
+                        aat:300226816 ;
+                        .
+
+
+##########################################
+# Regroupements
+##########################################
+
+# objectTypesByFormAttributes
+
+distgr:termsByRequirementType
+    rdf:type        skos:Collection ;
+    skos:prefLabel  "Terms by requirement type"@en ,
+                    "Termes par type d’obligatoriété"@fr ;
+    skos:definition "Regroupements des termes par type d’obligatoriété"@fr ,
+                    "Groupings of terms by requirement type"@en ;
+    skos:scopeNote  "Cette ressource n’est pas un concept."@fr ,
+                    "This resource is not a concept."@en ;
+    skos:inScheme   <https://w3id.org/display/vocab> ;
+    skos:member     distgr:linkedArtRequiredTerms ,
+                    distgr:linkedArtRecommendedTerms ,
+                    distgr:linkedArtOptionalTerms ,
+                    distgr:displaySpecificTerms ;
+
+    .
+
+
+distgr:linkedArtRequiredTerms
+    rdf:type        skos:Collection ;
+    dc:source <https://linked.art/model/vocab/required/> ;
+    skos:prefLabel  "Required terms (Linked Art)"@en ,
+                    "Termes obligatoires (Linked Art)"@fr ;
+    skos:scopeNote  "If a term is listed here then you MUST NOT use a different term for the same concept, as systems are expecting these terms. This is not to say that you MUST always have the terms in every record, you might not know (for example) the shape of an object, but if you do know it, then you must use the agreed upon URI for the concept of \"shape\" (Linked Art Model documentation)."@en ;
+    skos:inScheme   <https://w3id.org/display/vocab> ;
+    rdfs:seeAlso    <https://linked.art/model/vocab/required/> ;
+    skos:member     aat:300404670 ,
+                    aat:300418049 ,
+                    aat:300435443 ,
+                    aat:300054766 ,
+                    aat:300133025 ;
+    .
+
+
+distgr:linkedArtRecommendedTerms
+    rdf:type        skos:Collection;
+    skos:prefLabel  "Recommended terms (Linked Art)"@en ,
+                    "Termes recommandés (Linked Art)"@fr ;
+    skos:scopeNote  "Please think carefully before choosing another concept for one in the lists below as it will be much harder to compare your data with others', however it will still be valid Linked Art if you do pick a different concept (Linked Art Model documentation)."@en ;
+    skos:inScheme   <https://w3id.org/display/vocab> ;
+    skos:member     aat:300312355 ,
+                    aat:300435416 ,
+                    aat:300026687 ,
+                    aat:300435429 ,
+                    aat:300435436 ,
+                    aat:300037680 ,
+                    aat:300033618 ,
+                    aat:300047090 ,
+                    aat:300008389 ,
+                    aat:300312281 ,
+                    aat:300055644 ,
+                    aat:300055647 ,
+                    aat:300388277 ,
+                    aat:300388306 ,
+                    aat:300388474 ,
+                    aat:300379098 ;
+    .
+
+
+distgr:linkedArtOptionalTerms
+    rdf:type        skos:Collection ;
+    skos:prefLabel  "Optional terms (Linked Art)"@en ,
+                    "Termes facultatifs (Linked Art)"@fr ;
+    skos:scopeNote  "If you don't have a reason to use a different term, then please use these. If you do have a reason to use a different term, that's totally okay (Linked Art Model documentation)."@en ;
+    skos:inScheme   <https://w3id.org/display/vocab> ;
+    skos:member     aat:300435425 ;
+    .
+
+
+distgr:displaySpecificTerms
+    rdf:type skos:Collection ;
+    skos:prefLabel  "Display-specific terms"@en ,
+                    "Termes propres à Display"@fr ;
+    skos:definition "Regroupement des termes propres au projet Display"@fr ,
+                    "Grouping of Display-specific terms"@en ;
+    skos:scopeNote  "Terms grouped under this label are added to the Linked Art vocabulary in order to fillful the specific requirements of the Display project (Display). This resource is not a concept"@en ;
+    skos:inScheme   <https://w3id.org/display/vocab> ;
+    skos:member     aat:300211861 ,
+                    aat:300213259 ,
+                    aat:300144148 ,
+                    aat:300435451 ,
+                    aat:300378926 ,
+                    aat:300002687 ,
+                    aat:300375221 ;
+                    .
+
+
+distgr:objectTypesByFormAttribute
+    rdf:type skos:Collection ;
+    skos:prefLabel  "Object types by form attribute"@en ,
+                    "Types d’objet par attribut de forme"@fr ;
+    skos:scopeNote  "Groupings of object types  by form attribute"@en ,
+                    "Regroupements des types d’objet par attibut de forme"@fr ;
+    skos:inScheme   <https://w3id.org/display/vocab> ;
+    skos:member     dist:two ,
+                    dist:three ;
+    .
+
+distgr:objectTypesByFormAttribute
+    rdf:type        skos:Collection ;
+    skos:prefLabel  "Object types by form attribute"@en ,
+                    "Types d’objet par attribut de forme"@fr ;
+    skos:scopeNote  "Groupings of object types  by form attribute"@en ,
+                    "Regroupements des types d’objet par attibut de forme"@fr ;
+    skos:inScheme   <https://w3id.org/display/vocab> ;
+    skos:member     dist:two ,
+                    dist:three ;
+    .
+
+#################################################
+# Form attributes
+#################################################
+
+aat:300226816
+    rdf:type            skos:Concept ;
+    skos:prefLabel      "Form attributes"@en ,
+                        "Attributs de forme"@fr ;
+    skos:inScheme       <https://w3id.org/display/vocab> ;
+    skos:topConceptOf   <https://w3id.org/display/vocab> ;
+    skos:narrower       aat:300010332 ,
+                        aat:300010331 ;
+    .
+
+
+aat:300010332
+    rdf:type        skos:Concept ;
+    skos:prefLabel  "two-dimensional"@en ;
+    dc:source       <http://vocab.getty.edu/page/aat/300010332> ;
+    skos:broader    aat:300226816 ;
+    .
+
+
+aat:300010331
+    rdf:type        skos:Concept ;
+    skos:prefLabel  "three-dimensional"@en ;
+    dc:source       <http://vocab.getty.edu/page/aat/300010331> ;
+    skos:broader    aat:300226816 ;
+    .
+
+######################################
+# Types
+######################################
+
+
+aat:300054766
+    skos:prefLabel      "Exhibition"@en ,
+                        "Exposition"@fr ;
+    rdf:type            crm:E55_Type ,
+                        skos:Concept ;
+    rdfs:label          "Exhibition"@en ;
+    skos:altLabel       "Exhibition Activity"@en ,
+                        "Exhibiting"@en ;
+    skosxl:altLabel     distalt:aat:300054766 ;
+    skos:definition     "An exhibition (Linked Art)"@en ;
+    skos:related        aat:300133025 ;
+    skos:inScheme       <https://w3id.org/display/vocab> ;
+    skos:topConceptOf   <https://w3id.org/display/vocab> ;
+    .
+distalt:aat:300054766
+    rdf:type            skosxl:Label ;
+    skosxl:literalForm  "Exhibiting"@en ;
+    dc:source           <https://linked.art/model/vocab/required/> ;
+    skos:inScheme      <https://w3id.org/display/vocab> ;
+    .
+    
+
+
+aat:300133025
+    rdf:type        crm:E55_Type ,
+                    skos:Concept ;
+    rdfs:label      "Artwork"@en ;
+    skos:prefLabel  "Artwork"@en ,
+                    "Œuvre d’art"@fr ;
+    skos:altLabel   "Work of art"@en ;
+    skos:definition "The entity is an artwork (Linked Art)"@en ;
+    skos:scopeNote  "This resource classifies any type of entity; consequently an artwork may be a physical object or an immaterial entity (Display). A work of art may exist as a part of a larger object, e.g., a mural painting or a painting on a piece of furniture (AAT)."@en ;
+    dc:source       <https://vocab.getty.edu/page/aat/300133025> ;
+    skos:related    aat:300054766 ;
+    skos:inScheme   <https://w3id.org/display/vocab> ;
+    skos:broader    dist:types ;
+    .
+
+
+dist:types
+    rdf:type          skos:Concept ;
+    skos:definition   "Types used in the range of the crm:P2_has_type property"@en ,
+                      "Types utilisés dans la portée de la propriété crm:P2_has_type"@fr ;
+    skos:scopeNote    "This resource is an internal information artifact and must not be used with the Linked Art API."@en ;
+    skos:prefLabel    "Types"@en ,
+                      "Types"@fr ;
+    skos:topConceptOf <https://w3id.org/display/vocab> ;
+    skos:inScheme     <https://w3id.org/display/vocab> ;
+    rdfs:seeAlso      <https://linked.art/model/base/#types-and-classifications> ;
+    skos:narrower     aat:300133025 ,
+                      dist:classificationTypes ,
+                      dist:dimensionTypes ,
+                      dist:identifierTypes ,
+                      dist:nameTypes ,
+                      dist:setTypes ;
+                      .
+
+######################################
+# Set Types
+######################################
+
+dist:setTypes
+    rdf:type skos:Concept ;
+    skos:prefLabel  "Set Types"@en ,
+                    "Types d’ensembles"@fr ;
+    skos:definition "A set type (Display)"@en ;
+    skos:altLabel   "Colection types"@en ,
+                    "Types de collection"@fr ;
+    skos:scopeNote  "This resource is an internal information artifact and must not be used with the Linked Art API."@en ;
+    skos:inScheme   <https://w3id.org/display/vocab> ;
+    rdfs:seeAlso    <https://linked.art/model/collection/> ;
+    skos:broader    dist:types ;
+    skos:narrower   aat:300025976 ,
+                    aat:300378926 ;
+                    .
+
+aat:300025976
+    rdf:type        crm:E55_Type ,
+                    skos:Concept ;
+    rdfs:label      "Collection"@en ;
+    skos:prefLabel  "Collection"@en ,
+                    "Collection"@fr ;
+    skos:definition "The Set is a collection of things, typically physical objects and managed by an organization (Linked Art)"@en ;
+    dc:source       <https://linked.art/model/vocab/recommended/#set-types> ;
+    skos:inScheme   <https://w3id.org/display/vocab> ;
+    skos:broader    dist:setTypes ;
+    .
+
+aat:300378926
+    rdf:type        crm:E55_Type ,
+                    skos:Concept ;
+    rdfs:label      "Topical Collection"@en ;
+    skos:prefLabel  "Topical Collection"@en ,
+                    "Collection thématique"@fr ;
+    skos:definition "A collection wherein the constituent parts have in common a general subject, heading, topic, or composition, as distinguished from collections that reflect a common provenance (AAT)"@en ;
+    dc:source       <http://vocab.getty.edu/page/aat/300378926> ;
+    skos:inScheme   <https://w3id.org/display/vocab> ;
+    skos:broader    dist:setTypes ;
+    .
+
+######################################
+# Classification Types
+######################################
+
+dist:classificationTypes
+    rdf:type skos:Concept ;
+    skos:prefLabel  "Classification Types"@en ,
+                    "Types de classification"@fr ;
+    skos:definition "The types of types classification"@en ;
+    skos:altLabel   "Meta-types"@en ,
+                    "Types of types"@en ,
+                    "Métatypes"@fr ,
+                    "Types de types"@fr ;
+    skos:scopeNote  "This resource is an internal information artifact and must not be used with the Linked Art API."@en ;
+    skos:inScheme   <https://w3id.org/display/vocab> ;
+    rdfs:seeAlso    <https://linked.art/model/vocab/required/#classification-types> ;
+    skos:broader    dist:types ;
+    skos:narrower   aat:300435443 ,
+                    aat:300418049 ;
+                    .
+
+aat:300435443
+    rdf:type            crm:E55_Type ,
+                        skos:Concept ;
+    rdfs:label          "Type of Work or Object"@en ;
+    skos:prefLabel      "Type of Work or Object"@en ;
+    skosxl:prefLabel    distpref:aat:300435443 ;
+    skos:altLabel       "Type of Object"@en ,
+                        "Type of Work"@en ,
+                        "Object Types"@en ;
+    skos:definition     "A type of works (Linked Art)"@en ;
+    skos:scopeNote      """This resource is used as the meta-type of work or object types in the Linked Art model.
+    In the scope of the DIST thesaurus a specific \"type of object or work\" may be the type of any physical object (not only work of art). The same is true in the scope of the Linked Art model but it's not clearly explicited everywhere in the LA documentation."""@en ;
+    skos:editorialNote  "The label \"object types\" would be more consistent with other meta-type labels (such as \"name types\" or \"activity types\"). However, DIST retains the form \"type of object\" to align with the terminology used in the Linked Art model for this specific required term, prioritizing compatibility over internal naming uniformity."@en ;
+    skos:inScheme       <https://w3id.org/display/vocab> ;
+    rdfs:seeAlso        <https://linked.art/model/base/#types-of-types> ,
+                        <https://linked.art/model/vocab/required/#classification-types> ;
+    skos:broader          dist:classificationTypes ;
+    skos:narrower         aat:300033618 ,
+                          aat:300047090 ,
+                          aat:300375221 ,
+                          aat:300211861 ,
+                          aat:300213259 ,
+                          aat:300037680 ,
+                          aat:300144148 ;
+                          .
+distpref:aat:300435443
+    rdf:type            skosxl:Label ;
+    skosxl:literalForm  "Type of Work or Object"@en ;
+    dc:source           <https://linked.art/model/base/#types-of-types> ;
+    skos:inScheme       <https://w3id.org/display/vocab> ;
+    .
+
+aat:300033618
+    rdf:type        crm:E55_Type ,
+                    skos:Concept ;
+    rdfs:label      "Painting"@en ;
+    skos:prefLabel  "Painting"@en ;
+    crm:P2_has_type aat:300435443 ;
+    skos:definition "Object created by application of colored liquid onto a surface (Linked Art)"@en ;
+    skos:inScheme   <https://w3id.org/display/vocab> ;
+    skos:related    aat:300010332 ;
+    skos:broader    aat:300435443 ;
+    .
+
+
+aat:300047090
+    rdf:type crm:E55_Type , skos:Concept ;
+    rdfs:label "Sculpture"@en ;
+		skos:prefLabel "Sculpture"@en ;
+    crm:P2_has_type aat:300435443 ;
+    skos:definition "Object created by carving or engraving a hard material or molding a malleable material (Linked Art)"@en ;
+    skos:broader    aat:300435443 ;
+    skos:inScheme   <https://w3id.org/display/vocab> ;
+    .
+
+
+aat:300375221
+    rdf:type        crm:E55_Type ,
+                    skos:Concept ;
+    rdfs:label      "Modular Wall"@en ;
+	skos:prefLabel  "Modular Wall"@en ,
+                    "Cloison mobile"@fr ;
+    skos:altLabel   "Cimaise"@fr ;
+    skos:scopeNote  "Dans le contexte du projet Display, utilisé pour désigner les cimaises ou toute autre forme de cloison mobile ou temporaire. Voir aussi \"Picture rails\"."@fr ;
+    crm:P2_has_type aat:300435443 ;
+    skos:related    aat:300002687 ;
+    skos:broader    aat:300435443 ;
+    skos:inScheme   <https://w3id.org/display/vocab> ;
+    .
+
+
+aat:300002687
+    rdf:type        crm:E55_Type ,
+                    skos:Concept ;
+    rdfs:label      "Picture rails"@en ;
+	skos:prefLabel  "Picture rails"@en ,
+                    "Cimaise"@fr ;
+    skos:altLabel   "Cymaise"@fr ,
+                    "Picture moldings"@en ;
+    crm:P2_has_type aat:300435443 ;
+    skos:related    aat:300375221 ;
+    skos:broader    aat:300435443 ;
+    skos:inScheme   <https://w3id.org/display/vocab> ;
+    .
+
+
+aat:300211861
+    rdf:type            crm:E55_Type ,
+                        skos:Concept ;
+    rdfs:label          "Identification sign"@en ;
+		skos:prefLabel      "Identification sign"@en ;
+    skos:definition     "Signs that confirm destinations (AAT)"@en ;
+    skos:scopeNote      "For smaller, less public identifying notices, use \"labels (identifying artifacts)\" (AAT)"@en ;
+    skos:editorialNote  "Nous avions initialement proposé aat:300220751 \"Information forms (objects)\", mais aat:300211861 \"Identification sign\" est plus près de l’expression souhaitée. Il s’agit d’une signalétique, par exemple un panneau ou une impression sur un mur, support d’un élément d’identification de l’entité où l’on se trouve (d’où l’idée de \"signs that confirm destinations\", dans l’AAT) (DV)."@en ;
+    crm:P2_has_type     aat:300435443 ;
+    skos:broader        aat:300435443 ;
+    skos:inScheme       <https://w3id.org/display/vocab> ;
+    .
+
+
+aat:300213259
+    rdf:type        crm:E55_Type ,
+                    skos:Concept ;
+    rdfs:label      "Information sign"@en ;
+		skos:prefLabel  "Information sign"@en ;
+    skos:note       "Nous avions initialement proposé aat:300235510 \"visual resources\", mais aat:300211861 est plus près de l’expression souhaitée. Il s’agit d’une signalétique, par exemple un panneau ou une impression sur un mur, support d’un élément d’information général (\"Use to distinguish those signs that convey general information from those that are 'direction signs,' 'identification signs,' or 'regulatory signs.'\", dans l’AAT)."@fr ;
+    crm:P2_has_type aat:300435443 ;
+    skos:broader    aat:300435443 ;
+    skos:inScheme   <https://w3id.org/display/vocab> ;
+    .
+
+
+aat:300037680
+    rdf:type        crm:E55_Type ,
+                    skos:Concept ;
+    rdfs:label      "Furniture"@en ;
+		skos:prefLabel  "Furniture"@en ;
+    skos:definition "Objects used for sitting, reclining, or storage, such as a chair or cabinet (Linked Art)"@en ;
+    crm:P2_has_type aat:300435443 ;
+    skos:broader    aat:300435443 ;
+    skos:inScheme   <https://w3id.org/display/vocab> ;
+    .
+
+
+aat:300144148
+    rdf:type        crm:E55_Type ,
+                    skos:Concept ;
+    rdfs:label      "Showcase"@en ;
+		skos:prefLabel  "Showcase"@en ;
+    crm:P2_has_type aat:300435443 ;
+    skos:broader    aat:300435443 ;
+    skos:inScheme   <https://w3id.org/display/vocab> ;
+    .
+
+
+######################################
+# Dimension types
+######################################
+
+
+dist:dimensionTypes
+    rdf:type        crm:E55_Type ,
+                    skos:Concept ;
+    rdfs:label      "Dimension Types"@en ;
+    skos:prefLabel  "Dimension Types"@en ;
+    skos:definition "A dimension type (Display)"@en ;
+    skos:scopeNote  "This resource is an internal information artifact and must not be used with the Linked Art API."@en ;
+    skos:inScheme   <https://w3id.org/display/vocab> ;
+    skos:narrower   aat:300055647 ,
+                    aat:300055644 ;
+    skos:broader    dist:types ;
+    .
+
+aat:300055647
+    rdf:type        crm:E55_Type ,
+                    skos:Concept ;
+    rdfs:label      "Width"@en ;
+		skos:prefLabel  "Width"@en ;
+    skos:definition "The Dimension measures the weight of the entity"@en ;
+    skos:scopeNote  "Width is a type of dimension (DV)"@en ;
+    skos:inScheme   <https://w3id.org/display/vocab> ;
+    skos:broader    dist:dimensionTypes ;
+    .
+
+
+aat:300055644
+    rdf:type        crm:E55_Type ,
+                    skos:Concept ;
+    rdfs:label      "Height"@en ;
+		skos:prefLabel  "Height"@en ;
+    skos:definition "The Dimension measures the height of the entity, from the top to the bottom (Linked Art)"@en ;
+    skos:scopeNote  "Height is a type of dimension (DV)"@en ;
+    skos:inScheme <https://w3id.org/display/vocab> ;
+    skos:broader    dist:dimensionTypes ;
+    .
+
+
+aat:300379098
+    rdf:type        crm:E58_Measurement_Unit ,
+                    skos:Concept ;
+    rdfs:label      "centimeters"@en ;
+    skos:definition "centimeters (measurement unit)"@en ;
+		skos:prefLabel  "centimeters"@en ,
+                    "centimètres"@fr ;
+    skos:notation   "cm" ;
+    skos:inScheme   <https://w3id.org/display/vocab> ;
+    skos:broader    dist:measurementUnits ;
+    .
+
+######################################
+# Types of Identifier
+######################################
+
+
+dist:identifierTypes
+    rdf:type        crm:E55_Type ,
+                    skos:Concept ;
+    rdfs:label      "Identifier Types"@en ;
+    skos:prefLabel  "Identifier Types"@en ,
+                    "Types d’identifiant"@fr ;
+    skos:definition "A identifier type (Display)"@en ;
+    skos:scopeNote  "This resource is an internal information artifact and must not be used with the Linked Art API."@en ;
+    dc:source       <https://w3id.org/display/vocab> ;
+    skos:inScheme   <https://w3id.org/display/vocab> ;
+    skos:broader    dist:types ;
+    skos:narrower   aat:300312355 ;
+    .
+
+
+aat:300312355
+    rdf:type crm:E55_Type , skos:Concept ;
+    rdfs:label      "Accession number"@en ;
+	skos:prefLabel  "Accession number"@en ,
+                    "Numéro d’inventaire"@fr ;
+    skos:altLabel   "Inventory number"@en ,
+                    "Reference number"@en ,
+                    "Object number"@en ;
+    skos:definition "An accession number for the object (Linked Art)"@en ;
+    skos:editorialNote  "Wikidata description: object identifiers used in galleries, libraries, archives, and museums"@en ;
+    skos:exactMatch <http://www.wikidata.org/entity/Q1417099> ;
+    skos:inScheme   <https://w3id.org/display/vocab> ;
+    skos:broader    dist:identifierTypes ;
+    .
+
+######################################
+# Name Types
+######################################
+
+dist:nameTypes
+    rdf:type        crm:E55_Type ,
+                    skos:Concept ;
+    rdfs:label      "Name Types"@en ;
+    skos:prefLabel  "Name Types"@en ;
+    skos:definition "A name type (Display)"@en ;
+    skos:scopeNote  "This resource is an internal information artifact and must not be used with the Linked Art API."@en ;
+    dc:source       <https://w3id.org/display/vocab> ;
+                    skos:inScheme <https://w3id.org/display/vocab> ;
+    skos:broader    dist:types ;
+    skos:narrower   aat:300404670 ,
+                    aat:300264273 ;
+    .
+
+
+aat:300404670
+    rdf:type            crm:E55_Type ,
+                        skos:Concept ;
+    rdfs:label          "Primary Name"@en ;
+	skos:prefLabel      "Primary Name"@en ;
+    skos:definition     "The main or primary name of the entity (Linked Art)"@en ;
+    skos:scopeNote      "Every record must have a name with the primary name classification so that user interfaces know which name to use (Linked Art). According to LA there may be multiple primary names for a single record (exactly one per language), but in the scope of Display there can be only exactly one primary name among names in different languages for the record (ZR). See Alternate name for additional names in different languages."@en ;
+    skos:altLabel       "Preferred term"@en ,
+                        "Title"@en ,
+                        "Main title"@en ,
+                        "Primary title"@en ,
+                        "Main name"@en ;
+    skos:editorialNote  "“preferred terms” according to the AAT"@en ;
+    dc:source           <https://linked.art/model/vocab/required/#primary-name> ;
+    skos:inScheme       <https://w3id.org/display/vocab> ;
+    skos:related        aat:300264273 ;
+    skos:broader        dist:nameTypes ;
+    .
+
+
+aat:300264273
+    rdf:type            crm:E55_Type ,
+                        skos:Concept ;
+    rdfs:label          "Alternate Name"@en ;
+	skos:prefLabel      "Alternate Name"@en ;
+    skos:definition     "An alternate name, as opposed to the primary name, of an entity (Linked Art)"@en ;
+    skos:scopeNote      "Used for additional names in some languages that are different from the primary name."@en ;
+    skos:editorialNote  "\"nonpreferred terms\" according to the AAT"@en ;
+    dc:source           <https://linked.art/model/vocab/required/#primary-name> ;
+    skos:inScheme       <https://w3id.org/display/vocab> ;
+    skos:related        aat:300404670 ;
+    skos:broader        dist:nameTypes ;
+    .
+
+
+####################################
+# Statement
+####################################
+
+
+aat:300418049
+    rdf:type        crm:E55_Type ,
+                    skos:Concept ;
+    rdfs:label      "Brief Text"@en ;
+		skos:prefLabel  "Statement Types"@en ,
+                    "Types de déclaration"@fr ;
+    skos:altLabel   "Brief Text"@en ,
+                    "Texte court"@fr ;
+    skos:definition "A type of statement (Linked Art)"@en ;
+    skos:scopeNote  "This resource is used as the meta-type of statement types in the Linked Art model."@en ;
+    skos:inScheme   <https://w3id.org/display/vocab> ;
+    skos:broader    dist:classificationTypes ;
+    skos:narrower   aat:300435416 ,
+                    aat:300435429 ,
+                    aat:300435436 ,
+                    aat:300026687 ,
+                    aat:300435451 ;
+                    .
+
+
+aat:300435416
+    rdf:type crm:E55_Type , skos:Concept ;
+    rdfs:label "Description"@en ;
+		skos:prefLabel "Description"@en ;
+    skos:definition "A description of the entity (Linked Art)"@en ;
+    crm:P2_has_type aat:300418049 ;
+    skos:inScheme <https://w3id.org/display/vocab> ;
+    skos:broader  aat:300418049 ;
+    .
+
+
+aat:300435429
+    rdf:type crm:E55_Type , skos:Concept ;
+    rdfs:label "Material Statement"@en ;
+		skos:prefLabel "Material Statement"@en ;
+    skos:scopeNote "A description or list of the materials the object is made of (Linked Art)"@en ;
+    crm:P2_has_type aat:300418049 ;
+    skos:inScheme <https://w3id.org/display/vocab> ;
+    skos:broader  aat:300418049 ;
+    .
+
+
+aat:300435436
+    rdf:type crm:E55_Type , skos:Concept ;
+    rdfs:label "Production Statement"@en ;
+		skos:prefLabel "Production Statement"@en ;
+    skos:scopeNote "A description of the production or creation of the object (Linked Art)"@en ;
+    crm:P2_has_type aat:300418049 ;
+    skos:inScheme <https://w3id.org/display/vocab> ;
+    skos:broader  aat:300418049 ;
+    .
+
+
+aat:300026687
+    rdf:type crm:E55_Type , skos:Concept ;
+    rdfs:label "Credit Line"@en ;
+		skos:prefLabel "Credit Line"@en ;
+    skos:definition "A short statement of who should be acknowledged for the object (Linked Art)"@en ;
+    crm:P2_has_type aat:300418049 ;
+    skos:inScheme <https://w3id.org/display/vocab> ;
+    skos:broader  aat:300418049 ;
+    .
+
+
+aat:300435451
+    rdf:type crm:E55_Type , skos:Concept ;
+    rdfs:label "Spatial Statement"@en ;
+		skos:prefLabel "Spatial Statement"@en ;
+    skos:definition "A description of the way the work of art is meant to be seen or has been displayed (AAT)"@en ;
+    skos:scopeNote "Used for the topological or spatial description of a display or an exhibit; for example one could indicate what is to be considered as the front face of an exhibit (Display)."@en ;
+    crm:P2_has_type aat:300418049 ;
+    skos:inScheme <https://w3id.org/display/vocab> ;
+    skos:broader  aat:300418049 ;
+    .
+
+
+######################################
+# Types of group
+######################################
+
+aat:300312281
+    rdf:type        crm:E55_Type ,
+                    skos:Concept ;
+    rdfs:label      "Museum (group)"@en ;
+    skos:definition "The Group is a museum (Linked Art)"@en ;
+    skos:scopeNote  "This resource is used as a type of group; not to be confused with the museum as a place (Display)."@en ;
+		skos:prefLabel  "Museum (group)"@en ,
+                    "Musée (groupe)"@fr ;
+    skos:related    aat:300005768 ;
+    skos:inScheme <https://w3id.org/display/vocab> ;
+    .
+
+######################################
+# Languages
+######################################
+
+aat:300435433
+    rdf:type            crm:E55_Type ,
+                        skos:Concept ;
+    rdfs:label          "Languages"@en ;
+    skos:definition     "Languages used in the range of the crm:P72_has_language property"@en ,
+                        "Langues utilisées dans la portée de la propriété crm:P72_has_language property"@fr ;
+    skos:scopeNote      "Languages are instances of crm:E56_Language, and E56(x) ⇒ E55(x). This resource is an internal information artifact and must not be used with the Linked Art API."@en ;
+    skos:prefLabel      "Languages"@en ,
+                        "Langues"@fr ;
+    rdfs:seeAlso        <https://linked.art/model/vocab/recommended/#languages> ,
+                        <https://linked.art/model/vocab/recommended/languages/> ;
+    skos:inScheme       <https://w3id.org/display/vocab> ;
+    skos:topConceptOf   <https://w3id.org/display/vocab> ;
+    skos:narrower       aat:300388277 ,
+                        aat:300388306 ,
+                        aat:300388474 ;
+                        .
+
+aat:300388277
+    rdf:type crm:E56_Language , skos:Concept ;
+    rdfs:label "English"@en ;
+    skos:prefLabel "English"@en ;
+    skos:definition "English (language)"@en ;
+    skos:notation "en" ;
+    crm:P2_has_type aat:300435433 ;
+    skos:inScheme <https://w3id.org/display/vocab> ;
+    skos:broader aat:300435433 ;
+    .
+
+aat:300388306
+    rdf:type crm:E56_Language , skos:Concept ;
+    rdfs:label "French"@en ;
+		skos:prefLabel "French"@en ;
+    skos:definition "French (language)"@en ;
+    skos:notation "fr" ;
+    crm:P2_has_type aat:300435433 ;
+    skos:inScheme <https://w3id.org/display/vocab> ;
+    skos:broader aat:300435433 ;
+    .
+
+aat:300388474
+    rdf:type crm:E56_Language , skos:Concept ;
+    rdfs:label "Italian"@en ;
+		skos:prefLabel "Italian"@en ;
+    skos:notation "it" ;
+    crm:P2_has_type aat:300435433 ;
+    skos:inScheme <https://w3id.org/display/vocab> ;
+    skos:broader aat:300435433 ;
+    .
+
+#######################################
+# Places
+#######################################
+
+aat:300008389
+    rdf:type        crm:E55_Type ,
+                    skos:Concept ;
+    rdfs:label      "City"@en ;
+    skos:prefLabel  "City"@en ,
+                    "Ville"@fr ;
+    skos:altLabel   "Cities"@en ;
+    skos:definition "The Place is a city (Paris, Chicago, Tokyo, etc) (Linked Art)"@en ;
+    skos:scopeNote  "This resource is used as a type of place (DV)."@en ;
+    dc:source       <https://linked.art/model/vocab/recommended/#place-types> ;
+    skos:inScheme   <https://w3id.org/display/vocab> ;
+    .
+
+<http://vocab.getty.edu/tgn/7008161>
+    rdf:type        crm:E53_Place ,
+                    skos:Concept ;
+    rdfs:label      "Bordeaux"@fr ;
+    skos:prefLabel  "Bordeaux"@fr ,
+                    "Bordeaux"@en ;
+    skos:definition "Bordeaux (Nouvelle-Aquitaine, France)"@en ,
+                    "Bordeaux (Nouvelle-Aquitaine, France)"@fr ;
+    crm:P2_has_type aat:300008389 ;
+    skos:related    aat:300008389 ;
+    skos:inScheme <https://w3id.org/display/vocab> ;
+    .
+
+
+}
