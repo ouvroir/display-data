@@ -11,5 +11,6 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 exhib:exhibit0065
     rdf:type                    crm:E22_Human-Made_Object ;
     rdfs:label                  "Inconnu"@fr ;
-    rdfs:comment                "Aucune trace de cet objet n'a été trouvé dans les archives à part la photo de la salle. Je sais seulement qu'il est dans la vitrine (exhib:element0049) de la salle 9." ;
-    crm:P2_has_type             aat:300133025 .
+    rdfs:comment                "[@todo] Aucune trace de cet objet n'a été trouvé dans les archives à part la photo de la salle. Je sais seulement qu'il est dans la vitrine (exhib:element0049) de la salle 9." ;
+    crm:P2_has_type             aat:300133025 ;
+    .

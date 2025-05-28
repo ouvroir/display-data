@@ -3,6 +3,8 @@ title: "Display : exemples de données"
 author: ouvroir
 ---
 
+NOTE : les fichiers de ce dossier et les structures de données qu’ils contiennent sont obsolètes.
+
 # Notes
 
 Les IRI des ressources RDF, lorsque renvoyées comme valeur des champs, sont des identifiants non déréférençables (pour la majorité). Les IRI de l’espace de nom https://ouvroir.umontreal.ca avec le chemin /data peuvent être utilisées dans les requêtes à l’API.

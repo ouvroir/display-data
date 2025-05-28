@@ -28,7 +28,7 @@ exhib:activity0000 a crm:E7_Activity ;
     crm:P2_has_type                 aat:300054766 ;
     crm:P4_has_time-span            <urn:uuid:ec6d35bd-c704-4596-9341-f1dfad62cf5b> ;
     crm:P67i_is_referred_to_by      <urn:uuid:3780b062-2dac-4175-9d30-ff59e3aec630> ;
-    crm:P7_took_place_at <http://vocab.getty.edu/tgn/7008161> .
+    crm:P7_took_place_at            <http://vocab.getty.edu/tgn/7008161> .
 
 <urn:uuid:7bdf602c-4bbd-492f-b338-430abb759af8>
     rdf:type                       crm:E33_E41_Linguistic_Appellation ;
@@ -55,4 +55,4 @@ exhib:activity0000 a crm:E7_Activity ;
 
 <urn:uuid:3222057c-b66e-4dd2-8e87-c2394aeed909>
     rdf:type    crm:E89_Propositional_Object ;
-    rdfs:label  "Idea for Feux pâles" .
+    rdfs:label  "Idea for Feux pâles"@en .

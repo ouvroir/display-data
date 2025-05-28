@@ -16,7 +16,7 @@ exhib:exhibit0056
                                 aat:300047896 ;
     crm:P1_is_identified_by     <urn:uuid:793bb46f-920e-4572-92d4-a5ce4ee7b971> ;
     crm:P67i_is_referred_to_by  <urn:uuid:d362fcbb-7199-4c4d-9851-5b6632eae371> ;
-    crm:P108i_was_produced_by   <urn:uuid:c70ab43a-8d4b-445e-8a47-e04fc17d80b8> ;    
+    crm:P108i_was_produced_by   <urn:uuid:c70ab43a-8d4b-445e-8a47-e04fc17d80b8> ;
     crm:P43_has_dimension       <urn:uuid:a605cc95-d265-4d18-a196-cea7fa1b4c45> ,
     	                        <urn:uuid:64b8070f-a3ca-45bc-978a-428926ab6906> .
 
@@ -34,7 +34,7 @@ exhib:exhibit0056
 
 <urn:uuid:c70ab43a-8d4b-445e-8a47-e04fc17d80b8>
     rdf:type                crm:E12_Production ;
-    crm:P14_carried_out_by  https://vocab.getty.edu/ulan/500045082 ;
+    crm:P14_carried_out_by  aat:500045082 ;
     crm:P4_has_time-span    <urn:uuid:6891f77e-5eed-4483-b791-a6e022f62bb2>.
 
 <urn:uuid:6891f77e-5eed-4483-b791-a6e022f62bb2>

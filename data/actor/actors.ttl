@@ -8,19 +8,25 @@ PREFIX crm: <http://www.cidoc-crm.org/cidoc-crm/>
 PREFIX aat: <http://vocab.getty.edu/aat/>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
+# le nom structuré des acteurs (identified_by Name ; content "nom") sera construit à partir de rdfs:label 
+
 <http://vocab.getty.edu/ulan/500305133>
     rdf:type        crm:E74_Group ;
     crm:P2_has_type aat:300312281 ;
-    rdfs:label      "CAPC Musée d’art contemporain de Bordeaux"@fr .
+    rdfs:label      "CAPC Musée d’art contemporain de Bordeaux"@fr ;
+    .
 
 <http://vocab.getty.edu/ulan/500096019>
     rdf:type    crm:E21_Person ;
-    rdfs:label  "Philippe Thomas"@fr .
+    rdfs:label  "Philippe Thomas"@fr ;
+    .
 
 <http://dbpedia.org/resource/Marcel_Duchamp>
     rdf:type    crm:E21_Person ;
-    rdfs:label  "Marcel Duchamp"@fr .
+    rdfs:label  "Marcel Duchamp"@fr ;
+    .
 
 <http://vocab.getty.edu/ulan/500185192>
     rdf:type    crm:E21_Person ;
-    rdfs:label  "Andrea Dominico Remps"@it .
+    rdfs:label  "Andrea Dominico Remps"@it ;
+    .

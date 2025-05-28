@@ -37,7 +37,7 @@ exhib:exhibit0037
 
 <urn:uuid:84c97366-19a7-4368-b4cf-e4a3ce0f0507>
     rdf:type                crm:E12_Production ;
-    crm:P14_carried_out_by  https://vocab.getty.edu/ulan/500073908 ;
+    crm:P14_carried_out_by  aat:500073908 ;
     crm:P4_has_time-span    <urn:uuid:5765931d-64ce-45a2-bf30-2cfd4a6b75bc> .
 	
 <urn:uuid:5765931d-64ce-45a2-bf30-2cfd4a6b75bc>
