@@ -12,7 +12,9 @@ exhib:exhibit0006
     rdf:type                    crm:E22_Human-Made_Object ;
     rdfs:label                  "Buste de Platon"@fr ;
     rdfs:comment                "Ce buste est une copie d'un buste original, je ne sais pas comment l'intituler : vérifier ressource métier. (ZR)"@fr ,
-                                "Il faut aussi préciser qu'il est dans la Collection des moulages, Institut d’Archéologie classique de Strasbourg"@fr ;
+                                "Il faut aussi préciser qu'il est dans la Collection des moulages, Institut d’Archéologie classique de Strasbourg"@fr ,
+                                "Pour lier l’exhibit à une collection, utiliser la propriété la:member_of avec l’IRI de la collection comme valeur."@fr ;
+    la:member_of                exhib:set0001 ;
     crm:P2_has_type             aat:300133025 ,
                                 aat:300047090 ;
     crm:P1_is_identified_by     <urn:uuid:6b51598b-245d-4152-ae4d-6a55a5a81d4d> ;

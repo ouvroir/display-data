@@ -16,6 +16,12 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     rdfs:label      "CAPC Musée d’art contemporain de Bordeaux"@fr ;
     .
 
+<http://viaf.org/viaf/280742300>
+    rdf:type        crm:E74_Group ;
+    crm:P2_has_type aat:300312281 ;
+    rdfs:label      "Musée des moulages (Strasbourg)"@fr ; # nom du musée d’après de la notice d’autorité VIAF.
+    .
+
 <http://vocab.getty.edu/ulan/500096019>
     rdf:type    crm:E21_Person ;
     rdfs:label  "Philippe Thomas"@fr ;
