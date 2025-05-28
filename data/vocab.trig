@@ -181,29 +181,6 @@ aat:300010331
 ######################################
 
 
-aat:300054766
-    skos:prefLabel      "Exhibition"@en ,
-                        "Exposition"@fr ;
-    rdf:type            crm:E55_Type ,
-                        skos:Concept ;
-    rdfs:label          "Exhibition"@en ;
-    skos:altLabel       "Exhibition Activity"@en ,
-                        "Exhibiting"@en ;
-    skosxl:altLabel     distalt:aat:300054766 ;
-    skos:definition     "An exhibition (Linked Art)"@en ;
-    skos:related        aat:300133025 ;
-    skos:inScheme       <https://w3id.org/display/vocab> ;
-    skos:topConceptOf   <https://w3id.org/display/vocab> ;
-    .
-distalt:aat:300054766
-    rdf:type            skosxl:Label ;
-    skosxl:literalForm  "Exhibiting"@en ;
-    dc:source           <https://linked.art/model/vocab/required/> ;
-    skos:inScheme      <https://w3id.org/display/vocab> ;
-    .
-    
-
-
 aat:300133025
     rdf:type        crm:E55_Type ,
                     skos:Concept ;
@@ -237,6 +214,68 @@ dist:types
                       dist:nameTypes ,
                       dist:setTypes ;
                       .
+
+######################################
+# Activity Types
+######################################
+
+dist:activityTypes
+    rdf:type skos:Concept ;
+    skos:prefLabel  "Activity Types"@en ,
+                    "Types d’activités"@fr ;
+    skos:definition "An activity type (Display)"@en ;
+    skos:scopeNote  "This resource is an internal information artifact and must not be used with the Linked Art API."@en ;
+    skos:inScheme   <https://w3id.org/display/vocab> ;
+    rdfs:seeAlso    <https://linked.art/model/event/#types> ;
+    skos:broader    dist:types ;
+    skos:narrower   aat:300054766 ,
+                    aat:300054277 ;
+                    .
+
+
+aat:300054766
+    skos:prefLabel      "Exhibition"@en ,
+                        "Exposition"@fr ;
+    rdf:type            crm:E55_Type ,
+                        skos:Concept ;
+    rdfs:label          "Exhibition"@en ;
+    skos:altLabel       "Exhibition Activity"@en ,
+                        "Exhibiting"@en ;
+    skosxl:altLabel     distalt:aat:300054766 ;
+    skos:definition     "An exhibition (Linked Art)"@en ;
+    skos:related        aat:300133025 ;
+    skos:inScheme       <https://w3id.org/display/vocab> ;
+    skos:broader        dist:activityTypes ;
+    .
+distalt:aat:300054766
+    rdf:type            skosxl:Label ;
+    skosxl:literalForm  "Exhibiting"@en ;
+    dc:source           <https://linked.art/model/vocab/required/> ;
+    skos:inScheme       <https://w3id.org/display/vocab> ;
+    .
+    
+
+aat:300054277
+    skos:prefLabel      "Curation"@en ,
+                        "Curation"@fr ;
+    rdf:type            crm:E55_Type ,
+                        skos:Concept ;
+    rdfs:label          "Curating"@en ;
+    skos:altLabel       "Curation Activity"@en ,
+                        "Curating"@en ;
+    skosxl:altLabel     distalt:aat:300054277 ;
+    skos:definition     "A curation activity"@en ,
+                        "Une activité curatoriale"@fr ;
+    skos:inScheme       <https://w3id.org/display/vocab> ;
+    skos:broader        dist:activityTypes ;
+    .
+distalt:aat:300054277
+    rdf:type            skosxl:Label ;
+    skosxl:literalForm  "Curating"@en ;
+    dc:source           <https://linked.art/model/collection/#collections-of-objects> ;
+    skos:inScheme       <https://w3id.org/display/vocab> ;
+    .
+
 
 ######################################
 # Set Types
