@@ -1,0 +1,46 @@
+###################################################################################################
+# Requête pour générer le graphe des relations inférées pour une entité donnée
+#
+# L’approche consiste à :
+#
+#   1. Stocker les triplets enregistrés dans le graphe par défaut où sont générées les inférences
+#   2. Refléter automatiquement les enregistrements dans un graphe nommé sans inférence
+#   3. Filtrer pour ne retenir que les triplets qui ne sont pas dans le graphe des enregistrements
+#
+# 1. et 2. relèvent de la configuration du serveur ; 3. relève de requête SPARQL (ce fichier).
+
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+
+CONSTRUCT {
+  ?entity ?outcoming ?o .
+  ?s ?incoming ?entity .
+}
+WHERE {
+  
+  # L’entité à vérifier (à titre d’exemple)
+  BIND(<https://ouvroir.umontreal.ca/data/exhibit0015> AS ?entity)
+  
+  # Le filtre initial : modèle de graphe avec jointure sur l’entité
+  ?entity ?outcoming ?o .
+  ?s ?incoming ?entity .
+
+  # Les inférences ne sont pas enregistrées dans l’entrepôt : elles sont dynamiques
+  # Donc on ne retient que les triplets qui ne sont pas enregistrés
+  FILTER NOT EXISTS {
+    GRAPH <urn:ouvroir:display:graph> # Graphe des triplets enregistrés (sans inférence)
+      { ?entity ?outcoming ?o }
+  }
+  FILTER NOT EXISTS {
+    GRAPH <urn:ouvroir:display:graph>
+      { ?s ?incoming ?entity }
+  }
+
+  # Filtres des relations inférées entrantes/sortantes inutiles
+  FILTER(?outcoming != owl:differentFrom) # généré en raison des classes disjointes
+  FILTER(?incoming != owl:differentFrom)  # généré en raison des classes disjointes
+  FILTER(?entity != ?o)                   # owl:sameAs (une entité est logiquement toujours la même qu’elle-même)
+  FILTER(?s != ?entity)                   # owl:sameAs (une entité est logiquement toujours la même qu’elle-même)
+  FILTER(?o != owl:Thing)
+  FILTER(?o != rdfs:Resource)
+}

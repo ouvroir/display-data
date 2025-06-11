@@ -1,0 +1,19 @@
+# Récupérer les ressources desciptives orphelines (?rdo)
+PREFIX crm: <http://www.cidoc-crm.org/cidoc-crm/>
+SELECT DISTINCT ?rdo ?p ?o WHERE {
+  ?rdo ?p ?o ; crm:P2_has_type ?t .
+  FILTER NOT EXISTS { ?s ?a ?rdo }
+  FILTER (!CONTAINS(STR(?rdo), "http"))
+} ORDER BY ?rdo
+
+# Supprimer les ressources desciptives orphelines (?rdo)
+#
+# manque de robustesse pour l’instant
+# exemple : si l’activité n’est pas ^la:has_member (donc la:member_of), la ressrouce sera supprimée (pas supposé en théorie, mais...)
+# solution : éliminer les URL de la solution (les ressources descriptives référencées ne seront jamais identifiées par des URL)
+PREFIX crm: <http://www.cidoc-crm.org/cidoc-crm/>
+DELETE { ?rdo ?p ?o } WHERE {
+  ?rdo ?p ?o ; crm:P2_has_type ?t .
+  FILTER NOT EXISTS { ?s ?a ?rdo }
+  FILTER (!CONTAINS(STR(?rdo), "http"))
+}
