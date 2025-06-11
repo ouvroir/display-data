@@ -1,3 +1,9 @@
+
+PREFIX crm:     <http://www.cidoc-crm.org/cidoc-crm/>
+PREFIX utils:   <https://ntnlv.ca/ns/utils#>
+PREFIX la:      <https://linked.art/ns/terms/>
+PREFIX display: <https://w3id.org/display#>
+
 #######################################
 # JSON-LD mapping
 # Utilisées par l’API
@@ -5,7 +11,7 @@
 
 # Linked Art
 crm:E7_Activity                     utils:jsonldmapping "Activity" .
-crm:E12_Production                  utils:jsonldmapping "Prodcution" .
+crm:E12_Production                  utils:jsonldmapping "Production" .
 crm:E21_Person                      utils:jsonldmapping "Person" .
 crm:E33_Linguistic_Object           utils:jsonldmapping "LinguisticObject" .
 crm:E33_E41_Linguistic_Appellation  utils:jsonldmapping "Name" .
