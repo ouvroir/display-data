@@ -3,7 +3,9 @@ tbox-abox/
 datasets-config/
 .DS_Store
 notes/
-data/add-data.ttl
+data/prefixes.ttl
+data/put/
+data/put/*
 queries/api/
 queries/test-insertInconsistencies.rq
 queries/utilitaire-exhibitMetadata.rq
