@@ -8,6 +8,6 @@ PREFIX crm: <http://www.cidoc-crm.org/cidoc-crm/>
 PREFIX aat: <http://vocab.getty.edu/aat/>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-exhib:exhibition
+exhib:exhibitions
     rdf:type    la:Set ;
     rdfs:label  "Display : listes des expositions" .

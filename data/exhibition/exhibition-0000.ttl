@@ -19,7 +19,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 exhib:activity0000 a crm:E7_Activity ;
     rdfs:label "Feux pâles (capcMusée d’art contemporain, Bordeaux, 1990)"@fr ;
-    la:member_of                    exhib:exhibition ;
+    la:member_of                    exhib:exhibitions ;
     crm:P14_carried_out_by          <http://vocab.getty.edu/ulan/500305133> ,
                                     <http://vocab.getty.edu/ulan/500096019> ;
     crm:P15_was_influenced_by       <urn:uuid:3222057c-b66e-4dd2-8e87-c2394aeed909> ;

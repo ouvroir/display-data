@@ -40,8 +40,8 @@ exhib:exhibit0003 a display:Exhibit ;
   rdf:value "Exposition réalisée avec le concours de l’agence les readymade appartiennent à tout le monde ®" ;
   display:below exhib:exhibit0001 .
 
-exhib:exhibit0004 a display:Exhibit ;
-  rdfs:label "Sommaire de l’exposition"@fr .
+# Sommaire de l’exposition
+exhib:exhibit0004 a display:Exhibit .
 
 exhib:element0004 a display:Element ;
   rdfs:label "Cimaise du code-barres"@fr ;
@@ -340,10 +340,7 @@ exhib:space0015 rdfs:label "bas de la salle 6"@fr .
 
 exhib:exhibit0036 rdfs:label "Dimitrijevic" .
 
-exhib:exhibit0037 rdfs:label "Prina";
-  display:leftOf exhib:exhibit0041 .
-
-exhib:exhibit0041 rdfs:label "Prina 2" .
+exhib:exhibit0037 display:leftOf exhib:exhibit0041 .
 
 exhib:exhibit0038 rdfs:label "Lévine 1" .
 
@@ -440,7 +437,7 @@ exhib:element0049 a display:Element ;
   rdfs:label "vitrine œuvres"@fr ;
   display:inFrontOf exhib:element0047 ;
   display:contains exhib:exhibit0048 ,
-    exhib:exhibit0049 , exhibit0065.
+    exhib:exhibit0049 , exhib:exhibit0065 .
     
 #Pathway
 
@@ -482,8 +479,8 @@ exhib:exhibit0054 rdfs:label "Ready-made" ;
 exhib:exhibit0055 rdfs:label "Ready-made 2" .
   #au milieu de la piece au sol. Faces Salomon?
 
-exhib:exhibit0056 rdfs:label "Salomon" ;
-  display:faces exhib:exhibit0055 ;
+# Salomon
+exhib:exhibit0056 display:faces exhib:exhibit0055 ;
   display:faces exhib:exhibit0052 .
 
 exhib:exhibit0057 rdfs:label "Löcher" ;

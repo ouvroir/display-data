@@ -15,4 +15,4 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 <urn:display-bidon:activity-0002>
     rdf:type        crm:E7_Activity ;
     rdfs:label      "Exposition bidon 0002"@fr ;
-    la:member_of    exhib:exhibition .
+    la:member_of    exhib:exhibitions .

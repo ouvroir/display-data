@@ -25,7 +25,7 @@ exhib:exhibit0051
 rdf:type                        crm:E33_E41_Linguistic_Appellation ;
 crm:P190_has_symbolic_content   "Propriété privée*" ;
 crm:P2_has_type                 aat:300404670 ;
-crm:P72_has_language            aat:300387822 .
+crm:P72_has_language            aat:300388306 .
 
 <urn:uuid:f45b34c3-6ee2-4745-aee8-3f2421e897e7>
     rdf:type                        crm:E33_Linguistic_Object ;
@@ -35,6 +35,7 @@ crm:P72_has_language            aat:300387822 .
 
 <urn:uuid:94fb4436-9086-44c7-bd12-eb700e1a1b5f>
     rdf:type                crm:E12_Production ;
+    rdfs:label              "Événement de production pour Parcelle à céder" ;
     crm:P14_carried_out_by  "N.A JEDERMANN" ;
     crm:P4_has_time-span    <urn:uuid:1d819587-c13d-410f-8a63-c99ec836cf7a> .
 
