@@ -26,6 +26,6 @@ exhib:exhibit0004
 
 <urn:uuid:49bc2b2c-aebc-4a65-933d-3b6ef6c0286c>
     rdf:type                      crm:E33_Linguistic_Object ;
-    crm:P190_has_symbolic_content "Sommaire de l'exposition"@fr ;
+    crm:P190_has_symbolic_content "Sommaire de l’exposition"@fr ;
     crm:P2_has_type               aat:300435416 ;
     crm:P72_has_language          aat:300388306 .

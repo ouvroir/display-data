@@ -9,8 +9,8 @@ PREFIX aat:       <http://vocab.getty.edu/aat/>
 PREFIX la:        <https://linked.art/ns/terms/>
 PREFIX utils:     <https://ntnlv.ca/ns/utils#>
 PREFIX display:   <https://w3id.org/display#>
-PREFIX dist:       <https://w3id.org/display/vocab/>
-PREFIX distgr:       <https://w3id.org/display/vocab/group/>
+PREFIX dist:      <https://w3id.org/display/vocab/>
+PREFIX distgr:    <https://w3id.org/display/vocab/group/>
 PREFIX distalt:   <https://w3id.org/display/vocab/altLabel/>
 PREFIX distpref:  <https://w3id.org/display/vocab/prefLabel/>
 
@@ -523,7 +523,7 @@ aat:300379098
                     skos:Concept ;
     rdfs:label      "centimeters"@en ;
     skos:definition "centimeters (measurement unit)"@en ;
-		skos:prefLabel  "centimeters"@en ,
+	skos:prefLabel  "centimeters"@en ,
                     "centimètres"@fr ;
     skos:notation   "cm" ;
     skos:inScheme   <https://w3id.org/display/vocab> ;

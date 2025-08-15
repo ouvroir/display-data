@@ -17,7 +17,7 @@ exhib:exhibit0051
     crm:P1_is_identified_by     <urn:uuid:b666a816-87c3-46b0-9000-8029182f7408> ;
     crm:P67i_is_referred_to_by  <urn:uuid:f45b34c3-6ee2-4745-aee8-3f2421e897e7> ;
     crm:P108i_was_produced_by   <urn:uuid:94fb4436-9086-44c7-bd12-eb700e1a1b5f> ;    
-    crm:P43_has_dimension       <urn:uuid:9ac668a3-6c09-4567-811a-eafdc107ecde> ,
+    crm:P43_has_dimension       <urn:uuid:b2d5777d-95e4-45aa-a3e0-60bace4e624e> ,
                                 <urn:uuid:838df36a-3053-4e07-86a5-3a51f16fee2e> .
                                 
 

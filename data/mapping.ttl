@@ -3,6 +3,7 @@ PREFIX crm:     <http://www.cidoc-crm.org/cidoc-crm/>
 PREFIX utils:   <https://ntnlv.ca/ns/utils#>
 PREFIX la:      <https://linked.art/ns/terms/>
 PREFIX display: <https://w3id.org/display#>
+PREFIX bot:     <https://w3id.org/bot#>
 
 #######################################
 # JSON-LD mapping
@@ -31,3 +32,6 @@ display:Display                     utils:jsonldmapping "Display" .
 display:Element                     utils:jsonldmapping "Element" .
 display:Exhibit                     utils:jsonldmapping "Exhibit" .
 display:ExhibitionSpace             utils:jsonldmapping "ExhibitionSpace" .
+
+# Bot
+bot:Space                           utils:jsonldmapping "Space" .
