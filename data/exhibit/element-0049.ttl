@@ -10,14 +10,14 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 exhib:element0049
     rdf:type                    crm:E22_Human-Made_Object ;
-    rdfs:label                  "Vitrine œuvres, salle 9"@fr ;
+    rdfs:label                  "Vitrine œuvres, salle 9" ;
     crm:P2_has_type             aat:300144148 ;
     crm:P67i_is_referred_to_by  <urn:uuid:97f45348-71ec-44c1-9a47-2fda73b188c3> ;
     .
 
 <urn:uuid:97f45348-71ec-44c1-9a47-2fda73b188c3>
     rdf:type                      crm:E33_Linguistic_Object ;
-    crm:P190_has_symbolic_content "Vitrine située entre le buste de Platon et le buste de Simonide, dans l’Inventaire du mémorable, salle 1, indirectement."@fr ;
+    crm:P190_has_symbolic_content "Vitrine située entre le buste de Platon et le buste de Simonide, dans l’Inventaire du mémorable, salle 1, indirectement." ;
     crm:P2_has_type               aat:300435451 ;
-    crm:P72_has_language          aat:aat:300388306 ;
+    crm:P72_has_language          aat:300388306 ;
     .

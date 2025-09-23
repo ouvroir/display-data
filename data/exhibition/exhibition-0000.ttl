@@ -41,9 +41,9 @@ exhib:activity0000 a crm:E7_Activity ;
 
 <urn:uuid:3780b062-2dac-4175-9d30-ff59e3aec630>
     rdf:type                        crm:E33_Linguistic_Object ;
-    rdfs:label                      "Description de l’exposition (Feux pâles)"@fr ;
+    rdfs:label                      "Description de l’exposition (Feux pâles)" ;
     rdfs:comment                    "[@todo] Faut-il associer cette description à l’activité ou à l’entité abstaite? (DV)," ;
-    crm:P190_has_symbolic_content   "Feux-Pâles est une exposition commandée/signée par le capcMusée d’art contemporain de Bordeaux, et les ready-made appartiennent à tout le monde®, agence dont le directeur est l’artiste fictionnaliste Philippe Thomas. L’exposition présente en 11 chapitres une proposition sur la socialité du système de l’art. Plongeant le public dans des jeux de fiction et de références, il raconte sa perception de l’histoire de l’art et du musée."@fr ;
+    crm:P190_has_symbolic_content   "Feux-Pâles est une exposition commandée/signée par le capcMusée d’art contemporain de Bordeaux, et les ready-made appartiennent à tout le monde®, agence dont le directeur est l’artiste fictionnaliste Philippe Thomas. L’exposition présente en 11 chapitres une proposition sur la socialité du système de l’art. Plongeant le public dans des jeux de fiction et de références, il raconte sa perception de l’histoire de l’art et du musée." ;
     crm:P2_has_type                 aat:300435416 ;
     crm:P72_has_language            aat:300388306 .
 

@@ -10,7 +10,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 exhib:exhibit0056
     rdf:type                    crm:E22_Human-Made_Object ;
-    rdfs:label                  "Salomon"@fr ;
+    rdfs:label                  "Salomon" ;
     rdfs:comment                "Collection Galerie Claire Burrus" ;
     crm:P2_has_type             aat:300133025 ,
                                 aat:300047896 ;
@@ -29,7 +29,8 @@ exhib:exhibit0056
 
 <urn:uuid:d362fcbb-7199-4c4d-9851-5b6632eae371>
     rdf:type                        crm:E33_Linguistic_Object ;
-    crm:P190_has_symbolic_content   "table lumineuse"@fr ;
+    crm:P190_has_symbolic_content   "table lumineuse" ;
+    rdfs:comment                    "table lumineuse est-il un type d’œuvre dans ce contexte? Il semble que non, puisque que le type indiqué est «installation»." ;
     crm:P2_has_type                 aat:300435429 ;
     crm:P72_has_language            aat:300388306 .
 

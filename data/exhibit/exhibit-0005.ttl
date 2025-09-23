@@ -10,7 +10,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 exhib:exhibit0005
     rdf:type                    crm:E22_Human-Made_Object ;
-    rdfs:label                  "Scarabattolo (Remps)"@it ;
+    rdfs:label                  "Scarabattolo (Remps)" ;
     rdfs:comment                "Le titre primary doit être dans la langue originale, il peut y avoir des traductions."
     crm:P2_has_type             aat:300133025 ,
                                 aat:300033618 ;
@@ -35,7 +35,7 @@ exhib:exhibit0005
 
 <urn:uuid:c739aa2e-ae33-4e9e-9aba-87bc9d0f9f08>
     rdf:type                        crm:E33_Linguistic_Object ;
-    crm:P190_has_symbolic_content   "huile sur toile"@fr ;
+    crm:P190_has_symbolic_content   "huile sur toile" ;
     crm:P2_has_type                 aat:300435429 ;
     crm:P72_has_language            aat:300388306 .
 

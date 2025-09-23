@@ -17,7 +17,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 # Préambule
 ########################################################
 
-exhib:space0000 rdfs:label "Préambule"@fr ;
+exhib:space0000 rdfs:label "Préambule" ;
   bot:adjacentZone exhib:space0001 ; # Symmetric
   display:containsExhibit exhib:exhibit0001 , # inféré?
     exhib:exhibit0002 ,
@@ -36,7 +36,7 @@ exhib:exhibit0002 a display:Exhibit ;
   display:above exhib:exhibit0001 .
 
 exhib:exhibit0003 a display:Exhibit ;
-  rdfs:label "Crédits"@fr ;
+  rdfs:label "Crédits" ;
   rdf:value "Exposition réalisée avec le concours de l’agence les readymade appartiennent à tout le monde ®" ;
   display:below exhib:exhibit0001 .
 
@@ -44,29 +44,29 @@ exhib:exhibit0003 a display:Exhibit ;
 exhib:exhibit0004 a display:Exhibit .
 
 exhib:element0004 a display:Element ;
-  rdfs:label "Cimaise du code-barres"@fr ;
-  rdfs:comment "Cloison (cimaise) qui sert de support à exhib:exhibit0001. Identifié comme mur A dans le rapport"@fr .
+  rdfs:label "Cimaise du code-barres" ;
+  rdfs:comment "Cloison (cimaise) qui sert de support à exhib:exhibit0001. Identifié comme mur A dans le rapport" .
 
 exhib:element0005 a display:Element ;
-  rdfs:label "Cimaise du préambule"@fr .
+  rdfs:label "Cimaise du préambule" .
 
 exhib:element0006 a display:Element ;
-  rdfs:label "cimaise faisant face au mur de la porte d’entrée"@fr .
+  rdfs:label "cimaise faisant face au mur de la porte d’entrée" .
 
 exhib:element0007 a display:Element ;
-  rdfs:label "mur de la porte d’entrée"@fr ;
+  rdfs:label "mur de la porte d’entrée" ;
   display:faces exhib:element0006 ;
   bot:hasSubElement exhib:element0008 .
 
 exhib:element0008 a display:Element ;
-  rdfs:label "Porte d’entrée"@fr .
+  rdfs:label "Porte d’entrée" .
 
 ########################################################
 # Salle 1
 ########################################################
 
 exhib:space0001 a display:ExhibitionSpace ;
-  rdfs:label "salle 1 : Inventaire du mémorable"@fr ;
+  rdfs:label "salle 1 : Inventaire du mémorable" ;
   bot:adjacentZone exhib:space0005 ; # Symmetric
   display:hasExhibitionSpace exhib:space0002 , # transitive par bot:containsZone
     exhib:space0003 ,
@@ -75,10 +75,10 @@ exhib:space0001 a display:ExhibitionSpace ;
 # Spaces contained in exhib:space0001
 # peut être inféré si on déclare par ex. display:hasExhibitionSpace
 exhib:space0002 display:adjacentExhibit exhib:element0010 ;
-  rdfs:label "haut de la salle 1"@fr .
+  rdfs:label "haut de la salle 1" .
 
 exhib:space0003 a display:ExhibitionSpace ;
-  rdfs:label "espace Remps"@fr ;
+  rdfs:label "espace Remps" ;
   display:adjacentExhibit exhib:element0009 ,
     exhib:element0010 ,
     exhib:element0011 ,
@@ -87,7 +87,7 @@ exhib:space0003 a display:ExhibitionSpace ;
 
 # display001 est un display
 # attention n’est pas member_of set 
-exhib:display001 rdfs:label "Display contenu dans space0003 (espace Remps)"@fr ;
+exhib:display001 rdfs:label "Display contenu dans space0003 (espace Remps)" ;
   display:includes exhib:exhibit0005 ,
     exhib:exhibit0006 ,
     exhib:exhibit0007 ,
@@ -102,7 +102,7 @@ exhib:exhibit0005
 
 exhib:element0013 a display:Element ;
   rdfs:comment "n’est pas typé actuellement (2024-11-22)" ;
-  rdfs:label "vitrine vis-à-vis Remps"@fr .
+  rdfs:label "vitrine vis-à-vis Remps" .
 
 exhib:element0015 a display:Element .
 
@@ -116,55 +116,55 @@ exhib:display002 a display:Display ;
     exhib:exhibit0062 .
 
 exhib:element0014 a display:Element ;
-  rdfs:comment "n’est pas typé actuellement (2024-11-22)" ; rdfs:label "Socle de Platon"@fr .
+  rdfs:comment "n’est pas typé actuellement (2024-11-22)" ; rdfs:label "Socle de Platon" .
 
 exhib:exhibit0006 a display:Exhibit ;
-  rdfs:label "Buste de Platon"@fr ;
+  rdfs:label "Buste de Platon" ;
   display:liesOn exhib:element0014 ;
   display:inFrontOf exhib:element0010 ;
   display:leftOf exhib:element0015 .
 
 exhib:exhibit0007 a display:Exhibit ;
-  rdfs:label "Buste de Simonide"@fr ;
+  rdfs:label "Buste de Simonide" ;
   display:between exhib:element0015 , exhib:element0013 . # between
 
 exhib:exhibit0008 a display:Exhibit ;
-  rdfs:label "Buste d’Aristote"@fr ;
+  rdfs:label "Buste d’Aristote" ;
   display:between exhib:element0016 , exhib:element0013 . # between
 
 exhib:exhibit0009 a display:Exhibit ;
-  rdfs:label "Buste de Quintilien"@fr ;
+  rdfs:label "Buste de Quintilien" ;
   display:faces exhib:exhibit0006 ;
   display:rightOf exhib:element0016 .
 
 exhib:element0016 a display:Element ;
   rdfs:comment "n’est pas typé actuellement (2024-11-22)" ;
-  rdfs:label "vitrine (vers le bas du plan)"@fr ;
+  rdfs:label "vitrine (vers le bas du plan)" ;
   display:faces exhib:element0015 ;
   display:leftOf exhib:exhibit0009 .
 
 exhib:space0004 a display:ExhibitionSpace ;
-  rdfs:label "bas de la salle 1"@fr ;
+  rdfs:label "bas de la salle 1" ;
   display:adjacentExhibit exhib:element0012 .
 
 exhib:element0009 a display:Element ;
-  rdfs:label "cimaise Remps"@fr .
+  rdfs:label "cimaise Remps" .
 
 exhib:element0010 a display:Element ;
-  rdfs:label "cimaise de la salle 1"@fr .
+  rdfs:label "cimaise de la salle 1" .
 
 exhib:element0011 a display:Element ;
-  rdfs:label "cimaise de la salle 1"@fr .
+  rdfs:label "cimaise de la salle 1" .
 
 exhib:element0012 a display:Element ;
-  rdfs:label "cimaise de la salle 1"@fr .
+  rdfs:label "cimaise de la salle 1" .
 
 ########################################################
 # Salle 2
 ########################################################
 
 exhib:space0005 a display:ExhibitionSpace ;
-  rdfs:label "salle 2 : Le cabinets d’amateurs"@fr ;
+  rdfs:label "salle 2 : Le cabinets d’amateurs" ;
   display:containsExhibit exhib:exhibit0021 ,
     exhib:exhibit0022 ,
     exhib:exhibit0023 ,
@@ -181,30 +181,30 @@ exhib:exhibit0024 rdfs:label "Pannini" .
 exhib:exhibit0025 rdfs:label "Thomas" .
 
 exhib:element0021 a display:Element ;
-  rdfs:label "cimaise de la salle 2 haut"@fr .
+  rdfs:label "cimaise de la salle 2 haut" .
 
 exhib:element0022 a display:Element ;
-  rdfs:label "cimaise de la salle 2 gauche"@fr .
+  rdfs:label "cimaise de la salle 2 gauche" .
 
 exhib:element0023 a display:Element ;
-  rdfs:label "cimaise de la salle 2 bas"@fr .
+  rdfs:label "cimaise de la salle 2 bas" .
 
 exhib:element0024 a display:Element ;
-  rdfs:label "cimaise de la salle 2 droite"@fr .
+  rdfs:label "cimaise de la salle 2 droite" .
 
 ########################################################
 # Salle 3
 ########################################################
 
 exhib:space0006 a display:ExhibitionSpace ;
-  rdfs:label "salle 3 : L’art d’accommoder les restes"@fr ;
+  rdfs:label "salle 3 : L’art d’accommoder les restes" ;
   display:hasExhibitionSpace exhib:space0007 ,
     exhib:space0008 ,
     exhib:space0009 .
 
-exhib:space0007 rdfs:label "haut de la salle 3"@fr .
-exhib:space0008 rdfs:label "milieu de la salle 3 (espace Spoerri)"@fr .
-exhib:space0009 rdfs:label "bas de la salle 3"@fr .
+exhib:space0007 rdfs:label "haut de la salle 3" .
+exhib:space0008 rdfs:label "milieu de la salle 3 (espace Spoerri)" .
+exhib:space0009 rdfs:label "bas de la salle 3" .
 
 exhib:space0008 display:containsExhibit exhib:exhibit0013 ,
   exhib:exhibit0013 ,
@@ -229,9 +229,9 @@ exhib:element0028 a display:Element ;
 # Ne peut pas relever du point de vue (personne qui regarde)
 exhib:exhibit0015 display:liesOn exhib:element0029 .
 exhib:element0029 a display:Element ;
-  rdfs:comment "n’est pas typé actuellement (2024-11-22)"@fr ,
-    "socle sur lequel est posé Fontaine (Duchamp), dans la salle 3"@fr ;
-  rdfs:label "socle de fontaine"@fr .
+  rdfs:comment "n’est pas typé actuellement (2024-11-22)" ,
+    "socle sur lequel est posé Fontaine (Duchamp), dans la salle 3" ;
+  rdfs:label "socle de fontaine" .
 
 # Manzoni
 exhib:exhibit0016 rdfs:label "Manzoni" ;
@@ -253,7 +253,7 @@ exhib:element0020 a display:Element ;
 ########################################################
 
 exhib:space0010 a display:ExhibitionSpace ;
-  rdfs:label "salle 4 : Le musée sans objet"@fr ;
+  rdfs:label "salle 4 : Le musée sans objet" ;
   display:containsExhibit exhib:exhibit0026 ,
     exhib:exhibit0027 ,
     exhib:exhibit0028 ,
@@ -268,7 +268,7 @@ exhib:exhibit0030 rdfs:label "Smithson" .
 
 exhib:element0025 a display:Element ;
   rdfs:comment "n’est pas typé actuellement (2024-11-22)" ;
-  rdfs:label "vitrine archive"@fr ;
+  rdfs:label "vitrine archive" ;
   display:inFrontOf exhib:element0026 ;
   display:contains exhib:exhibit0026 ,
     exhib:exhibit0027 ,
@@ -277,14 +277,14 @@ exhib:element0025 a display:Element ;
     exhib:exhibit0030 .
 
 exhib:element0026 a display:Element ;
-  rdfs:label "cimaise de la salle 4"@fr .
+  rdfs:label "cimaise de la salle 4" .
 
 ########################################################
 # Salle 5
 ########################################################
 
 exhib:space0011 a display:ExhibitionSpace ;
-  rdfs:label "salle 5 : Passif de la modernité"@fr ;
+  rdfs:label "salle 5 : Passif de la modernité" ;
   display:containsExhibit exhib:exhibit0031 ,
     exhib:exhibit0032 ,
     exhib:exhibit0033 ,
@@ -297,7 +297,7 @@ exhib:exhibit0031 rdfs:label "McCollum" ;
 exhib:exhibit0032 rdfs:label "Richter 1" .
 
 exhib:exhibit0033 rdfs:label "Richter 2" .
-exhib:interface0033 rdfs:comment "L’utilisation des interfaces permet de complexifier les relations, c’est-à-dire d’aller au-delà de la relation binaire du triplet RDF. Ainsi, nous pouvons impliquer plus de deux entités dans la relation si nécessaire."@fr .
+exhib:interface0033 rdfs:comment "L’utilisation des interfaces permet de complexifier les relations, c’est-à-dire d’aller au-delà de la relation binaire du triplet RDF. Ainsi, nous pouvons impliquer plus de deux entités dans la relation si nécessaire." .
 
 exhib:exhibit0034 rdfs:label "Clairet" ;
   display:rightOf exhib:exhibit0027 .
@@ -325,18 +325,18 @@ exhib:element0033 a display:Element .
 ########################################################
 
 exhib:space0012 a display:ExhibitionSpace ;
-  rdfs:label "salle 6 : La chair est triste, hélas ! Et j’ai lu tous les livres...."@fr .
+  rdfs:label "salle 6 : La chair est triste, hélas ! Et j’ai lu tous les livres...." .
 
-exhib:space0013 rdfs:label "haut de la salle 6"@fr .
+exhib:space0013 rdfs:label "haut de la salle 6" .
 
-exhib:space0014 rdfs:label "milieu de la salle 6"@fr ;
+exhib:space0014 rdfs:label "milieu de la salle 6" ;
   display:containsExhibit exhib:exhibit0036 ,
   exhib:exhibit0037 ,
   exhib:exhibit0038 ,
   exhib:exhibit0039 ,
   exhib:exhibit0040 .
 
-exhib:space0015 rdfs:label "bas de la salle 6"@fr .
+exhib:space0015 rdfs:label "bas de la salle 6" .
 
 exhib:exhibit0036 rdfs:label "Dimitrijevic" .
 
@@ -360,7 +360,7 @@ exhib:element0042 a display:Element .
 # Salle 7
 ########################################################
 
-exhib:space0016 rdfs:label "salle 7 : Respect de l’étiquette, intérêt du cartel"@fr ;
+exhib:space0016 rdfs:label "salle 7 : Respect de l’étiquette, intérêt du cartel" ;
   display:containsExhibit exhib:exhibit0042 . 
 
 exhib:exhibit0042 rdfs:label "Souvenir écran" .
@@ -371,24 +371,24 @@ exhib:exhibit0042 rdfs:label "Souvenir écran" .
 ########################################################
 
 exhib:space0017 a display:ExhibitionSpace ;
-  rdfs:label "salle 8 : Le musée réfléchi"@fr .
+  rdfs:label "salle 8 : Le musée réfléchi" .
 
-exhib:space0018 rdfs:label "haut de la salle 8"@fr ;
+exhib:space0018 rdfs:label "haut de la salle 8" ;
   display:adjacentExhibit exhib:element0054 .
 
 exhib:element0054 a display:Element ;
   display:isBehind exhib:exhibit0043 ;
   display:faces exhib:element0055 ;
-  rdfs:label "Cimaise du haut (perspective plan, cf. Renaudie), salle 8"@fr .
+  rdfs:label "Cimaise du haut (perspective plan, cf. Renaudie), salle 8" .
 
 exhib:exhibit0046 display:inFrontOf exhib:element0055 ;
   rdfs:label "Broodthaers, salle 8" .
 
 exhib:element0055 a display:Element ;
-  rdfs:label "Cimaise Broodthaers, salle 8"@fr .
+  rdfs:label "Cimaise Broodthaers, salle 8" .
 
 exhib:space0019 a display:ExhibitionSpace ;
-  rdfs:label "milieu de salle 8"@fr ;
+  rdfs:label "milieu de salle 8" ;
   display:containsExhibit exhib:exhibit0043 ,
   exhib:exhibit0044 ,
   exhib:exhibit0045 ,
@@ -402,7 +402,7 @@ exhib:exhibit0044 rdfs:label "Duchamp 2" .
 
 exhib:exhibit0045 rdfs:label "Venazzo" .
 
-exhib:space0020 rdfs:label "bas de la salle 8"@fr .
+exhib:space0020 rdfs:label "bas de la salle 8" .
 
 exhib:element0043 a display:Element .
 exhib:element0044 a display:Element .
@@ -415,7 +415,7 @@ exhib:element0045 a display:Element .
 ########################################################
 
 exhib:space0021 a display:ExhibitionSpace ;
-  rdfs:label "salle 9 : Mesure pour mesure"@fr ;
+  rdfs:label "salle 9 : Mesure pour mesure" ;
   display:containsExhibit exhib:exhibit0047 ,
     exhib:exhibit0048 ,
     exhib:exhibit0049 ,
@@ -425,16 +425,14 @@ exhib:space0021 a display:ExhibitionSpace ;
 exhib:exhibit0047 rdfs:label "Haacke" .
 exhib:exhibit0048 rdfs:label "Manzoni 1" .
 exhib:exhibit0049 rdfs:label "Duchamp 3" .
-exhib:exhibit0050 rdfs:label "Broodthaers (salle 9)"@fr .
-exhib:exhibit0051 rdfs:label "Parcelle à céder"@fr .
+exhib:exhibit0050 rdfs:label "Broodthaers (salle 9)" .
+exhib:exhibit0051 rdfs:label "Parcelle à céder" .
 
 exhib:element0046 a display:Element .
 exhib:element0047 a display:Element .
 exhib:element0048 a display:Element .
 
 exhib:element0049 a display:Element ;
-  rdfs:comment "n’est pas typé actuellement (2024-11-22)" ;
-  rdfs:label "vitrine œuvres"@fr ;
   display:inFrontOf exhib:element0047 ;
   display:contains exhib:exhibit0048 ,
     exhib:exhibit0049 , exhib:exhibit0065 .
@@ -446,7 +444,7 @@ exhib:element0049 a display:Element ;
 ########################################################
 
 exhib:space0022 a display:ExhibitionSpace ;
-  rdfs:label "salle 10 : De la propriété littéraire et artistique"@fr ;
+  rdfs:label "salle 10 : De la propriété littéraire et artistique" ;
   display:intersectingExhibit exhib:exhibit0051 .
 
 #Pathway
@@ -456,9 +454,9 @@ exhib:space0022 a display:ExhibitionSpace ;
 ########################################################
 
 exhib:space0023 a display:ExhibitionSpace ;
-  rdfs:label "salle 11 : L’index"@fr .
+  rdfs:label "salle 11 : L’index" .
 
-exhib:space0025 rdfs:label "milieu 11"@fr ;
+exhib:space0025 rdfs:label "milieu 11" ;
   display:containsExhibit exhib:exhibit0052 ,
     exhib:exhibit0053 ,
     exhib:exhibit0054 ,
@@ -491,8 +489,8 @@ exhib:element0051 a display:Element .
 exhib:element0052 a display:Element .
 exhib:element0053 a display:Element .
 
-exhib:space0024 rdfs:label "haut de la salle 11"@fr .
-exhib:space0026 rdfs:label "bas de la salle 11"@fr .
+exhib:space0024 rdfs:label "haut de la salle 11" .
+exhib:space0026 rdfs:label "bas de la salle 11" .
 
 #j’ai laissé les isleft/rightOf en fonction du regardeur parce que nous avons commencé comme ça, malgré la problématique que cela pose.
 
@@ -501,7 +499,7 @@ exhib:space0026 rdfs:label "bas de la salle 11"@fr .
 ########################################################
 
 exhib:space0999 a display:ExhibitionSpace ;
-  rdfs:label "Espace desservant Francken"@fr ;
+  rdfs:label "Espace desservant Francken" ;
   bot:intersectsZone exhib:space0002 , # Symmetric. # Si un espace est contenu dans un espace, on intersectionne dans l’espace contenu au plus bas niveau (plus précis que l’intersection de haut niveau, avec lequelle on ne saurait pas dans quel espace de plus bas niveau on passe).
     exhib:space0005 ,
     exhib:space0007 ,
@@ -515,14 +513,14 @@ exhib:space0999 a display:ExhibitionSpace ;
     exhib:space0024 .
 
 exhib:space0998 a display:ExhibitionSpace ;
-  rdfs:label "Espace desservant Thomas-Pannini"@fr ;
+  rdfs:label "Espace desservant Thomas-Pannini" ;
   bot:intersectsZone exhib:space0004 ;
   bot:intersectsZone exhib:space0005 ;
   bot:intersectsZone exhib:space0009 .
 
 exhib:space0997 a display:ExhibitionSpace ;
-  rdfs:label "Espace desservant Broodthaers"@fr ;
-  rdfs:comment "Description inachevée; il n’est pas clair que la notion d’espace deservant nous sera utile."@fr .
+  rdfs:label "Espace desservant Broodthaers" ;
+  rdfs:comment "Description inachevée; il n’est pas clair que la notion d’espace deservant nous sera utile." .
 
 ########################################################
 # Vérifications Espaces
@@ -554,13 +552,13 @@ exhib:space0020 a display:ExhibitionSpace .
 
 # à vérifier
 #exhib:interface0027 a display:PathwayInterface ;
-#  rdfs:label "Interface de circulation côté Haake"@fr ;
+#  rdfs:label "Interface de circulation côté Haake" ;
 #  bot:interfaceOf exhib:space0021 ,
 #    exhib:space0022 .
 # pas la subtilité du pilier au milieu.
 # il faudrait créer deux interfaces de circulation dans ce cas :
 #exhib:interface0032 a display:PathwayInterface ;
-#  rdfs:label "Interface de circulation côté Broodthaers"@fr ;
+#  rdfs:label "Interface de circulation côté Broodthaers" ;
 #  bot:interfaceOf exhib:space0021 ,
 #    exhib:space0022 .
 

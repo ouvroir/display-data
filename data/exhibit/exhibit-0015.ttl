@@ -9,29 +9,29 @@ PREFIX aat: <http://vocab.getty.edu/aat/>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 exhib:exhibit0015 a crm:E22_Human-Made_Object ;
-    rdfs:label                  "Fontaine (Duchamp)"@fr ;
+    rdfs:label                  "Fontaine (Duchamp)" ;
     crm:P2_has_type             aat:300133025 ,
                                 aat:300047090 ;
     crm:P1_is_identified_by     <urn:uuid:e00fa329-dcdd-460d-aa70-cdb20f080f34> ,
-                                <urn:uuid:1c05c198-c80e-4daa-8b6b-e3a44b873d0f> ;
+                                <urn:uuid:6bfa7fa3-0e5a-470e-919d-dc1f1c2071b6> ;
     crm:P67i_is_referred_to_by  <urn:uuid:508e8e8a-a743-4dd3-b250-fac2acec0c35> ;
     crm:P108i_was_produced_by   <urn:uuid:ac9fa743-4e60-4875-a2b4-08cdd0aa9c5d> .
 
 <urn:uuid:e00fa329-dcdd-460d-aa70-cdb20f080f34>
     rdf:type                      crm:E33_E41_Linguistic_Appellation ;
-    crm:P190_has_symbolic_content "Fontaine"@fr ;
+    crm:P190_has_symbolic_content "Fontaine" ;
     crm:P2_has_type               aat:300404670 ;
     crm:P72_has_language          aat:300388306 .
 
-<urn:uuid:1c05c198-c80e-4daa-8b6b-e3a44b873d0f>
+<urn:uuid:6bfa7fa3-0e5a-470e-919d-dc1f1c2071b6>
     rdf:type                      crm:E33_E41_Linguistic_Appellation ;
-    crm:P190_has_symbolic_content "Fountain"@en ;
-    crm:P2_has_type               aat:300404670 ;
+    crm:P190_has_symbolic_content "Fountain" ;
+    crm:P2_has_type               aat:300264273 ;
     crm:P72_has_language          aat:300388277 .
 
 <urn:uuid:508e8e8a-a743-4dd3-b250-fac2acec0c35>
     rdf:type                      crm:E33_Linguistic_Object ;
-    crm:P190_has_symbolic_content "readymade sculpture attributed to Marcel Duchamp consisting of a porcelain urinal signed “R. KELLY”"@en ;
+    crm:P190_has_symbolic_content "readymade sculpture attributed to Marcel Duchamp consisting of a porcelain urinal signed “R. KELLY”" ;
     crm:P2_has_type               aat:300435416 ;
     crm:P72_has_language          aat:300388277 .
 

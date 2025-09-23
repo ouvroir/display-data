@@ -18,7 +18,7 @@ PREFIX xsd:     <http://www.w3.org/2001/XMLSchema#>
 
 exhib:set0001
     rdf:type                la:Set ;
-    rdfs:label              "Collection de moulages (IAC Strasbourg)"@fr ;
+    rdfs:label              "Collection de moulages (IAC Strasbourg)" ;
     crm:P2_has_type         aat:300025976 ; # Collection
     crm:P1_is_identified_by <urn:uuid:2b1d2c57-33ce-4e21-82ce-293988e1d2e8> ;
     crm:P16i_was_used_for   <urn:uuid:2f691081-9573-4660-b359-bb2a10dbd81b> ;
@@ -26,14 +26,14 @@ exhib:set0001
 
 <urn:uuid:2b1d2c57-33ce-4e21-82ce-293988e1d2e8>
     rdf:type                      crm:E33_E41_Linguistic_Appellation ;
-    crm:P190_has_symbolic_content "Collection de moulages (Musée des moulages, Strasbourg)"@fr ;
+    crm:P190_has_symbolic_content "Collection de moulages (Musée des moulages, Strasbourg)" ;
     crm:P2_has_type               aat:300404670 ;
     crm:P72_has_language          aat:300388306 ;
     .
 
 <urn:uuid:2f691081-9573-4660-b359-bb2a10dbd81b>
     rdf:type                crm:E7_Activity ;
-    rdfs:label              "Activité curatoriale (Collection de moulages, Musée des moulages, Strasbourg)"@fr ;
+    rdfs:label              "Activité curatoriale (Collection de moulages, Musée des moulages, Strasbourg)" ;
     crm:P2_has_type         aat:300054277 ;
     crm:P14_carried_out_by  <http://viaf.org/viaf/280742300> ;
     .

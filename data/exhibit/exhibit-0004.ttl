@@ -11,7 +11,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 exhib:exhibit0004
     rdf:type                    crm:E22_Human-Made_Object ,
                                 display:Exhibit ;
-    rdfs:label                  "Sommaire de l'exposition"@fr ;
+    rdfs:label                  "Sommaire de l’exposition" ;
     rdfs:comment                "A-t-on la possibilité de décrire si l'objet existe encore matérielement aujourd'hui ou non" ;
     crm:P2_has_type             aat:300220751 ;
     crm:P67i_is_referred_to_by  <urn:uuid:d5f56c31-f4ce-45d5-a3fd-e4f09aeea615> ;
@@ -20,12 +20,12 @@ exhib:exhibit0004
     
 <urn:uuid:d5f56c31-f4ce-45d5-a3fd-e4f09aeea615>
     rdf:type                      crm:E33_Linguistic_Object ;
-    crm:P190_has_symbolic_content "tableau à lettres"@fr ;
+    crm:P190_has_symbolic_content "tableau à lettres" ;
     crm:P2_has_type               aat:300435429 ;
     crm:P72_has_language          aat:300388306 .
 
 <urn:uuid:49bc2b2c-aebc-4a65-933d-3b6ef6c0286c>
     rdf:type                      crm:E33_Linguistic_Object ;
-    crm:P190_has_symbolic_content "Sommaire de l’exposition"@fr ;
+    crm:P190_has_symbolic_content "Sommaire de l’exposition" ;
     crm:P2_has_type               aat:300435416 ;
     crm:P72_has_language          aat:300388306 .
