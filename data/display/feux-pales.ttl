@@ -171,9 +171,9 @@ exhib:space0005 a display:ExhibitionSpace ;
     exhib:exhibit0024 ,
     exhib:exhibit0025 .
 
-exhib:exhibit0021 rdfs:label "Janssens 1" ;
+exhib:exhibit0021
   display:inFrontOf exhib:element0024 .
-exhib:exhibit0022 rdfs:label "Janssens 2" .
+
 exhib:exhibit0023 rdfs:label "Francken" ;
   display:inFrontOf exhib:exhibit0024 ,
     exhib:exhibit0025 .
@@ -921,8 +921,9 @@ exhib:exhibit0034 a crm:E22_Human-Made_Object ;
 exhib:exhibit0062 a crm:E22_Human-Made_Object ;
   crm:P2_has_type aat:300133025 .
 
-exhib:exhibit0021 a crm:E22_Human-Made_Object ;
-  crm:P2_has_type aat:300133025 .
+# voir exhibit-0021.ttl
+# exhib:exhibit0021 a crm:E22_Human-Made_Object ;
+#   crm:P2_has_type aat:300133025 .
 
 exhib:exhibit0027 a crm:E22_Human-Made_Object ;
   crm:P2_has_type aat:300133025 .
@@ -945,8 +946,9 @@ exhib:exhibit0007 a crm:E22_Human-Made_Object ;
 exhib:exhibit0035 a crm:E22_Human-Made_Object ;
   crm:P2_has_type aat:300133025 .
 
-exhib:exhibit0022 a crm:E22_Human-Made_Object ;
-  crm:P2_has_type aat:300133025 .
+# voir exhibit-0022.ttl
+# exhib:exhibit0022 a crm:E22_Human-Made_Object ;
+#   crm:P2_has_type aat:300133025 .
 
 exhib:exhibit0050 a crm:E22_Human-Made_Object ;
   crm:P2_has_type aat:300133025 .

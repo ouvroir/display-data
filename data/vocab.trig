@@ -25,7 +25,7 @@ PREFIX distpref:  <https://w3id.org/display/vocab/prefLabel/>
                         aat:300133025 ,
                         <http://www.wikidata.org/entity/Q621550> ;
     dc:publisher        <https://ouvroir.umontreal.ca> ;
-    dc:modified         "2025-05-26"^^xsd:date ;
+    dc:modified         "2025-09-22"^^xsd:date ;
     skos:hasTopConcept  dist:types ,
                         aat:300435433 ,
                         aat:300226816 ;
@@ -187,14 +187,39 @@ aat:300133025
     rdfs:label      "Artwork"@en ;
     skos:prefLabel  "Artwork"@en ,
                     "Œuvre d’art"@fr ;
-    skos:altLabel   "Work of art"@en ;
+    skos:altLabel   "Work of art"@en ,
+                    "Exhibit"@en ,
+                    "Exhibit"@fr ,
+                    "Expôt"@fr ,
+                    "Objet exposé"@fr ,
+                    "Displayed object"@en ,
+                    "Abstract work"@en ,
+                    "Œuvre abstraite"@fr ;
     skos:definition "The entity is an artwork (Linked Art)"@en ;
-    skos:scopeNote  "This resource classifies any type of entity; consequently an artwork may be a physical object or an immaterial entity (Display). A work of art may exist as a part of a larger object, e.g., a mural painting or a painting on a piece of furniture (AAT)."@en ;
+    skos:scopeNote  "This resource classifies an object that is an artwork; an artwork may be a physical object or an immaterial entity (Display). A work of art may exist as a part of a larger object, e.g., a mural painting or a painting on a piece of furniture (AAT); or as a part of an immaterial entity."@en ;
     dc:source       <https://vocab.getty.edu/page/aat/300133025> ;
     skos:related    aat:300054766 ;
     skos:inScheme   <https://w3id.org/display/vocab> ;
     skos:broader    dist:types ;
     .
+
+
+aat:300417531
+    rdf:type        crm:E55_Type ,
+                    skos:Concept ;
+    rdfs:label      "Exhibition"@en ;
+    skos:prefLabel  "Exhibition"@en ,
+                    "Exposition"@fr ;
+    skos:altLabel   "Exhibition (abstract work)"@en ,
+                    "Exposition (œuvre abstraite)"@fr ;
+    skos:definition "The entity is an exhibition as an abstract work."@en ;
+    skos:scopeNote  "This resource classifies entity that is the idea for an exhibition (Display)."@en ;
+    dc:source       <https://linked.art/model/exhibition/#exhibition-concept> ;
+    skos:related    aat:300054766 ;
+    skos:inScheme   <https://w3id.org/display/vocab> ;
+    skos:broader    dist:types ;
+    .
+
 
 
 dist:types
@@ -234,35 +259,34 @@ dist:activityTypes
 
 
 aat:300054766
-    skos:prefLabel      "Exhibition"@en ,
-                        "Exposition"@fr ;
+    skos:prefLabel      "Exhibiting"@en ,
+                        "Exposition (activité)"@fr ;
     rdf:type            crm:E55_Type ,
                         skos:Concept ;
-    rdfs:label          "Exhibition"@en ;
-    skos:altLabel       "Exhibition Activity"@en ,
-                        "Exhibiting"@en ;
+    rdfs:label          "Exhibiting"@en ;
+    skos:altLabel       "Exhibition Activity"@en ;
     skosxl:altLabel     distalt:aat:300054766 ;
-    skos:definition     "An exhibition (Linked Art)"@en ;
+    skos:definition     "An exhibition activity"@en ;
     skos:related        aat:300133025 ;
     skos:inScheme       <https://w3id.org/display/vocab> ;
     skos:broader        dist:activityTypes ;
     .
 distalt:aat:300054766
     rdf:type            skosxl:Label ;
-    skosxl:literalForm  "Exhibiting"@en ;
+    skosxl:literalForm  "Exhibition (activity)"@en ;
     dc:source           <https://linked.art/model/vocab/required/> ;
     skos:inScheme       <https://w3id.org/display/vocab> ;
     .
     
 
 aat:300054277
-    skos:prefLabel      "Curation"@en ,
-                        "Curation"@fr ;
+    skos:prefLabel      "Curating"@en ,
+                        "Curation (activité)"@fr ;
     rdf:type            crm:E55_Type ,
                         skos:Concept ;
     rdfs:label          "Curating"@en ;
     skos:altLabel       "Curation Activity"@en ,
-                        "Curating"@en ;
+                        "Activité curatoriale"@fr ;
     skosxl:altLabel     distalt:aat:300054277 ;
     skos:definition     "A curation activity"@en ,
                         "Une activité curatoriale"@fr ;
@@ -271,7 +295,7 @@ aat:300054277
     .
 distalt:aat:300054277
     rdf:type            skosxl:Label ;
-    skosxl:literalForm  "Curating"@en ;
+    skosxl:literalForm  "Curation (activity)"@en ;
     dc:source           <https://linked.art/model/collection/#collections-of-objects> ;
     skos:inScheme       <https://w3id.org/display/vocab> ;
     .

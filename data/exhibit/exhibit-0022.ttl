@@ -1,0 +1,20 @@
+PREFIX bot: <https://w3id.org/bot#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX display: <https://w3id.org/display#>
+PREFIX exhib: <https://ouvroir.umontreal.ca/data/>
+PREFIX aw: <https://ouvroir.umontreal.ca/data/abstract-work/>
+PREFIX la: <https://linked.art/ns/terms/>
+PREFIX crm: <http://www.cidoc-crm.org/cidoc-crm/>
+PREFIX aat: <http://vocab.getty.edu/aat/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+exhib:exhibit0022
+    rdf:type                    crm:E22_Human-Made_Object ;
+    rdfs:label                  "Janssens 2" ;
+    rdfs:comment                "Cet expôt fait partie d’une entité modélisée comme une œuvre abstraite « Abstract Work » (classe `crm:E89_Propositional_object`). Ce type d’entité (classe) est utilisé pour rassembler différents expôts qui constituent une seule œuvre. La référence à cette entité est fournie par le champ `subject_of` (expôt subject_of œuvre abstraite)." ;
+    crm:P2_has_type             aat:300133025 ,
+                                aat:300047090 ;
+    crm:P67i_is_referred_to_by  <urn:uuid:18f79679-fd21-4360-bf4d-2d5799b12e3e> ;
+    crm:P129i_is_subject_of     aw:9lh24u72 ;
+    .

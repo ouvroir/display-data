@@ -25,6 +25,7 @@ crm:E56_Language                    utils:jsonldmapping "Language" .
 crm:E58_Measurement_Unit            utils:jsonldmapping "MeasurementUnit" .
 crm:E65_Creation                    utils:jsonldmapping "Creation" .
 crm:E74_Group                       utils:jsonldmapping "Group" .
+crm:E89_Propositional_Object        utils:jsonldmapping "PropositionalObject" .
 la:Set                              utils:jsonldmapping "Set" .
 
 # Display

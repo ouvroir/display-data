@@ -14,6 +14,7 @@ PREFIX bot: <https://w3id.org/bot#>
 # cidoc et al.
 la:has_member owl:inverseOf la:member_of .
 crm:P16_used_specific_object owl:inverseOf crm:P16i_was_used_for .
+crm:P129_is_about owl:inverseOf crm:P129i_is_subject_of .
 
 # bot
 bot:adjacentZone a owl:ObjectProperty , owl:SymmetricProperty ;

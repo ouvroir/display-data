@@ -1,12 +1,13 @@
-PREFIX bot: <https://w3id.org/bot#>
-PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX bot:     <https://w3id.org/bot#>
+PREFIX rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs:    <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX display: <https://w3id.org/display#>
-PREFIX exhib: <https://ouvroir.umontreal.ca/data/>
-PREFIX la: <https://linked.art/ns/terms/>
-PREFIX crm: <http://www.cidoc-crm.org/cidoc-crm/>
-PREFIX aat: <http://vocab.getty.edu/aat/>
-PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX exhib:   <https://ouvroir.umontreal.ca/data/>
+PREFIX aw:      <https://ouvroir.umontreal.ca/data/abstract-work/>
+PREFIX la:      <https://linked.art/ns/terms/>
+PREFIX crm:     <http://www.cidoc-crm.org/cidoc-crm/>
+PREFIX aat:     <http://vocab.getty.edu/aat/>
+PREFIX xsd:     <http://www.w3.org/2001/XMLSchema#>
 
 exhib:exhibit0041
     rdf:type                    crm:E22_Human-Made_Object ;
@@ -16,16 +17,21 @@ exhib:exhibit0041
     crm:P2_has_type             aat:300133025 ,
                                 aat:300189621 ;
     crm:P1_is_identified_by     <urn:uuid:4b4e42f6-56ad-4dd9-8d88-63945751ad70> ;
-    crm:P67i_is_referred_to_by  <urn:uuid:5061c008-1170-4b4e-9c46-fe35d0c3cd6c> ;
+    crm:P67i_is_referred_to_by  <urn:uuid:5061c008-1170-4b4e-9c46-fe35d0c3cd6c> ,
+                                <urn:uuid:18f79679-fd21-4360-bf4d-2d5799b12e3e> ;
+    crm:P129i_is_subject_of     aw:zy8b3c93 ;
     crm:P108i_was_produced_by   <urn:uuid:0e978aaa-205b-4279-847e-bf4554072118> ;    
     crm:P43_has_dimension       <urn:uuid:a0a7e822-1126-4d56-a608-15c8f15293c0> ,
-                                <urn:uuid:640b3459-c4a0-41a9-8c62-3762da611e1a> .
+                                <urn:uuid:640b3459-c4a0-41a9-8c62-3762da611e1a> ;
+    .
 
 <urn:uuid:4b4e42f6-56ad-4dd9-8d88-63945751ad70>
     rdf:type                        crm:E33_E41_Linguistic_Appellation ;
-    crm:P190_has_symbolic_content   "Exquisite Corpse : the complete paintings of Manet n° 35/556, La musique aux Tuileries 1860 - Ny Carlsberg Glyptoteket, Copenhagen" ;
+    crm:P190_has_symbolic_content   "Exquisite Corpse: the complete paintings of Manet n° 35/556, La musique aux Tuileries 1860 - Ny Carlsberg Glyptoteket, Copenhagen" ;
     crm:P2_has_type                 aat:300404670 ;
-    crm:P72_has_language            aat:300387822 .
+    crm:P72_has_language            aat:300388277 ,
+                                    aat:300388306 ;
+    .
 	
 <urn:uuid:5061c008-1170-4b4e-9c46-fe35d0c3cd6c>
     rdf:type                        crm:E33_Linguistic_Object ;
