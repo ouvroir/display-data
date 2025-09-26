@@ -10,7 +10,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 exhib:exhibit0001
     rdf:type                    crm:E22_Human-Made_Object ;
-    rdfs:label                  "Ready-made R : code-barres exposé dans le préambule" ;
+    rdfs:label                  "Ready-made R : code-barres exposé dans le préambule" ;
     rdfs:comment                "[@todo] il faudrait pouvoir préciser si les dimensions sont encadrés ou non, par défault on considère que c'est le cas (ZR). Nous allons utiliser les statements pour ce faire (DV)." ,
                                 "[@todo] Cette oeuvre a deux éléments : l'œuvre et son cartel (ZR). Le cartel sera un display:Element support de (carries) d’un contenu textuel au sujet de l’œuvre." ;
     crm:P2_has_type             aat:300133025 ,
