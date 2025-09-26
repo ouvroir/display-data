@@ -8,6 +8,7 @@ PREFIX la:      <https://linked.art/ns/terms/>
 PREFIX crm:     <http://www.cidoc-crm.org/cidoc-crm/>
 PREFIX aat:     <http://vocab.getty.edu/aat/>
 PREFIX xsd:     <http://www.w3.org/2001/XMLSchema#>
+PREFIX actor: <https://ouvroir.umontreal.ca/data/actor/>
 
 exhib:exhibit0037
     rdf:type                    crm:E22_Human-Made_Object ;
@@ -48,7 +49,7 @@ aw:zy8b3c93
 
 <urn:uuid:84c97366-19a7-4368-b4cf-e4a3ce0f0507>
     rdf:type                crm:E12_Production ;
-    crm:P14_carried_out_by  <http://vocab.getty.edu/ulan/500073908> ;
+    crm:P14_carried_out_by  actor:stephen-prina ;
     crm:P4_has_time-span    <urn:uuid:5765931d-64ce-45a2-bf30-2cfd4a6b75bc> .
 	
 <urn:uuid:5765931d-64ce-45a2-bf30-2cfd4a6b75bc>

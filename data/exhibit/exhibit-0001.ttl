@@ -7,6 +7,7 @@ PREFIX la: <https://linked.art/ns/terms/>
 PREFIX crm: <http://www.cidoc-crm.org/cidoc-crm/>
 PREFIX aat: <http://vocab.getty.edu/aat/>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX actor: <https://ouvroir.umontreal.ca/data/actor/>
 
 exhib:exhibit0001
     rdf:type                    crm:E22_Human-Made_Object ;
@@ -38,7 +39,7 @@ exhib:exhibit0001
 <urn:uuid:ea055aed-a5c0-435d-a7d2-3e9631434f53>
     rdf:type                crm:E12_Production ;
     rdfs:label              "The production event of exhibit0001" ;
-    crm:P14_carried_out_by  <http://vocab.getty.edu/ulan/500305133> ;
+    crm:P14_carried_out_by  actor:capc-musee-d-art-contemporain-de-bordeaux ;
     crm:P4_has_time-span    <urn:uuid:3ee918dc-bfbc-45f9-afc1-9e3569efc7ec> .
 
 <urn:uuid:3ee918dc-bfbc-45f9-afc1-9e3569efc7ec>

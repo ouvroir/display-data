@@ -7,6 +7,7 @@ PREFIX la:      <https://linked.art/ns/terms/>
 PREFIX crm:     <http://www.cidoc-crm.org/cidoc-crm/>
 PREFIX aat:     <http://vocab.getty.edu/aat/>
 PREFIX xsd:     <http://www.w3.org/2001/XMLSchema#>
+PREFIX actor: <https://ouvroir.umontreal.ca/data/actor/>
 
 ########################################################
 # Collection de moulages
@@ -35,5 +36,5 @@ exhib:set0001
     rdf:type                crm:E7_Activity ;
     rdfs:label              "Activité curatoriale (Collection de moulages, Musée des moulages, Strasbourg)" ;
     crm:P2_has_type         aat:300054277 ;
-    crm:P14_carried_out_by  <http://viaf.org/viaf/280742300> ;
+    crm:P14_carried_out_by  actor:musee-des-moulages-strasbourg ;
     .

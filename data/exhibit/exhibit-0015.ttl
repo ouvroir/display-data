@@ -7,6 +7,7 @@ PREFIX la: <https://linked.art/ns/terms/>
 PREFIX crm: <http://www.cidoc-crm.org/cidoc-crm/>
 PREFIX aat: <http://vocab.getty.edu/aat/>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX actor: <https://ouvroir.umontreal.ca/data/actor/>
 
 exhib:exhibit0015 a crm:E22_Human-Made_Object ;
     rdfs:label                  "Fontaine (Duchamp)" ;
@@ -37,7 +38,7 @@ exhib:exhibit0015 a crm:E22_Human-Made_Object ;
 
 <urn:uuid:ac9fa743-4e60-4875-a2b4-08cdd0aa9c5d>
     rdf:type               crm:E12_Production ;
-    crm:P14_carried_out_by <http://dbpedia.org/resource/Marcel_Duchamp> ;
+    crm:P14_carried_out_by actor:marcel-duchamp ;
     crm:P4_has_time-span   <urn:uuid:e0a024b3-bc5f-4345-9906-be5a14b10695> .
 
 <urn:uuid:e0a024b3-bc5f-4345-9906-be5a14b10695>

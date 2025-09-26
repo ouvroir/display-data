@@ -12,30 +12,40 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 # le nom structuré des acteurs (identified_by Name ; content "nom") sera construit à partir de rdfs:label 
 # une seule fois par SPARQL
 
-<http://vocab.getty.edu/ulan/500305133>
+actor:capc-musee-d-art-contemporain-de-bordeaux
     rdf:type        crm:E74_Group ;
     crm:P2_has_type aat:300312281 ;
     rdfs:label      "CAPC Musée d’art contemporain de Bordeaux" ;
+    la:equivalent   <http://vocab.getty.edu/ulan/500305133> ;
     .
 
-<http://viaf.org/viaf/280742300>
+actor:musee-des-moulages-strasbourg
     rdf:type        crm:E74_Group ;
     crm:P2_has_type aat:300312281 ;
     rdfs:label      "Musée des moulages (Strasbourg)" ; # nom du musée d’après de la notice d’autorité VIAF.
+    la:equivalent   <http://viaf.org/viaf/280742300> ;
     .
 
-<http://vocab.getty.edu/ulan/500096019>
-    rdf:type    crm:E21_Person ;
-    rdfs:label  "Philippe Thomas" ;
+actor:philippe-thomas
+    rdf:type        crm:E21_Person ;
+    rdfs:label      "Philippe Thomas" ;
+    la:equivalent   <http://vocab.getty.edu/ulan/500096019> ;
     .
 
-<http://dbpedia.org/resource/Marcel_Duchamp>
-    rdf:type    crm:E21_Person ;
-    rdfs:label  "Marcel Duchamp" ;
+actor:marcel-duchamp
+    rdf:type        crm:E21_Person ;
+    rdfs:label      "Marcel Duchamp" ;
+    la:equivalent   <http://dbpedia.org/resource/Marcel_Duchamp> ;
     .
 
-<http://vocab.getty.edu/ulan/500185192>
-    rdf:type    crm:E21_Person ;
-    rdfs:label  "Andrea Dominico Remps" ;
+actor:andrea-dominico-remps
+    rdf:type        crm:E21_Person ;
+    rdfs:label      "Andrea Dominico Remps" ;
+    la:equivalent   <http://vocab.getty.edu/ulan/500185192> ;
     .
+
+actor:stephen-prina
+    rdf:type        crm:E21_Person ;
+    rdfs:label      "Stephen Prina" ;
+    la:equivalent   <http://vocab.getty.edu/ulan/500073908> ;
     .

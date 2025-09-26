@@ -8,6 +8,7 @@ PREFIX la:      <https://linked.art/ns/terms/>
 PREFIX crm:     <http://www.cidoc-crm.org/cidoc-crm/>
 PREFIX aat:     <http://vocab.getty.edu/aat/>
 PREFIX xsd:     <http://www.w3.org/2001/XMLSchema#>
+PREFIX actor: <https://ouvroir.umontreal.ca/data/actor/>
 
 #########################################################
 # Feux pâles selon CIDOC                                #
@@ -21,8 +22,8 @@ PREFIX xsd:     <http://www.w3.org/2001/XMLSchema#>
 exhib:activity0000 a crm:E7_Activity ;
     rdfs:label "Feux pâles (capcMusée d’art contemporain, Bordeaux, 1990)" ;
     la:member_of                    exhib:exhibitions ;
-    crm:P14_carried_out_by          <http://vocab.getty.edu/ulan/500305133> ,
-                                    <http://vocab.getty.edu/ulan/500096019> ;
+    crm:P14_carried_out_by          actor:capc-musee-d-art-contemporain-de-bordeaux ,
+                                    actor:philippe-thomas ;
     crm:P15_was_influenced_by       aw:lucmbse5 ;
     crm:P16_used_specific_object    exhib:set0000 ;
     crm:P1_is_identified_by         <urn:uuid:7bdf602c-4bbd-492f-b338-430abb759af8> ;# the name has its own class (Name) and could have an id selon linkedart
