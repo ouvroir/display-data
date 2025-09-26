@@ -12,7 +12,7 @@ PREFIX actor: <https://ouvroir.umontreal.ca/data/actor/>
 exhib:exhibit0005
     rdf:type                    crm:E22_Human-Made_Object ;
     rdfs:label                  "Scarabattolo (Remps)" ;
-    rdfs:comment                "Le titre primary doit être dans la langue originale, il peut y avoir des traductions."
+    rdfs:comment                "[@todo] Le titre primary doit être dans la langue originale, il peut y avoir des traductions." ;
     crm:P2_has_type             aat:300133025 ,
                                 aat:300033618 ;
     crm:P1_is_identified_by     <urn:uuid:70d68ead-aaee-4df1-9f4c-b6e0e8032a34> ,

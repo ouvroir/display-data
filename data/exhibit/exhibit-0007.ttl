@@ -11,7 +11,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 exhib:exhibit0007
     rdf:type                    crm:E22_Human-Made_Object ;
     rdfs:label                  "Buste de Simonide" ;
-    rdfs:comment                "Ce buste est une copie d'un buste original, je ne sais pas comment l'intituler : vérifier ressource métier. Dans l'exposition semble être nommé Simonide mais semblerait d'après d'autre sources que ce soit Eschyle (ZR)."@fr ,
+    rdfs:comment                "[@todo] Ce buste est une copie d'un buste original, je ne sais pas comment l'intituler : vérifier ressource métier. Dans l'exposition semble être nommé Simonide mais semblerait d'après d'autre sources que ce soit Eschyle (ZR)." ,
                                 "Collection des moulages, Institut d’Archéologie classique de Strasbourg (ZR)" ,
                                 "Pour lier l’exhibit à une collection, utiliser la propriété member_of avec l’IRI de la collection comme valeur." ;
     la:member_of                exhib:set0001 ; # collection de moulages

@@ -12,7 +12,7 @@ exhib:exhibit0004
     rdf:type                    crm:E22_Human-Made_Object ,
                                 display:Exhibit ;
     rdfs:label                  "Sommaire de l’exposition" ;
-    rdfs:comment                "A-t-on la possibilité de décrire si l'objet existe encore matérielement aujourd'hui ou non" ;
+    rdfs:comment                "[@todo] A-t-on la possibilité de décrire si l'objet existe encore matérielement aujourd'hui ou non (ZR). Événement de destruction si connu (DV)." ;
     crm:P2_has_type             aat:300213259 ;
     crm:P67i_is_referred_to_by  <urn:uuid:491b542a-82ca-4362-a169-8bc75fccdb2c> ,
                                 <urn:uuid:72345ec9-1800-4d8a-bf79-809755889cab> ;

@@ -31,6 +31,7 @@ Les versions sont liées au projet par dcterms:hasVersion, mais dcterms:hasPart 
     dcterms:hasVersion  <urn:uuid:8d330a9f-e3e2-4dba-ab62-d2f3e098fb33> ,
                         <urn:uuid:a9da2047-48fb-411c-bf4d-86b9d0cc28f9> .
 
+# exemple de version dans le sens inverse
 <urn:uuid:b5aa1c27-c15c-484e-a6c8-aa831683e55c>
     rdf:type            <foo> ;
     rdfs:label          "hypothèse A, version 1" ;
