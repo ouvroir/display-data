@@ -33,6 +33,8 @@ display:Display                     utils:jsonldmapping "Display" .
 display:Element                     utils:jsonldmapping "Element" .
 display:Exhibit                     utils:jsonldmapping "Exhibit" .
 display:ExhibitionSpace             utils:jsonldmapping "ExhibitionSpace" .
+display:HangingInterface            utils:jsonldmapping "HangingInterface" .
+display:PathwayInterface            utils:jsonldmapping "PathwayInterface" .
 
 # Bot
 bot:Space                           utils:jsonldmapping "Space" .
