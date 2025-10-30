@@ -1,11 +1,11 @@
-/catalog-v001.xml
-tbox-abox/
-datasets-config/
+# partout
 .DS_Store
+
+# Dossiers
+app/
+datasets-config/
 notes/
-data/prefixes.ttl
-data/put/
-data/put/*
-queries/api/
+data/test-api/
+queries/display-api/
 queries/test-insertInconsistencies.rq
 queries/utilitaire-exhibitMetadata.rq
