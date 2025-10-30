@@ -14,7 +14,9 @@ PREFIX distgr:    <https://w3id.org/display/vocab/group/>
 PREFIX distalt:   <https://w3id.org/display/vocab/altLabel/>
 PREFIX distpref:  <https://w3id.org/display/vocab/prefLabel/>
 
-<urn:ouvroir:vocab> { # graphe
+# id du graphe nommé
+# (n’est pas l’identifiant du vocabulaire)
+<urn:ouvroir:vocab> {
 
 
 <https://w3id.org/display/vocab>
