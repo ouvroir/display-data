@@ -4,8 +4,11 @@
 # Dossiers
 app/
 datasets-config/
+diagrammes/
 notes/
 data/test-api/
 queries/display-api/
 queries/test-insertInconsistencies.rq
-queries/utilitaire-exhibitMetadata.rq
+utilitaire-delete-literal.rq
+utilitaire-exhibitMetadata.rq
+utilitaire-fix-literal.rq
