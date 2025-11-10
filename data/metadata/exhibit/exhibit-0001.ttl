@@ -18,6 +18,7 @@ exhib:exhibit0001
                                 aat:300033618 ;
     crm:P1_is_identified_by     <urn:uuid:ff6833d0-ce10-4162-869f-a30ad10cb661> ;
     crm:P67i_is_referred_to_by  <urn:uuid:cf6976af-df66-4e7a-b506-dd75f061a69b> ;
+    la:member_of                exhib:set000 ;
     crm:P108i_was_produced_by   <urn:uuid:ea055aed-a5c0-435d-a7d2-3e9631434f53> ;
     crm:P43_has_dimension       <urn:uuid:f97441b9-1325-4dbe-8828-b3b3ec537090> ,
                                 <urn:uuid:2b42ec96-e1e7-400e-93c3-f65dfe8ee313> .

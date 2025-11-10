@@ -10,4 +10,5 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 exhib:exhibitions
     rdf:type    la:Set ;
-    rdfs:label  "Display : listes des expositions" .
+    rdfs:label  "Display : listes des expositions" ;
+    .

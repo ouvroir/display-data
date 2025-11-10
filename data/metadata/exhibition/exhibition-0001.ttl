@@ -12,7 +12,10 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 # Exhibition activity
 ########################################################
 
-<urn:display-bidon:activity-0001>
-    rdf:type        crm:E7_Activity ;
-    rdfs:label      "Exposition bidon 0001" ;
-    la:member_of    exhib:exhibitions .
+<urn:display:bidon:activity:{nanoID}>
+    rdf:type                        crm:E7_Activity ;
+    rdfs:label                      "Exposition bidon 0001" ;
+    crm:P15_was_influenced_by       aw:{nanoID} ; # obligatoire
+    crm:P16_used_specific_object    exhib:{nanoID} ;
+    la:member_of                    exhib:exhibitions ;
+    .
