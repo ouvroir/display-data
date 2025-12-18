@@ -8,6 +8,7 @@ notes/
 data/test-api/
 queries/display-api/
 
+_chargement.sh
 test-insertInconsistencies.rq
 
 # requêtes utilitaires
