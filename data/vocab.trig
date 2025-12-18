@@ -14,9 +14,16 @@ PREFIX distgr:    <https://w3id.org/display/vocab/group/>
 PREFIX distalt:   <https://w3id.org/display/vocab/altLabel/>
 PREFIX distpref:  <https://w3id.org/display/vocab/prefLabel/>
 
-# id du graphe nommé
-# (n’est pas l’identifiant du vocabulaire)
-<urn:ouvroir:vocab> {
+# id du graphe nommé (n’est pas l’identifiant du vocabulaire)
+# <urn:ouvroir:vocab>
+#
+# charger avec curl (plus fiable que l’interface)
+# exemple:
+#
+# curl -k -X POST \
+#   -H "Content-Type: text/turtle" \
+#   --data-binary "@./vocab.ttl" \
+#   "serveur/skosmos/data?graph=urn:ouvroir:vocab"
 
 
 <https://w3id.org/display/vocab>
@@ -129,7 +136,8 @@ distgr:displaySpecificTerms
                     aat:300375221 ,
                     aat:300435415 ,
                     aat:300002469 ,
-                    aat:300002767 ;
+                    aat:300002767 ,
+                    aat:300404411 ;
     .
 
 
@@ -201,16 +209,34 @@ aat:300133025
                     "Exhibit"@fr ,
                     "Expôt"@fr ,
                     "Objet exposé"@fr ,
-                    "Displayed object"@en ,
-                    "Abstract work"@en ,
-                    "Œuvre abstraite"@fr ;
+                    "Displayed object"@en ;
     skos:definition "The entity is an artwork (Linked Art)"@en ;
-    skos:scopeNote  "This resource classifies an object that is an artwork; an artwork may be a physical object or an immaterial entity (Display). A work of art may exist as a part of a larger object, e.g., a mural painting or a painting on a piece of furniture (AAT); or as a part of an immaterial entity."@en ;
+    skos:scopeNote  "This resource classifies an object that is an artwork. A work of art may exist as a part of a larger object, e.g., a mural painting or a painting on a piece of furniture (AAT); or as the subject of a creative work (abstract work)."@en ;
     dc:source       <https://vocab.getty.edu/page/aat/300133025> ;
-    skos:related    aat:300054766 ;
+    skos:related    aat:300054766 ,
+                    aat:300404411 ;
     skos:inScheme   <https://w3id.org/display/vocab> ;
     skos:broader    dist:types ;
     .
+
+
+aat:300404411
+    rdf:type        crm:E55_Type ,
+                    skos:Concept ;
+    rdfs:label      "Creative work"@en ;
+    skos:prefLabel  "Creative Work"@en ,
+                    "Œuvre de création"@fr ;
+    skos:altLabel   "Abstract Work"@en ,
+                    "Œuvre abstraite"@fr ;
+    skos:hiddenLabel    "300404411"@en ,
+                        "300404411"@fr ;
+    skos:definition "The entity is the idea of an artwork (Display)"@en ;
+    skos:scopeNote  "This resource classifies an immaterial entity that is the idea of an artwork. The idea of an artwork is viewed as an abstract work that may be linked to one or many objects that are artworks as physical entities."@en ;
+    skos:related    aat:300133025 ;
+    skos:inScheme   <https://w3id.org/display/vocab> ;
+    skos:broader    dist:types ;
+    .
+
 
 
 aat:300417531
@@ -268,6 +294,7 @@ dist:types
     rdfs:seeAlso        <https://linked.art/model/base/#types-and-classifications> ;
     skos:narrower       aat:300133025 ,
                         aat:300417531 ,
+                        aat:300404411 ,
                         dist:activityTypes ,
                         dist:classificationTypes ,
                         dist:dimensionTypes ,
@@ -986,6 +1013,3 @@ aat:300008389
     skos:related    aat:300008389 ;
     skos:inScheme <https://w3id.org/display/vocab> ;
     .
-
-
-}
