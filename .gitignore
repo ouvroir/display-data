@@ -2,13 +2,16 @@
 .DS_Store
 
 # Dossiers
-app/
 datasets-config/
 diagrammes/
 notes/
 data/test-api/
 queries/display-api/
-queries/test-insertInconsistencies.rq
+
+test-insertInconsistencies.rq
+
+# requêtes utilitaires
 utilitaire-delete-literal.rq
 utilitaire-exhibitMetadata.rq
 utilitaire-fix-literal.rq
+utilitaire-resetInfGraphs.rq
