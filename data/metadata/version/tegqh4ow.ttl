@@ -1,0 +1,24 @@
+PREFIX bot: <https://w3id.org/bot#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX display: <https://w3id.org/display#>
+PREFIX exhib: <https://ouvroir.umontreal.ca/data/>
+PREFIX la: <https://linked.art/ns/terms/>
+PREFIX crm: <http://www.cidoc-crm.org/cidoc-crm/>
+PREFIX dig: <http://www.ics.forth.gr/isl/CRMdig/>
+PREFIX aat: <http://vocab.getty.edu/aat/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX actor: <https://ouvroir.umontreal.ca/data/actor/>
+
+<https://ouvroir.umontreal.ca/data/version/tegqh4ow>
+  rdf:type crm:E73_Information_Object ;
+  rdfs:label "Version de travail sur Feux Pâles (activity0000)" ;
+  crm:P2_has_type aat:300220469 ;
+  crm:P129_is_about exhib:activity0000 ;
+  la:digitally_carried_by <https://ouvroir.umontreal.ca/data/graph/tegqh4ow> ;
+  .
+
+<https://ouvroir.umontreal.ca/data/graph/tegqh4ow>
+  rdf:type dig:D1_Digital_Object ;
+  rdfs:label "Graphe nommé contenant les triplets de la version/tegqh4ow (about Feux pâles)" ;
+  .
