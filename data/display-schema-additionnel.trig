@@ -7,9 +7,13 @@ PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX bot: <https://w3id.org/bot#>
 
+# à insérer dans <urn:ouvroir:display:models> de /display-reasoner
+
 ##########################################
 # Permettre des inférences utiles
 ##########################################
+
+<urn:ouvroir:display:models> {
 
 # cidoc et al.
 la:has_member                 owl:inverseOf la:member_of .
@@ -32,3 +36,5 @@ bot:intersectsZone a owl:ObjectProperty , owl:SymmetricProperty ;
 bot:containsZone a owl:ObjectProperty , owl:TransitiveProperty ;
   rdfs:domain bot:Zone ;
   rdfs:range bot:Zone .
+
+}
