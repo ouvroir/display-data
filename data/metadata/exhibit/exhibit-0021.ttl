@@ -1,0 +1,57 @@
+PREFIX bot:     <https://w3id.org/bot#>
+PREFIX rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs:    <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX display: <https://w3id.org/display#>
+PREFIX exhib:   <https://ouvroir.umontreal.ca/data/>
+PREFIX aw:      <https://ouvroir.umontreal.ca/data/abstract-work/>
+PREFIX la:      <https://linked.art/ns/terms/>
+PREFIX crm:     <http://www.cidoc-crm.org/cidoc-crm/>
+PREFIX aat:     <http://vocab.getty.edu/aat/>
+PREFIX xsd:     <http://www.w3.org/2001/XMLSchema#>
+
+exhib:exhibit0021
+    rdf:type                    crm:E22_Human-Made_Object ;
+    rdfs:label                  "Janssens 1" ;
+    rdfs:comment                "Cet expôt fait partie d’une entité modélisée comme une œuvre abstraite « Abstract Work » (classe `crm:E89_Propositional_object`). Ce type d’entité (classe) est utilisé pour rassembler différents expôts qui constituent une seule œuvre. La référence à cette entité est fournie par le champ `subject_of` (expôt subject_of œuvre abstraite)." ;
+    crm:P2_has_type             aat:300133025 ,
+                                aat:300047090 ;
+    crm:P67i_is_referred_to_by  <urn:uuid:18f79679-fd21-4360-bf4d-2d5799b12e3e> ;
+    crm:P129i_is_subject_of     aw:9lh24u72 ;
+    .
+
+<urn:uuid:18f79679-fd21-4360-bf4d-2d5799b12e3e>
+    rdf:type                      crm:E33_Linguistic_Object ;
+    crm:P190_has_symbolic_content "Cet expôt (exhibit) fait partie d’une entité modélisée comme une œuvre abstraite «Abstract Work» (classe `crm:E89_Propositional_object`). Ce type d’entité (classe) est utilisé pour rassembler différents expôts qui constituent une seule œuvre. La référence à cette entité est fournie par le champ `subject_of` (exhibit subject_of œuvre abstraite)." ;
+    crm:P2_has_type               aat:300435415 ;
+    crm:P72_has_language          aat:300388306 ;
+    .
+
+#############################################
+# Œuvre constituée de plusieurs exhibits
+#
+# E89_Propositional_Object est utilisé
+# comme "abstract work" : l’œuvre comme
+# proposition sur le monde, ou comme une
+# certaine vision du monde (utilise
+# P1291 is about, une dérogation à LA).
+#
+# Autre option, conforme à LA : une entité
+# E22 (qui ne serait pas un exhibit au
+# sens de Display) avec ses parties qui 
+# sont des exhibits (et des E22).
+#############################################
+
+# peut recevoir des métadonnées
+aw:9lh24u72
+    rdf:type        crm:E89_Propositional_Object ;
+    rdfs:label      "«Abstract work» pour Janssen 1 (exhibit0021) et 2 (exhibit0022)." ;
+    crm:P2_has_type aat:300133025 ;
+    crm:P67i_is_referred_to_by  <urn:uuid:be5543e7-8dde-46aa-b05a-cefa92404406> ;
+    .
+
+<urn:uuid:be5543e7-8dde-46aa-b05a-cefa92404406>
+    rdf:type                      crm:E33_Linguistic_Object ;
+    crm:P190_has_symbolic_content "Cette entité de type `crm:E89_Propositional_Object` représente une œuvre abstraite (Abstract Work). Ce type d’entité (classe) est utilisé pour rassembler différents expôts (exhibits) qui constituent une seule œuvre. La référence à ces expôts est fournie par le champ `about` (œuvre abstraite about exhibit)." ;
+    crm:P2_has_type               aat:300435415 ;
+    crm:P72_has_language          aat:300388306 ;
+    .

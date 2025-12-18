@@ -1,11 +1,18 @@
-/catalog-v001.xml
-tbox-abox/
-datasets-config/
+# partout
 .DS_Store
+
+# Dossiers
+datasets-config/
+diagrammes/
 notes/
-data/prefixes.ttl
-data/put/
-data/put/*
-queries/api/
-queries/test-insertInconsistencies.rq
-queries/utilitaire-exhibitMetadata.rq
+data/test-api/
+queries/display-api/
+
+_chargement.sh
+test-insertInconsistencies.rq
+
+# requêtes utilitaires
+utilitaire-delete-literal.rq
+utilitaire-exhibitMetadata.rq
+utilitaire-fix-literal.rq
+utilitaire-resetInfGraphs.rq

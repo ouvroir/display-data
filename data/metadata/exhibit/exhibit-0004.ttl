@@ -1,0 +1,31 @@
+PREFIX bot: <https://w3id.org/bot#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX display: <https://w3id.org/display#>
+PREFIX exhib: <https://ouvroir.umontreal.ca/data/>
+PREFIX la: <https://linked.art/ns/terms/>
+PREFIX crm: <http://www.cidoc-crm.org/cidoc-crm/>
+PREFIX aat: <http://vocab.getty.edu/aat/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+exhib:exhibit0004
+    rdf:type                    crm:E22_Human-Made_Object ,
+                                display:Exhibit ;
+    rdfs:label                  "Sommaire de l’exposition" ;
+    rdfs:comment                "[@todo] A-t-on la possibilité de décrire si l'objet existe encore matérielement aujourd'hui ou non (ZR). Événement de destruction si connu (DV)." ;
+    crm:P2_has_type             aat:300213259 ;
+    crm:P67i_is_referred_to_by  <urn:uuid:491b542a-82ca-4362-a169-8bc75fccdb2c> ,
+                                <urn:uuid:72345ec9-1800-4d8a-bf79-809755889cab> ;
+    crm:P108i_was_produced_by   <urn:uuid:ea055aed-a5c0-435d-a7d2-3e9631434f53> .
+    
+<urn:uuid:491b542a-82ca-4362-a169-8bc75fccdb2c>
+    rdf:type                      crm:E33_Linguistic_Object ;
+    crm:P190_has_symbolic_content "tableau à lettres" ;
+    crm:P2_has_type               aat:300435429 ;
+    crm:P72_has_language          aat:300388306 .
+
+<urn:uuid:72345ec9-1800-4d8a-bf79-809755889cab>
+    rdf:type                      crm:E33_Linguistic_Object ;
+    crm:P190_has_symbolic_content "Sommaire de l’exposition" ;
+    crm:P2_has_type               aat:300435416 ;
+    crm:P72_has_language          aat:300388306 .

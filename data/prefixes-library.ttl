@@ -1,0 +1,31 @@
+# @todo: encoder avec SKOS et indexer avec Fuseki
+
+
+# web standards
+PREFIX prov:    <http://www.w3.org/ns/prov#>
+PREFIX rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs:    <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX skos:    <http://www.w3.org/2004/02/skos/core#>
+PREFIX skosxl:  <http://www.w3.org/2008/05/skos-xl#>
+PREFIX xsd:     <http://www.w3.org/2001/XMLSchema#>
+
+
+# metadata & vocabulary
+PREFIX aat:     <http://vocab.getty.edu/aat/>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX ulan:    <http://vocab.getty.edu/ulan/>
+PREFIX viaf:    <http://viaf.org/viaf/>
+
+
+# display model & data
+PREFIX bot:     <https://w3id.org/bot#>
+PREFIX display: <https://w3id.org/display#>
+PREFIX dist:    <https://w3id.org/display/vocab/> # dist: Display Thesaurus
+PREFIX exhib:   <https://ouvroir.umontreal.ca/data/>
+PREFIX utils:   <https://ntnlv.ca/ns/utils#>
+
+
+# linked art & CIDOC CRM
+PREFIX la:      <https://linked.art/ns/terms/>
+PREFIX crm:     <http://www.cidoc-crm.org/cidoc-crm/>
+PREFIX dig:     <http://www.ics.forth.gr/isl/CRMdig/>

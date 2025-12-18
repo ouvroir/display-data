@@ -3,6 +3,23 @@ PREFIX crm:     <http://www.cidoc-crm.org/cidoc-crm/>
 PREFIX utils:   <https://ntnlv.ca/ns/utils#>
 PREFIX la:      <https://linked.art/ns/terms/>
 PREFIX display: <https://w3id.org/display#>
+PREFIX bot:     <https://w3id.org/bot#>
+PREFIX dig:     <http://www.ics.forth.gr/isl/CRMdig/>
+
+
+# à insérer dans les graphes de ces entrepôts:
+# /display/reasoner <urn:ouvroir:display:models>
+# /display <urn:ouvroir:display:metadata>
+# /display <default>
+#
+# charger avec curl (plus fiable que l’interface)
+# exemple:
+#
+# curl -k -X POST \
+#   -H "Content-Type: text/turtle" \
+#   --data-binary "@./vocab.ttl" \
+#   "serveur/skosmos/data?graph=urn:ouvroir:vocab"
+
 
 #######################################
 # JSON-LD mapping
@@ -10,6 +27,7 @@ PREFIX display: <https://w3id.org/display#>
 #######################################
 
 # Linked Art
+dig:D1_Digital_Object               utils:jsonldmapping "DigitalObject" .
 crm:E7_Activity                     utils:jsonldmapping "Activity" .
 crm:E12_Production                  utils:jsonldmapping "Production" .
 crm:E21_Person                      utils:jsonldmapping "Person" .
@@ -23,7 +41,9 @@ crm:E55_Type                        utils:jsonldmapping "Type" .
 crm:E56_Language                    utils:jsonldmapping "Language" .
 crm:E58_Measurement_Unit            utils:jsonldmapping "MeasurementUnit" .
 crm:E65_Creation                    utils:jsonldmapping "Creation" .
+crm:E73_Information_Object          utils:jsonldmapping "InformationObject" .
 crm:E74_Group                       utils:jsonldmapping "Group" .
+crm:E89_Propositional_Object        utils:jsonldmapping "PropositionalObject" .
 la:Set                              utils:jsonldmapping "Set" .
 
 # Display
@@ -31,3 +51,8 @@ display:Display                     utils:jsonldmapping "Display" .
 display:Element                     utils:jsonldmapping "Element" .
 display:Exhibit                     utils:jsonldmapping "Exhibit" .
 display:ExhibitionSpace             utils:jsonldmapping "ExhibitionSpace" .
+display:HangingInterface            utils:jsonldmapping "HangingInterface" .
+display:PathwayInterface            utils:jsonldmapping "PathwayInterface" .
+
+# Bot
+bot:Space                           utils:jsonldmapping "Space" .

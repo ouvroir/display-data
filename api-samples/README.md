@@ -3,7 +3,10 @@ title: "Display : exemples de données"
 author: ouvroir
 ---
 
-NOTE : les fichiers de ce dossier et les structures de données qu’ils contiennent sont obsolètes.
+# Fichiers obsolètes
+
+Les fichiers de ce dossier et les structures de données qu’ils contiennent sont **obsolètes**.
+Ils sont conservés pour archivage.
 
 # Notes
 
