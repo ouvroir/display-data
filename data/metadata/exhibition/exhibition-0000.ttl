@@ -19,8 +19,9 @@ PREFIX actor: <https://ouvroir.umontreal.ca/data/actor/>
 # Exhibition activity
 ########################################################
 
-exhib:activity0000 a crm:E7_Activity ;
-    rdfs:label "Feux pâles (capcMusée d’art contemporain, Bordeaux, 1990)" ;
+exhib:activity0000
+    rdf:type                        crm:E7_Activity ;
+    rdfs:label                      "Feux pâles (capcMusée d’art contemporain, Bordeaux, 1990)" ;
     la:member_of                    exhib:exhibitions ;
     crm:P14_carried_out_by          actor:capc-musee-d-art-contemporain-de-bordeaux ,
                                     actor:philippe-thomas ;
@@ -61,6 +62,7 @@ aw:lucmbse5
     rdf:type                crm:E89_Propositional_Object ;
     rdfs:label              "Idea, or abstract work for Feux pâles" ;
     crm:P2_has_type         aat:300417531 ;
+    crm:P15i_influenced     exhib:activity0000 ;
     crm:P1_is_identified_by <urn:uuid:0c9cc9d0-2baf-49d1-a409-cf9e1d72bf00> ;
     .
 

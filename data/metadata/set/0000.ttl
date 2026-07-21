@@ -16,6 +16,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 exhib:set0000 a la:Set ;
     rdfs:label                  "Feux pâles (1990) : ensemble des exhibits" ;
     crm:P2_has_type             aat:300378926 ;
+    crm:P16i_was_used_for       exhib:activity0000 ;
     crm:P1_is_identified_by     <urn:uuid:d01ffd54-e462-456e-9f28-1862f3c3b903> ;
     crm:P67i_is_referred_to_by  <urn:uuid:a30266eb-a8ae-4361-b716-25cdb747c6f2> ;
 #  crm:P94i_was_created_by [ a crm:E65_Creation ;
@@ -39,68 +40,68 @@ exhib:set0000 a la:Set ;
     crm:P2_has_type aat:300435416 .
 
 ########################################################
-# Put exhibits in the Feux pâles set
-# FP set brings together exhibits as proposed by PT 
+# Put exhibits in the Feux pâles Set
+# The FP Set brings together exhibits as proposed by PT
 ########################################################
 
-# exhib:exhibit0037 la:member_of exhib:set0000 .
-# exhib:exhibit0024 la:member_of exhib:set0000 .
-# exhib:exhibit0052 la:member_of exhib:set0000 .
-# exhib:exhibit0011 la:member_of exhib:set0000 .
-# exhib:exhibit0058 la:member_of exhib:set0000 .
-# exhib:exhibit0017 la:member_of exhib:set0000 .
-# exhib:exhibit0045 la:member_of exhib:set0000 .
-# exhib:exhibit0004 la:member_of exhib:set0000 .
-# exhib:exhibit0032 la:member_of exhib:set0000 .
-# exhib:exhibit0060 la:member_of exhib:set0000 .
-# exhib:exhibit0038 la:member_of exhib:set0000 .
-# exhib:exhibit0025 la:member_of exhib:set0000 .
-# exhib:exhibit0053 la:member_of exhib:set0000 .
-# exhib:exhibit0012 la:member_of exhib:set0000 .
-# exhib:exhibit0040 la:member_of exhib:set0000 .
-# exhib:exhibit0059 la:member_of exhib:set0000 .
-# exhib:exhibit0046 la:member_of exhib:set0000 .
-# exhib:exhibit0005 la:member_of exhib:set0000 .
-# exhib:exhibit0033 la:member_of exhib:set0000 .
-# exhib:exhibit0061 la:member_of exhib:set0000 .
-# exhib:exhibit0039 la:member_of exhib:set0000 .
-# exhib:exhibit0026 la:member_of exhib:set0000 .
-# exhib:exhibit0054 la:member_of exhib:set0000 .
-# exhib:exhibit0013 la:member_of exhib:set0000 .
-# exhib:exhibit0047 la:member_of exhib:set0000 .
-# exhib:exhibit0006 la:member_of exhib:set0000 .
-# exhib:exhibit0034 la:member_of exhib:set0000 .
-# exhib:exhibit0062 la:member_of exhib:set0000 .
-# exhib:exhibit0021 la:member_of exhib:set0000 .
-# exhib:exhibit0027 la:member_of exhib:set0000 .
-# exhib:exhibit0055 la:member_of exhib:set0000 .
-# exhib:exhibit0014 la:member_of exhib:set0000 .
-# exhib:exhibit0042 la:member_of exhib:set0000 .
-# exhib:exhibit0001 la:member_of exhib:set0000 .
-# exhib:exhibit0048 la:member_of exhib:set0000 .
-# exhib:exhibit0007 la:member_of exhib:set0000 .
-# exhib:exhibit0035 la:member_of exhib:set0000 .
-# exhib:exhibit0022 la:member_of exhib:set0000 .
-# exhib:exhibit0050 la:member_of exhib:set0000 .
-# exhib:exhibit0028 la:member_of exhib:set0000 .
-# exhib:exhibit0056 la:member_of exhib:set0000 .
-# exhib:exhibit0015 la:member_of exhib:set0000 .
-# exhib:exhibit0043 la:member_of exhib:set0000 .
-# exhib:exhibit0002 la:member_of exhib:set0000 .
-# exhib:exhibit0030 la:member_of exhib:set0000 .
-# exhib:exhibit0049 la:member_of exhib:set0000 .
-# exhib:exhibit0008 la:member_of exhib:set0000 .
-# exhib:exhibit0036 la:member_of exhib:set0000 .
-# exhib:exhibit0023 la:member_of exhib:set0000 .
-# exhib:exhibit0051 la:member_of exhib:set0000 .
-# exhib:exhibit0010 la:member_of exhib:set0000 .
-# exhib:exhibit0029 la:member_of exhib:set0000 .
-# exhib:exhibit0057 la:member_of exhib:set0000 .
-# exhib:exhibit0016 la:member_of exhib:set0000 .
-# exhib:exhibit0044 la:member_of exhib:set0000 .
-# exhib:exhibit0003 la:member_of exhib:set0000 .
-# exhib:exhibit0031 la:member_of exhib:set0000 .
-# exhib:exhibit0009 la:member_of exhib:set0000 .
+exhib:exhibit0037 la:member_of exhib:set0000 .
+exhib:exhibit0024 la:member_of exhib:set0000 .
+exhib:exhibit0052 la:member_of exhib:set0000 .
+exhib:exhibit0011 la:member_of exhib:set0000 .
+exhib:exhibit0058 la:member_of exhib:set0000 .
+exhib:exhibit0017 la:member_of exhib:set0000 .
+exhib:exhibit0045 la:member_of exhib:set0000 .
+exhib:exhibit0004 la:member_of exhib:set0000 .
+exhib:exhibit0032 la:member_of exhib:set0000 .
+exhib:exhibit0060 la:member_of exhib:set0000 .
+exhib:exhibit0038 la:member_of exhib:set0000 .
+exhib:exhibit0025 la:member_of exhib:set0000 .
+exhib:exhibit0053 la:member_of exhib:set0000 .
+exhib:exhibit0012 la:member_of exhib:set0000 .
+exhib:exhibit0040 la:member_of exhib:set0000 .
+exhib:exhibit0059 la:member_of exhib:set0000 .
+exhib:exhibit0046 la:member_of exhib:set0000 .
+exhib:exhibit0005 la:member_of exhib:set0000 .
+exhib:exhibit0033 la:member_of exhib:set0000 .
+exhib:exhibit0061 la:member_of exhib:set0000 .
+exhib:exhibit0039 la:member_of exhib:set0000 .
+exhib:exhibit0026 la:member_of exhib:set0000 .
+exhib:exhibit0054 la:member_of exhib:set0000 .
+exhib:exhibit0013 la:member_of exhib:set0000 .
+exhib:exhibit0047 la:member_of exhib:set0000 .
+exhib:exhibit0006 la:member_of exhib:set0000 .
+exhib:exhibit0034 la:member_of exhib:set0000 .
+exhib:exhibit0062 la:member_of exhib:set0000 .
+exhib:exhibit0021 la:member_of exhib:set0000 .
+exhib:exhibit0027 la:member_of exhib:set0000 .
+exhib:exhibit0055 la:member_of exhib:set0000 .
+exhib:exhibit0014 la:member_of exhib:set0000 .
+exhib:exhibit0042 la:member_of exhib:set0000 .
+exhib:exhibit0001 la:member_of exhib:set0000 .
+exhib:exhibit0048 la:member_of exhib:set0000 .
+exhib:exhibit0007 la:member_of exhib:set0000 .
+exhib:exhibit0035 la:member_of exhib:set0000 .
+exhib:exhibit0022 la:member_of exhib:set0000 .
+exhib:exhibit0050 la:member_of exhib:set0000 .
+exhib:exhibit0028 la:member_of exhib:set0000 .
+exhib:exhibit0056 la:member_of exhib:set0000 .
+exhib:exhibit0015 la:member_of exhib:set0000 .
+exhib:exhibit0043 la:member_of exhib:set0000 .
+exhib:exhibit0002 la:member_of exhib:set0000 .
+exhib:exhibit0030 la:member_of exhib:set0000 .
+exhib:exhibit0049 la:member_of exhib:set0000 .
+exhib:exhibit0008 la:member_of exhib:set0000 .
+exhib:exhibit0036 la:member_of exhib:set0000 .
+exhib:exhibit0023 la:member_of exhib:set0000 .
+exhib:exhibit0051 la:member_of exhib:set0000 .
+exhib:exhibit0010 la:member_of exhib:set0000 .
+exhib:exhibit0029 la:member_of exhib:set0000 .
+exhib:exhibit0057 la:member_of exhib:set0000 .
+exhib:exhibit0016 la:member_of exhib:set0000 .
+exhib:exhibit0044 la:member_of exhib:set0000 .
+exhib:exhibit0003 la:member_of exhib:set0000 .
+exhib:exhibit0031 la:member_of exhib:set0000 .
+exhib:exhibit0009 la:member_of exhib:set0000 .
 # <https://ouvroir.umontreal.ca/data/element0026> <https://linked.art/ns/terms/member_of> <https://ouvroir.umontreal.ca/data/set0000> .
 # <https://ouvroir.umontreal.ca/data/element0054> <https://linked.art/ns/terms/member_of> <https://ouvroir.umontreal.ca/data/set0000> .
 # <https://ouvroir.umontreal.ca/data/element0013> <https://linked.art/ns/terms/member_of> <https://ouvroir.umontreal.ca/data/set0000> .
