@@ -8,18 +8,9 @@ PREFIX dig:     <http://www.ics.forth.gr/isl/CRMdig/>
 
 
 # à insérer dans les graphes de ces entrepôts:
-# /display/reasoner <urn:ouvroir:display:models>
-# /display <urn:ouvroir:display:metadata>
-# /display <default>
-#
-# charger avec curl (plus fiable que l’interface)
-# exemple:
-#
-# curl -k -X POST \
-#   -H "Content-Type: text/turtle" \
-#   --data-binary "@./vocab.ttl" \
-#   "serveur/skosmos/data?graph=urn:ouvroir:vocab"
-
+# /display-reasoner <urn:ouvroir:display:models>
+# /display-v0.1 <urn:ouvroir:display:metadata>
+# /display-v0.1 <default>
 
 #######################################
 # JSON-LD mapping
