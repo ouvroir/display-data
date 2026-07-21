@@ -16,14 +16,6 @@ PREFIX distpref:  <https://w3id.org/display/vocab/prefLabel/>
 
 # id du graphe nommé (n’est pas l’identifiant du vocabulaire)
 # <urn:ouvroir:vocab>
-#
-# charger avec curl (plus fiable que l’interface)
-# exemple:
-#
-# curl -k -X POST \
-#   -H "Content-Type: text/turtle" \
-#   --data-binary "@./vocab.ttl" \
-#   "serveur/skosmos/data?graph=urn:ouvroir:vocab"
 
 
 <https://w3id.org/display/vocab>
