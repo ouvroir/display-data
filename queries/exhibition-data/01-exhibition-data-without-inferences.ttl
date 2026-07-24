@@ -1,0 +1,111 @@
+<urn:uuid:833b56f0-f589-4fcb-a915-6f2df0ac2659>
+        a       <http://www.cidoc-crm.org/cidoc-crm/E33_E41_Linguistic_Appellation>;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Primary Name";
+        <http://www.cidoc-crm.org/cidoc-crm/P190_has_symbolic_content>
+                "wall 4"^^<http://www.w3.org/2001/XMLSchema#dateTime>;
+        <http://www.cidoc-crm.org/cidoc-crm/P2_has_type>
+                <https://vocab.getty.edu/aat/300404670> .
+
+<https://ouvroir.umontreal.ca/data/element-2747f6d9>
+        a       <https://w3id.org/display#Element>;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Élément de l'exposition wall 4"^^<http://www.w3.org/2001/XMLSchema#dateTime>;
+        <http://www.cidoc-crm.org/cidoc-crm/P1_is_identified_by>
+                <urn:uuid:833b56f0-f589-4fcb-a915-6f2df0ac2659> .
+
+<urn:uuid:14f0b1a1-91d2-4111-965d-178adc8eb683>
+        a       <http://www.cidoc-crm.org/cidoc-crm/E33_E41_Linguistic_Appellation>;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Primary Name";
+        <http://www.cidoc-crm.org/cidoc-crm/P190_has_symbolic_content>
+                "Wall 3"^^<http://www.w3.org/2001/XMLSchema#dateTime>;
+        <http://www.cidoc-crm.org/cidoc-crm/P2_has_type>
+                <https://vocab.getty.edu/aat/300404670> .
+
+<https://ouvroir.umontreal.ca/data/element-04760ed8>
+        a       <https://w3id.org/display#Exhibit> , <https://w3id.org/display#Element>;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Élément de l'exposition Wall 3"^^<http://www.w3.org/2001/XMLSchema#dateTime>;
+        <http://www.cidoc-crm.org/cidoc-crm/P1_is_identified_by>
+                <urn:uuid:14f0b1a1-91d2-4111-965d-178adc8eb683> .
+
+<urn:uuid:b580af5e-c14b-4e76-82ed-ebc550921111>
+        a       <http://www.cidoc-crm.org/cidoc-crm/E33_E41_Linguistic_Appellation>;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Primary Name";
+        <http://www.cidoc-crm.org/cidoc-crm/P190_has_symbolic_content>
+                "Wall 2"^^<http://www.w3.org/2001/XMLSchema#dateTime>;
+        <http://www.cidoc-crm.org/cidoc-crm/P2_has_type>
+                <https://vocab.getty.edu/aat/300404670> .
+
+<https://ouvroir.umontreal.ca/data/element-3643e55d>
+        a       <https://w3id.org/display#Exhibit> , <https://w3id.org/display#Element>;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Élément de l'exposition Wall 2"^^<http://www.w3.org/2001/XMLSchema#dateTime>;
+        <http://www.cidoc-crm.org/cidoc-crm/P1_is_identified_by>
+                <urn:uuid:b580af5e-c14b-4e76-82ed-ebc550921111> .
+
+<urn:uuid:1ccfdacc-b34f-42e0-a0b4-1e0b0da09738>
+        a       <http://www.cidoc-crm.org/cidoc-crm/E33_E41_Linguistic_Appellation>;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Primary Name";
+        <http://www.cidoc-crm.org/cidoc-crm/P190_has_symbolic_content>
+                "Wall 1"^^<http://www.w3.org/2001/XMLSchema#dateTime>;
+        <http://www.cidoc-crm.org/cidoc-crm/P2_has_type>
+                <https://vocab.getty.edu/aat/300404670> .
+
+<https://ouvroir.umontreal.ca/data/element-ac244ed2>
+        a       <https://w3id.org/display#Exhibit> , <https://w3id.org/display#Element>;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Élément de l'exposition Wall 1"^^<http://www.w3.org/2001/XMLSchema#dateTime>;
+        <http://www.cidoc-crm.org/cidoc-crm/P1_is_identified_by>
+                <urn:uuid:1ccfdacc-b34f-42e0-a0b4-1e0b0da09738> .
+
+<https://ouvroir.umontreal.ca/data/space-110d2618>
+        a       <https://w3id.org/display#ExhibitionSpace>;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Room 2"^^<http://www.w3.org/2001/XMLSchema#dateTime>;
+        <https://w3id.org/display#containsExhibit>
+                <https://ouvroir.umontreal.ca/data/element-2747f6d9> , <https://ouvroir.umontreal.ca/data/element-04760ed8> , <https://ouvroir.umontreal.ca/data/element-3643e55d> , <https://ouvroir.umontreal.ca/data/element-ac244ed2> .
+
+<https://ouvroir.umontreal.ca/data/version-eb22abb0>
+        a       <http://www.cidoc-crm.org/cidoc-crm/E73_Information_Object>;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Version de travail portant sur https://ouvroir.umontreal.ca/data/activity-8a2e8154";
+        <http://www.cidoc-crm.org/cidoc-crm/P129_is_about>
+                <https://ouvroir.umontreal.ca/data/activity-8a2e8154>;
+        <http://www.cidoc-crm.org/cidoc-crm/P2_has_type>
+                <http://vocab.getty.edu/aat/300220469>;
+        <https://linked.art/ns/terms/digitally_carried_by>
+                <https://ouvroir.umontreal.ca/data/graph-eb22abb0> .
+
+<https://ouvroir.umontreal.ca/data/graph-eb22abb0>
+        a       <http://www.ics.forth.gr/isl/CRMdig/D1_Digital_Object>;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "The named graph containing triples of https://ouvroir.umontreal.ca/data/version-eb22abb0" .
+
+<urn:uuid:163e2a67-0cec-4976-8e6e-cee9cd957923>
+        a       <http://www.cidoc-crm.org/cidoc-crm/E33_E41_Linguistic_Appellation>;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Primary Name";
+        <http://www.cidoc-crm.org/cidoc-crm/P190_has_symbolic_content>
+                "DH TEST";
+        <http://www.cidoc-crm.org/cidoc-crm/P2_has_type>
+                <https://vocab.getty.edu/aat/300404670> .
+
+<https://ouvroir.umontreal.ca/data/set-8dea1ef6>
+        a       <https://linked.art/ns/terms/Set>;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Main Set" .
+
+<https://ouvroir.umontreal.ca/data/activity-8a2e8154>
+        a       <http://www.cidoc-crm.org/cidoc-crm/E7_Activity>;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "DH TEST";
+        <http://www.cidoc-crm.org/cidoc-crm/P16_used_specific_object>
+                <https://ouvroir.umontreal.ca/data/set-8dea1ef6>;
+        <http://www.cidoc-crm.org/cidoc-crm/P1_is_identified_by>
+                <urn:uuid:163e2a67-0cec-4976-8e6e-cee9cd957923>;
+        <http://www.cidoc-crm.org/cidoc-crm/P2_has_type>
+                <http://vocab.getty.edu/aat/300054766> .

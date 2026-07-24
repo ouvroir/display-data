@@ -1,0 +1,101 @@
+@prefix bot:     <https://w3id.org/bot#>.
+@prefix crm:     <http://www.cidoc-crm.org/cidoc-crm/>.
+@prefix dc:      <http://purl.org/dc/elements/1.1/>.
+@prefix dct:     <http://purl.org/dc/terms/>.
+@prefix dcterms: <http://purl.org/dc/terms/>.
+@prefix dig:     <http://www.ics.forth.gr/isl/CRMdig/>.
+@prefix display: <https://w3id.org/display#>.
+@prefix foaf:    <http://xmlns.com/foaf/0.1/>.
+@prefix la:      <https://linked.art/ns/terms/>.
+@prefix org:     <http://www.w3.org/ns/org#>.
+@prefix owl:     <http://www.w3.org/2002/07/owl#>.
+@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix schema:  <https://schema.org/>.
+@prefix utils:   <https://ntnlv.ca/ns/utils#>.
+@prefix vann:    <http://purl.org/vocab/vann/>.
+@prefix vcard:   <http://www.w3.org/2006/vcard/ns#>.
+@prefix voaf:    <http://purl.org/vocommons/voaf#>.
+@prefix vs:      <http://www.w3.org/2003/06/sw-vocab-status/ns#>.
+@prefix xml:     <http://www.w3.org/XML/1998/namespace>.
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#>.
+
+<urn:uuid:1ccfdacc-b34f-42e0-a0b4-1e0b0da09738>
+        rdf:type                       crm:E33_E41_Linguistic_Appellation;
+        rdfs:label                     "Primary Name";
+        crm:P190_has_symbolic_content  "Wall 1"^^xsd:dateTime;
+        crm:P2_has_type                <https://vocab.getty.edu/aat/300404670> .
+
+<urn:uuid:833b56f0-f589-4fcb-a915-6f2df0ac2659>
+        rdf:type                       crm:E33_E41_Linguistic_Appellation;
+        rdfs:label                     "Primary Name";
+        crm:P190_has_symbolic_content  "wall 4"^^xsd:dateTime;
+        crm:P2_has_type                <https://vocab.getty.edu/aat/300404670> .
+
+<https://ouvroir.umontreal.ca/data/space-110d2618>
+        rdf:type                 bot:Space , display:ExhibitionSpace;
+        rdfs:label               "Room 2"^^xsd:dateTime;
+        display:containsExhibit  <https://ouvroir.umontreal.ca/data/element-ac244ed2> , <https://ouvroir.umontreal.ca/data/element-3643e55d> , <https://ouvroir.umontreal.ca/data/element-04760ed8> , <https://ouvroir.umontreal.ca/data/element-2747f6d9>;
+        display:hasExhibit       <https://ouvroir.umontreal.ca/data/element-ac244ed2> , <https://ouvroir.umontreal.ca/data/element-3643e55d> , <https://ouvroir.umontreal.ca/data/element-04760ed8> , <https://ouvroir.umontreal.ca/data/element-2747f6d9> .
+
+<https://ouvroir.umontreal.ca/data/graph-eb22abb0>
+        rdf:type    dig:D1_Digital_Object;
+        rdfs:label  "The named graph containing triples of https://ouvroir.umontreal.ca/data/version-eb22abb0" .
+
+<https://ouvroir.umontreal.ca/data/set-8dea1ef6>
+        rdf:type               la:Set;
+        rdfs:label             "Main Set";
+        crm:P16i_was_used_for  <https://ouvroir.umontreal.ca/data/activity-8a2e8154> .
+
+<urn:uuid:14f0b1a1-91d2-4111-965d-178adc8eb683>
+        rdf:type                       crm:E33_E41_Linguistic_Appellation;
+        rdfs:label                     "Primary Name";
+        crm:P190_has_symbolic_content  "Wall 3"^^xsd:dateTime;
+        crm:P2_has_type                <https://vocab.getty.edu/aat/300404670> .
+
+<https://ouvroir.umontreal.ca/data/element-2747f6d9>
+        rdf:type                 bot:Element , display:Exhibit , display:Element;
+        rdfs:label               "Élément de l'exposition wall 4"^^xsd:dateTime;
+        crm:P1_is_identified_by  <urn:uuid:833b56f0-f589-4fcb-a915-6f2df0ac2659> .
+
+<https://ouvroir.umontreal.ca/data/activity-8a2e8154>
+        rdf:type                      crm:E7_Activity;
+        rdfs:label                    "DH TEST";
+        crm:P129i_is_subject_of       <https://ouvroir.umontreal.ca/data/version-eb22abb0>;
+        crm:P16_used_specific_object  <https://ouvroir.umontreal.ca/data/set-8dea1ef6>;
+        crm:P1_is_identified_by       <urn:uuid:163e2a67-0cec-4976-8e6e-cee9cd957923>;
+        crm:P2_has_type               <http://vocab.getty.edu/aat/300054766> .
+
+<https://ouvroir.umontreal.ca/data/element-3643e55d>
+        rdf:type                 bot:Element , display:Element , display:Exhibit;
+        rdfs:label               "Élément de l'exposition Wall 2"^^xsd:dateTime;
+        crm:P1_is_identified_by  <urn:uuid:b580af5e-c14b-4e76-82ed-ebc550921111> .
+
+<https://ouvroir.umontreal.ca/data/element-04760ed8>
+        rdf:type                 bot:Element , display:Element , display:Exhibit;
+        rdfs:label               "Élément de l'exposition Wall 3"^^xsd:dateTime;
+        crm:P1_is_identified_by  <urn:uuid:14f0b1a1-91d2-4111-965d-178adc8eb683> .
+
+<urn:uuid:163e2a67-0cec-4976-8e6e-cee9cd957923>
+        rdf:type                       crm:E33_E41_Linguistic_Appellation;
+        rdfs:label                     "Primary Name";
+        crm:P190_has_symbolic_content  "DH TEST";
+        crm:P2_has_type                <https://vocab.getty.edu/aat/300404670> .
+
+<https://ouvroir.umontreal.ca/data/element-ac244ed2>
+        rdf:type                 bot:Element , display:Element , display:Exhibit;
+        rdfs:label               "Élément de l'exposition Wall 1"^^xsd:dateTime;
+        crm:P1_is_identified_by  <urn:uuid:1ccfdacc-b34f-42e0-a0b4-1e0b0da09738> .
+
+<https://ouvroir.umontreal.ca/data/version-eb22abb0>
+        rdf:type                 crm:E73_Information_Object;
+        rdfs:label               "Version de travail portant sur https://ouvroir.umontreal.ca/data/activity-8a2e8154";
+        crm:P129_is_about        <https://ouvroir.umontreal.ca/data/activity-8a2e8154>;
+        crm:P2_has_type          <http://vocab.getty.edu/aat/300220469>;
+        la:digitally_carried_by  <https://ouvroir.umontreal.ca/data/graph-eb22abb0> .
+
+<urn:uuid:b580af5e-c14b-4e76-82ed-ebc550921111>
+        rdf:type                       crm:E33_E41_Linguistic_Appellation;
+        rdfs:label                     "Primary Name";
+        crm:P190_has_symbolic_content  "Wall 2"^^xsd:dateTime;
+        crm:P2_has_type                <https://vocab.getty.edu/aat/300404670> .
